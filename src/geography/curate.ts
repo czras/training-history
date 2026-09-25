@@ -1,255 +1,326 @@
-import { readFile } from "node:fs/promises";
+import { createReadStream } from "node:fs";
+import { mkdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
+import { spawn } from "node:child_process";
 
+import { OSMTransform } from "osm-pbf-parser-node";
 import { unified } from "unified";
 import remarkGfm from "remark-gfm";
 import remarkParse from "remark-parse";
+import { visit } from "unist-util-visit";
 
 import { acquireCountries } from "./osm.js";
 
-const COVERAGE_FILE = path.resolve("geography/coverage.md");
+const ROOT = path.resolve(".");
+const COVERAGE_PATH = path.join(ROOT, "geography", "coverage.md");
+const RAW_DIR = path.join(ROOT, "data", "geography", "raw");
+const CANDIDATE_DIR = path.join(RAW_DIR, "candidates");
 
-interface CoverageSelection {
+type CountrySelection = {
   country: string;
-  mode: "country" | "areas";
-  areas?: string[];
-}
+  areas: string[];
+};
 
-interface MdastNode {
-  type: string;
-  value?: string;
-  checked?: boolean | null;
-  children?: MdastNode[];
-}
+type Candidate = {
+  type: "node" | "way" | "relation";
+  id: number;
+  name: string;
+  tags: Record<string, string>;
+};
 
-function nodeText(node: MdastNode): string {
-  if (node.type === "text") {
-    return node.value ?? "";
-  }
+function parseCoverage(markdown: string): CountrySelection[] {
+  const tree = unified().use(remarkParse).use(remarkGfm).parse(markdown);
 
-  return (node.children ?? []).map(nodeText).join("");
-}
+  const selections: CountrySelection[] = [];
+  let currentCountry: CountrySelection | undefined;
 
-function listItemName(item: MdastNode): string {
-  const paragraph = item.children?.find(
-    (child) => child.type === "paragraph",
-  );
+  visit(tree, "listItem", (node: any) => {
+    const text = node.children
+      .filter((child: any) => child.type === "paragraph")
+      .flatMap((paragraph: any) => paragraph.children ?? [])
+      .filter((child: any) => child.type === "text")
+      .map((child: any) => child.value)
+      .join("")
+      .trim();
 
-  if (!paragraph) {
-    throw new Error("Coverage list item has no paragraph");
-  }
-
-  return nodeText(paragraph).trim();
-}
-
-function nestedAreas(item: MdastNode): string[] {
-  const nestedList = item.children?.find(
-    (child) => child.type === "list",
-  );
-
-  if (!nestedList) {
-    return [];
-  }
-
-  const areas: string[] = [];
-
-  for (const child of nestedList.children ?? []) {
-    if (child.type !== "listItem") {
-      continue;
-    }
-
-    const area = listItemName(child);
-
-    if (!area) {
-      throw new Error("Coverage contains an empty area");
-    }
-
-    // Areas are deliberately not task-list items.
-    if (child.checked !== null && child.checked !== undefined) {
-      throw new Error(
-        `Area "${area}" must not use checkbox syntax`,
-      );
-    }
-
-    areas.push(area);
-  }
-
-  return areas;
-}
-
-function parseCoverage(markdown: string): CoverageSelection[] {
-  const tree = unified()
-    .use(remarkParse)
-    .use(remarkGfm)
-    .parse(markdown) as unknown as MdastNode;
-
-  const selections: CoverageSelection[] = [];
-
-  /*
-   * coverage.md has this structure:
-   *
-   *   # Geographic coverage
-   *
-   *   ## Europe
-   *
-   *   * [x] Austria
-   *     * Vienna
-   *     * Präbichl
-   *
-   * The Europe list is therefore a list directly contained by a section.
-   *
-   * We walk only list nodes whose parent is a section/root-level container.
-   * Nested lists are consumed by nestedAreas() and are not processed again.
-   */
-  function processList(list: MdastNode): void {
-    for (const child of list.children ?? []) {
-      if (child.type !== "listItem") {
-        continue;
-      }
-
-      const country = listItemName(child);
-
-      if (!country) {
-        throw new Error("Coverage contains an empty country");
-      }
-
-      const areas = nestedAreas(child);
-
-      /*
-       * An unchecked country is not selected, but an unchecked country
-       * must not contain areas because that would make the configuration
-       * ambiguous.
-       */
-      if (child.checked !== true) {
-        if (areas.length > 0) {
-          throw new Error(
-            `Unchecked country "${country}" must not have areas`,
-          );
-        }
-
-        continue;
-      }
-
-      if (areas.length === 0) {
-        selections.push({
-          country,
-          mode: "country",
-        });
-      } else {
-        selections.push({
-          country,
-          mode: "areas",
-          areas,
-        });
-      }
-    }
-  }
-
-  function walk(node: MdastNode, insideList = false): void {
-    if (node.type === "list") {
-      if (!insideList) {
-        processList(node);
-      }
-
-      // Nested lists belong to the country currently being processed.
+    if (!text) {
       return;
     }
 
-    for (const child of node.children ?? []) {
-      walk(child, insideList || node.type === "list");
+    const checked = node.checked === true;
+
+    if (node.position?.start?.column === 1 && checked) {
+      currentCountry = {
+        country: text,
+        areas: [],
+      };
+
+      selections.push(currentCountry);
+      return;
     }
-  }
 
-  walk(tree);
-
-  validateCoverage(selections);
+    if (currentCountry && node.position?.start?.column > 1) {
+      currentCountry.areas.push(text);
+    }
+  });
 
   return selections;
 }
 
-function validateCoverage(selections: CoverageSelection[]): void {
-  const countries = new Set<string>();
+function candidateFile(country: string): string {
+  const slug = country
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
 
-  for (const selection of selections) {
-    if (countries.has(selection.country)) {
-      throw new Error(
-        `Duplicate country in coverage configuration: ${selection.country}`,
+  return path.join(CANDIDATE_DIR, `${slug}-named.osm.pbf`);
+}
+
+function runOsmium(
+  sourcePath: string,
+  outputPath: string,
+): Promise<void> {
+  return new Promise((resolve, reject) => {
+    console.log("  filtering named OSM objects with osmium...");
+
+    const child = spawn(
+      "osmium",
+      [
+        "tags-filter",
+        "--overwrite",
+        "--progress",
+        "-R",
+        sourcePath,
+        "nwr/name=*",
+        "-o",
+        outputPath,
+      ],
+      {
+        stdio: "inherit",
+      },
+    );
+
+    child.once("error", (error) => {
+      if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+        reject(
+          new Error(
+            "osmium was not found. Install osmium-tool and make sure `osmium` is on PATH.",
+          ),
+        );
+        return;
+      }
+
+      reject(error);
+    });
+
+    child.once("exit", (code) => {
+      if (code === 0) {
+        resolve();
+      } else {
+        reject(new Error(`osmium tags-filter exited with code ${code}`));
+      }
+    });
+  });
+}
+
+function tagsFromEntity(entity: any): Record<string, string> {
+  if (!entity.tags) {
+    return {};
+  }
+
+  if (Array.isArray(entity.tags)) {
+    return Object.fromEntries(
+      entity.tags.map((tag: any) => [
+        tag.key ?? tag.k,
+        tag.value ?? tag.v,
+      ]),
+    );
+  }
+
+  return Object.fromEntries(
+    Object.entries(entity.tags).map(([key, value]) => [
+      key,
+      String(value),
+    ]),
+  );
+}
+
+async function scanCandidates(
+  country: CountrySelection,
+  sourcePath: string,
+): Promise<Candidate[]> {
+  const outputPath = candidateFile(country.country);
+
+  await mkdir(CANDIDATE_DIR, { recursive: true });
+
+  await runOsmium(sourcePath, outputPath);
+
+  const outputStats = await stat(outputPath);
+
+  console.log(
+    `  candidate PBF: ${(outputStats.size / 1024 / 1024).toFixed(1)} MB`,
+  );
+
+  const candidates: Candidate[] = [];
+
+  const input = createReadStream(outputPath);
+  const parser = new OSMTransform({
+    withTags: true,
+    withInfo: false,
+  });
+
+  input.pipe(parser);
+
+  for await (const batch of parser) {
+    const entities = Array.isArray(batch) ? batch : [batch];
+
+    for (const entity of entities as any[]) {
+      const tags = tagsFromEntity(entity);
+      const name = tags.name;
+
+      if (!name) {
+        continue;
+      }
+
+      let type: Candidate["type"];
+
+      if (entity.type === "node") {
+        type = "node";
+      } else if (entity.type === "way") {
+        type = "way";
+      } else if (entity.type === "relation") {
+        type = "relation";
+      } else {
+        continue;
+      }
+
+      candidates.push({
+        type,
+        id: Number(entity.id),
+        name,
+        tags,
+      });
+    }
+  }
+
+  return candidates;
+}
+
+function printCandidates(
+  country: CountrySelection,
+  candidates: Candidate[],
+): void {
+  const nodes = candidates.filter((candidate) => candidate.type === "node");
+  const ways = candidates.filter((candidate) => candidate.type === "way");
+  const relations = candidates.filter(
+    (candidate) => candidate.type === "relation",
+  );
+
+  console.log("");
+  console.log(`Candidates for ${country.country}`);
+  console.log(`  nodes:      ${nodes.length.toLocaleString()}`);
+  console.log(`  ways:       ${ways.length.toLocaleString()}`);
+  console.log(`  relations:  ${relations.length.toLocaleString()}`);
+
+  if (country.areas.length === 0) {
+    console.log("  configured scope: whole country");
+    return;
+  }
+
+  console.log("");
+  console.log("Configured selections");
+
+  for (const area of country.areas) {
+    const matches = candidates.filter(
+      (candidate) =>
+        candidate.name.localeCompare(area, undefined, {
+          sensitivity: "accent",
+        }) === 0,
+    );
+
+    console.log(`  ${area}: ${matches.length} match(es)`);
+
+    for (const match of matches.slice(0, 20)) {
+      const interestingTags = Object.entries(match.tags)
+        .filter(([key]) =>
+          [
+            "place",
+            "boundary",
+            "admin_level",
+            "natural",
+            "mountain_pass",
+            "landuse",
+            "leisure",
+            "tourism",
+            "type",
+          ].includes(key),
+        )
+        .map(([key, value]) => `${key}=${value}`)
+        .join(", ");
+
+      console.log(
+        `    ${match.type}/${match.id} ${match.name}` +
+          (interestingTags ? ` [${interestingTags}]` : ""),
       );
     }
 
-    countries.add(selection.country);
-
-    if (selection.mode !== "areas") {
-      continue;
-    }
-
-    if (!selection.areas || selection.areas.length === 0) {
-      throw new Error(
-        `Country "${selection.country}" has area restrictions but no areas`,
-      );
-    }
-
-    const areas = new Set<string>();
-
-    for (const area of selection.areas) {
-      if (!area.trim()) {
-        throw new Error(
-          `Country "${selection.country}" contains an empty area`,
-        );
-      }
-
-      if (areas.has(area)) {
-        throw new Error(
-          `Duplicate area "${area}" in country "${selection.country}"`,
-        );
-      }
-
-      areas.add(area);
+    if (matches.length > 20) {
+      console.log(`    ... ${matches.length - 20} more`);
     }
   }
 }
 
 async function main(): Promise<void> {
-  const markdown = await readFile(COVERAGE_FILE, "utf8");
+  const markdown = await readFile(COVERAGE_PATH, "utf8");
   const selections = parseCoverage(markdown);
 
-  console.log("Geography coverage:");
+  if (selections.length === 0) {
+    throw new Error("No checked countries found in coverage.md");
+  }
+
+  console.log("Geographic curation");
+  console.log("");
 
   for (const selection of selections) {
-    if (selection.mode === "country") {
-      console.log(`  ${selection.country}: whole country`);
-      continue;
-    }
-
-    console.log(`  ${selection.country}:`);
-
-    for (const area of selection.areas ?? []) {
-      console.log(`    - ${area}`);
-    }
+    console.log(
+      `  ${selection.country}` +
+        (selection.areas.length
+          ? `: ${selection.areas.join(", ")}`
+          : ": whole country"),
+    );
   }
 
-  const countries = selections.map((selection) => selection.country);
+  console.log("");
 
-  if (countries.length === 0) {
-    console.log("\nNo countries selected.");
-    return;
+  await acquireCountries(
+    selections.map((selection) => selection.country),
+    RAW_DIR,
+  );
+
+  console.log("");
+
+  for (const selection of selections) {
+    const slug = selection.country
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
+
+    const sourcePath = path.join(RAW_DIR, `${slug}.osm.pbf`);
+
+    const candidates = await scanCandidates(selection, sourcePath);
+
+    printCandidates(selection, candidates);
   }
 
-  console.log("\nAcquiring OSM sources...\n");
-
-  const sources = await acquireCountries(countries);
-
-  console.log("\nOSM acquisition complete:");
-
-  for (const source of sources) {
-    const status = source.downloaded ? "downloaded" : "already present";
-
-    console.log(`  ${source.country}: ${status}`);
-    console.log(`    ${source.path}`);
-  }
+  console.log("");
+  console.log("Geographic candidate discovery complete.");
 }
 
 main().catch((error) => {
-  console.error(error instanceof Error ? error.message : error);
-  process.exitCode = 1;
+  console.error(error);
+  process.exit(1);
 });
