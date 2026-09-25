@@ -40,6 +40,26 @@ async function fetchActivity(id: string): Promise<unknown> {
   return response.json();
 }
 
+async function fetchActivityStreams(id: string): Promise<unknown> {
+  const url = `${API_BASE}/activity/${encodeURIComponent(id)}/streams.json`;
+
+  const response = await fetch(url, {
+    headers: {
+      Authorization: authHeader(),
+      Accept: "application/json",
+    },
+  });
+
+  if (!response.ok) {
+    const body = await response.text();
+    throw new Error(
+      `Intervals.icu streams API returned ${response.status}: ${body}`,
+    );
+  }
+
+  return response.json();
+}
+
 function formatDuration(seconds: unknown): string {
   if (typeof seconds !== "number") {
     return "unknown";
@@ -162,12 +182,15 @@ function gitCommitMessage(activity: any): string {
 
 async function main() {
   const activity = await fetchActivity(activityId);
+  const streams = await fetchActivityStreams(activityId);
 
   const directory = join("activities", activityId);
 
   await mkdir(directory, { recursive: true });
 
   const sourcePath = join(directory, "source.json");
+  const streamsPath = join(directory, "streams.json");
+
   const evidencePath = join(directory, "evidence.md");
 
   await writeFile(
@@ -177,12 +200,18 @@ async function main() {
   );
 
   await writeFile(
+    streamsPath,
+    JSON.stringify(streams, null, 2) + "\n",
+    "utf8",
+  );
+
+  await writeFile(
     evidencePath,
     activityEvidence(activity),
     "utf8",
   );
 
-  execFileSync("git", ["add", sourcePath, evidencePath], {
+  execFileSync("git", ["add", sourcePath, streamsPath, evidencePath], {
     stdio: "inherit",
   });
 
