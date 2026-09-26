@@ -8,12 +8,18 @@ import {
 } from "./candidates.js";
 import { acquireCountries } from "./osm.js";
 import {
+  printResolutions,
+  resolveSelection,
+} from "./resolve.js";
+import {
   section,
   item,
   detail,
   done,
+  endSection,
   info,
 } from "./log.js";
+import { writeCuration } from "./curation.js";
 
 const ROOT = path.resolve(".");
 const RAW_DIR = path.join(ROOT, "data", "geography", "raw");
@@ -47,7 +53,7 @@ async function main(): Promise<void> {
     );
   }
 
-  done("Coverage loaded", {
+  endSection("Coverage loaded", {
     countries: selections.length,
   });
 
@@ -58,7 +64,7 @@ async function main(): Promise<void> {
     RAW_DIR,
   );
 
-  done("Acquisition complete");
+  endSection("Acquisition complete");
 
   section("Candidate discovery");
 
@@ -89,7 +95,48 @@ async function main(): Promise<void> {
     printCandidates(selection, candidates);
   }
 
-  done("Candidate discovery complete");
+  endSection("Candidate discovery complete");
+
+  section("Resolution");
+
+  const resolutionsByCountry = new Map<
+    string,
+    Awaited<ReturnType<typeof resolveSelection>>
+  >();
+
+  for (const selection of selections) {
+    const candidates =
+      candidatesByCountry.get(selection.country) ?? [];
+
+    item(selection.country);
+
+    const resolutions = resolveSelection(
+      selection,
+      candidates,
+    );
+
+    resolutionsByCountry.set(
+      selection.country,
+      resolutions,
+    );
+
+    detail("named selections", {
+      count: resolutions.length,
+    });
+
+    printResolutions(selection, resolutions);
+  }
+
+  endSection("Resolution complete");
+
+  section("Curation");
+
+  await writeCuration(
+    selections,
+    resolutionsByCountry,
+  );
+
+  endSection("Curation complete");
 }
 
 const isMain =
