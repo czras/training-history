@@ -7,65 +7,99 @@ import {
   printCandidates,
 } from "./candidates.js";
 import { acquireCountries } from "./osm.js";
+import {
+  section,
+  item,
+  detail,
+  done,
+  info,
+} from "./log.js";
 
 const ROOT = path.resolve(".");
 const RAW_DIR = path.join(ROOT, "data", "geography", "raw");
 
+function countrySlug(country: string): string {
+  return country
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 async function main(): Promise<void> {
+  info("Geographic curation");
+
+  section("Coverage");
+
   const selections = await loadCoverage();
 
   if (selections.length === 0) {
     throw new Error("No checked countries found in coverage.md");
   }
 
-  console.log("Geographic curation");
-  console.log("");
-
   for (const selection of selections) {
-    console.log(
-      `  ${selection.country}` +
+    item(
+      selection.country +
         (selection.areas.length
           ? `: ${selection.areas.join(", ")}`
           : ": whole country"),
     );
   }
 
-  console.log("");
+  done("Coverage loaded", {
+    countries: selections.length,
+  });
+
+  section("Acquisition");
 
   await acquireCountries(
     selections.map((selection) => selection.country),
     RAW_DIR,
   );
 
-  console.log("");
+  done("Acquisition complete");
+
+  section("Candidate discovery");
+
+  const candidatesByCountry = new Map<
+    string,
+    Awaited<ReturnType<typeof discoverCandidates>>
+  >();
 
   for (const selection of selections) {
-    const slug = selection.country
-      .normalize("NFKD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, "-")
-      .replace(/^-|-$/g, "");
+    const sourcePath = path.join(
+      RAW_DIR,
+      `${countrySlug(selection.country)}.osm.pbf`,
+    );
 
-    const sourcePath = path.join(RAW_DIR, `${slug}.osm.pbf`);
+    item(selection.country);
 
     const candidates = await discoverCandidates(
       selection,
       sourcePath,
     );
 
+    candidatesByCountry.set(selection.country, candidates);
+
+    detail("candidates", {
+      count: candidates.length,
+    });
+
     printCandidates(selection, candidates);
   }
 
-  console.log("");
-  console.log("Geographic candidate discovery complete.");
+  done("Candidate discovery complete");
 }
 
-const entrypoint = pathToFileURL(process.argv[1] ?? "").href;
+const isMain =
+  process.argv[1] &&
+  pathToFileURL(process.argv[1]).href ===
+    import.meta.url;
 
-if (import.meta.url === entrypoint) {
+if (isMain) {
   main().catch((error) => {
     console.error(error);
-    process.exit(1);
+    process.exitCode = 1;
   });
 }
