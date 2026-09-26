@@ -40,7 +40,9 @@ function runOsmium(
   outputPath: string,
 ): Promise<void> {
   return new Promise((resolve, reject) => {
-    console.log("  filtering named OSM objects with osmium...");
+    console.log(
+      "  filtering named geographic objects with osmium...",
+    );
 
     const child = spawn(
       "osmium",
@@ -76,13 +78,19 @@ function runOsmium(
       if (code === 0) {
         resolve();
       } else {
-        reject(new Error(`osmium tags-filter exited with code ${code}`));
+        reject(
+          new Error(
+            `osmium tags-filter exited with code ${code}`,
+          ),
+        );
       }
     });
   });
 }
 
-function tagsFromEntity(entity: any): Record<string, string> {
+function tagsFromEntity(
+  entity: any,
+): Record<string, string> {
   if (!entity.tags) {
     return {};
   }
@@ -104,16 +112,36 @@ function tagsFromEntity(entity: any): Record<string, string> {
   );
 }
 
-function namesFromTags(tags: Record<string, string>): CandidateName[] {
+function namesFromTags(
+  tags: Record<string, string>,
+): CandidateName[] {
   return Object.entries(tags)
     .filter(
       ([key, value]) =>
-        (key === "name" || key.startsWith("name:")) && Boolean(value),
+        (key === "name" || key.startsWith("name:")) &&
+        Boolean(value),
     )
     .map(([key, value]) => ({
       key,
       value,
     }));
+}
+
+function isExcluded(
+  tags: Record<string, string>,
+): boolean {
+  return (
+    tags.railway !== undefined ||
+    tags.aerialway !== undefined ||
+    tags.public_transport !== undefined ||
+    tags.type === "public_transport" ||
+    tags.amenity === "ferry_terminal" ||
+    tags.highway !== undefined ||
+    tags.traffic_sign !== undefined ||
+    tags.boundary === "statistical" ||
+    tags.man_made === "monitoring_station" ||
+    tags.tourism === "information"
+  );
 }
 
 export async function discoverCandidates(
@@ -143,10 +171,17 @@ export async function discoverCandidates(
   input.pipe(parser);
 
   for await (const batch of parser) {
-    const entities = Array.isArray(batch) ? batch : [batch];
+    const entities = Array.isArray(batch)
+      ? batch
+      : [batch];
 
     for (const entity of entities as any[]) {
       const tags = tagsFromEntity(entity);
+
+      if (isExcluded(tags)) {
+        continue;
+      }
+
       const name = tags.name;
 
       if (!name) {
@@ -182,17 +217,27 @@ export function printCandidates(
   country: CountrySelection,
   candidates: Candidate[],
 ): void {
-  const nodes = candidates.filter((candidate) => candidate.type === "node");
-  const ways = candidates.filter((candidate) => candidate.type === "way");
+  const nodes = candidates.filter(
+    (candidate) => candidate.type === "node",
+  );
+  const ways = candidates.filter(
+    (candidate) => candidate.type === "way",
+  );
   const relations = candidates.filter(
     (candidate) => candidate.type === "relation",
   );
 
   console.log("");
   console.log(`Candidates for ${country.country}`);
-  console.log(`  nodes:      ${nodes.length.toLocaleString()}`);
-  console.log(`  ways:       ${ways.length.toLocaleString()}`);
-  console.log(`  relations:  ${relations.length.toLocaleString()}`);
+  console.log(
+    `  nodes:      ${nodes.length.toLocaleString()}`,
+  );
+  console.log(
+    `  ways:       ${ways.length.toLocaleString()}`,
+  );
+  console.log(
+    `  relations:  ${relations.length.toLocaleString()}`,
+  );
 
   if (country.areas.length === 0) {
     console.log("  configured scope: whole country");
@@ -206,26 +251,41 @@ export function printCandidates(
     const matches = candidates.filter((candidate) =>
       candidate.names.some(
         (name) =>
-          name.value.localeCompare(area, undefined, {
-            sensitivity: "accent",
-          }) === 0,
+          name.value.localeCompare(
+            area,
+            undefined,
+            {
+              sensitivity: "accent",
+            },
+          ) === 0,
       ),
     );
 
-    console.log(`  ${area}: ${matches.length} match(es)`);
+    console.log(
+      `  ${area}: ${matches.length} match(es)`,
+    );
 
     for (const match of matches.slice(0, 20)) {
       const matchingNames = match.names
         .filter(
           (name) =>
-            name.value.localeCompare(area, undefined, {
-              sensitivity: "accent",
-            }) === 0,
+            name.value.localeCompare(
+              area,
+              undefined,
+              {
+                sensitivity: "accent",
+              },
+            ) === 0,
         )
-        .map((name) => `${name.key}=${name.value}`)
+        .map(
+          (name) =>
+            `${name.key}=${name.value}`,
+        )
         .join(", ");
 
-      const interestingTags = Object.entries(match.tags)
+      const interestingTags = Object.entries(
+        match.tags,
+      )
         .filter(([key]) =>
           [
             "place",
@@ -239,18 +299,27 @@ export function printCandidates(
             "type",
           ].includes(key),
         )
-        .map(([key, value]) => `${key}=${value}`)
+        .map(
+          ([key, value]) =>
+            `${key}=${value}`,
+        )
         .join(", ");
 
       console.log(
         `    ${match.type}/${match.id} ${match.name}` +
-          (matchingNames ? ` [matched: ${matchingNames}]` : "") +
-          (interestingTags ? ` [${interestingTags}]` : ""),
+          (matchingNames
+            ? ` [matched: ${matchingNames}]`
+            : "") +
+          (interestingTags
+            ? ` [${interestingTags}]`
+            : ""),
       );
     }
 
     if (matches.length > 20) {
-      console.log(`    ... ${matches.length - 20} more`);
+      console.log(
+        `    ... ${matches.length - 20} more`,
+      );
     }
   }
 }

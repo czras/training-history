@@ -48,6 +48,16 @@ function classifyCandidate(
     }
   }
 
+  if (tags.landuse === "winter_sports") {
+    roles.add("feature");
+    reasons.push("landuse=winter_sports");
+  }
+
+  if (tags.site === "piste") {
+    roles.add("feature");
+    reasons.push("site=piste");
+  }
+
   if (tags.place) {
     switch (tags.place) {
       case "city":
