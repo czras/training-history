@@ -41,8 +41,8 @@ purpose: human selection of geographic entities
   - role: unknown
   - matched: name=Präbichl
 
-- [ ] `node/240051485` — Präbichl
-  - role: unknown
+- [x] `node/240051485` — Präbichl
+  - role: feature
   - matched: name=Präbichl
   - place=locality
 
@@ -89,7 +89,7 @@ _Whole-country coverage; no named geographic curation required._
   - place=city
 
 - [ ] `node/760018463` — Genève
-  - role: unknown
+  - role: region
   - matched: name:br=Geneva, name:en=Geneva
   - place=state
 
@@ -248,7 +248,7 @@ _Whole-country coverage; no named geographic curation required._
   - place=village
 
 - [x] `node/13563558263` — Vals
-  - role: unknown
+  - role: feature
   - matched: name=Vals
   - place=locality
 

@@ -60,6 +60,16 @@ function classifyCandidate(
         roles.add("settlement");
         reasons.push(`place=${tags.place}`);
         break;
+
+      case "locality":
+        roles.add("feature");
+        reasons.push("place=locality");
+        break;
+
+      case "state":
+        roles.add("region");
+        reasons.push("place=state");
+        break;
     }
   }
 
@@ -72,7 +82,6 @@ function classifyCandidate(
 
   if (featureTags.length > 0) {
     roles.add("feature");
-
     reasons.push(
       `geographic feature (${featureTags
         .map((key) => `${key}=${tags[key]}`)
