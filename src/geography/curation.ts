@@ -26,6 +26,23 @@ purpose: human selection of geographic entities
 
 `;
 
+const INTERESTING_TAGS = [
+  "place",
+  "boundary",
+  "admin_level",
+  "natural",
+  "mountain_pass",
+  "waterway",
+  "geological",
+  "tourism",
+  "leisure",
+  "landuse",
+  "amenity",
+  "sport",
+  "highway",
+  "railway",
+];
+
 function candidateKey(candidate: Candidate): string {
   return `${candidate.type}/${candidate.id}`;
 }
@@ -43,6 +60,22 @@ function checkedCandidatesFromMarkdown(
   }
 
   return checked;
+}
+
+function formatOtherTags(
+  candidate: Candidate,
+): string | undefined {
+  const otherTags = Object.entries(candidate.tags)
+    .filter(([key]) => !INTERESTING_TAGS.includes(key))
+    .sort(([a], [b]) => a.localeCompare(b));
+
+  if (otherTags.length === 0) {
+    return undefined;
+  }
+
+  return otherTags
+    .map(([key, value]) => `${key}=${value}`)
+    .join(", ");
 }
 
 function formatCandidate(
@@ -82,20 +115,21 @@ function formatCandidate(
     lines.push(`  - matched: ${matchingNames}`);
   }
 
-  const interestingTags = [
-    "place",
-    "boundary",
-    "admin_level",
-    "natural",
-    "mountain_pass",
-    "waterway",
-    "geological",
-  ].filter((key) => candidate.tags[key]);
+  for (const key of INTERESTING_TAGS) {
+    if (candidate.tags[key]) {
+      lines.push(
+        `  - ${key}=${candidate.tags[key]}`,
+      );
+    }
+  }
 
-  for (const key of interestingTags) {
-    lines.push(
-      `  - ${key}=${candidate.tags[key]}`,
-    );
+  const otherTags = formatOtherTags(candidate);
+
+  if (
+    otherTags &&
+    classification.roles.includes("unknown")
+  ) {
+    lines.push(`  - other: ${otherTags}`);
   }
 
   return lines.join("\n");
