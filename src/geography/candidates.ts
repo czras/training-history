@@ -6,6 +6,7 @@ import { spawn } from "node:child_process";
 import { OSMTransform } from "osm-pbf-parser-node";
 
 import type { CountrySelection } from "./coverage.js";
+import { isExcluded } from "./filter.js";
 
 const ROOT = path.resolve(".");
 const RAW_DIR = path.join(ROOT, "data", "geography", "raw");
@@ -125,23 +126,6 @@ function namesFromTags(
       key,
       value,
     }));
-}
-
-function isExcluded(
-  tags: Record<string, string>,
-): boolean {
-  return (
-    tags.railway !== undefined ||
-    tags.aerialway !== undefined ||
-    tags.public_transport !== undefined ||
-    tags.type === "public_transport" ||
-    tags.amenity === "ferry_terminal" ||
-    tags.highway !== undefined ||
-    tags.traffic_sign !== undefined ||
-    tags.boundary === "statistical" ||
-    tags.man_made === "monitoring_station" ||
-    tags.tourism === "information"
-  );
 }
 
 export async function discoverCandidates(

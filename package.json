@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "ingest": "tsx src/ingest.ts",
-    "curate:geography": "tsx src/geography/curate.ts"
+    "curate:geography": "tsx src/geography/curate.ts",
+    "materialize:geography": "tsx src/geography/materialize.ts"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",
