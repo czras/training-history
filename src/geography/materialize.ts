@@ -35,6 +35,10 @@ const MATERIALIZED_DIR = path.join(
   "geography",
   "materialized",
 );
+const TEMP_DIR = path.join(
+  MATERIALIZED_DIR,
+  ".tmp",
+);
 
 function countrySlug(country: string): string {
   return country
@@ -234,13 +238,18 @@ async function materializeWholeCountry(
   const slug = countrySlug(country);
 
   const semanticPath = path.join(
-    MATERIALIZED_DIR,
+    TEMP_DIR,
     `${slug}-semantic.osm.pbf`,
   );
 
   const outputPath = path.join(
     MATERIALIZED_DIR,
     `${slug}.osm.pbf`,
+  );
+
+  await fs.mkdir(
+    TEMP_DIR,
+    { recursive: true },
   );
 
   await fs.mkdir(
@@ -293,6 +302,11 @@ async function materializeWholeCountry(
       outputPath,
     ),
   });
+
+  await fs.rm(
+    semanticPath,
+    { force: true },
+  );
 
   return outputPath;
 }
@@ -372,10 +386,8 @@ async function inspectMaterializedCountry(
   });
 
   if (rejected > 0) {
-    detail("Warning", {
-      message:
-        "Materialized PBF contains referenced geometry that is not itself a geographic candidate.",
-      rejected,
+    detail("Referenced geometry", {
+      count: rejected,
     });
   }
 
@@ -385,6 +397,194 @@ async function inspectMaterializedCountry(
   );
 
   printDistribution(tagDistribution);
+}
+
+async function exportGeoJson(
+  country: string,
+  materializedPath: string,
+): Promise<string> {
+  const slug = countrySlug(country);
+  const outputPath = path.join(
+    TEMP_DIR,
+    `${slug}.geojson`,
+  );
+
+  await fs.mkdir(
+    TEMP_DIR,
+    { recursive: true },
+  );
+
+  item("GIS export", {
+    country,
+  });
+
+  await run("osmium", [
+    "export",
+    "--overwrite",
+    "--add-unique-id=type_id",
+    materializedPath,
+    "-o",
+    outputPath,
+  ]);
+
+  done("GIS export complete", {
+    file: path.relative(
+      ".",
+      outputPath,
+    ),
+  });
+
+  return outputPath;
+}
+
+type GeoJsonFeature = {
+  type: "Feature";
+  id?: string | number;
+  properties?: Record<string, unknown>;
+  geometry?: unknown;
+};
+
+type GeoJsonCollection = {
+  type: "FeatureCollection";
+  features: GeoJsonFeature[];
+};
+
+async function normalizeGeoJson(
+  country: string,
+  geoJsonPath: string,
+): Promise<string> {
+  const slug = countrySlug(country);
+  const outputPath = path.join(
+    TEMP_DIR,
+    `${slug}-normalized.geojson`,
+  );
+
+  const content =
+    await fs.readFile(
+      geoJsonPath,
+      "utf8",
+    );
+
+  const collection =
+    JSON.parse(content) as GeoJsonCollection;
+
+  const features: GeoJsonFeature[] = [];
+
+  for (const feature of collection.features) {
+    const properties =
+      feature.properties ?? {};
+
+    const tags = Object.fromEntries(
+      Object.entries(properties).filter(
+        ([key]) =>
+          !key.startsWith("@") &&
+          key !== "osm_id" &&
+          key !== "osm_type",
+      ),
+    );
+
+    const reason = geographicReason(
+      Object.fromEntries(
+        Object.entries(tags).map(
+          ([key, value]) => [
+            key,
+            String(value),
+          ],
+        ),
+      ),
+    );
+
+    if (!reason) {
+      continue;
+    }
+
+    const osmType =
+      typeof properties["@type"] === "string"
+        ? properties["@type"]
+        : typeof properties.osm_type ===
+            "string"
+          ? properties.osm_type
+          : undefined;
+
+    const osmIdValue =
+      properties["@id"] ??
+      properties.osm_id;
+
+    const name =
+      typeof properties.name === "string"
+        ? properties.name
+        : undefined;
+
+    features.push({
+      type: "Feature",
+      properties: {
+        country,
+        role: reason,
+        osm_type: osmType ?? null,
+        osm_id:
+          osmIdValue !== undefined
+            ? String(osmIdValue)
+            : null,
+        name: name ?? null,
+        tags: JSON.stringify(tags),
+      },
+      geometry: feature.geometry,
+    });
+  }
+
+  const normalized: GeoJsonCollection = {
+    type: "FeatureCollection",
+    features,
+  };
+
+  await fs.writeFile(
+    outputPath,
+    JSON.stringify(normalized),
+    "utf8",
+  );
+
+  done("Normalized GIS dataset", {
+    features: features.length,
+  });
+
+  return outputPath;
+}
+
+async function materializeGeoPackage(
+  country: string,
+  normalizedGeoJsonPath: string,
+): Promise<string> {
+  const outputPath = path.join(
+    MATERIALIZED_DIR,
+    "geography.gpkg",
+  );
+
+  item("GeoPackage materialization", {
+    country,
+  });
+
+  await run("ogr2ogr", [
+    "-f",
+    "GPKG",
+    "-overwrite",
+    outputPath,
+    normalizedGeoJsonPath,
+    "-nln",
+    "geography",
+    "-nlt",
+    "PROMOTE_TO_MULTI",
+    "-a_srs",
+    "EPSG:4326",
+  ]);
+
+  done("GeoPackage materialization complete", {
+    file: path.relative(
+      ".",
+      outputPath,
+    ),
+  });
+
+  return outputPath;
 }
 
 function groupByCountry(
@@ -540,6 +740,23 @@ async function main(): Promise<void> {
     await inspectMaterializedCountry(
       country,
       materializedPath,
+    );
+
+    const geoJsonPath =
+      await exportGeoJson(
+        country,
+        materializedPath,
+      );
+
+    const normalizedPath =
+      await normalizeGeoJson(
+        country,
+        geoJsonPath,
+      );
+
+    await materializeGeoPackage(
+      country,
+      normalizedPath,
     );
   }
 
