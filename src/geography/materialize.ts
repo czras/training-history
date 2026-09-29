@@ -9,7 +9,11 @@ import {
   loadCuration,
   type CurationEntry,
 } from "./selection.js";
-import { isGeographic } from "./filter.js";
+import {
+  geographicReason,
+  GEOGRAPHIC_OSMIUM_FILTERS,
+  type GeographicReason,
+} from "./filter.js";
 import {
   section,
   item,
@@ -19,16 +23,17 @@ import {
 } from "./log.js";
 
 const ROOT = path.resolve(".");
-const RAW_DIR = path.join(ROOT, "data", "geography", "raw");
+const RAW_DIR = path.join(
+  ROOT,
+  "data",
+  "geography",
+  "raw",
+);
 const MATERIALIZED_DIR = path.join(
   ROOT,
   "data",
   "geography",
   "materialized",
-);
-const WHOLE_COUNTRY_DIR = path.join(
-  RAW_DIR,
-  "whole-country",
 );
 
 function countrySlug(country: string): string {
@@ -60,26 +65,6 @@ function osmId(entry: CurationEntry): string {
   return `${prefix}${match[2]}`;
 }
 
-function osmIdFromEntity(
-  entity: any,
-): string | undefined {
-  if (
-    entity.type !== "node" &&
-    entity.type !== "way" &&
-    entity.type !== "relation"
-  ) {
-    return undefined;
-  }
-
-  const prefix = {
-    node: "n",
-    way: "w",
-    relation: "r",
-  }[entity.type];
-
-  return `${prefix}${entity.id}`;
-}
-
 function tagsFromEntity(
   entity: any,
 ): Record<string, string> {
@@ -98,7 +83,10 @@ function tagsFromEntity(
 
   return Object.fromEntries(
     Object.entries(entity.tags).map(
-      ([key, value]) => [key, String(value)],
+      ([key, value]) => [
+        key,
+        String(value),
+      ],
     ),
   );
 }
@@ -112,7 +100,21 @@ function run(
       stdio: "inherit",
     });
 
-    child.once("error", reject);
+    child.once("error", (error) => {
+      if (
+        (error as NodeJS.ErrnoException).code ===
+        "ENOENT"
+      ) {
+        reject(
+          new Error(
+            `${command} was not found. Make sure it is installed and on PATH.`,
+          ),
+        );
+        return;
+      }
+
+      reject(error);
+    });
 
     child.once("exit", (code, signal) => {
       if (code === 0) {
@@ -133,21 +135,123 @@ function run(
   });
 }
 
-async function namedPbf(
+type TagDistribution = Map<
+  GeographicReason,
+  Map<string, Map<string, number>>
+>;
+
+function incrementDistribution(
+  distribution: TagDistribution,
+  reason: GeographicReason,
+  tags: Record<string, string>,
+): void {
+  const tagKey =
+    reason === "administrative_boundary" ||
+    reason === "regional_boundary" ||
+    reason === "protected_area"
+      ? "boundary"
+      : reason === "settlement" ||
+          reason === "locality"
+        ? "place"
+        : reason === "geographic_feature"
+          ? "natural"
+          : reason === "watercourse"
+            ? "waterway"
+            : reason === "geological_feature"
+              ? "geological"
+              : reason === "mountain_pass"
+                ? "mountain_pass"
+                : undefined;
+
+  if (!tagKey) {
+    return;
+  }
+
+  const value = tags[tagKey];
+
+  if (!value) {
+    return;
+  }
+
+  const tagValues =
+    distribution.get(reason) ??
+    new Map<string, Map<string, number>>();
+
+  const values =
+    tagValues.get(tagKey) ??
+    new Map<string, number>();
+
+  values.set(
+    value,
+    (values.get(value) ?? 0) + 1,
+  );
+
+  tagValues.set(tagKey, values);
+  distribution.set(reason, tagValues);
+}
+
+function printDistribution(
+  distribution: TagDistribution,
+): void {
+  const categories = [
+    ...distribution.entries(),
+  ].sort(
+    ([a], [b]) => a.localeCompare(b),
+  );
+
+  for (const [
+    reason,
+    tagGroups,
+  ] of categories) {
+    console.log(`    ${reason}`);
+
+    for (const [
+      tagKey,
+      values,
+    ] of tagGroups) {
+      const entries = [
+        ...values.entries(),
+      ].sort(
+        ([, a], [, b]) => b - a,
+      );
+
+      for (const [
+        value,
+        count,
+      ] of entries) {
+        console.log(
+          `      ${tagKey}=${value}: ${count.toLocaleString()}`,
+        );
+      }
+    }
+  }
+}
+
+async function materializeWholeCountry(
   country: string,
   sourcePath: string,
 ): Promise<string> {
-  const outputPath = path.join(
-    WHOLE_COUNTRY_DIR,
-    `${countrySlug(country)}-named.osm.pbf`,
+  const slug = countrySlug(country);
+
+  const semanticPath = path.join(
+    MATERIALIZED_DIR,
+    `${slug}-semantic.osm.pbf`,
   );
 
-  await fs.mkdir(WHOLE_COUNTRY_DIR, {
-    recursive: true,
-  });
+  const outputPath = path.join(
+    MATERIALIZED_DIR,
+    `${slug}.osm.pbf`,
+  );
 
-  item("Named-object extraction", {
+  await fs.mkdir(
+    MATERIALIZED_DIR,
+    { recursive: true },
+  );
+
+  item("Semantic geographic extraction", {
     country,
+    filters:
+      GEOGRAPHIC_OSMIUM_FILTERS.length,
   });
 
   await run("osmium", [
@@ -156,34 +260,65 @@ async function namedPbf(
     "--progress",
     "-R",
     sourcePath,
+    ...GEOGRAPHIC_OSMIUM_FILTERS,
+    "-o",
+    semanticPath,
+  ]);
+
+  done("Semantic extraction complete", {
+    file: path.relative(
+      ".",
+      semanticPath,
+    ),
+  });
+
+  item("Named geographic extraction", {
+    country,
+  });
+
+  await run("osmium", [
+    "tags-filter",
+    "--overwrite",
+    "--progress",
+    "-R",
+    semanticPath,
     "nwr/name=*",
     "-o",
     outputPath,
   ]);
 
-  done("Named-object extraction complete", {
-    file: path.relative(".", outputPath),
+  done("Materialized whole country", {
+    file: path.relative(
+      ".",
+      outputPath,
+    ),
   });
 
   return outputPath;
 }
 
-async function collectWholeCountryIds(
+async function inspectMaterializedCountry(
   country: string,
-  sourcePath: string,
-): Promise<string[]> {
-  const namedPath = await namedPbf(
-    country,
-    sourcePath,
-  );
-
-  item("Geographic filtering", {
+  materializedPath: string,
+): Promise<void> {
+  item("Semantic verification", {
     country,
   });
 
-  const ids: string[] = [];
+  const reasonCounts = new Map<
+    GeographicReason,
+    number
+  >();
 
-  const input = createReadStream(namedPath);
+  const tagDistribution: TagDistribution =
+    new Map();
+
+  let retained = 0;
+  let rejected = 0;
+
+  const input =
+    createReadStream(materializedPath);
+
   const parser = new OSMTransform({
     withTags: true,
     withInfo: false,
@@ -198,83 +333,77 @@ async function collectWholeCountryIds(
 
     for (const entity of entities as any[]) {
       const tags = tagsFromEntity(entity);
+      const reason = geographicReason(tags);
 
-      if (!isGeographic(tags)) {
+      if (!reason) {
+        rejected++;
         continue;
       }
 
-      const id = osmIdFromEntity(entity);
+      retained++;
 
-      if (id) {
-        ids.push(id);
-      }
+      reasonCounts.set(
+        reason,
+        (reasonCounts.get(reason) ?? 0) + 1,
+      );
+
+      incrementDistribution(
+        tagDistribution,
+        reason,
+        tags,
+      );
     }
   }
 
-  done("Geographic filtering complete", {
-    retained: ids.length,
+  done("Semantic verification complete", {
+    retained,
+    rejected,
   });
 
-  return ids;
-}
+  detail("Geographic categories", {
+    categories: [
+      ...reasonCounts.entries(),
+    ]
+      .map(
+        ([reason, count]) =>
+          `${reason}=${count}`,
+      )
+      .join(","),
+  });
 
-async function materializeCountryIds(
-  country: string,
-  sourcePath: string,
-  ids: string[],
-): Promise<string> {
-  if (ids.length === 0) {
-    throw new Error(
-      `No geographic objects selected for ${country}`,
-    );
+  if (rejected > 0) {
+    detail("Warning", {
+      message:
+        "Materialized PBF contains referenced geometry that is not itself a geographic candidate.",
+      rejected,
+    });
   }
 
-  const outputPath = path.join(
-    MATERIALIZED_DIR,
-    `${countrySlug(country)}.osm.pbf`,
+  console.log("");
+  console.log(
+    `Geographic tag distribution for ${country}`,
   );
 
-  await fs.mkdir(MATERIALIZED_DIR, {
-    recursive: true,
-  });
-
-  item(country, {
-    selected: ids.length,
-    source: path.relative(".", sourcePath),
-  });
-
-  detail("OSM IDs", {
-    ids: ids.length,
-  });
-
-  await run("osmium", [
-    "getid",
-    "--overwrite",
-    "--add-referenced",
-    sourcePath,
-    ...ids,
-    "-o",
-    outputPath,
-  ]);
-
-  done("Materialized country", {
-    file: path.relative(".", outputPath),
-  });
-
-  return outputPath;
+  printDistribution(tagDistribution);
 }
 
 function groupByCountry(
   entries: CurationEntry[],
 ): Map<string, CurationEntry[]> {
-  const grouped = new Map<string, CurationEntry[]>();
+  const grouped = new Map<
+    string,
+    CurationEntry[]
+  >();
 
   for (const entry of entries) {
     const entriesForCountry =
       grouped.get(entry.country) ?? [];
 
     entriesForCountry.push(entry);
-    grouped.set(entry.country, entriesForCountry);
+    grouped.set(
+      entry.country,
+      entriesForCountry,
+    );
   }
 
   return grouped;
@@ -297,80 +426,134 @@ async function materializeCuratedCountry(
     );
   }
 
-  const ids = entries.map(osmId);
-
-  return materializeCountryIds(
-    country,
-    sourcePath,
-    ids,
-  );
-}
-
-async function materializeWholeCountry(
-  country: string,
-): Promise<string> {
-  const sourcePath = path.join(
-    RAW_DIR,
+  const outputPath = path.join(
+    MATERIALIZED_DIR,
     `${countrySlug(country)}.osm.pbf`,
   );
 
-  try {
-    await fs.access(sourcePath);
-  } catch {
-    throw new Error(
-      `Source PBF for ${country} does not exist: ${sourcePath}`,
-    );
-  }
-
-  const ids = await collectWholeCountryIds(
-    country,
-    sourcePath,
+  await fs.mkdir(
+    MATERIALIZED_DIR,
+    { recursive: true },
   );
 
-  return materializeCountryIds(
-    country,
+  const ids = entries.map(osmId);
+
+  item(country, {
+    selected: ids.length,
+    source: path.relative(
+      ".",
+      sourcePath,
+    ),
+  });
+
+  detail("OSM IDs", {
+    ids: ids.length,
+  });
+
+  await run("osmium", [
+    "getid",
+    "--overwrite",
+    "--add-referenced",
     sourcePath,
-    ids,
-  );
+    ...ids,
+    "-o",
+    outputPath,
+  ]);
+
+  done("Materialized country", {
+    file: path.relative(
+      ".",
+      outputPath,
+    ),
+  });
+
+  return outputPath;
 }
 
 async function main(): Promise<void> {
-  section("Geographic materialization");
+  section(
+    "Geographic materialization",
+  );
 
-  const entries = await loadCuration();
+  const entries =
+    await loadCuration();
 
   detail("curated selections", {
     count: entries.length,
   });
 
-  const curatedByCountry = groupByCountry(entries);
+  const curatedByCountry =
+    groupByCountry(entries);
 
-  section("Curated OSM extraction");
+  section(
+    "Curated OSM extraction",
+  );
 
-  for (const [country, countryEntries] of curatedByCountry) {
+  for (
+    const [
+      country,
+      countryEntries,
+    ] of curatedByCountry
+  ) {
     await materializeCuratedCountry(
       country,
       countryEntries,
     );
   }
 
-  endSection("Curated OSM extraction complete", {
-    countries: curatedByCountry.size,
-  });
+  endSection(
+    "Curated OSM extraction complete",
+    {
+      countries:
+        curatedByCountry.size,
+    },
+  );
 
-  section("Whole-country extraction");
+  section(
+    "Whole-country materialization",
+  );
 
-  const wholeCountry = ["Hungary"];
+  const wholeCountry = [
+    "Hungary",
+  ];
 
   for (const country of wholeCountry) {
-    await materializeWholeCountry(country);
+    const sourcePath = path.join(
+      RAW_DIR,
+      `${countrySlug(country)}.osm.pbf`,
+    );
+
+    try {
+      await fs.access(sourcePath);
+    } catch {
+      throw new Error(
+        `Source PBF for ${country} does not exist: ${sourcePath}`,
+      );
+    }
+
+    const materializedPath =
+      await materializeWholeCountry(
+        country,
+        sourcePath,
+      );
+
+    await inspectMaterializedCountry(
+      country,
+      materializedPath,
+    );
   }
 
-  endSection("Whole-country extraction complete", {
-    countries: wholeCountry.length,
-  });
+  endSection(
+    "Whole-country materialization complete",
+    {
+      countries:
+        wholeCountry.length,
+    },
+  );
 
-  endSection("Geographic materialization complete");
+  endSection(
+    "Geographic materialization complete",
+  );
 }
 
 main().catch((error) => {
