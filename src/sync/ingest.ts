@@ -11,6 +11,7 @@ import {
   discoverActivities,
   type ActivityIndexEntry,
 } from "./activities.js";
+import { deriveAll } from "./derive.js";
 import { persistActivity } from "./persist.js";
 
 const ACTIVITY_INDEX_PATH = join(
@@ -326,6 +327,23 @@ async function ingestAll(
   );
 }
 
+function logFailure(failure: IngestionFailure) {
+  console.log(
+    "  " +
+    failure.entry.id +
+    " — " +
+    failure.entry.start_date_local +
+    " — " +
+    failure.entry.type +
+    " — " +
+    failure.entry.name
+  );
+  console.log(
+    "    " +
+    formatFailure(failure.error)
+  );
+}
+
 async function main(): Promise<void> {
   const activityId = parseActivityId();
 
@@ -355,6 +373,11 @@ async function main(): Promise<void> {
     await ingestAll(newActivities);
 
   console.log("");
+
+  const derivationFailures =
+    await deriveAll(index.activities);
+
+  console.log("");
   console.log("Ingestion complete");
   console.log("");
   console.log(
@@ -366,31 +389,38 @@ async function main(): Promise<void> {
       (newActivities.length - failures.length),
   );
   console.log(
+    "Derived:    " +
+      (index.activities.length -
+        derivationFailures.length),
+  );
+  console.log(
     "Failed:     " +
-      failures.length,
+      (failures.length +
+        derivationFailures.length),
   );
 
   if (failures.length > 0) {
     console.log("");
-    console.log("Failed activities:");
+    console.log("Failed downloads:");
 
     for (const failure of failures) {
-      console.log(
-        "  " +
-          failure.entry.id +
-          " — " +
-          failure.entry.start_date_local +
-          " — " +
-          failure.entry.type +
-          " — " +
-          failure.entry.name,
-      );
-      console.log(
-        "    " +
-          formatFailure(failure.error),
-      );
+      logFailure(failure);
     }
+  }
 
+  if (derivationFailures.length > 0) {
+    console.log("");
+    console.log("Failed derivations:");
+
+    for (const failure of derivationFailures) {
+      logFailure(failure);
+    }
+  }
+
+  if (
+    failures.length > 0 ||
+    derivationFailures.length > 0
+  ) {
     process.exitCode = 1;
   }
 }
