@@ -267,7 +267,6 @@ async function materializeWholeCountry(
     "tags-filter",
     "--overwrite",
     "--progress",
-    "-R",
     sourcePath,
     ...GEOGRAPHIC_OSMIUM_FILTERS,
     "-o",
@@ -289,7 +288,6 @@ async function materializeWholeCountry(
     "tags-filter",
     "--overwrite",
     "--progress",
-    "-R",
     semanticPath,
     "nwr/name=*",
     "-o",
@@ -422,6 +420,7 @@ async function exportGeoJson(
     "export",
     "--overwrite",
     "--add-unique-id=type_id",
+    "--attributes=type,id",
     materializedPath,
     "-o",
     outputPath,
@@ -501,14 +500,12 @@ async function normalizeGeoJson(
     const osmType =
       typeof properties["@type"] === "string"
         ? properties["@type"]
-        : typeof properties.osm_type ===
-            "string"
-          ? properties.osm_type
-          : undefined;
+        : undefined;
 
     const osmIdValue =
-      properties["@id"] ??
-      properties.osm_id;
+      properties["@id"] !== undefined
+        ? String(properties["@id"])
+        : undefined;
 
     const name =
       typeof properties.name === "string"
@@ -520,11 +517,8 @@ async function normalizeGeoJson(
       properties: {
         country,
         role: reason,
-        osm_type: osmType ?? null,
-        osm_id:
-          osmIdValue !== undefined
-            ? String(osmIdValue)
-            : null,
+        osm_type: osmType,
+        osm_id: osmIdValue,
         name: name ?? null,
         tags: JSON.stringify(tags),
       },
@@ -631,8 +625,18 @@ async function materializeCuratedCountry(
     `${countrySlug(country)}.osm.pbf`,
   );
 
+  const idFilePath = path.join(
+    TEMP_DIR,
+    `${countrySlug(country)}-ids.txt`,
+  );
+
   await fs.mkdir(
     MATERIALIZED_DIR,
+    { recursive: true },
+  );
+
+  await fs.mkdir(
+    TEMP_DIR,
     { recursive: true },
   );
 
@@ -650,15 +654,29 @@ async function materializeCuratedCountry(
     ids: ids.length,
   });
 
-  await run("osmium", [
-    "getid",
-    "--overwrite",
-    "--add-referenced",
-    sourcePath,
-    ...ids,
-    "-o",
-    outputPath,
-  ]);
+  await fs.writeFile(
+    idFilePath,
+    `${ids.join("\n")}\n`,
+    "utf8",
+  );
+
+  try {
+    await run("osmium", [
+      "getid",
+      "--overwrite",
+      "--add-referenced",
+      sourcePath,
+      "--id-file",
+      idFilePath,
+      "-o",
+      outputPath,
+    ]);
+  } finally {
+    await fs.rm(
+      idFilePath,
+      { force: true },
+    );
+  }
 
   done("Materialized country", {
     file: path.relative(
