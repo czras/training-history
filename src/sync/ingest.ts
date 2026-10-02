@@ -1,15 +1,12 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import type { ActivityPlatform } from "../platforms/activity.js";
+import { IntervalsIcuPlatform } from "../platforms/intervals-icu/index.js";
 
-const API_BASE = "https://intervals.icu/api/v1";
 const ACTIVITY_INDEX_PATH = join("data", "sync", "activities.json");
-const CONCURRENCY = 8;
 
-const apiKey = process.env.INTERVALS_ICU_API_KEY;
-
-if (!apiKey) {
-  throw new Error("INTERVALS_ICU_API_KEY is not set");
-}
+const activityPlatform: ActivityPlatform =
+  new IntervalsIcuPlatform();
 
 type ActivityIndexEntry = {
   id: string;
@@ -28,10 +25,6 @@ type IngestionFailure = {
   entry: ActivityIndexEntry;
   error: unknown;
 };
-
-function authHeader(): string {
-  return `Basic ${Buffer.from(`API_KEY:${apiKey}`).toString("base64")}`;
-}
 
 function parseActivityId(): string | undefined {
   const args = process.argv.slice(2);
@@ -104,56 +97,6 @@ async function readActivityIndex(): Promise<ActivityIndex> {
   return index as ActivityIndex;
 }
 
-async function fetchActivity(id: string): Promise<any> {
-  const url = `${API_BASE}/activity/${encodeURIComponent(id)}?intervals=true`;
-
-  const response = await fetch(url, {
-    headers: {
-      Authorization: authHeader(),
-      Accept: "application/json",
-    },
-  });
-
-  if (!response.ok) {
-    const body = await response.text();
-
-    throw new Error(
-      `Intervals.icu API returned ${response.status} for activity ${id}: ${body}`,
-    );
-  }
-
-  return response.json();
-}
-
-async function fetchStreams(id: string): Promise<any[]> {
-  const url = `${API_BASE}/activity/${encodeURIComponent(id)}/streams.json`;
-
-  const response = await fetch(url, {
-    headers: {
-      Authorization: authHeader(),
-      Accept: "application/json",
-    },
-  });
-
-  if (!response.ok) {
-    const body = await response.text();
-
-    throw new Error(
-      `Intervals.icu streams API returned ${response.status} for activity ${id}: ${body}`,
-    );
-  }
-
-  const streams = await response.json();
-
-  if (!Array.isArray(streams)) {
-    throw new Error(
-      `Intervals.icu streams API returned unexpected data for activity ${id}`,
-    );
-  }
-
-  return streams;
-}
-
 function formatDuration(seconds: unknown): string {
   if (typeof seconds !== "number") {
     return "unknown";
@@ -175,8 +118,14 @@ function formatNumber(value: unknown, decimals = 2): string {
   return typeof value === "number" ? value.toFixed(decimals) : "unknown";
 }
 
-function findStream(streams: any[], type: string): any | undefined {
-  return streams.find((stream) => stream.type === type);
+function findStream(streams: unknown[], type: string): any | undefined {
+  return streams.find(
+    (stream) =>
+      stream &&
+      typeof stream === "object" &&
+      "type" in stream &&
+      stream.type === type,
+  );
 }
 
 function numericValues(data: unknown): number[] {
@@ -191,7 +140,7 @@ function numericValues(data: unknown): number[] {
 }
 
 function streamRange(
-  streams: any[],
+  streams: unknown[],
   type: string,
 ): { min: number; max: number } | undefined {
   const stream = findStream(streams, type);
@@ -208,7 +157,7 @@ function streamRange(
 }
 
 function coordinateValues(
-  streams: any[],
+  streams: unknown[],
 ): Array<[number, number]> {
   const stream = findStream(streams, "latlng");
 
@@ -240,7 +189,7 @@ function coordinateValues(
   return coordinates;
 }
 
-function geographicDerivation(streams: any[]) {
+function geographicDerivation(streams: unknown[]) {
   const coordinates = coordinateValues(streams);
 
   if (coordinates.length === 0) {
@@ -265,7 +214,7 @@ function geographicDerivation(streams: any[]) {
 
 function activityEvidence(
   activity: any,
-  streams: any[],
+  streams: unknown[],
 ): string {
   const isRun = activity.type === "Run";
 
@@ -376,10 +325,7 @@ Geographic and physiological values in this document are calculated from the pre
 }
 
 async function ingestActivity(activityId: string): Promise<void> {
-  const [activity, streams] = await Promise.all([
-    fetchActivity(activityId),
-    fetchStreams(activityId),
-  ]);
+  const activity = await activityPlatform.getActivity(activityId);
 
   const directory = join("activities", activityId);
 
@@ -387,23 +333,32 @@ async function ingestActivity(activityId: string): Promise<void> {
 
   const sourcePath = join(directory, "source.json");
   const streamsPath = join(directory, "streams.json");
+  const workoutPath = join(directory, "workout.json");
   const evidencePath = join(directory, "evidence.md");
 
   await writeFile(
     sourcePath,
-    JSON.stringify(activity, null, 2) + "\n",
+    JSON.stringify(activity.source, null, 2) + "\n",
     "utf8",
   );
 
   await writeFile(
     streamsPath,
-    JSON.stringify(streams, null, 2) + "\n",
+    JSON.stringify(activity.streams, null, 2) + "\n",
     "utf8",
   );
 
+  if (activity.workout !== undefined) {
+    await writeFile(
+      workoutPath,
+      JSON.stringify(activity.workout, null, 2) + "\n",
+      "utf8",
+    );
+  }
+
   await writeFile(
     evidencePath,
-    activityEvidence(activity, streams),
+    activityEvidence(activity.source, activity.streams),
     "utf8",
   );
 }
@@ -415,43 +370,33 @@ function formatFailure(error: unknown): string {
 async function ingestAll(
   entries: ActivityIndexEntry[],
 ): Promise<IngestionFailure[]> {
-  const failures: IngestionFailure[] = [];
-  let nextIndex = 0;
+  console.log('Downloads are rate-limited; the first result may take a few seconds.')
 
-  async function worker(): Promise<void> {
-    while (true) {
-      const index = nextIndex++;
-
-      if (index >= entries.length) {
-        return;
-      }
-
-      const entry = entries[index];
-
+  const results = await Promise.all(
+    entries.map(async (entry, index) => {
       try {
         await ingestActivity(entry.id);
 
         console.log(
           `[${index + 1}/${entries.length}] OK — ${entry.id} — ${entry.start_date_local} — ${entry.type} — ${entry.name}`,
         );
-      } catch (error) {
-        failures.push({ entry, error });
 
+        return undefined;
+      } catch (error) {
         console.error(
           `[${index + 1}/${entries.length}] FAILED — ${entry.id} — ${entry.start_date_local} — ${entry.type} — ${entry.name}`,
         );
         console.error(`  ${formatFailure(error)}`);
+
+        return { entry, error };
       }
-    }
-  }
-
-  const workerCount = Math.min(CONCURRENCY, entries.length);
-
-  await Promise.all(
-    Array.from({ length: workerCount }, () => worker()),
+    }),
   );
 
-  return failures;
+  return results.filter(
+    (result): result is IngestionFailure =>
+      result !== undefined,
+  );
 }
 
 async function main() {
@@ -475,7 +420,6 @@ async function main() {
   console.log("Ingesting activities from discovery index");
   console.log(`  Index: ${ACTIVITY_INDEX_PATH}`);
   console.log(`  Activities: ${index.activities.length}`);
-  console.log(`  Concurrency: ${CONCURRENCY}`);
   console.log("");
 
   const failures = await ingestAll(index.activities);
