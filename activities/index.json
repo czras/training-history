@@ -1,0 +1,4758 @@
+{
+  "source": "intervals.icu",
+  "object_type": "activity",
+  "activities": [
+    {
+      "id": "i17044608",
+      "start_date_local": "2023-02-07T08:13:48",
+      "type": "Run",
+      "name": "Morning Run"
+    },
+    {
+      "id": "i17044609",
+      "start_date_local": "2023-02-07T17:10:07",
+      "type": "Run",
+      "name": "Afternoon Run"
+    },
+    {
+      "id": "i17044619",
+      "start_date_local": "2023-02-10T08:09:54",
+      "type": "Run",
+      "name": "Morning Run"
+    },
+    {
+      "id": "i17044620",
+      "start_date_local": "2023-02-10T17:25:11",
+      "type": "Run",
+      "name": "Afternoon Run"
+    },
+    {
+      "id": "i17044623",
+      "start_date_local": "2023-02-11T16:40:28",
+      "type": "Run",
+      "name": "Afternoon Run"
+    },
+    {
+      "id": "i17044630",
+      "start_date_local": "2023-02-14T08:18:29",
+      "type": "Run",
+      "name": "Morning Run"
+    },
+    {
+      "id": "i17044632",
+      "start_date_local": "2023-02-14T17:28:03",
+      "type": "Run",
+      "name": "Afternoon Run"
+    },
+    {
+      "id": "i17044659",
+      "start_date_local": "2023-02-25T15:50:07",
+      "type": "Run",
+      "name": "Afternoon Run"
+    },
+    {
+      "id": "i17044662",
+      "start_date_local": "2023-02-26T11:28:48",
+      "type": "Run",
+      "name": "Lunch Run"
+    },
+    {
+      "id": "i17044672",
+      "start_date_local": "2023-03-01T17:12:06",
+      "type": "Run",
+      "name": "Afternoon Run"
+    },
+    {
+      "id": "i17044675",
+      "start_date_local": "2023-03-03T17:51:49",
+      "type": "Run",
+      "name": "Afternoon Run"
+    },
+    {
+      "id": "i17044680",
+      "start_date_local": "2023-03-05T12:14:38",
+      "type": "Run",
+      "name": "Lunch Run"
+    },
+    {
+      "id": "i17044685",
+      "start_date_local": "2023-03-07T08:31:42",
+      "type": "Run",
+      "name": "Morning Run"
+    },
+    {
+      "id": "i17044686",
+      "start_date_local": "2023-03-07T16:20:59",
+      "type": "Run",
+      "name": "Afternoon Run"
+    },
+    {
+      "id": "i17044694",
+      "start_date_local": "2023-03-08T17:46:04",
+      "type": "Run",
+      "name": "Afternoon Run"
+    },
+    {
+      "id": "i17044701",
+      "start_date_local": "2023-03-10T18:18:12",
+      "type": "Run",
+      "name": "Evening Run"
+    },
+    {
+      "id": "i17044706",
+      "start_date_local": "2023-03-12T13:18:58",
+      "type": "Run",
+      "name": "Lunch Run"
+    },
+    {
+      "id": "i17044713",
+      "start_date_local": "2023-03-15T19:17:57",
+      "type": "Run",
+      "name": "Evening Run"
+    },
+    {
+      "id": "i17044716",
+      "start_date_local": "2023-03-17T17:15:37",
+      "type": "Run",
+      "name": "Afternoon Run"
+    },
+    {
+      "id": "i17044721",
+      "start_date_local": "2023-03-19T11:46:05",
+      "type": "Run",
+      "name": "Lunch Run"
+    },
+    {
+      "id": "i17044733",
+      "start_date_local": "2023-03-21T08:37:52",
+      "type": "Run",
+      "name": "Morning Run"
+    },
+    {
+      "id": "i17044737",
+      "start_date_local": "2023-03-21T16:48:51",
+      "type": "Run",
+      "name": "Afternoon Run"
+    },
+    {
+      "id": "i17044750",
+      "start_date_local": "2023-03-23T20:49:22",
+      "type": "Run",
+      "name": "Night Run"
+    },
+    {
+      "id": "i17044759",
+      "start_date_local": "2023-03-25T11:51:18",
+      "type": "Run",
+      "name": "Dél-Börzsönyi Kilátások 20"
+    },
+    {
+      "id": "i17044769",
+      "start_date_local": "2023-03-28T08:22:44",
+      "type": "Run",
+      "name": "Morning Run"
+    },
+    {
+      "id": "i17044771",
+      "start_date_local": "2023-03-28T16:48:47",
+      "type": "Run",
+      "name": "Afternoon Run"
+    },
+    {
+      "id": "i17044785",
+      "start_date_local": "2023-03-30T08:08:55",
+      "type": "Run",
+      "name": "Morning Run"
+    },
+    {
+      "id": "i17044789",
+      "start_date_local": "2023-03-30T15:39:18",
+      "type": "Run",
+      "name": "Afternoon Run"
+    },
+    {
+      "id": "i17044803",
+      "start_date_local": "2023-04-01T20:53:51",
+      "type": "Run",
+      "name": "Night Run"
+    },
+    {
+      "id": "i17044806",
+      "start_date_local": "2023-04-02T13:35:30",
+      "type": "Run",
+      "name": "Lunch Run"
+    },
+    {
+      "id": "i17044817",
+      "start_date_local": "2023-04-04T07:57:26",
+      "type": "Run",
+      "name": "Morning Run"
+    },
+    {
+      "id": "i17044826",
+      "start_date_local": "2023-04-04T16:02:05",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17044844",
+      "start_date_local": "2023-04-07T19:44:50",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17044849",
+      "start_date_local": "2023-04-09T14:16:36",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17044860",
+      "start_date_local": "2023-04-11T09:13:24",
+      "type": "Run",
+      "name": "Munkába"
+    },
+    {
+      "id": "i17044863",
+      "start_date_local": "2023-04-11T17:08:21",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17044874",
+      "start_date_local": "2023-04-13T08:31:28",
+      "type": "Run",
+      "name": "Munkába"
+    },
+    {
+      "id": "i17044876",
+      "start_date_local": "2023-04-13T18:07:56",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17044885",
+      "start_date_local": "2023-04-16T18:23:15",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i17044894",
+      "start_date_local": "2023-04-18T08:40:31",
+      "type": "Run",
+      "name": "Munkába"
+    },
+    {
+      "id": "i17044899",
+      "start_date_local": "2023-04-18T16:26:28",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17044908",
+      "start_date_local": "2023-04-20T19:45:35",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17044921",
+      "start_date_local": "2023-04-23T21:22:29",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17044930",
+      "start_date_local": "2023-04-25T09:07:27",
+      "type": "Run",
+      "name": "Munkába"
+    },
+    {
+      "id": "i17044933",
+      "start_date_local": "2023-04-25T18:14:06",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17054996",
+      "start_date_local": "2023-04-28T16:50:53",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17149768",
+      "start_date_local": "2023-04-30T13:44:15",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17295137",
+      "start_date_local": "2023-05-03T19:30:50",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17353644",
+      "start_date_local": "2023-05-05T07:24:43",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17365660",
+      "start_date_local": "2023-05-05T16:36:38",
+      "type": "Run",
+      "name": "Munkából"
+    },
+    {
+      "id": "i17465298",
+      "start_date_local": "2023-05-07T17:11:21",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17562765",
+      "start_date_local": "2023-05-09T21:53:23",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17599595",
+      "start_date_local": "2023-05-10T19:40:22",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i17703959",
+      "start_date_local": "2023-05-13T09:08:54",
+      "type": "Run",
+      "name": "Vértes 40k lépés"
+    },
+    {
+      "id": "i17803700",
+      "start_date_local": "2023-05-16T07:35:21",
+      "type": "Run",
+      "name": "Regeneráló"
+    },
+    {
+      "id": "i17815973",
+      "start_date_local": "2023-05-16T16:02:36",
+      "type": "Run",
+      "name": "Munkából"
+    },
+    {
+      "id": "i17924929",
+      "start_date_local": "2023-05-19T08:11:10",
+      "type": "Run",
+      "name": "Munkába"
+    },
+    {
+      "id": "i17955375",
+      "start_date_local": "2023-05-19T16:38:18",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i19064479",
+      "start_date_local": "2023-06-11T15:50:30",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i19203510",
+      "start_date_local": "2023-06-14T16:36:42",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i19377920",
+      "start_date_local": "2023-06-18T08:31:28",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i19536752",
+      "start_date_local": "2023-06-21T06:22:18",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i19586451",
+      "start_date_local": "2023-06-22T05:41:41",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i19670637",
+      "start_date_local": "2023-06-24T08:21:10",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i19711349",
+      "start_date_local": "2023-06-25T07:29:47",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i19843190",
+      "start_date_local": "2023-06-28T06:13:36",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i19894502",
+      "start_date_local": "2023-06-29T06:01:37",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i19975567",
+      "start_date_local": "2023-07-01T08:01:52",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i20000006",
+      "start_date_local": "2023-07-01T19:11:17",
+      "type": "Swim",
+      "name": "Könnyű "
+    },
+    {
+      "id": "i20012246",
+      "start_date_local": "2023-07-02T06:35:48",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i20043726",
+      "start_date_local": "2023-07-02T19:17:23",
+      "type": "Swim",
+      "name": "Könnyű "
+    },
+    {
+      "id": "i20154364",
+      "start_date_local": "2023-07-05T06:26:00",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i20201734",
+      "start_date_local": "2023-07-06T05:53:54",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i20293297",
+      "start_date_local": "2023-07-08T05:50:06",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i20339017",
+      "start_date_local": "2023-07-08T09:40:06",
+      "type": "Hike",
+      "name": "Pirkancos"
+    },
+    {
+      "id": "i20341644",
+      "start_date_local": "2023-07-09T07:05:28",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i20483885",
+      "start_date_local": "2023-07-12T05:52:48",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i20529044",
+      "start_date_local": "2023-07-13T05:32:49",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i20620010",
+      "start_date_local": "2023-07-15T06:04:34",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i20653735",
+      "start_date_local": "2023-07-15T11:04:02",
+      "type": "Hike",
+      "name": "Kék Badacsony 11"
+    },
+    {
+      "id": "i20660840",
+      "start_date_local": "2023-07-16T05:35:22",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i20736852",
+      "start_date_local": "2023-07-17T19:20:03",
+      "type": "Swim",
+      "name": "Könnyű "
+    },
+    {
+      "id": "i20810263",
+      "start_date_local": "2023-07-19T06:17:58",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i20864936",
+      "start_date_local": "2023-07-20T05:48:53",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i20954083",
+      "start_date_local": "2023-07-22T07:35:05",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i20955450",
+      "start_date_local": "2023-07-22T09:08:49",
+      "type": "Run",
+      "name": "Könnyű"
+    },
+    {
+      "id": "i21003518",
+      "start_date_local": "2023-07-23T06:32:56",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i21034421",
+      "start_date_local": "2023-07-23T19:25:51",
+      "type": "Swim",
+      "name": "Könnyű "
+    },
+    {
+      "id": "i21080169",
+      "start_date_local": "2023-07-24T19:02:49",
+      "type": "Swim",
+      "name": "Könnyű "
+    },
+    {
+      "id": "i21141292",
+      "start_date_local": "2023-07-25T16:54:22",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i21226017",
+      "start_date_local": "2023-07-26T16:48:18",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i21314830",
+      "start_date_local": "2023-07-28T05:31:21",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i21387047",
+      "start_date_local": "2023-07-29T10:04:06",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i21512016",
+      "start_date_local": "2023-08-01T07:25:22",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i21620578",
+      "start_date_local": "2023-08-03T09:22:44",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i21680840",
+      "start_date_local": "2023-08-04T11:09:34",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i21757265",
+      "start_date_local": "2023-08-06T09:01:36",
+      "type": "TrailRun",
+      "name": "Balaton IVV 25"
+    },
+    {
+      "id": "i21901625",
+      "start_date_local": "2023-08-09T05:16:16",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i21980628",
+      "start_date_local": "2023-08-10T16:22:32",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i22043832",
+      "start_date_local": "2023-08-12T05:32:17",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i22109624",
+      "start_date_local": "2023-08-13T09:30:31",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i22184684",
+      "start_date_local": "2023-08-15T06:33:44",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i22234457",
+      "start_date_local": "2023-08-16T05:33:03",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i22284596",
+      "start_date_local": "2023-08-17T05:35:53",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i22381519",
+      "start_date_local": "2023-08-19T07:08:46",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i22441655",
+      "start_date_local": "2023-08-20T08:44:56",
+      "type": "TrailRun",
+      "name": "István kardja 25 "
+    },
+    {
+      "id": "i22528556",
+      "start_date_local": "2023-08-22T05:56:24",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i22598328",
+      "start_date_local": "2023-08-23T05:59:20",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i22657082",
+      "start_date_local": "2023-08-24T04:57:58",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i22761083",
+      "start_date_local": "2023-08-26T05:30:18",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i22818017",
+      "start_date_local": "2023-08-27T09:13:04",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i22854914",
+      "start_date_local": "2023-08-28T06:31:38",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i22908647",
+      "start_date_local": "2023-08-29T06:38:49",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i22971655",
+      "start_date_local": "2023-08-30T06:59:36",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i23049071",
+      "start_date_local": "2023-08-31T11:56:26",
+      "type": "Hike",
+      "name": "Josefswarte Oliviával"
+    },
+    {
+      "id": "i23100154",
+      "start_date_local": "2023-09-01T19:20:04",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i23167665",
+      "start_date_local": "2023-09-03T09:20:17",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i23250033",
+      "start_date_local": "2023-09-05T04:42:25",
+      "type": "Run",
+      "name": "Domb x6"
+    },
+    {
+      "id": "i23411446",
+      "start_date_local": "2023-09-07T00:00:00",
+      "type": "Run",
+      "name": "MLSS teszt"
+    },
+    {
+      "id": "i23419279",
+      "start_date_local": "2023-09-08T06:23:19",
+      "type": "Run",
+      "name": "Domb x6"
+    },
+    {
+      "id": "i23471183",
+      "start_date_local": "2023-09-09T07:11:26",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i23527781",
+      "start_date_local": "2023-09-10T09:16:57",
+      "type": "Run",
+      "name": "Dr. Hegyi Imre emléktúra 20"
+    },
+    {
+      "id": "i23565849",
+      "start_date_local": "2023-09-11T06:14:46",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i23613111",
+      "start_date_local": "2023-09-12T04:27:49",
+      "type": "Run",
+      "name": "Domb x8"
+    },
+    {
+      "id": "i23672891",
+      "start_date_local": "2023-09-13T05:28:07",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i23785353",
+      "start_date_local": "2023-09-15T05:38:59",
+      "type": "Run",
+      "name": "Domb x9"
+    },
+    {
+      "id": "i23833690",
+      "start_date_local": "2023-09-16T07:27:10",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i23892397",
+      "start_date_local": "2023-09-17T08:09:43",
+      "type": "Run",
+      "name": "Kőről kőre a Balatonfelvidéken 25"
+    },
+    {
+      "id": "i23929114",
+      "start_date_local": "2023-09-18T05:45:12",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i23975597",
+      "start_date_local": "2023-09-19T04:02:17",
+      "type": "Run",
+      "name": "Domb x10"
+    },
+    {
+      "id": "i24031005",
+      "start_date_local": "2023-09-20T05:36:12",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i24083893",
+      "start_date_local": "2023-09-21T06:15:32",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i24138141",
+      "start_date_local": "2023-09-22T05:35:24",
+      "type": "Run",
+      "name": "Domb x12"
+    },
+    {
+      "id": "i24201892",
+      "start_date_local": "2023-09-23T10:51:34",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i24327848",
+      "start_date_local": "2023-09-26T04:44:08",
+      "type": "Run",
+      "name": "Domb x6"
+    },
+    {
+      "id": "i24391707",
+      "start_date_local": "2023-09-27T05:33:07",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i24443365",
+      "start_date_local": "2023-09-28T06:13:58",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i24560567",
+      "start_date_local": "2023-09-30T12:01:05",
+      "type": "Run",
+      "name": "Tihany félmaraton "
+    },
+    {
+      "id": "i24590684",
+      "start_date_local": "2023-10-01T07:14:51",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i24633219",
+      "start_date_local": "2023-10-02T05:36:08",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i24687933",
+      "start_date_local": "2023-10-03T04:48:15",
+      "type": "Run",
+      "name": "Lendületes"
+    },
+    {
+      "id": "i24945987",
+      "start_date_local": "2023-10-05T03:57:25",
+      "type": "Run",
+      "name": "Lendületes"
+    },
+    {
+      "id": "i25022245",
+      "start_date_local": "2023-10-06T03:57:27",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i25125934",
+      "start_date_local": "2023-10-07T08:19:24",
+      "type": "Run",
+      "name": "Bakonyi barangolás 30"
+    },
+    {
+      "id": "i25192525",
+      "start_date_local": "2023-10-08T08:31:51",
+      "type": "Run",
+      "name": "Németh Béla emléktúra 25"
+    },
+    {
+      "id": "i25233576",
+      "start_date_local": "2023-10-09T05:31:01",
+      "type": "Run",
+      "name": "Lendületes"
+    },
+    {
+      "id": "i25328067",
+      "start_date_local": "2023-10-10T20:09:12",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i25386710",
+      "start_date_local": "2023-10-11T17:50:15",
+      "type": "Run",
+      "name": "Lendületes"
+    },
+    {
+      "id": "i25445632",
+      "start_date_local": "2023-10-12T20:06:31",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i25529703",
+      "start_date_local": "2023-10-14T08:32:25",
+      "type": "Run",
+      "name": "Kinizsi Pál emléktúra 40"
+    },
+    {
+      "id": "i25600901",
+      "start_date_local": "2023-10-15T21:33:31",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i25705690",
+      "start_date_local": "2023-10-17T20:12:03",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i25757781",
+      "start_date_local": "2023-10-18T18:05:37",
+      "type": "Run",
+      "name": "Lendületes"
+    },
+    {
+      "id": "i25828745",
+      "start_date_local": "2023-10-19T20:35:50",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i25870333",
+      "start_date_local": "2023-10-20T16:53:55",
+      "type": "Run",
+      "name": "Lendületes"
+    },
+    {
+      "id": "i25903151",
+      "start_date_local": "2023-10-21T07:28:10",
+      "type": "TrailRun",
+      "name": "Csúcs ez a hely 45"
+    },
+    {
+      "id": "i25949211",
+      "start_date_local": "2023-10-22T08:54:41",
+      "type": "TrailRun",
+      "name": "Kőről kőre a Bakonyban 20"
+    },
+    {
+      "id": "i25994855",
+      "start_date_local": "2023-10-23T08:36:12",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i26116453",
+      "start_date_local": "2023-10-25T06:51:46",
+      "type": "Run",
+      "name": "Lendületes"
+    },
+    {
+      "id": "i26266922",
+      "start_date_local": "2023-10-27T18:59:03",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i26310472",
+      "start_date_local": "2023-10-28T10:00:09",
+      "type": "Run",
+      "name": "BUFF 6h"
+    },
+    {
+      "id": "i26372203",
+      "start_date_local": "2023-10-29T20:58:17",
+      "type": "Run",
+      "name": "Regeneráló "
+    },
+    {
+      "id": "i26485869",
+      "start_date_local": "2023-10-31T20:08:12",
+      "type": "Run",
+      "name": "Regeneráló "
+    },
+    {
+      "id": "i26533309",
+      "start_date_local": "2023-11-01T14:04:58",
+      "type": "Ride",
+      "name": "Visszatérés a tetthelyre "
+    },
+    {
+      "id": "i26658229",
+      "start_date_local": "2023-11-03T19:42:33",
+      "type": "Run",
+      "name": "Regeneráló "
+    },
+    {
+      "id": "i26714953",
+      "start_date_local": "2023-11-04T20:33:17",
+      "type": "Run",
+      "name": "Regeneráló "
+    },
+    {
+      "id": "i26812475",
+      "start_date_local": "2023-11-06T18:04:40",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i26813357",
+      "start_date_local": "2023-11-06T18:30:00",
+      "type": "Workout",
+      "name": "SVSE futóklub erősítés"
+    },
+    {
+      "id": "i26837491",
+      "start_date_local": "2023-11-07T08:20:00",
+      "type": "Workout",
+      "name": "Légzés tréning"
+    },
+    {
+      "id": "i27018122",
+      "start_date_local": "2023-11-09T22:31:19",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i27121328",
+      "start_date_local": "2023-11-11T14:46:42",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i27151296",
+      "start_date_local": "2023-11-12T08:53:51",
+      "type": "Ride",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i27306080",
+      "start_date_local": "2023-11-14T18:14:01",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i27377525",
+      "start_date_local": "2023-11-15T17:12:52",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i27405091",
+      "start_date_local": "2023-11-16T08:19:44",
+      "type": "WeightTraining",
+      "name": "Strivacity erősítés "
+    },
+    {
+      "id": "i27513994",
+      "start_date_local": "2023-11-17T18:06:47",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i27513993",
+      "start_date_local": "2023-11-17T18:38:10",
+      "type": "Workout",
+      "name": "SVSE futóiskola "
+    },
+    {
+      "id": "i27527649",
+      "start_date_local": "2023-11-18T07:35:52",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i27685087",
+      "start_date_local": "2023-11-20T18:05:34",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i27685085",
+      "start_date_local": "2023-11-20T18:39:13",
+      "type": "WeightTraining",
+      "name": "SVSE erősítés "
+    },
+    {
+      "id": "i27923489",
+      "start_date_local": "2023-11-24T18:02:47",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i27985694",
+      "start_date_local": "2023-11-25T07:55:27",
+      "type": "Hike",
+      "name": "Tanúhegyek nyomában 40"
+    },
+    {
+      "id": "i28074882",
+      "start_date_local": "2023-11-27T18:04:20",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i28074888",
+      "start_date_local": "2023-11-27T18:37:25",
+      "type": "WeightTraining",
+      "name": "SVSE erősítés "
+    },
+    {
+      "id": "i28127453",
+      "start_date_local": "2023-11-28T17:35:45",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i28285912",
+      "start_date_local": "2023-12-01T18:04:12",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i28335942",
+      "start_date_local": "2023-12-02T09:30:11",
+      "type": "Hike",
+      "name": "Bakonyi Mikulás 18"
+    },
+    {
+      "id": "i28441004",
+      "start_date_local": "2023-12-04T18:06:25",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i28441003",
+      "start_date_local": "2023-12-04T18:41:09",
+      "type": "WeightTraining",
+      "name": "SVSE erősítés "
+    },
+    {
+      "id": "i28458067",
+      "start_date_local": "2023-12-05T06:15:19",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i28461925",
+      "start_date_local": "2023-12-05T08:23:54",
+      "type": "WeightTraining",
+      "name": "Strivacity erősítés"
+    },
+    {
+      "id": "i28795753",
+      "start_date_local": "2023-12-11T18:06:39",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i28795752",
+      "start_date_local": "2023-12-11T18:23:36",
+      "type": "Run",
+      "name": "SVSE futóiskola, erősítés "
+    },
+    {
+      "id": "i28843305",
+      "start_date_local": "2023-12-12T20:01:48",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i28859889",
+      "start_date_local": "2023-12-13T06:35:41",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i28973832",
+      "start_date_local": "2023-12-15T05:56:24",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i29035370",
+      "start_date_local": "2023-12-16T09:53:35",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i29077279",
+      "start_date_local": "2023-12-17T06:39:27",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i29183437",
+      "start_date_local": "2023-12-18T18:04:50",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i29183435",
+      "start_date_local": "2023-12-18T18:40:51",
+      "type": "WeightTraining",
+      "name": "SVSE erősítés "
+    },
+    {
+      "id": "i29201010",
+      "start_date_local": "2023-12-19T06:04:19",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i29268911",
+      "start_date_local": "2023-12-20T09:25:30",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i29360278",
+      "start_date_local": "2023-12-21T18:28:34",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i29410091",
+      "start_date_local": "2023-12-22T18:04:10",
+      "type": "Run",
+      "name": "Veszprun futás "
+    },
+    {
+      "id": "i29434750",
+      "start_date_local": "2023-12-23T08:16:48",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i29494017",
+      "start_date_local": "2023-12-24T08:13:06",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i29550043",
+      "start_date_local": "2023-12-25T10:42:49",
+      "type": "Ride",
+      "name": "(majdnem) Kőris-hegyi cyclocross "
+    },
+    {
+      "id": "i29609266",
+      "start_date_local": "2023-12-26T20:23:17",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i29639924",
+      "start_date_local": "2023-12-27T09:10:19",
+      "type": "Run",
+      "name": "Veszprém Bejgli(fél)maraton"
+    },
+    {
+      "id": "i29807342",
+      "start_date_local": "2023-12-29T15:39:19",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i29836961",
+      "start_date_local": "2023-12-30T07:44:47",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i29931770",
+      "start_date_local": "2023-12-31T15:34:56",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i29973668",
+      "start_date_local": "2024-01-01T12:48:57",
+      "type": "Run",
+      "name": "Domb rövid x6"
+    },
+    {
+      "id": "i30016288",
+      "start_date_local": "2024-01-02T06:36:36",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i30098573",
+      "start_date_local": "2024-01-03T07:22:12",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i30170994",
+      "start_date_local": "2024-01-04T07:03:24",
+      "type": "Run",
+      "name": "Domb rövid x9"
+    },
+    {
+      "id": "i30238955",
+      "start_date_local": "2024-01-05T06:01:11",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i30304857",
+      "start_date_local": "2024-01-06T06:15:28",
+      "type": "Run",
+      "name": "Lendületes "
+    },
+    {
+      "id": "i30371836",
+      "start_date_local": "2024-01-07T08:12:09",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i30435591",
+      "start_date_local": "2024-01-08T08:05:24",
+      "type": "Run",
+      "name": "Domb rövid x9"
+    },
+    {
+      "id": "i30485464",
+      "start_date_local": "2024-01-08T18:03:06",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i30485463",
+      "start_date_local": "2024-01-08T18:28:29",
+      "type": "WeightTraining",
+      "name": "SVSE erősítés "
+    },
+    {
+      "id": "i30504586",
+      "start_date_local": "2024-01-09T04:25:26",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i30584886",
+      "start_date_local": "2024-01-10T05:10:40",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i30698650",
+      "start_date_local": "2024-01-11T18:48:19",
+      "type": "Run",
+      "name": "Lendületes "
+    },
+    {
+      "id": "i30796061",
+      "start_date_local": "2024-01-13T10:45:26",
+      "type": "Run",
+      "name": "Tihany Trail 15km/406m"
+    },
+    {
+      "id": "i30838681",
+      "start_date_local": "2024-01-14T08:14:12",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i30899566",
+      "start_date_local": "2024-01-15T05:59:01",
+      "type": "Run",
+      "name": "Regeneráló "
+    },
+    {
+      "id": "i30948470",
+      "start_date_local": "2024-01-15T18:02:29",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i30948468",
+      "start_date_local": "2024-01-15T18:34:44",
+      "type": "WeightTraining",
+      "name": "SVSE erősítés "
+    },
+    {
+      "id": "i30976310",
+      "start_date_local": "2024-01-16T06:05:44",
+      "type": "Run",
+      "name": "Lendületes"
+    },
+    {
+      "id": "i31065891",
+      "start_date_local": "2024-01-17T06:43:18",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i31137715",
+      "start_date_local": "2024-01-18T07:42:00",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i31193023",
+      "start_date_local": "2024-01-19T05:41:31",
+      "type": "Run",
+      "name": "Domb rövid x9"
+    },
+    {
+      "id": "i31247970",
+      "start_date_local": "2024-01-20T05:37:56",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i31330078",
+      "start_date_local": "2024-01-21T10:41:43",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i31403856",
+      "start_date_local": "2024-01-22T18:14:24",
+      "type": "Run",
+      "name": "Evening Run"
+    },
+    {
+      "id": "i31403854",
+      "start_date_local": "2024-01-22T18:40:57",
+      "type": "WeightTraining",
+      "name": "SVSE erősítés "
+    },
+    {
+      "id": "i31443443",
+      "start_date_local": "2024-01-23T08:25:07",
+      "type": "WeightTraining",
+      "name": "Strivacity erősítés "
+    },
+    {
+      "id": "i31473696",
+      "start_date_local": "2024-01-23T18:06:16",
+      "type": "Run",
+      "name": "Lendületes"
+    },
+    {
+      "id": "i31503709",
+      "start_date_local": "2024-01-24T06:44:27",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i31597894",
+      "start_date_local": "2024-01-25T05:53:27",
+      "type": "Run",
+      "name": "Domb rövid x9"
+    },
+    {
+      "id": "i31669831",
+      "start_date_local": "2024-01-26T07:11:43",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i31707001",
+      "start_date_local": "2024-01-26T18:02:43",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i31750186",
+      "start_date_local": "2024-01-27T08:46:12",
+      "type": "Run",
+      "name": "Margit vonal emléktúra 20"
+    },
+    {
+      "id": "i31820856",
+      "start_date_local": "2024-01-28T10:28:33",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i31878474",
+      "start_date_local": "2024-01-29T05:55:48",
+      "type": "Run",
+      "name": "Lendületes"
+    },
+    {
+      "id": "i31919601",
+      "start_date_local": "2024-01-29T18:02:04",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i31919600",
+      "start_date_local": "2024-01-29T18:36:52",
+      "type": "WeightTraining",
+      "name": "SVSE erősítés "
+    },
+    {
+      "id": "i31946335",
+      "start_date_local": "2024-01-30T06:38:41",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i31946333",
+      "start_date_local": "2024-01-30T08:23:40",
+      "type": "WeightTraining",
+      "name": "Strivacity erősítés "
+    },
+    {
+      "id": "i32010688",
+      "start_date_local": "2024-01-31T06:57:55",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i32070970",
+      "start_date_local": "2024-02-01T06:04:35",
+      "type": "Run",
+      "name": "Domb rövid x9"
+    },
+    {
+      "id": "i32137983",
+      "start_date_local": "2024-02-02T07:05:51",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i32171285",
+      "start_date_local": "2024-02-02T17:45:50",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i32202539",
+      "start_date_local": "2024-02-03T08:00:19",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i32280306",
+      "start_date_local": "2024-02-04T10:08:23",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i32387102",
+      "start_date_local": "2024-02-05T18:03:37",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i32387100",
+      "start_date_local": "2024-02-05T18:37:28",
+      "type": "WeightTraining",
+      "name": "SVSE erősítés "
+    },
+    {
+      "id": "i32424193",
+      "start_date_local": "2024-02-06T08:04:13",
+      "type": "Run",
+      "name": "Lendületes"
+    },
+    {
+      "id": "i32462621",
+      "start_date_local": "2024-02-06T18:11:47",
+      "type": "Run",
+      "name": "VeszpRun haladó "
+    },
+    {
+      "id": "i32483291",
+      "start_date_local": "2024-02-07T06:08:47",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i32565815",
+      "start_date_local": "2024-02-08T08:29:47",
+      "type": "Run",
+      "name": "Domb rövid x9"
+    },
+    {
+      "id": "i32624618",
+      "start_date_local": "2024-02-09T08:00:49",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i32651128",
+      "start_date_local": "2024-02-09T18:03:55",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i32713721",
+      "start_date_local": "2024-02-10T14:19:24",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i32849865",
+      "start_date_local": "2024-02-12T18:04:52",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i32849862",
+      "start_date_local": "2024-02-12T18:43:01",
+      "type": "WeightTraining",
+      "name": "SVSE erősítés "
+    },
+    {
+      "id": "i32882049",
+      "start_date_local": "2024-02-13T08:19:50",
+      "type": "WeightTraining",
+      "name": "Strivacity erősítés "
+    },
+    {
+      "id": "i33206929",
+      "start_date_local": "2024-02-17T07:24:43",
+      "type": "TrailRun",
+      "name": "Bakony Vadon 25"
+    },
+    {
+      "id": "i33309381",
+      "start_date_local": "2024-02-19T18:06:10",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i33309380",
+      "start_date_local": "2024-02-19T18:42:13",
+      "type": "WeightTraining",
+      "name": "SVSE erősítés "
+    },
+    {
+      "id": "i33339642",
+      "start_date_local": "2024-02-20T08:21:57",
+      "type": "WeightTraining",
+      "name": "Strivacity erősítés "
+    },
+    {
+      "id": "i33401439",
+      "start_date_local": "2024-02-21T06:39:45",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i33485909",
+      "start_date_local": "2024-02-22T10:24:05",
+      "type": "Run",
+      "name": "MLSS teszt"
+    },
+    {
+      "id": "i34359685",
+      "start_date_local": "2024-03-04T18:04:50",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i34400566",
+      "start_date_local": "2024-03-05T08:23:03",
+      "type": "WeightTraining",
+      "name": "Strivacity erősítés "
+    },
+    {
+      "id": "i34451991",
+      "start_date_local": "2024-03-05T18:26:53",
+      "type": "Run",
+      "name": "VeszpRun haladó "
+    },
+    {
+      "id": "i34494248",
+      "start_date_local": "2024-03-06T05:49:41",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i34577041",
+      "start_date_local": "2024-03-07T08:23:58",
+      "type": "WeightTraining",
+      "name": "Strivacity erősítés "
+    },
+    {
+      "id": "i34701401",
+      "start_date_local": "2024-03-08T18:03:10",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i34774879",
+      "start_date_local": "2024-03-09T08:54:06",
+      "type": "Run",
+      "name": "Reguly Antal emléktúra 35"
+    },
+    {
+      "id": "i34880793",
+      "start_date_local": "2024-03-11T05:50:53",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i34955244",
+      "start_date_local": "2024-03-12T08:23:52",
+      "type": "WeightTraining",
+      "name": "Strivacity erősítés "
+    },
+    {
+      "id": "i35002999",
+      "start_date_local": "2024-03-12T18:22:50",
+      "type": "Run",
+      "name": "VeszpRun haladó "
+    },
+    {
+      "id": "i35022852",
+      "start_date_local": "2024-03-13T05:42:06",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i35100843",
+      "start_date_local": "2024-03-14T08:22:56",
+      "type": "WeightTraining",
+      "name": "Strivacity erősítés "
+    },
+    {
+      "id": "i35184079",
+      "start_date_local": "2024-03-15T09:15:01",
+      "type": "Run",
+      "name": "Táncsicstól-Táncsicsig terepfutás"
+    },
+    {
+      "id": "i35320843",
+      "start_date_local": "2024-03-17T09:06:10",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i35443288",
+      "start_date_local": "2024-03-18T18:04:18",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i35541058",
+      "start_date_local": "2024-03-19T18:21:45",
+      "type": "Run",
+      "name": "VeszpRun haladó "
+    },
+    {
+      "id": "i35543915",
+      "start_date_local": "2024-03-20T06:03:22",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i35625219",
+      "start_date_local": "2024-03-21T08:21:38",
+      "type": "WeightTraining",
+      "name": "Strivacity erősítés "
+    },
+    {
+      "id": "i35698264",
+      "start_date_local": "2024-03-22T06:02:42",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i35783290",
+      "start_date_local": "2024-03-23T08:57:39",
+      "type": "Run",
+      "name": "Pétfürdői Tavasz 26"
+    },
+    {
+      "id": "i35858122",
+      "start_date_local": "2024-03-24T11:30:27",
+      "type": "Run",
+      "name": "NN City Run félmaraton"
+    },
+    {
+      "id": "i35952591",
+      "start_date_local": "2024-03-25T18:07:03",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i36220624",
+      "start_date_local": "2024-03-29T09:47:02",
+      "type": "Run",
+      "name": "Nagypénteki keresztút 25"
+    },
+    {
+      "id": "i36260510",
+      "start_date_local": "2024-03-30T07:38:47",
+      "type": "Run",
+      "name": "Bakonyi Nyuszitúra 33"
+    },
+    {
+      "id": "i36758081",
+      "start_date_local": "2024-04-05T18:06:17",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i36969396",
+      "start_date_local": "2024-04-08T18:05:22",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i37275152",
+      "start_date_local": "2024-04-12T18:02:51",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i37311792",
+      "start_date_local": "2024-04-13T09:16:09",
+      "type": "Run",
+      "name": "Generali Run maraton"
+    },
+    {
+      "id": "i37989695",
+      "start_date_local": "2024-04-22T18:05:51",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i38568803",
+      "start_date_local": "2024-04-29T18:05:41",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i38801325",
+      "start_date_local": "2024-05-03T06:16:42",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i39030533",
+      "start_date_local": "2024-05-06T06:23:56",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i39076125",
+      "start_date_local": "2024-05-06T18:05:44",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i39152212",
+      "start_date_local": "2024-05-07T17:50:03",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i39439331",
+      "start_date_local": "2024-05-10T18:03:22",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i39594182",
+      "start_date_local": "2024-05-13T05:15:12",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i39641395",
+      "start_date_local": "2024-05-13T18:06:32",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i39672655",
+      "start_date_local": "2024-05-14T05:57:08",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i39765236",
+      "start_date_local": "2024-05-15T06:12:02",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i39849830",
+      "start_date_local": "2024-05-16T05:58:41",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i40035205",
+      "start_date_local": "2024-05-18T11:56:50",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i40139118",
+      "start_date_local": "2024-05-19T13:26:14",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i40188161",
+      "start_date_local": "2024-05-20T08:21:39",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i40259631",
+      "start_date_local": "2024-05-21T06:01:27",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i40433370",
+      "start_date_local": "2024-05-23T06:20:16",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i40558205",
+      "start_date_local": "2024-05-24T18:03:27",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i40661417",
+      "start_date_local": "2024-05-25T12:19:17",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i40661418",
+      "start_date_local": "2024-05-26T07:24:38",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i41095209",
+      "start_date_local": "2024-05-31T18:01:35",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i41258510",
+      "start_date_local": "2024-06-02T06:00:04",
+      "type": "Run",
+      "name": "GOMU 48H World Championship - 6h"
+    },
+    {
+      "id": "i41672789",
+      "start_date_local": "2024-06-08T07:43:13",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i41748230",
+      "start_date_local": "2024-06-09T08:28:18",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i41866522",
+      "start_date_local": "2024-06-10T18:04:53",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i41950010",
+      "start_date_local": "2024-06-11T18:59:25",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i41971818",
+      "start_date_local": "2024-06-12T05:43:11",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i42057838",
+      "start_date_local": "2024-06-13T06:33:15",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i42181295",
+      "start_date_local": "2024-06-14T18:04:41",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i42207538",
+      "start_date_local": "2024-06-15T07:37:56",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i42411580",
+      "start_date_local": "2024-06-17T18:03:20",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i42440826",
+      "start_date_local": "2024-06-18T06:02:52",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i42532597",
+      "start_date_local": "2024-06-19T05:48:42",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i42750015",
+      "start_date_local": "2024-06-21T17:51:09",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i42823975",
+      "start_date_local": "2024-06-22T18:25:39",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i42928795",
+      "start_date_local": "2024-06-24T05:40:54",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i43006685",
+      "start_date_local": "2024-06-25T05:51:23",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i43080409",
+      "start_date_local": "2024-06-26T06:05:29",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i43172487",
+      "start_date_local": "2024-06-27T08:58:16",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i43272859",
+      "start_date_local": "2024-06-28T17:46:06",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i43339928",
+      "start_date_local": "2024-06-29T13:35:03",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i43393186",
+      "start_date_local": "2024-06-30T07:38:24",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i43615527",
+      "start_date_local": "2024-07-03T06:09:12",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i43684704",
+      "start_date_local": "2024-07-03T18:57:21",
+      "type": "Run",
+      "name": "Regeneráló "
+    },
+    {
+      "id": "i43689251",
+      "start_date_local": "2024-07-04T05:57:27",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i43734781",
+      "start_date_local": "2024-07-04T18:23:15",
+      "type": "Run",
+      "name": "Regeneráló "
+    },
+    {
+      "id": "i43808680",
+      "start_date_local": "2024-07-05T17:45:22",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i43837767",
+      "start_date_local": "2024-07-06T08:20:18",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i43912726",
+      "start_date_local": "2024-07-07T06:30:03",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i44128727",
+      "start_date_local": "2024-07-10T06:33:43",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i44213718",
+      "start_date_local": "2024-07-11T06:04:49",
+      "type": "Run",
+      "name": "Regeneráló"
+    },
+    {
+      "id": "i44288039",
+      "start_date_local": "2024-07-12T06:04:12",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i44427947",
+      "start_date_local": "2024-07-14T04:00:04",
+      "type": "Run",
+      "name": "Celtic 63"
+    },
+    {
+      "id": "i44567347",
+      "start_date_local": "2024-07-16T05:59:47",
+      "type": "Run",
+      "name": "Könnyű"
+    },
+    {
+      "id": "i44647698",
+      "start_date_local": "2024-07-17T06:33:50",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i44738449",
+      "start_date_local": "2024-07-18T07:03:27",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i44810818",
+      "start_date_local": "2024-07-19T06:00:35",
+      "type": "Run",
+      "name": "Könnyű "
+    },
+    {
+      "id": "i44864663",
+      "start_date_local": "2024-07-19T18:46:08",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i44887334",
+      "start_date_local": "2024-07-20T06:04:31",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i44970164",
+      "start_date_local": "2024-07-21T06:46:31",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i45088517",
+      "start_date_local": "2024-07-22T18:43:51",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i45102901",
+      "start_date_local": "2024-07-23T06:05:06",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i45197307",
+      "start_date_local": "2024-07-24T06:29:10",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i45281222",
+      "start_date_local": "2024-07-25T06:10:08",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i45416057",
+      "start_date_local": "2024-07-26T18:51:45",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i45437458",
+      "start_date_local": "2024-07-27T05:53:33",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i45555568",
+      "start_date_local": "2024-07-28T12:34:36",
+      "type": "Ride",
+      "name": "Csapatás Gödrösre "
+    },
+    {
+      "id": "i45555567",
+      "start_date_local": "2024-07-28T14:18:29",
+      "type": "Run",
+      "name": "UB páros találka "
+    },
+    {
+      "id": "i45640962",
+      "start_date_local": "2024-07-29T18:21:07",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i45702149",
+      "start_date_local": "2024-07-30T12:53:20",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i45759561",
+      "start_date_local": "2024-07-31T07:45:39",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i45835390",
+      "start_date_local": "2024-08-01T06:36:25",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i45915498",
+      "start_date_local": "2024-08-02T06:53:49",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i45915500",
+      "start_date_local": "2024-08-02T08:12:33",
+      "type": "Run",
+      "name": "Levezetés "
+    },
+    {
+      "id": "i46079934",
+      "start_date_local": "2024-08-04T09:00:01",
+      "type": "TrailRun",
+      "name": "Balaton IVV 25 (23,8km/403m)"
+    },
+    {
+      "id": "i46140765",
+      "start_date_local": "2024-08-05T07:20:23",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i46229870",
+      "start_date_local": "2024-08-06T09:55:14",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i46344703",
+      "start_date_local": "2024-08-07T14:49:35",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i46398488",
+      "start_date_local": "2024-08-08T07:21:42",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i46543227",
+      "start_date_local": "2024-08-09T19:37:50",
+      "type": "Run",
+      "name": "Veszprémi sörmérföld"
+    },
+    {
+      "id": "i46571832",
+      "start_date_local": "2024-08-10T09:54:36",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i46678939",
+      "start_date_local": "2024-08-11T18:51:44",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i46760700",
+      "start_date_local": "2024-08-12T18:51:34",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i46790232",
+      "start_date_local": "2024-08-13T06:39:41",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i46883160",
+      "start_date_local": "2024-08-14T06:41:38",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i46970709",
+      "start_date_local": "2024-08-15T06:44:16",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i47079476",
+      "start_date_local": "2024-08-16T07:34:48",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i47174477",
+      "start_date_local": "2024-08-17T13:07:51",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i47252975",
+      "start_date_local": "2024-08-18T09:49:49",
+      "type": "Run",
+      "name": "Korinthosz 80 afer party"
+    },
+    {
+      "id": "i47463305",
+      "start_date_local": "2024-08-20T18:39:14",
+      "type": "Run",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i47554198",
+      "start_date_local": "2024-08-21T18:09:54",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i47591176",
+      "start_date_local": "2024-08-22T06:19:54",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i47737215",
+      "start_date_local": "2024-08-23T19:06:46",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i47771231",
+      "start_date_local": "2024-08-24T06:43:01",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i47854830",
+      "start_date_local": "2024-08-25T10:33:57",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i48019439",
+      "start_date_local": "2024-08-27T06:01:09",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i48106355",
+      "start_date_local": "2024-08-28T05:44:57",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i48198613",
+      "start_date_local": "2024-08-29T06:50:16",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i48285074",
+      "start_date_local": "2024-08-30T06:04:25",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i48380316",
+      "start_date_local": "2024-08-31T06:13:36",
+      "type": "TrailRun",
+      "name": "Magas Bakony 50 (51,5km/1484m)"
+    },
+    {
+      "id": "i48570614",
+      "start_date_local": "2024-09-02T18:06:50",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i48604853",
+      "start_date_local": "2024-09-03T06:08:10",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i48708307",
+      "start_date_local": "2024-09-04T06:20:12",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i48951473",
+      "start_date_local": "2024-09-06T18:04:06",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i49035529",
+      "start_date_local": "2024-09-07T16:06:44",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i49066215",
+      "start_date_local": "2024-09-08T08:43:48",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i49179355",
+      "start_date_local": "2024-09-09T18:11:58",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i49214524",
+      "start_date_local": "2024-09-10T07:11:44",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i49304462",
+      "start_date_local": "2024-09-11T06:49:53",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i49395528",
+      "start_date_local": "2024-09-12T06:07:35",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i49549195",
+      "start_date_local": "2024-09-14T06:09:15",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i49652866",
+      "start_date_local": "2024-09-15T13:09:06",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i49743142",
+      "start_date_local": "2024-09-16T18:06:27",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i49804893",
+      "start_date_local": "2024-09-17T12:49:46",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i50016006",
+      "start_date_local": "2024-09-19T18:03:50",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i50080477",
+      "start_date_local": "2024-09-20T18:16:01",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i50181783",
+      "start_date_local": "2024-09-21T10:21:33",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i50212638",
+      "start_date_local": "2024-09-22T10:59:44",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i50343369",
+      "start_date_local": "2024-09-23T18:04:38",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i50383663",
+      "start_date_local": "2024-09-24T10:50:53",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i50505196",
+      "start_date_local": "2024-09-25T17:43:38",
+      "type": "TrailRun",
+      "name": "Tempó "
+    },
+    {
+      "id": "i50684552",
+      "start_date_local": "2024-09-27T18:21:20",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i50753454",
+      "start_date_local": "2024-09-28T10:00:05",
+      "type": "Run",
+      "name": "BUFF - 6h"
+    },
+    {
+      "id": "i50813608",
+      "start_date_local": "2024-09-29T10:04:16",
+      "type": "Run",
+      "name": "Fuss az iskoládért"
+    },
+    {
+      "id": "i50813605",
+      "start_date_local": "2024-09-29T11:40:32",
+      "type": "Run",
+      "name": "Fuss az iskoládért váltó "
+    },
+    {
+      "id": "i50942806",
+      "start_date_local": "2024-09-30T18:05:00",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i51298893",
+      "start_date_local": "2024-10-04T19:06:56",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i51351433",
+      "start_date_local": "2024-10-05T07:31:28",
+      "type": "TrailRun",
+      "name": "Kinizsi Pál emléktúra 40 (36,2km/711m)"
+    },
+    {
+      "id": "i51432044",
+      "start_date_local": "2024-10-06T09:55:46",
+      "type": "Run",
+      "name": "Regeneráló "
+    },
+    {
+      "id": "i51557019",
+      "start_date_local": "2024-10-07T18:03:02",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i51622865",
+      "start_date_local": "2024-10-08T10:06:05",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i51803483",
+      "start_date_local": "2024-10-10T06:24:10",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i51984451",
+      "start_date_local": "2024-10-11T17:52:16",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i52080501",
+      "start_date_local": "2024-10-12T08:05:34",
+      "type": "TrailRun",
+      "name": "Bakonyi Barangolás 70 (69,5km/2045m)"
+    },
+    {
+      "id": "i52302858",
+      "start_date_local": "2024-10-14T18:04:53",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i52319937",
+      "start_date_local": "2024-10-15T10:12:18",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i52748715",
+      "start_date_local": "2024-10-19T07:02:19",
+      "type": "TrailRun",
+      "name": "UBT Hegyestű - 115km/2137m"
+    },
+    {
+      "id": "i53106466",
+      "start_date_local": "2024-10-23T10:23:32",
+      "type": "Hike",
+      "name": "Kékmadár 1.c a Somlón "
+    },
+    {
+      "id": "i53225925",
+      "start_date_local": "2024-10-25T06:56:44",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i53558486",
+      "start_date_local": "2024-10-28T12:32:45",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i53558484",
+      "start_date_local": "2024-10-28T14:38:54",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i53870148",
+      "start_date_local": "2024-10-31T16:02:13",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i54105530",
+      "start_date_local": "2024-11-03T09:07:27",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i54262006",
+      "start_date_local": "2024-11-04T18:11:18",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i54372632",
+      "start_date_local": "2024-11-05T16:34:01",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i54469917",
+      "start_date_local": "2024-11-06T12:15:00",
+      "type": "Other",
+      "name": "Gyógytorna "
+    },
+    {
+      "id": "i54640513",
+      "start_date_local": "2024-11-08T18:15:44",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i54774435",
+      "start_date_local": "2024-11-10T10:06:36",
+      "type": "Ride",
+      "name": "Ködösítés Nikivel "
+    },
+    {
+      "id": "i55408188",
+      "start_date_local": "2024-11-16T08:48:50",
+      "type": "Run",
+      "name": "Gyógyfuti"
+    },
+    {
+      "id": "i55416436",
+      "start_date_local": "2024-11-17T06:03:51",
+      "type": "Ride",
+      "name": "Balatoni ködvágás Nikivel "
+    },
+    {
+      "id": "i56529450",
+      "start_date_local": "2024-11-25T18:05:14",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i56847018",
+      "start_date_local": "2024-11-28T18:45:23",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i56943545",
+      "start_date_local": "2024-11-29T18:24:14",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i57053728",
+      "start_date_local": "2024-11-30T15:12:01",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i57264395",
+      "start_date_local": "2024-12-02T18:04:57",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i57629412",
+      "start_date_local": "2024-12-06T18:20:38",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i57911512",
+      "start_date_local": "2024-12-09T18:01:09",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i58439942",
+      "start_date_local": "2024-12-13T18:17:57",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i58439940",
+      "start_date_local": "2024-12-14T14:17:58",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i58698424",
+      "start_date_local": "2024-12-16T18:07:41",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i58868826",
+      "start_date_local": "2024-12-18T06:43:30",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i59137590",
+      "start_date_local": "2024-12-20T18:00:00",
+      "type": "Workout",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i59168767",
+      "start_date_local": "2024-12-21T06:36:49",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i59252760",
+      "start_date_local": "2024-12-22T06:34:39",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i59384260",
+      "start_date_local": "2024-12-23T13:11:58",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i59463971",
+      "start_date_local": "2024-12-24T09:12:11",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i59737984",
+      "start_date_local": "2024-12-27T09:50:49",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i59832744",
+      "start_date_local": "2024-12-28T08:25:37",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i59945303",
+      "start_date_local": "2024-12-29T08:18:55",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i60073894",
+      "start_date_local": "2024-12-30T10:10:59",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i60181645",
+      "start_date_local": "2024-12-31T09:30:37",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i60342775",
+      "start_date_local": "2025-01-01T17:11:22",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i60457590",
+      "start_date_local": "2025-01-02T17:11:35",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i60576860",
+      "start_date_local": "2025-01-03T14:55:52",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i60657925",
+      "start_date_local": "2025-01-04T07:28:05",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i60844806",
+      "start_date_local": "2025-01-05T16:34:07",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i61116893",
+      "start_date_local": "2025-01-07T16:46:21",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i61605180",
+      "start_date_local": "2025-01-11T17:55:00",
+      "type": "Run",
+      "name": "Könnyű "
+    },
+    {
+      "id": "i61833486",
+      "start_date_local": "2025-01-13T18:05:03",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i62706597",
+      "start_date_local": "2025-01-20T18:04:50",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i62764762",
+      "start_date_local": "2025-01-21T06:19:05",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i62885885",
+      "start_date_local": "2025-01-22T06:20:15",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i63264673",
+      "start_date_local": "2025-01-25T06:56:13",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i63614872",
+      "start_date_local": "2025-01-27T18:05:05",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i63662454",
+      "start_date_local": "2025-01-28T06:18:49",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i63787243",
+      "start_date_local": "2025-01-29T06:18:02",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i64099592",
+      "start_date_local": "2025-01-31T17:47:43",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i64204277",
+      "start_date_local": "2025-02-01T14:25:49",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i64523794",
+      "start_date_local": "2025-02-04T05:53:36",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i64645190",
+      "start_date_local": "2025-02-05T06:18:53",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i68482662",
+      "start_date_local": "2025-03-07T17:44:34",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i68568657",
+      "start_date_local": "2025-03-08T10:24:12",
+      "type": "Hike",
+      "name": "Római fürdő"
+    },
+    {
+      "id": "i68858911",
+      "start_date_local": "2025-03-10T18:04:39",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i69465383",
+      "start_date_local": "2025-03-14T17:41:17",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i69877149",
+      "start_date_local": "2025-03-17T18:04:14",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i70455207",
+      "start_date_local": "2025-03-21T17:43:45",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i70866941",
+      "start_date_local": "2025-03-24T18:04:38",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i71576485",
+      "start_date_local": "2025-03-28T18:17:15",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i71923140",
+      "start_date_local": "2025-03-31T18:05:21",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i72544104",
+      "start_date_local": "2025-04-04T17:37:30",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i72654419",
+      "start_date_local": "2025-04-05T14:02:00",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i72774340",
+      "start_date_local": "2025-04-06T12:38:27",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i72952299",
+      "start_date_local": "2025-04-07T18:05:44",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i73574671",
+      "start_date_local": "2025-04-11T17:37:48",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i73989843",
+      "start_date_local": "2025-04-14T18:03:46",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i74335246",
+      "start_date_local": "2025-04-16T18:23:15",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i74872067",
+      "start_date_local": "2025-04-20T16:20:48",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i75385513",
+      "start_date_local": "2025-04-23T18:42:06",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i75663666",
+      "start_date_local": "2025-04-25T17:52:37",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i75822464",
+      "start_date_local": "2025-04-26T22:49:19",
+      "type": "Run",
+      "name": "UB Balatonmáriafürdő nyugat-kelet"
+    },
+    {
+      "id": "i75832108",
+      "start_date_local": "2025-04-27T03:04:43",
+      "type": "Run",
+      "name": "UB Szántód-Zamárdi"
+    },
+    {
+      "id": "i75848657",
+      "start_date_local": "2025-04-27T08:11:24",
+      "type": "Run",
+      "name": "UB Alsóörs-Csopak"
+    },
+    {
+      "id": "i76079902",
+      "start_date_local": "2025-04-28T18:07:26",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i76232304",
+      "start_date_local": "2025-04-29T18:22:48",
+      "type": "TrailRun",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i76493514",
+      "start_date_local": "2025-05-01T09:49:55",
+      "type": "TrailRun",
+      "name": "Vadlán53 rajt (12.8km/354m)"
+    },
+    {
+      "id": "i76640320",
+      "start_date_local": "2025-05-02T10:57:48",
+      "type": "Hike",
+      "name": "Dörgicsei kósza "
+    },
+    {
+      "id": "i76693165",
+      "start_date_local": "2025-05-02T18:05:15",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i76799148",
+      "start_date_local": "2025-05-03T10:29:49",
+      "type": "Hike",
+      "name": "Bakonyi Gyilkos tó "
+    },
+    {
+      "id": "i76910717",
+      "start_date_local": "2025-05-04T08:45:58",
+      "type": "TrailRun",
+      "name": "VeszpRun terep"
+    },
+    {
+      "id": "i77742939",
+      "start_date_local": "2025-05-09T17:47:26",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i77830891",
+      "start_date_local": "2025-05-10T07:52:08",
+      "type": "TrailRun",
+      "name": "Velence 35 (34km/720m)"
+    },
+    {
+      "id": "i77966386",
+      "start_date_local": "2025-05-11T09:15:24",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i78191024",
+      "start_date_local": "2025-05-12T18:04:17",
+      "type": "TrailRun",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i78365109",
+      "start_date_local": "2025-05-13T18:18:10",
+      "type": "TrailRun",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i78811415",
+      "start_date_local": "2025-05-16T17:30:55",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i78891379",
+      "start_date_local": "2025-05-17T10:43:45",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i79001342",
+      "start_date_local": "2025-05-18T08:42:24",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i79391611",
+      "start_date_local": "2025-05-20T18:13:42",
+      "type": "TrailRun",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i79538227",
+      "start_date_local": "2025-05-21T17:37:50",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i79691041",
+      "start_date_local": "2025-05-22T17:52:24",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i79833357",
+      "start_date_local": "2025-05-23T17:46:34",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i79942642",
+      "start_date_local": "2025-05-24T06:53:03",
+      "type": "TrailRun",
+      "name": "Tanúhegyek 50 (47,7km/1500m)"
+    },
+    {
+      "id": "i80053271",
+      "start_date_local": "2025-05-25T09:20:35",
+      "type": "TrailRun",
+      "name": "VeszpRun trail"
+    },
+    {
+      "id": "i80269893",
+      "start_date_local": "2025-05-26T17:49:37",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i80421941",
+      "start_date_local": "2025-05-27T18:18:29",
+      "type": "TrailRun",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i80736067",
+      "start_date_local": "2025-05-29T19:32:28",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i80879553",
+      "start_date_local": "2025-05-30T17:31:19",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i81792433",
+      "start_date_local": "2025-06-05T18:58:36",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i81931820",
+      "start_date_local": "2025-06-06T17:49:27",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i82034025",
+      "start_date_local": "2025-06-07T09:24:44",
+      "type": "TrailRun",
+      "name": "Vadlán53 közepe (26,9km/942m)"
+    },
+    {
+      "id": "i82135529",
+      "start_date_local": "2025-06-08T09:22:38",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i82279211",
+      "start_date_local": "2025-06-09T09:00:02",
+      "type": "TrailRun",
+      "name": "VI. Pünkösdi futás (10,8km/235m)"
+    },
+    {
+      "id": "i82586268",
+      "start_date_local": "2025-06-11T05:56:08",
+      "type": "Run",
+      "name": "Regeneráló "
+    },
+    {
+      "id": "i82676796",
+      "start_date_local": "2025-06-11T17:11:13",
+      "type": "Walk",
+      "name": "Munkából "
+    },
+    {
+      "id": "i82676789",
+      "start_date_local": "2025-06-11T17:40:08",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i82827375",
+      "start_date_local": "2025-06-12T17:35:31",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i82978818",
+      "start_date_local": "2025-06-13T18:06:08",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i83004701",
+      "start_date_local": "2025-06-13T20:14:19",
+      "type": "Run",
+      "name": "Mozgás éjszakája (3km)"
+    },
+    {
+      "id": "i83004700",
+      "start_date_local": "2025-06-13T21:06:38",
+      "type": "Walk",
+      "name": "Mozgás éjszakája (1,5km)"
+    },
+    {
+      "id": "i83083976",
+      "start_date_local": "2025-06-14T13:24:27",
+      "type": "Ride",
+      "name": "Oliviával "
+    },
+    {
+      "id": "i83273334",
+      "start_date_local": "2025-06-15T19:01:23",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i83391162",
+      "start_date_local": "2025-06-16T18:05:53",
+      "type": "TrailRun",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i83391160",
+      "start_date_local": "2025-06-16T18:44:33",
+      "type": "Run",
+      "name": "SVSE futóklub "
+    },
+    {
+      "id": "i83440805",
+      "start_date_local": "2025-06-17T05:59:32",
+      "type": "Walk",
+      "name": "Kutyaséta Rékával "
+    },
+    {
+      "id": "i83443080",
+      "start_date_local": "2025-06-17T07:29:09",
+      "type": "Walk",
+      "name": "Munkába "
+    },
+    {
+      "id": "i83478222",
+      "start_date_local": "2025-06-17T11:44:56",
+      "type": "Walk",
+      "name": "Ebédelni "
+    },
+    {
+      "id": "i83507381",
+      "start_date_local": "2025-06-17T16:50:49",
+      "type": "Walk",
+      "name": "Munkából"
+    },
+    {
+      "id": "i83534023",
+      "start_date_local": "2025-06-17T18:20:26",
+      "type": "TrailRun",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i83982809",
+      "start_date_local": "2025-06-20T18:05:16",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i84094481",
+      "start_date_local": "2025-06-21T07:09:09",
+      "type": "TrailRun",
+      "name": "Balaton 50 (50,8km/1410m)"
+    },
+    {
+      "id": "i84204017",
+      "start_date_local": "2025-06-22T10:00:15",
+      "type": "TrailRun",
+      "name": "Kő-árok félmaraton (19,7km/482m)"
+    },
+    {
+      "id": "i84396975",
+      "start_date_local": "2025-06-23T18:05:11",
+      "type": "TrailRun",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i84565614",
+      "start_date_local": "2025-06-24T18:22:56",
+      "type": "TrailRun",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i85021467",
+      "start_date_local": "2025-06-27T18:52:50",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i85153101",
+      "start_date_local": "2025-06-28T20:10:07",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i85197240",
+      "start_date_local": "2025-06-29T08:23:02",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i85390284",
+      "start_date_local": "2025-06-30T06:58:33",
+      "type": "Walk",
+      "name": "Munkába "
+    },
+    {
+      "id": "i85390277",
+      "start_date_local": "2025-06-30T16:56:00",
+      "type": "Walk",
+      "name": "Munkából "
+    },
+    {
+      "id": "i85417922",
+      "start_date_local": "2025-06-30T18:45:30",
+      "type": "TrailRun",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i85534037",
+      "start_date_local": "2025-07-01T08:21:38",
+      "type": "Walk",
+      "name": "Munkába "
+    },
+    {
+      "id": "i85534038",
+      "start_date_local": "2025-07-01T16:17:58",
+      "type": "Walk",
+      "name": "Munkából "
+    },
+    {
+      "id": "i85552483",
+      "start_date_local": "2025-07-01T17:05:14",
+      "type": "Run",
+      "name": "Átmozgató "
+    },
+    {
+      "id": "i85706565",
+      "start_date_local": "2025-07-02T16:42:35",
+      "type": "Run",
+      "name": "Egyéni csúcsok versenye (amatőr 800m/4x100m)"
+    },
+    {
+      "id": "i85883361",
+      "start_date_local": "2025-07-03T07:39:06",
+      "type": "Walk",
+      "name": "Munkába "
+    },
+    {
+      "id": "i85883359",
+      "start_date_local": "2025-07-03T16:42:27",
+      "type": "Walk",
+      "name": "Munkából "
+    },
+    {
+      "id": "i85883358",
+      "start_date_local": "2025-07-03T19:06:59",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i86022365",
+      "start_date_local": "2025-07-04T16:41:48",
+      "type": "TrailRun",
+      "name": "Almádi kézfogások 15 (15km/288m)"
+    },
+    {
+      "id": "i86118037",
+      "start_date_local": "2025-07-05T08:26:21",
+      "type": "TrailRun",
+      "name": "Zánkai Út-törők 34 (34km/605m) "
+    },
+    {
+      "id": "i86239632",
+      "start_date_local": "2025-07-06T08:26:19",
+      "type": "TrailRun",
+      "name": "Zamárdi - Viadukt 28 (26,6km/499m)"
+    },
+    {
+      "id": "i86424800",
+      "start_date_local": "2025-07-07T08:38:07",
+      "type": "Walk",
+      "name": "Munkába "
+    },
+    {
+      "id": "i86424798",
+      "start_date_local": "2025-07-07T17:31:37",
+      "type": "Walk",
+      "name": "Munkából "
+    },
+    {
+      "id": "i86424797",
+      "start_date_local": "2025-07-07T18:53:20",
+      "type": "TrailRun",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i86569085",
+      "start_date_local": "2025-07-08T18:21:31",
+      "type": "TrailRun",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i86698434",
+      "start_date_local": "2025-07-09T07:04:53",
+      "type": "Walk",
+      "name": "Munkába "
+    },
+    {
+      "id": "i86698427",
+      "start_date_local": "2025-07-09T18:08:27",
+      "type": "Walk",
+      "name": "Munkából "
+    },
+    {
+      "id": "i87129454",
+      "start_date_local": "2025-07-12T18:16:51",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i87219384",
+      "start_date_local": "2025-07-13T11:37:59",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i87424281",
+      "start_date_local": "2025-07-14T18:51:45",
+      "type": "TrailRun",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i87467288",
+      "start_date_local": "2025-07-15T06:41:07",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i87631202",
+      "start_date_local": "2025-07-16T06:32:07",
+      "type": "Run",
+      "name": "Regeneráló "
+    },
+    {
+      "id": "i87725383",
+      "start_date_local": "2025-07-16T18:01:42",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i87863510",
+      "start_date_local": "2025-07-17T16:05:14",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i88043765",
+      "start_date_local": "2025-07-18T19:04:09",
+      "type": "Run",
+      "name": "SVSE futóklub bemelegítés "
+    },
+    {
+      "id": "i88043759",
+      "start_date_local": "2025-07-18T19:30:22",
+      "type": "Run",
+      "name": "SVSE futóklub résztáv "
+    },
+    {
+      "id": "i88043757",
+      "start_date_local": "2025-07-18T19:55:16",
+      "type": "Run",
+      "name": "SVSE futóklub levezetés "
+    },
+    {
+      "id": "i88145956",
+      "start_date_local": "2025-07-19T09:15:18",
+      "type": "Hike",
+      "name": "Kék Badacsony 11 (11km/360m)"
+    },
+    {
+      "id": "i88243545",
+      "start_date_local": "2025-07-20T07:00:11",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i88365000",
+      "start_date_local": "2025-07-20T20:30:48",
+      "type": "Run",
+      "name": "Tempó "
+    },
+    {
+      "id": "i88511595",
+      "start_date_local": "2025-07-21T08:03:23",
+      "type": "Walk",
+      "name": "Morning Walk"
+    },
+    {
+      "id": "i88511593",
+      "start_date_local": "2025-07-21T16:20:40",
+      "type": "Walk",
+      "name": "Afternoon Walk"
+    },
+    {
+      "id": "i88511589",
+      "start_date_local": "2025-07-21T18:52:54",
+      "type": "TrailRun",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i88569020",
+      "start_date_local": "2025-07-22T07:42:48",
+      "type": "Walk",
+      "name": "Morning Walk"
+    },
+    {
+      "id": "i88687243",
+      "start_date_local": "2025-07-22T18:22:31",
+      "type": "TrailRun",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i88815213",
+      "start_date_local": "2025-07-23T16:42:30",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i88891807",
+      "start_date_local": "2025-07-24T06:59:49",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i88997662",
+      "start_date_local": "2025-07-24T19:06:36",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i89153045",
+      "start_date_local": "2025-07-25T19:11:09",
+      "type": "Run",
+      "name": "SVSE futóklub bemelegítés "
+    },
+    {
+      "id": "i89153042",
+      "start_date_local": "2025-07-25T19:32:56",
+      "type": "Run",
+      "name": "SVSE futóklub résztáv "
+    },
+    {
+      "id": "i89153041",
+      "start_date_local": "2025-07-25T19:59:16",
+      "type": "Run",
+      "name": "SVSE futóklub levezetés"
+    },
+    {
+      "id": "i89202790",
+      "start_date_local": "2025-07-26T06:49:36",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i89340032",
+      "start_date_local": "2025-07-27T06:32:13",
+      "type": "Walk",
+      "name": "Rékával "
+    },
+    {
+      "id": "i89354817",
+      "start_date_local": "2025-07-27T10:12:38",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i89486892",
+      "start_date_local": "2025-07-28T07:28:13",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i89554334",
+      "start_date_local": "2025-07-28T12:11:35",
+      "type": "Hike",
+      "name": "Leopoldsteiner see"
+    },
+    {
+      "id": "i89643405",
+      "start_date_local": "2025-07-29T07:04:12",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i89815073",
+      "start_date_local": "2025-07-30T06:08:25",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i89920857",
+      "start_date_local": "2025-07-30T11:01:37",
+      "type": "Walk",
+      "name": "Mautern"
+    },
+    {
+      "id": "i90001869",
+      "start_date_local": "2025-07-31T08:26:42",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i90048539",
+      "start_date_local": "2025-07-31T14:42:40",
+      "type": "Hike",
+      "name": "Grüner See "
+    },
+    {
+      "id": "i90143686",
+      "start_date_local": "2025-08-01T06:51:56",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i90190130",
+      "start_date_local": "2025-08-01T14:44:26",
+      "type": "Swim",
+      "name": "Asia spa, Leoben"
+    },
+    {
+      "id": "i90294747",
+      "start_date_local": "2025-08-02T07:40:00",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i90371357",
+      "start_date_local": "2025-08-02T15:59:15",
+      "type": "Walk",
+      "name": "Laßnitzhöhe"
+    },
+    {
+      "id": "i90505513",
+      "start_date_local": "2025-08-03T08:46:42",
+      "type": "TrailRun",
+      "name": "Balaton IVV 40 (37,7km/1041m)"
+    },
+    {
+      "id": "i90592163",
+      "start_date_local": "2025-08-04T05:59:21",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i90606502",
+      "start_date_local": "2025-08-04T07:56:04",
+      "type": "Walk",
+      "name": "Munkába "
+    },
+    {
+      "id": "i90699887",
+      "start_date_local": "2025-08-04T17:22:10",
+      "type": "Walk",
+      "name": "Munkából "
+    },
+    {
+      "id": "i90699884",
+      "start_date_local": "2025-08-04T18:54:48",
+      "type": "TrailRun",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i90786358",
+      "start_date_local": "2025-08-05T07:45:41",
+      "type": "Walk",
+      "name": "Munkába "
+    },
+    {
+      "id": "i90786357",
+      "start_date_local": "2025-08-05T11:50:16",
+      "type": "Walk",
+      "name": "Ebédelni "
+    },
+    {
+      "id": "i90786350",
+      "start_date_local": "2025-08-05T13:18:32",
+      "type": "Walk",
+      "name": "Irodába "
+    },
+    {
+      "id": "i90856580",
+      "start_date_local": "2025-08-05T17:08:39",
+      "type": "Walk",
+      "name": "Munkából "
+    },
+    {
+      "id": "i90856576",
+      "start_date_local": "2025-08-05T18:28:19",
+      "type": "TrailRun",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i91077079",
+      "start_date_local": "2025-08-06T19:56:54",
+      "type": "Run",
+      "name": "Sörmérföld gyakorlás"
+    },
+    {
+      "id": "i91400954",
+      "start_date_local": "2025-08-07T18:37:30",
+      "type": "Walk",
+      "name": "História Kertmozi Rékával "
+    },
+    {
+      "id": "i91408141",
+      "start_date_local": "2025-08-09T06:13:43",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i91441446",
+      "start_date_local": "2025-08-09T11:28:19",
+      "type": "Run",
+      "name": "Lendületes"
+    },
+    {
+      "id": "i91466317",
+      "start_date_local": "2025-08-09T14:40:40",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i91588224",
+      "start_date_local": "2025-08-10T11:01:55",
+      "type": "Run",
+      "name": "Résztáv bemelegítés"
+    },
+    {
+      "id": "i91588218",
+      "start_date_local": "2025-08-10T11:39:04",
+      "type": "Run",
+      "name": "Résztáv"
+    },
+    {
+      "id": "i91595427",
+      "start_date_local": "2025-08-10T12:35:36",
+      "type": "Run",
+      "name": "Résztáv levezetés"
+    },
+    {
+      "id": "i91657717",
+      "start_date_local": "2025-08-10T17:26:10",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i91777079",
+      "start_date_local": "2025-08-11T06:33:33",
+      "type": "Walk",
+      "name": "Rékával ❤️‍🩹"
+    },
+    {
+      "id": "i91888492",
+      "start_date_local": "2025-08-11T18:53:07",
+      "type": "TrailRun",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i92305035",
+      "start_date_local": "2025-08-14T11:47:18",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i92477340",
+      "start_date_local": "2025-08-15T13:44:53",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i92580352",
+      "start_date_local": "2025-08-16T08:19:48",
+      "type": "Run",
+      "name": "Résztáv bemelegítés"
+    },
+    {
+      "id": "i92580348",
+      "start_date_local": "2025-08-16T08:51:00",
+      "type": "Run",
+      "name": "Résztáv"
+    },
+    {
+      "id": "i92585164",
+      "start_date_local": "2025-08-16T09:38:10",
+      "type": "Run",
+      "name": "Résztáv levezetés"
+    },
+    {
+      "id": "i92673300",
+      "start_date_local": "2025-08-16T17:38:37",
+      "type": "Swim",
+      "name": "Tiszaújváros strand"
+    },
+    {
+      "id": "i92735268",
+      "start_date_local": "2025-08-17T08:00:30",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i92991198",
+      "start_date_local": "2025-08-18T16:21:53",
+      "type": "Walk",
+      "name": "St. Moritz Bad"
+    },
+    {
+      "id": "i93013883",
+      "start_date_local": "2025-08-18T19:00:34",
+      "type": "TrailRun",
+      "name": "Alp/Lej da Staz"
+    },
+    {
+      "id": "i93095653",
+      "start_date_local": "2025-08-19T10:44:53",
+      "type": "Walk",
+      "name": "Lej Marsch"
+    },
+    {
+      "id": "i93170823",
+      "start_date_local": "2025-08-19T15:09:19",
+      "type": "Hike",
+      "name": "Lej/Piz da l'Ova Cotschna"
+    },
+    {
+      "id": "i93170812",
+      "start_date_local": "2025-08-19T18:18:30",
+      "type": "TrailRun",
+      "name": "Lej/Piz da l'Ova Cotschna"
+    },
+    {
+      "id": "i93416968",
+      "start_date_local": "2025-08-20T17:25:47",
+      "type": "TrailRun",
+      "name": "Motto Croce"
+    },
+    {
+      "id": "i93470256",
+      "start_date_local": "2025-08-21T12:21:19",
+      "type": "Walk",
+      "name": "Lugano"
+    },
+    {
+      "id": "i93508447",
+      "start_date_local": "2025-08-21T15:54:35",
+      "type": "TrailRun",
+      "name": "Monte Bré - Sasso Rosso"
+    },
+    {
+      "id": "i93713986",
+      "start_date_local": "2025-08-22T20:45:09",
+      "type": "TrailRun",
+      "name": "Matterhorn Ultraks - Vertinight (4,9km/691m)"
+    },
+    {
+      "id": "i93866760",
+      "start_date_local": "2025-08-23T07:21:05",
+      "type": "TrailRun",
+      "name": "Matterhorn Ultraks - Sky (49km/3600m)"
+    },
+    {
+      "id": "i93938261",
+      "start_date_local": "2025-08-24T08:50:04",
+      "type": "TrailRun",
+      "name": "Matterhorn Ultraks - Active (19km/1150m)"
+    },
+    {
+      "id": "i94209938",
+      "start_date_local": "2025-08-25T19:31:49",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i94275699",
+      "start_date_local": "2025-08-26T08:40:59",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i94539969",
+      "start_date_local": "2025-08-27T09:56:26",
+      "type": "Walk",
+      "name": "Vals"
+    },
+    {
+      "id": "i94539967",
+      "start_date_local": "2025-08-27T11:57:09",
+      "type": "Walk",
+      "name": "Therme Vals"
+    },
+    {
+      "id": "i94564706",
+      "start_date_local": "2025-08-27T19:21:16",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i94747994",
+      "start_date_local": "2025-08-28T17:47:43",
+      "type": "Run",
+      "name": "VeszpRun "
+    },
+    {
+      "id": "i94796388",
+      "start_date_local": "2025-08-29T06:34:55",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i94903837",
+      "start_date_local": "2025-08-29T18:50:50",
+      "type": "Run",
+      "name": "15. Veszprémi Sörmérföld "
+    },
+    {
+      "id": "i95013304",
+      "start_date_local": "2025-08-30T07:40:25",
+      "type": "TrailRun",
+      "name": "Magas Bakony 50 (51,5km/1484m)"
+    },
+    {
+      "id": "i95097811",
+      "start_date_local": "2025-08-31T02:24:44",
+      "type": "Walk",
+      "name": "Réka nélkül 💔"
+    },
+    {
+      "id": "i95524896",
+      "start_date_local": "2025-09-02T07:29:27",
+      "type": "Walk",
+      "name": "Bíróságra "
+    },
+    {
+      "id": "i95524892",
+      "start_date_local": "2025-09-02T17:04:25",
+      "type": "Walk",
+      "name": "Irodából "
+    },
+    {
+      "id": "i95559013",
+      "start_date_local": "2025-09-02T18:17:53",
+      "type": "TrailRun",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i95934064",
+      "start_date_local": "2025-09-04T20:08:59",
+      "type": "Run",
+      "name": "Tempó "
+    },
+    {
+      "id": "i96076764",
+      "start_date_local": "2025-09-05T18:07:39",
+      "type": "Run",
+      "name": "SVSE futóklub bemelegítés "
+    },
+    {
+      "id": "i96076763",
+      "start_date_local": "2025-09-05T18:28:53",
+      "type": "Run",
+      "name": "SVSE futóklub résztáv "
+    },
+    {
+      "id": "i96076761",
+      "start_date_local": "2025-09-05T18:58:56",
+      "type": "Run",
+      "name": "SVSE futóklub levezetés "
+    },
+    {
+      "id": "i96129139",
+      "start_date_local": "2025-09-06T07:25:24",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i96366578",
+      "start_date_local": "2025-09-07T16:16:00",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i96403439",
+      "start_date_local": "2025-09-07T19:26:45",
+      "type": "Walk",
+      "name": "Holdfogyatkozás oda "
+    },
+    {
+      "id": "i96403436",
+      "start_date_local": "2025-09-07T20:39:56",
+      "type": "Walk",
+      "name": "Holdfogyatkozás vissza "
+    },
+    {
+      "id": "i96439112",
+      "start_date_local": "2025-09-08T06:45:45",
+      "type": "Run",
+      "name": "Könnyű"
+    },
+    {
+      "id": "i96726756",
+      "start_date_local": "2025-09-09T18:20:19",
+      "type": "TrailRun",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i96784984",
+      "start_date_local": "2025-09-10T06:32:44",
+      "type": "Run",
+      "name": "Tempó"
+    },
+    {
+      "id": "i96917057",
+      "start_date_local": "2025-09-11T05:15:18",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i97161933",
+      "start_date_local": "2025-09-12T18:16:36",
+      "type": "Run",
+      "name": "SVSE futóklub bemelegítés "
+    },
+    {
+      "id": "i97161935",
+      "start_date_local": "2025-09-12T18:27:09",
+      "type": "Run",
+      "name": "SVSE futóklub résztáv "
+    },
+    {
+      "id": "i97161937",
+      "start_date_local": "2025-09-12T19:00:55",
+      "type": "Run",
+      "name": "SVSE futóklub levezetés "
+    },
+    {
+      "id": "i97235862",
+      "start_date_local": "2025-09-13T08:00:05",
+      "type": "Run",
+      "name": "XII. Szőlőskör (49,65km/705m)"
+    },
+    {
+      "id": "i97302010",
+      "start_date_local": "2025-09-13T19:47:14",
+      "type": "Walk",
+      "name": "Rékával ❤️‍🩹"
+    },
+    {
+      "id": "i97448133",
+      "start_date_local": "2025-09-14T20:07:14",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i97556475",
+      "start_date_local": "2025-09-15T18:04:56",
+      "type": "TrailRun",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i97691986",
+      "start_date_local": "2025-09-16T18:12:14",
+      "type": "Run",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i97872860",
+      "start_date_local": "2025-09-17T19:50:09",
+      "type": "Walk",
+      "name": "Rékával ❤️"
+    },
+    {
+      "id": "i97876016",
+      "start_date_local": "2025-09-18T05:29:19",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i98087720",
+      "start_date_local": "2025-09-19T18:16:05",
+      "type": "Run",
+      "name": "Könnyű "
+    },
+    {
+      "id": "i98177357",
+      "start_date_local": "2025-09-20T10:30:52",
+      "type": "TrailRun",
+      "name": "Tihany Cross 30 (3x10,2km/281m)"
+    },
+    {
+      "id": "i98338469",
+      "start_date_local": "2025-09-21T19:12:30",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i98470779",
+      "start_date_local": "2025-09-22T18:03:50",
+      "type": "TrailRun",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i98622186",
+      "start_date_local": "2025-09-23T07:30:55",
+      "type": "Walk",
+      "name": "Munkába "
+    },
+    {
+      "id": "i98622187",
+      "start_date_local": "2025-09-23T17:44:32",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i98678875",
+      "start_date_local": "2025-09-24T06:56:31",
+      "type": "Walk",
+      "name": "Rékával suliba "
+    },
+    {
+      "id": "i99105676",
+      "start_date_local": "2025-09-27T06:46:37",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i99204302",
+      "start_date_local": "2025-09-27T11:26:35",
+      "type": "Walk",
+      "name": "Miklád "
+    },
+    {
+      "id": "i99247177",
+      "start_date_local": "2025-09-28T10:00:42",
+      "type": "Run",
+      "name": "Fuss az iskoládért "
+    },
+    {
+      "id": "i99454187",
+      "start_date_local": "2025-09-29T18:03:09",
+      "type": "TrailRun",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i99601778",
+      "start_date_local": "2025-09-30T18:27:47",
+      "type": "Run",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i99702897",
+      "start_date_local": "2025-10-01T13:25:31",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i99773297",
+      "start_date_local": "2025-10-01T19:28:28",
+      "type": "Walk",
+      "name": "Rékával "
+    },
+    {
+      "id": "i99857460",
+      "start_date_local": "2025-10-02T13:27:00",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i100283931",
+      "start_date_local": "2025-10-04T13:00:02",
+      "type": "TrailRun",
+      "name": "Vadlán Ultra Terep 53 (53km/1750m)"
+    },
+    {
+      "id": "i100392788",
+      "start_date_local": "2025-10-05T12:11:25",
+      "type": "Other",
+      "name": "Jeges fürdés "
+    },
+    {
+      "id": "i100638427",
+      "start_date_local": "2025-10-06T18:05:44",
+      "type": "TrailRun",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i101008941",
+      "start_date_local": "2025-10-08T12:13:25",
+      "type": "Walk",
+      "name": "Rékához "
+    },
+    {
+      "id": "i101682390",
+      "start_date_local": "2025-10-13T08:34:57",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i101856608",
+      "start_date_local": "2025-10-14T08:33:05",
+      "type": "Run",
+      "name": "Könnyű"
+    },
+    {
+      "id": "i101954902",
+      "start_date_local": "2025-10-14T18:18:06",
+      "type": "Run",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i102030014",
+      "start_date_local": "2025-10-15T08:30:46",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i102289494",
+      "start_date_local": "2025-10-16T17:49:34",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i102443534",
+      "start_date_local": "2025-10-17T16:07:26",
+      "type": "Run",
+      "name": "Könnyű "
+    },
+    {
+      "id": "i102443531",
+      "start_date_local": "2025-10-17T17:54:16",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i102570801",
+      "start_date_local": "2025-10-18T13:09:00",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i102677869",
+      "start_date_local": "2025-10-19T08:30:56",
+      "type": "TrailRun",
+      "name": "Somlói barangolások 20 (20,9km/475m+)"
+    },
+    {
+      "id": "i102734576",
+      "start_date_local": "2025-10-19T16:09:19",
+      "type": "TrailRun",
+      "name": "Tihany Cross REPEAT"
+    },
+    {
+      "id": "i102886627",
+      "start_date_local": "2025-10-20T18:05:23",
+      "type": "TrailRun",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i103062150",
+      "start_date_local": "2025-10-21T18:21:54",
+      "type": "Run",
+      "name": "VeszpRun haladó"
+    },
+    {
+      "id": "i103367713",
+      "start_date_local": "2025-10-23T08:45:26",
+      "type": "Hike",
+      "name": "Kinizsi Pál emléktúra 10 (8,8km/228m)"
+    },
+    {
+      "id": "i103501711",
+      "start_date_local": "2025-10-24T09:05:51",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i103722178",
+      "start_date_local": "2025-10-25T09:23:26",
+      "type": "TrailRun",
+      "name": "Kőről kőre a Bakonyban 40 (42,2km/1476m)"
+    },
+    {
+      "id": "i103870152",
+      "start_date_local": "2025-10-26T15:56:13",
+      "type": "Run",
+      "name": "Könnyű"
+    },
+    {
+      "id": "i104536152",
+      "start_date_local": "2025-10-30T17:19:32",
+      "type": "Run",
+      "name": "VeszpRun Halloween"
+    },
+    {
+      "id": "i104801066",
+      "start_date_local": "2025-11-01T09:57:57",
+      "type": "TrailRun",
+      "name": "Zörög-hegy 40 (39,6km/1100m+)"
+    },
+    {
+      "id": "i104956109",
+      "start_date_local": "2025-11-02T14:02:45",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i105374270",
+      "start_date_local": "2025-11-04T17:52:13",
+      "type": "Walk",
+      "name": "Afternoon Walk"
+    },
+    {
+      "id": "i105522170",
+      "start_date_local": "2025-11-05T17:33:32",
+      "type": "Walk",
+      "name": "Afternoon Walk"
+    },
+    {
+      "id": "i105722009",
+      "start_date_local": "2025-11-07T09:02:41",
+      "type": "Walk",
+      "name": "Morning Walk"
+    },
+    {
+      "id": "i105843139",
+      "start_date_local": "2025-11-08T10:23:54",
+      "type": "TrailRun",
+      "name": "Fehér-Vár-Palota Csór 13 "
+    },
+    {
+      "id": "i106239938",
+      "start_date_local": "2025-11-10T17:51:40",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i106522238",
+      "start_date_local": "2025-11-12T11:08:14",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i107244431",
+      "start_date_local": "2025-11-16T10:40:25",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i107538405",
+      "start_date_local": "2025-11-18T12:22:39",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i107941335",
+      "start_date_local": "2025-11-20T14:34:51",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i108609432",
+      "start_date_local": "2025-11-25T11:10:17",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i109251898",
+      "start_date_local": "2025-11-29T11:33:36",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i109525351",
+      "start_date_local": "2025-12-01T08:44:00",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i110272057",
+      "start_date_local": "2025-12-05T09:57:35",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i110482007",
+      "start_date_local": "2025-12-06T13:45:38",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i110964828",
+      "start_date_local": "2025-12-09T08:51:12",
+      "type": "Run",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i111169575",
+      "start_date_local": "2025-12-10T10:15:23",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i113238304",
+      "start_date_local": "2025-12-22T09:32:06",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i114414141",
+      "start_date_local": "2025-12-28T08:10:19",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i114445204",
+      "start_date_local": "2025-12-29T11:14:12",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i115004539",
+      "start_date_local": "2026-01-01T08:52:29",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i115463721",
+      "start_date_local": "2026-01-03T11:31:19",
+      "type": "Run",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i116235863",
+      "start_date_local": "2026-01-06T08:33:56",
+      "type": "Run",
+      "name": "Könnyű "
+    },
+    {
+      "id": "i137710242",
+      "start_date_local": "2026-04-06T12:43:36",
+      "type": "Hike",
+      "name": "Vinye kör "
+    },
+    {
+      "id": "i145375704",
+      "start_date_local": "2026-05-04T16:15:32",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i145978873",
+      "start_date_local": "2026-05-06T17:09:34",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i146534305",
+      "start_date_local": "2026-05-08T16:41:20",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i147023125",
+      "start_date_local": "2026-05-10T17:44:14",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i147290006",
+      "start_date_local": "2026-05-11T17:02:03",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i147932258",
+      "start_date_local": "2026-05-13T17:16:10",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i148238225",
+      "start_date_local": "2026-05-14T16:45:08",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i149141495",
+      "start_date_local": "2026-05-17T18:11:29",
+      "type": "TrailRun",
+      "name": "Hosszú "
+    },
+    {
+      "id": "i149776454",
+      "start_date_local": "2026-05-18T17:11:12",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i150073190",
+      "start_date_local": "2026-05-20T17:29:14",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i150377031",
+      "start_date_local": "2026-05-21T17:23:20",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i152068453",
+      "start_date_local": "2026-05-27T17:43:31",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i152323840",
+      "start_date_local": "2026-05-28T17:56:44",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i152766814",
+      "start_date_local": "2026-05-30T17:27:19",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i153588486",
+      "start_date_local": "2026-06-01T17:49:21",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i154019228",
+      "start_date_local": "2026-06-03T18:12:45",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i154341653",
+      "start_date_local": "2026-06-04T17:29:28",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i154850432",
+      "start_date_local": "2026-06-06T17:04:00",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i154991995",
+      "start_date_local": "2026-06-07T10:12:31",
+      "type": "Hike",
+      "name": "Kis-Bükki barangolás "
+    },
+    {
+      "id": "i155121434",
+      "start_date_local": "2026-06-07T17:39:08",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i158378071",
+      "start_date_local": "2026-06-17T17:31:33",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i181360100",
+      "start_date_local": "2026-08-30T09:49:00",
+      "type": "Hike",
+      "name": "Úrkút - Kab-hegy kör "
+    },
+    {
+      "id": "i185920716",
+      "start_date_local": "2026-09-12T09:09:41",
+      "type": "Hike",
+      "name": "Somló adománytúra 16 (15,3km/520m)"
+    },
+    {
+      "id": "i186312577",
+      "start_date_local": "2026-09-13T09:25:59",
+      "type": "Hike",
+      "name": "Ősz a cuhán 20 (19,3km/459m)"
+    },
+    {
+      "id": "i188329046",
+      "start_date_local": "2026-09-19T10:09:20",
+      "type": "Hike",
+      "name": "Balatoni kilátók 10 (9,8km/199m+)"
+    },
+    {
+      "id": "i190004465",
+      "start_date_local": "2026-09-24T17:48:03",
+      "type": "Run",
+      "name": "VeszpRun privát"
+    },
+    {
+      "id": "i190333634",
+      "start_date_local": "2026-09-25T17:55:09",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i191900234",
+      "start_date_local": "2026-09-28T18:15:19",
+      "type": "GravelRide",
+      "name": "Tekeres tekerés"
+    },
+    {
+      "id": "i191578597",
+      "start_date_local": "2026-09-29T17:34:32",
+      "type": "TrailRun",
+      "name": "Marge ❤️‍🔥"
+    },
+    {
+      "id": "i192081841",
+      "start_date_local": "2026-09-30T17:59:38",
+      "type": "TrailRun",
+      "name": "Hosszú"
+    },
+    {
+      "id": "i192110294",
+      "start_date_local": "2026-10-01T06:40:04",
+      "type": "GravelRide",
+      "name": "Miklós Pál hegy"
+    }
+  ]
+}
