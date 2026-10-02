@@ -1,0 +1,24 @@
+{
+  "geography": {
+    "coordinateCount": 2100,
+    "boundingBox": {
+      "north": 47.09781,
+      "south": 47.093243,
+      "east": 17.900616,
+      "west": 17.875217
+    }
+  },
+  "classification": {
+    "class": "generic_training",
+    "signals": [
+      {
+        "kind": "intervals_race",
+        "value": false
+      },
+      {
+        "kind": "name_pattern",
+        "rule": "generic-name:Regeneráló"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "geography": {
+    "coordinateCount": 1805,
+    "boundingBox": {
+      "north": 46.97541,
+      "south": 46.961826,
+      "east": 17.899046,
+      "west": 17.885681
+    }
+  },
+  "classification": {
+    "class": "generic_training",
+    "signals": [
+      {
+        "kind": "intervals_race",
+        "value": false
+      },
+      {
+        "kind": "name_pattern",
+        "rule": "generic-name:Könnyű"
+      }
+    ]
+  }
+}

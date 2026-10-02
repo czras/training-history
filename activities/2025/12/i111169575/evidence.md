@@ -57,6 +57,13 @@
   - East: 17.928911 [°]
   - West: 17.907055 [°]
 
+## Classification
+
+- Class: generic_training
+- Signals:
+  - Intervals.icu race: false
+  - Name pattern: generic-name:Hosszú
+
 ## Training
 
 - Training load: 65
@@ -80,4 +87,6 @@ This document is a generated human-readable projection of `source.json` and `str
 
 The canonical source evidence is preserved unchanged.
 
-Geographic and physiological values in this document are calculated from the preserved activity streams. No external geographic enrichment is applied.
+The derived values in this document are calculated from the preserved `streams.json` and semantic classification from `source.json`. They are also preserved in `derived.json`.
+
+No external geographic enrichment is applied.

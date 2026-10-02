@@ -1,0 +1,15 @@
+{
+  "geography": {
+    "coordinateCount": 21359,
+    "boundingBox": {
+      "north": 46.958282,
+      "south": 46.955936,
+      "east": 17.911192,
+      "west": 17.907888
+    }
+  },
+  "classification": {
+    "class": "unknown",
+    "signals": []
+  }
+}

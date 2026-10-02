@@ -1,0 +1,28 @@
+{
+  "coreTemperature": {
+    "min": 37,
+    "max": 38.8
+  },
+  "geography": {
+    "coordinateCount": 4475,
+    "boundingBox": {
+      "north": 47.09797,
+      "south": 47.082634,
+      "east": 17.911943,
+      "west": 17.860306
+    }
+  },
+  "classification": {
+    "class": "generic_training",
+    "signals": [
+      {
+        "kind": "intervals_race",
+        "value": false
+      },
+      {
+        "kind": "name_pattern",
+        "rule": "generic-name:Hosszú"
+      }
+    ]
+  }
+}

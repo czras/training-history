@@ -1,0 +1,24 @@
+{
+  "geography": {
+    "coordinateCount": 3215,
+    "boundingBox": {
+      "north": 47.093105,
+      "south": 47.08307,
+      "east": 17.903854,
+      "west": 17.88046
+    }
+  },
+  "classification": {
+    "class": "community_event",
+    "signals": [
+      {
+        "kind": "intervals_race",
+        "value": false
+      },
+      {
+        "kind": "name_pattern",
+        "rule": "name-prefix:SVSE futóklub"
+      }
+    ]
+  }
+}

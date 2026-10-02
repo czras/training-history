@@ -1,0 +1,28 @@
+{
+  "coreTemperature": {
+    "min": 0,
+    "max": 38.39
+  },
+  "geography": {
+    "coordinateCount": 3805,
+    "boundingBox": {
+      "north": 47.108414,
+      "south": 47.081757,
+      "east": 17.9119,
+      "west": 17.883015
+    }
+  },
+  "classification": {
+    "class": "community_event",
+    "signals": [
+      {
+        "kind": "intervals_race",
+        "value": false
+      },
+      {
+        "kind": "name_pattern",
+        "rule": "name-prefix:VeszpRun"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "coreTemperature": {
+    "min": 0,
+    "max": 37.27
+  },
+  "classification": {
+    "class": "unknown",
+    "signals": [
+      {
+        "kind": "intervals_race",
+        "value": false
+      }
+    ]
+  }
+}

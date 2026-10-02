@@ -1,0 +1,28 @@
+{
+  "coreTemperature": {
+    "min": 0,
+    "max": 38.75
+  },
+  "geography": {
+    "coordinateCount": 5472,
+    "boundingBox": {
+      "north": 47.083935,
+      "south": 47.0186,
+      "east": 17.948578,
+      "west": 17.911736
+    }
+  },
+  "classification": {
+    "class": "generic_training",
+    "signals": [
+      {
+        "kind": "intervals_race",
+        "value": false
+      },
+      {
+        "kind": "name_pattern",
+        "rule": "generic-name:Tempó"
+      }
+    ]
+  }
+}

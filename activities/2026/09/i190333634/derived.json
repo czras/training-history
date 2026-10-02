@@ -1,0 +1,28 @@
+{
+  "coreTemperature": {
+    "min": 37.43,
+    "max": 38.53
+  },
+  "geography": {
+    "coordinateCount": 3640,
+    "boundingBox": {
+      "north": 47.084766,
+      "south": 47.082684,
+      "east": 17.911991,
+      "west": 17.902113
+    }
+  },
+  "classification": {
+    "class": "community_event",
+    "signals": [
+      {
+        "kind": "intervals_race",
+        "value": false
+      },
+      {
+        "kind": "name_pattern",
+        "rule": "name-prefix:SVSE futóklub"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "coreTemperature": {
+    "min": 37.36,
+    "max": 38.76
+  },
+  "geography": {
+    "coordinateCount": 4292,
+    "boundingBox": {
+      "north": 47.111534,
+      "south": 47.082516,
+      "east": 17.912035,
+      "west": 17.836576
+    }
+  },
+  "classification": {
+    "class": "unknown",
+    "signals": [
+      {
+        "kind": "intervals_race",
+        "value": false
+      }
+    ]
+  }
+}

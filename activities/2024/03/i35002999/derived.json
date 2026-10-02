@@ -1,0 +1,24 @@
+{
+  "geography": {
+    "coordinateCount": 4556,
+    "boundingBox": {
+      "north": 47.107796,
+      "south": 47.08837,
+      "east": 17.919117,
+      "west": 17.883032
+    }
+  },
+  "classification": {
+    "class": "community_event",
+    "signals": [
+      {
+        "kind": "intervals_race",
+        "value": false
+      },
+      {
+        "kind": "name_pattern",
+        "rule": "name-prefix:VeszpRun"
+      }
+    ]
+  }
+}

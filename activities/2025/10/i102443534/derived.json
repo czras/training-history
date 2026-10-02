@@ -1,0 +1,28 @@
+{
+  "coreTemperature": {
+    "min": 0,
+    "max": 38.14
+  },
+  "geography": {
+    "coordinateCount": 3232,
+    "boundingBox": {
+      "north": 47.084084,
+      "south": 47.063328,
+      "east": 17.930262,
+      "west": 17.911058
+    }
+  },
+  "classification": {
+    "class": "generic_training",
+    "signals": [
+      {
+        "kind": "intervals_race",
+        "value": false
+      },
+      {
+        "kind": "name_pattern",
+        "rule": "generic-name:Könnyű"
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "geography": {
+    "coordinateCount": 2366,
+    "boundingBox": {
+      "north": 47.526596,
+      "south": 47.519405,
+      "east": 14.973003,
+      "west": 14.951367
+    }
+  },
+  "classification": {
+    "class": "generic_training",
+    "signals": [
+      {
+        "kind": "intervals_race",
+        "value": false
+      },
+      {
+        "kind": "name_pattern",
+        "rule": "generic-name:Hosszú"
+      }
+    ]
+  }
+}
