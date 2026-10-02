@@ -3,6 +3,7 @@ import { join } from "node:path";
 
 const API_BASE = "https://intervals.icu/api/v1";
 const ACTIVITY_INDEX_PATH = join("data", "sync", "activities.json");
+const CONCURRENCY = 8;
 
 const apiKey = process.env.INTERVALS_ICU_API_KEY;
 
@@ -21,6 +22,11 @@ type ActivityIndex = {
   source: string;
   object_type: string;
   activities: ActivityIndexEntry[];
+};
+
+type IngestionFailure = {
+  entry: ActivityIndexEntry;
+  error: unknown;
 };
 
 function authHeader(): string {
@@ -370,8 +376,10 @@ Geographic and physiological values in this document are calculated from the pre
 }
 
 async function ingestActivity(activityId: string): Promise<void> {
-  const activity = await fetchActivity(activityId);
-  const streams = await fetchStreams(activityId);
+  const [activity, streams] = await Promise.all([
+    fetchActivity(activityId),
+    fetchStreams(activityId),
+  ]);
 
   const directory = join("activities", activityId);
 
@@ -400,6 +408,52 @@ async function ingestActivity(activityId: string): Promise<void> {
   );
 }
 
+function formatFailure(error: unknown): string {
+  return error instanceof Error ? error.message : String(error);
+}
+
+async function ingestAll(
+  entries: ActivityIndexEntry[],
+): Promise<IngestionFailure[]> {
+  const failures: IngestionFailure[] = [];
+  let nextIndex = 0;
+
+  async function worker(): Promise<void> {
+    while (true) {
+      const index = nextIndex++;
+
+      if (index >= entries.length) {
+        return;
+      }
+
+      const entry = entries[index];
+
+      try {
+        await ingestActivity(entry.id);
+
+        console.log(
+          `[${index + 1}/${entries.length}] OK — ${entry.id} — ${entry.start_date_local} — ${entry.type} — ${entry.name}`,
+        );
+      } catch (error) {
+        failures.push({ entry, error });
+
+        console.error(
+          `[${index + 1}/${entries.length}] FAILED — ${entry.id} — ${entry.start_date_local} — ${entry.type} — ${entry.name}`,
+        );
+        console.error(`  ${formatFailure(error)}`);
+      }
+    }
+  }
+
+  const workerCount = Math.min(CONCURRENCY, entries.length);
+
+  await Promise.all(
+    Array.from({ length: workerCount }, () => worker()),
+  );
+
+  return failures;
+}
+
 async function main() {
   const activityId = parseActivityId();
 
@@ -421,21 +475,31 @@ async function main() {
   console.log("Ingesting activities from discovery index");
   console.log(`  Index: ${ACTIVITY_INDEX_PATH}`);
   console.log(`  Activities: ${index.activities.length}`);
+  console.log(`  Concurrency: ${CONCURRENCY}`);
   console.log("");
 
-  for (let i = 0; i < index.activities.length; i++) {
-    const entry = index.activities[i];
+  const failures = await ingestAll(index.activities);
+  const succeeded = index.activities.length - failures.length;
 
-    console.log(
-      `[${i + 1}/${index.activities.length}] ` +
-        `${entry.id} — ${entry.start_date_local} — ${entry.type} — ${entry.name}`,
-    );
+  console.log("");
+  console.log("Ingestion complete");
+  console.log("");
+  console.log(`Succeeded: ${succeeded}`);
+  console.log(`Failed:    ${failures.length}`);
 
-    await ingestActivity(entry.id);
+  if (failures.length > 0) {
+    console.log("");
+    console.log("Failed activities:");
+
+    for (const failure of failures) {
+      console.log(
+        `  ${failure.entry.id} — ${failure.entry.start_date_local} — ${failure.entry.type} — ${failure.entry.name}`,
+      );
+      console.log(`    ${formatFailure(failure.error)}`);
+    }
+
+    process.exitCode = 1;
   }
-
-  console.log("");
-  console.log(`Ingested ${index.activities.length} activities`);
 }
 
 main().catch((error) => {
