@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import type { ActivityPlatform } from "../platforms/activity.js";
 import { IntervalsIcuPlatform } from "../platforms/intervals-icu/index.js";
+import { deriveStreamFacts } from "../derivation/streams.js";
 
 const ACTIVITY_INDEX_PATH = join("data", "sync", "activities.json");
 
@@ -118,100 +119,6 @@ function formatNumber(value: unknown, decimals = 2): string {
   return typeof value === "number" ? value.toFixed(decimals) : "unknown";
 }
 
-function findStream(streams: unknown[], type: string): any | undefined {
-  return streams.find(
-    (stream) =>
-      stream &&
-      typeof stream === "object" &&
-      "type" in stream &&
-      stream.type === type,
-  );
-}
-
-function numericValues(data: unknown): number[] {
-  if (!Array.isArray(data)) {
-    return [];
-  }
-
-  return data.filter(
-    (value): value is number =>
-      typeof value === "number" && Number.isFinite(value),
-  );
-}
-
-function streamRange(
-  streams: unknown[],
-  type: string,
-): { min: number; max: number } | undefined {
-  const stream = findStream(streams, type);
-  const values = numericValues(stream?.data);
-
-  if (values.length === 0) {
-    return undefined;
-  }
-
-  return {
-    min: Math.min(...values),
-    max: Math.max(...values),
-  };
-}
-
-function coordinateValues(
-  streams: unknown[],
-): Array<[number, number]> {
-  const stream = findStream(streams, "latlng");
-
-  if (
-    !stream ||
-    !Array.isArray(stream.data) ||
-    !Array.isArray(stream.data2)
-  ) {
-    return [];
-  }
-
-  const count = Math.min(stream.data.length, stream.data2.length);
-  const coordinates: Array<[number, number]> = [];
-
-  for (let i = 0; i < count; i++) {
-    const lat = stream.data[i];
-    const lng = stream.data2[i];
-
-    if (
-      typeof lat === "number" &&
-      Number.isFinite(lat) &&
-      typeof lng === "number" &&
-      Number.isFinite(lng)
-    ) {
-      coordinates.push([lat, lng]);
-    }
-  }
-
-  return coordinates;
-}
-
-function geographicDerivation(streams: unknown[]) {
-  const coordinates = coordinateValues(streams);
-
-  if (coordinates.length === 0) {
-    return undefined;
-  }
-
-  const latitudes = coordinates.map(([lat]) => lat);
-  const longitudes = coordinates.map(([, lng]) => lng);
-
-  return {
-    source: "streams.json",
-    stream: "latlng",
-    coordinateCount: coordinates.length,
-    boundingBox: {
-      north: Math.max(...latitudes),
-      south: Math.min(...latitudes),
-      east: Math.max(...longitudes),
-      west: Math.min(...longitudes),
-    },
-  };
-}
-
 function activityEvidence(
   activity: any,
   streams: unknown[],
@@ -222,8 +129,10 @@ function activityEvidence(
     ? `Average unilateral cadence: ${formatNumber(activity.average_cadence, 1)} [steps/min]`
     : `Average cadence: ${formatNumber(activity.average_cadence, 1)} [rpm]`;
 
-  const coreTemperature = streamRange(streams, "core_temperature");
-  const geography = geographicDerivation(streams);
+  const facts = deriveStreamFacts(streams);
+
+  const coreTemperature = facts.coreTemperature;
+  const geography = facts.geography;
 
   const coreTemperatureSection = coreTemperature
     ? `## Physiology
