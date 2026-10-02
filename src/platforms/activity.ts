@@ -11,5 +11,10 @@ export type Activity = {
 };
 
 export interface ActivityPlatform {
+  discoverActivities(
+    oldest: string,
+    newest: string,
+  ): Promise<ActivitySource[]>;
+
   getActivity(id: string): Promise<Activity>;
 }

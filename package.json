@@ -3,7 +3,6 @@
   "type": "module",
   "scripts": {
     "ingest": "tsx src/sync/ingest.ts",
-    "discover:activities": "tsx src/sync/activities.ts",
     "curate:geography": "tsx src/geography/curate.ts",
     "materialize:geography": "tsx src/geography/materialize.ts",
     "inspect:geography": "tsx src/geography/inspect.ts"
