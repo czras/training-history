@@ -2,9 +2,17 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import type { Activity } from "../platforms/activity.js";
 import {
+  classifyActivity,
+  type ActivityClassification,
+} from "../semantics/classify.js";
+import {
   deriveStreamFacts,
   type StreamFacts,
 } from "../derivation/streams.js";
+
+type DerivedFacts = StreamFacts & {
+  classification: ActivityClassification;
+};
 
 async function writeFileLogged(
   path: string,
@@ -18,7 +26,9 @@ export async function persistActivity(
   activityId: string,
   activity: Activity,
 ): Promise<void> {
-  const startDate = new Date(activity.source.start_date_local);
+  const startDate = new Date(
+    activity.source.start_date_local,
+  );
 
   if (Number.isNaN(startDate.getTime())) {
     throw new Error(
@@ -44,9 +54,18 @@ export async function persistActivity(
   const workoutPath = join(directory, "workout.json");
   const evidencePath = join(directory, "evidence.md");
 
-  const facts: StreamFacts = deriveStreamFacts(
+  const streamFacts = deriveStreamFacts(
     activity.streams,
   );
+
+  const classification = classifyActivity(
+    activity.source,
+  );
+
+  const facts: DerivedFacts = {
+    ...streamFacts,
+    classification,
+  };
 
   await writeFileLogged(
     sourcePath,
@@ -72,7 +91,10 @@ export async function persistActivity(
 
   await writeFileLogged(
     evidencePath,
-    activityEvidence(activity.source, facts),
+    activityEvidence(
+      activity.source,
+      facts,
+    ),
   );
 }
 
@@ -83,7 +105,9 @@ function formatDuration(seconds: unknown): string {
 
   const totalSeconds = Math.round(seconds);
   const hours = Math.floor(totalSeconds / 3600);
-  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const minutes = Math.floor(
+    (totalSeconds % 3600) / 60,
+  );
   const remainingSeconds = totalSeconds % 60;
 
   if (hours > 0) {
@@ -93,13 +117,18 @@ function formatDuration(seconds: unknown): string {
   return `${minutes}m ${remainingSeconds}s`;
 }
 
-function formatNumber(value: unknown, decimals = 2): string {
-  return typeof value === "number" ? value.toFixed(decimals) : "unknown";
+function formatNumber(
+  value: unknown,
+  decimals = 2,
+): string {
+  return typeof value === "number"
+    ? value.toFixed(decimals)
+    : "unknown";
 }
 
 function activityEvidence(
-  activity: any,
-  facts: StreamFacts,
+  activity: Record<string, unknown>,
+  facts: DerivedFacts,
 ): string {
   const isRun = activity.type === "Run";
 
@@ -109,13 +138,15 @@ function activityEvidence(
 
   const coreTemperature = facts.coreTemperature;
   const geography = facts.geography;
+  const classification = facts.classification;
 
-  const coreTemperatureSection = coreTemperature
-    ? `## Physiology
+  const coreTemperatureSection =
+    coreTemperature
+      ? `## Physiology
 
 - Core temperature: ${formatNumber(coreTemperature.min, 2)}–${formatNumber(coreTemperature.max, 2)} [°C]
 `
-    : "";
+      : "";
 
   const geographySection = geography
     ? `## Geography
@@ -129,6 +160,24 @@ function activityEvidence(
 
 `
     : "";
+
+  const classificationSection = `## Classification
+
+- Class: ${classification.class}
+- Signals:
+${
+  classification.signals.length > 0
+    ? classification.signals
+        .map((signal) =>
+          signal.kind === "intervals_race"
+            ? `  - Intervals.icu race: ${String(signal.value)}`
+            : `  - Name pattern: ${signal.rule}`,
+        )
+        .join("\n")
+    : "  - none"
+}
+
+`;
 
   return `# Activity
 
@@ -182,7 +231,7 @@ function activityEvidence(
 - Tailwind: ${formatNumber(activity.tailwind_percent, 1)} [%]
 
 ${coreTemperatureSection}
-${geographySection}## Training
+${geographySection}${classificationSection}## Training
 
 - Training load: ${activity.icu_training_load ?? "unknown"}
 - HR load: ${activity.hr_load ?? "unknown"}
@@ -205,7 +254,7 @@ This document is a generated human-readable projection of \`source.json\` and \`
 
 The canonical source evidence is preserved unchanged.
 
-The derived values in this document are calculated from the preserved 'streams.json' and are also preserved in 'derived.json'.
+The derived values in this document are calculated from the preserved \`streams.json\` and semantic classification from \`source.json\`. They are also preserved in \`derived.json\`.
 
 No external geographic enrichment is applied.
 `;
