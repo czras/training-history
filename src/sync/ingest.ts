@@ -2,7 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import type { ActivityPlatform } from "../platforms/activity.js";
 import { IntervalsIcuPlatform } from "../platforms/intervals-icu/index.js";
-import { deriveStreamFacts } from "../derivation/streams.js";
+import { deriveStreamFacts, StreamFacts } from "../derivation/streams.js";
 
 const ACTIVITY_INDEX_PATH = join("data", "sync", "activities.json");
 
@@ -121,15 +121,13 @@ function formatNumber(value: unknown, decimals = 2): string {
 
 function activityEvidence(
   activity: any,
-  streams: unknown[],
+  facts: StreamFacts,
 ): string {
   const isRun = activity.type === "Run";
 
   const cadenceLabel = isRun
     ? `Average unilateral cadence: ${formatNumber(activity.average_cadence, 1)} [steps/min]`
     : `Average cadence: ${formatNumber(activity.average_cadence, 1)} [rpm]`;
-
-  const facts = deriveStreamFacts(streams);
 
   const coreTemperature = facts.coreTemperature;
   const geography = facts.geography;
@@ -229,7 +227,9 @@ This document is a generated human-readable projection of \`source.json\` and \`
 
 The canonical source evidence is preserved unchanged.
 
-Geographic and physiological values in this document are calculated from the preserved activity streams. No external geographic enrichment is applied.
+The derived values in this document are calculated from the preserved 'streams.json' and are also preserved in 'derived.json'.
+
+No external geographic enrichment is applied.
 `;
 }
 
@@ -254,6 +254,7 @@ async function ingestActivity(activityId: string): Promise<void> {
   const sourcePath = join(directory, "source.json");
   const streamsPath = join(directory, "streams.json");
   const workoutPath = join(directory, "workout.json");
+  const derivedPath = join(directory, "derived.json");
   const evidencePath = join(directory, "evidence.md");
 
   await writeFile(
@@ -268,6 +269,14 @@ async function ingestActivity(activityId: string): Promise<void> {
     "utf8",
   );
 
+  const facts = deriveStreamFacts(activity.streams);
+
+  await writeFile(
+    derivedPath,
+    JSON.stringify(facts, null, 2) + "\n",
+    "utf8",
+  );
+
   if (activity.workout !== undefined) {
     await writeFile(
       workoutPath,
@@ -278,7 +287,7 @@ async function ingestActivity(activityId: string): Promise<void> {
 
   await writeFile(
     evidencePath,
-    activityEvidence(activity.source, activity.streams),
+    activityEvidence(activity.source, facts),
     "utf8",
   );
 }
