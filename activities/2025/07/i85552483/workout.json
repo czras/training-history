@@ -1,0 +1,112 @@
+{
+  "id": 63747016,
+  "start_date_local": "2025-07-01T17:00:00",
+  "icu_training_load": 49,
+  "icu_atl": 60.433693,
+  "icu_ctl": 48.64433,
+  "type": "Run",
+  "carbs_used": null,
+  "ss_p_max": null,
+  "ss_w_prime": null,
+  "ss_cp": null,
+  "calendar_id": 1,
+  "uid": "937737a8-4dc1-4590-b5ca-5e2f883bbef8",
+  "athlete_id": "i124581",
+  "category": "WORKOUT",
+  "end_date_local": "2025-07-01T18:30:00",
+  "name": "Átmozgató ",
+  "description": "\n- 90m Z1-Z2 HR\n\nfutóiskola \n\n3x 150m lendülés kifutással középső 50m 9s 250m séta \n2x 200m rajt illetve cél szimuláció 39s illetve 40s 5p séta\n2x 120m verseny ritmusban 250m séta \n\nugrások, nyújtás ",
+  "indoor": false,
+  "color": "green",
+  "moving_time": 5400,
+  "icu_ftp": null,
+  "w_prime": null,
+  "p_max": null,
+  "atl_days": null,
+  "ctl_days": null,
+  "updated": "2025-07-01T17:17:06.624+00:00",
+  "not_on_fitness_chart": false,
+  "show_as_note": false,
+  "show_on_ctl_line": false,
+  "for_week": false,
+  "target": null,
+  "joules": 0,
+  "joules_above_ftp": 0,
+  "workout_doc": {
+    "steps": [
+      {
+        "hr": {
+          "end": 2,
+          "start": 1,
+          "units": "hr_zone"
+        },
+        "duration": 5400
+      }
+    ],
+    "locales": [],
+    "options": {},
+    "distance": 0,
+    "duration": 5400,
+    "zoneTimes": [
+      {
+        "id": "Z1",
+        "secs": 5400
+      },
+      {
+        "id": "Z2",
+        "secs": 0
+      },
+      {
+        "id": "Z3",
+        "secs": 0
+      },
+      {
+        "id": "Z4",
+        "secs": 0
+      },
+      {
+        "id": "Z5",
+        "secs": 0
+      },
+      {
+        "id": "Z6",
+        "secs": 0
+      },
+      {
+        "id": "Z7",
+        "secs": 0
+      }
+    ],
+    "average_watts": 0,
+    "normalized_power": 0,
+    "variability_index": null,
+    "polarization_index": 0
+  },
+  "push_errors": null,
+  "athlete_cannot_edit": false,
+  "hide_from_athlete": false,
+  "structure_read_only": false,
+  "created_by_id": "i124581",
+  "shared_event_id": null,
+  "entered": false,
+  "carbs_per_hour": null,
+  "sub_type": null,
+  "distance": 0,
+  "tags": null,
+  "attachments": null,
+  "oauth_client_id": null,
+  "external_id": null,
+  "load_target": null,
+  "time_target": null,
+  "distance_target": null,
+  "training_availability": "NORMAL",
+  "max_training_time": null,
+  "can_train_sports": null,
+  "plan_athlete_id": null,
+  "plan_folder_id": null,
+  "plan_workout_id": null,
+  "plan_applied": null,
+  "icu_intensity": 57.154762,
+  "strain_score": null,
+  "plan_name": null
+}

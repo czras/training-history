@@ -1,5 +1,9 @@
 export type Activity = {
-  source: unknown;
+  source: {
+    id: string;
+    start_date_local: string;
+    [key: string]: unknown;
+  };
   streams: unknown[];
   workout?: unknown;
 };

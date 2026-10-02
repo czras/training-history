@@ -327,7 +327,18 @@ Geographic and physiological values in this document are calculated from the pre
 async function ingestActivity(activityId: string): Promise<void> {
   const activity = await activityPlatform.getActivity(activityId);
 
-  const directory = join("activities", activityId);
+  const startDate = new Date(activity.source.start_date_local);
+
+  if (Number.isNaN(startDate.getTime())) {
+    throw new Error(
+      `Activity ${activityId} has invalid start_date_local: ${activity.source.start_date_local}`,
+    );
+  }
+
+  const year = activity.source.start_date_local.slice(0, 4);
+  const month = activity.source.start_date_local.slice(5, 7);
+
+  const directory = join("activities", year, month, activityId);
 
   await mkdir(directory, { recursive: true });
 

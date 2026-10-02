@@ -1,0 +1,111 @@
+{
+  "id": 21582228,
+  "start_date_local": "2023-10-07T07:30:00",
+  "icu_training_load": 197,
+  "icu_atl": 79.21887,
+  "icu_ctl": 64.6138,
+  "type": "TrailRun",
+  "carbs_used": null,
+  "ss_p_max": null,
+  "ss_w_prime": null,
+  "ss_cp": null,
+  "calendar_id": 1,
+  "uid": "15145b8a-4535-47a9-a968-245ac9220f44",
+  "athlete_id": "i124581",
+  "category": "RACE_C",
+  "end_date_local": "2023-10-07T11:30:00",
+  "name": "Bakonyi barangolás 30",
+  "description": "https://tturak.hu/hikeOccasion/5173/details\n- 240m Z2 HR",
+  "indoor": false,
+  "color": "green",
+  "moving_time": 14400,
+  "icu_ftp": null,
+  "w_prime": null,
+  "p_max": null,
+  "atl_days": null,
+  "ctl_days": null,
+  "updated": "2023-09-11T13:28:33.674+00:00",
+  "not_on_fitness_chart": false,
+  "show_as_note": false,
+  "show_on_ctl_line": false,
+  "for_week": false,
+  "target": null,
+  "joules": 0,
+  "joules_above_ftp": 0,
+  "workout_doc": {
+    "steps": [
+      {
+        "hr": {
+          "units": "hr_zone",
+          "value": 2
+        },
+        "duration": 14400
+      }
+    ],
+    "locales": [],
+    "options": {},
+    "distance": 0,
+    "duration": 14400,
+    "zoneTimes": [
+      {
+        "id": "Z1",
+        "secs": 0
+      },
+      {
+        "id": "Z2",
+        "secs": 14400
+      },
+      {
+        "id": "Z3",
+        "secs": 0
+      },
+      {
+        "id": "Z4",
+        "secs": 0
+      },
+      {
+        "id": "Z5",
+        "secs": 0
+      },
+      {
+        "id": "Z6",
+        "secs": 0
+      },
+      {
+        "id": "Z7",
+        "secs": 0
+      }
+    ],
+    "description": "https://tturak.hu/hikeOccasion/5173/details",
+    "average_watts": 0,
+    "normalized_power": 0,
+    "variability_index": null
+  },
+  "push_errors": null,
+  "athlete_cannot_edit": false,
+  "hide_from_athlete": false,
+  "structure_read_only": false,
+  "created_by_id": "i124581",
+  "shared_event_id": null,
+  "entered": false,
+  "carbs_per_hour": null,
+  "sub_type": null,
+  "distance": null,
+  "tags": null,
+  "attachments": null,
+  "oauth_client_id": null,
+  "external_id": null,
+  "load_target": null,
+  "time_target": null,
+  "distance_target": null,
+  "training_availability": "NORMAL",
+  "max_training_time": null,
+  "can_train_sports": null,
+  "plan_athlete_id": null,
+  "plan_folder_id": null,
+  "plan_workout_id": null,
+  "plan_applied": null,
+  "icu_intensity": 70.178345,
+  "strain_score": null,
+  "plan_name": null
+}

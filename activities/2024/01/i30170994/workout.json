@@ -1,0 +1,145 @@
+{
+  "id": 26455922,
+  "start_date_local": "2024-01-04T06:45:00",
+  "icu_training_load": 46,
+  "icu_atl": 71.04996,
+  "icu_ctl": 54.916668,
+  "type": "Run",
+  "carbs_used": null,
+  "ss_p_max": null,
+  "ss_w_prime": null,
+  "ss_cp": null,
+  "calendar_id": 1,
+  "uid": "f026ec9a-d147-42a8-a48e-a8d28f48cdd4",
+  "athlete_id": "i124581",
+  "category": "WORKOUT",
+  "end_date_local": "2024-01-04T07:38:00",
+  "name": "Domb rövid x9",
+  "description": "Warmup\n- 8m normal Z1 HR\n\n9x Hill\n- 60s maxeffort 90-100% HR\n- 180s normal Z1 HR\n\nCooldown\n- 9m normal Z1-Z2 HR",
+  "indoor": false,
+  "color": "race",
+  "moving_time": 3180,
+  "icu_ftp": null,
+  "w_prime": null,
+  "p_max": null,
+  "atl_days": null,
+  "ctl_days": null,
+  "updated": "2024-01-03T17:57:10.547+00:00",
+  "not_on_fitness_chart": false,
+  "show_as_note": false,
+  "show_on_ctl_line": false,
+  "for_week": false,
+  "target": null,
+  "joules": 0,
+  "joules_above_ftp": 0,
+  "workout_doc": {
+    "steps": [
+      {
+        "hr": {
+          "units": "hr_zone",
+          "value": 1
+        },
+        "warmup": true,
+        "duration": 480
+      },
+      {
+        "reps": 9,
+        "text": "9x Hill",
+        "steps": [
+          {
+            "hr": {
+              "end": 100,
+              "start": 90,
+              "units": "%hr"
+            },
+            "duration": 60,
+            "maxeffort": true
+          },
+          {
+            "hr": {
+              "units": "hr_zone",
+              "value": 1
+            },
+            "duration": 180
+          }
+        ],
+        "distance": 0,
+        "duration": 2160
+      },
+      {
+        "hr": {
+          "end": 2,
+          "start": 1,
+          "units": "hr_zone"
+        },
+        "cooldown": true,
+        "duration": 540
+      }
+    ],
+    "locales": [],
+    "options": {},
+    "distance": 0,
+    "duration": 3180,
+    "zoneTimes": [
+      {
+        "id": "Z1",
+        "secs": 2640
+      },
+      {
+        "id": "Z2",
+        "secs": 0
+      },
+      {
+        "id": "Z3",
+        "secs": 0
+      },
+      {
+        "id": "Z4",
+        "secs": 0
+      },
+      {
+        "id": "Z5",
+        "secs": 0
+      },
+      {
+        "id": "Z6",
+        "secs": 0
+      },
+      {
+        "id": "Z7",
+        "secs": 540
+      }
+    ],
+    "average_watts": 0,
+    "normalized_power": 0,
+    "variability_index": null,
+    "polarization_index": 3.12
+  },
+  "push_errors": null,
+  "athlete_cannot_edit": false,
+  "hide_from_athlete": false,
+  "structure_read_only": false,
+  "created_by_id": "i124581",
+  "shared_event_id": null,
+  "entered": false,
+  "carbs_per_hour": null,
+  "sub_type": null,
+  "distance": 0,
+  "tags": null,
+  "attachments": null,
+  "oauth_client_id": null,
+  "external_id": null,
+  "load_target": null,
+  "time_target": null,
+  "distance_target": null,
+  "training_availability": "NORMAL",
+  "max_training_time": null,
+  "can_train_sports": null,
+  "plan_athlete_id": "i124581",
+  "plan_folder_id": 228241,
+  "plan_workout_id": 488,
+  "plan_applied": null,
+  "icu_intensity": 72.16334,
+  "strain_score": null,
+  "plan_name": "GOMU48 6h 2024"
+}

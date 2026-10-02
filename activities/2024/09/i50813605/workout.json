@@ -1,0 +1,111 @@
+{
+  "id": 43562737,
+  "start_date_local": "2024-09-29T11:30:00",
+  "icu_training_load": 3,
+  "icu_atl": 94.247345,
+  "icu_ctl": 71.492195,
+  "type": "Run",
+  "carbs_used": null,
+  "ss_p_max": null,
+  "ss_w_prime": null,
+  "ss_cp": null,
+  "calendar_id": 1,
+  "uid": "68b4a980-39da-40f6-9743-840f9c1545ef",
+  "athlete_id": "i124581",
+  "category": "WORKOUT",
+  "end_date_local": "2024-09-29T11:33:00",
+  "name": "Fuss az iskoládért váltó ",
+  "description": "-180s Z3 HR",
+  "indoor": false,
+  "color": "green",
+  "moving_time": 180,
+  "icu_ftp": null,
+  "w_prime": null,
+  "p_max": null,
+  "atl_days": null,
+  "ctl_days": null,
+  "updated": "2024-09-29T14:59:27.705+00:00",
+  "not_on_fitness_chart": false,
+  "show_as_note": false,
+  "show_on_ctl_line": false,
+  "for_week": false,
+  "target": null,
+  "joules": 0,
+  "joules_above_ftp": 0,
+  "workout_doc": {
+    "steps": [
+      {
+        "hr": {
+          "units": "hr_zone",
+          "value": 3
+        },
+        "duration": 180
+      }
+    ],
+    "locales": [],
+    "options": {},
+    "distance": 0,
+    "duration": 180,
+    "zoneTimes": [
+      {
+        "id": "Z1",
+        "secs": 0
+      },
+      {
+        "id": "Z2",
+        "secs": 0
+      },
+      {
+        "id": "Z3",
+        "secs": 180
+      },
+      {
+        "id": "Z4",
+        "secs": 0
+      },
+      {
+        "id": "Z5",
+        "secs": 0
+      },
+      {
+        "id": "Z6",
+        "secs": 0
+      },
+      {
+        "id": "Z7",
+        "secs": 0
+      }
+    ],
+    "average_watts": 0,
+    "normalized_power": 0,
+    "variability_index": null,
+    "polarization_index": 0
+  },
+  "push_errors": null,
+  "athlete_cannot_edit": false,
+  "hide_from_athlete": false,
+  "structure_read_only": false,
+  "created_by_id": "i124581",
+  "shared_event_id": null,
+  "entered": false,
+  "carbs_per_hour": null,
+  "sub_type": null,
+  "distance": 0,
+  "tags": null,
+  "attachments": null,
+  "oauth_client_id": null,
+  "external_id": null,
+  "load_target": null,
+  "time_target": null,
+  "distance_target": null,
+  "training_availability": "NORMAL",
+  "max_training_time": null,
+  "can_train_sports": null,
+  "plan_athlete_id": null,
+  "plan_folder_id": null,
+  "plan_workout_id": null,
+  "plan_applied": null,
+  "icu_intensity": null,
+  "strain_score": null,
+  "plan_name": null
+}

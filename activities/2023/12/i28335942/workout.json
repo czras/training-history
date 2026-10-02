@@ -1,0 +1,104 @@
+{
+  "id": 24916616,
+  "start_date_local": "2023-12-02T09:00:00",
+  "icu_training_load": 62,
+  "icu_atl": 39.816967,
+  "icu_ctl": 51.535587,
+  "type": "Hike",
+  "carbs_used": null,
+  "ss_p_max": null,
+  "ss_w_prime": null,
+  "ss_cp": null,
+  "calendar_id": 1,
+  "uid": "3941979f-5721-46fe-9dec-dd76421eca7d",
+  "athlete_id": "i124581",
+  "category": "WORKOUT",
+  "end_date_local": "2023-12-02T13:00:00",
+  "name": "Bakonyi Mikulás 18",
+  "description": "Nimfával\n- 240m Z1 HR",
+  "indoor": false,
+  "color": "green",
+  "moving_time": 14400,
+  "icu_ftp": null,
+  "w_prime": null,
+  "p_max": null,
+  "atl_days": null,
+  "ctl_days": null,
+  "updated": "2023-11-29T18:28:49.862+00:00",
+  "not_on_fitness_chart": false,
+  "show_as_note": false,
+  "show_on_ctl_line": false,
+  "for_week": false,
+  "target": null,
+  "joules": 0,
+  "joules_above_ftp": 0,
+  "workout_doc": {
+    "steps": [
+      {
+        "hr": {
+          "units": "hr_zone",
+          "value": 1
+        },
+        "duration": 14400
+      }
+    ],
+    "locales": [],
+    "options": {},
+    "distance": 0,
+    "duration": 14400,
+    "zoneTimes": [
+      {
+        "id": "Z1",
+        "secs": 14400
+      },
+      {
+        "id": "Z2",
+        "secs": 0
+      },
+      {
+        "id": "Z3",
+        "secs": 0
+      },
+      {
+        "id": "Z4",
+        "secs": 0
+      },
+      {
+        "id": "Z5",
+        "secs": 0
+      }
+    ],
+    "description": "Nimfával",
+    "average_watts": 0,
+    "normalized_power": 0,
+    "variability_index": null,
+    "polarization_index": 0
+  },
+  "push_errors": null,
+  "athlete_cannot_edit": false,
+  "hide_from_athlete": false,
+  "structure_read_only": false,
+  "created_by_id": "i124581",
+  "shared_event_id": null,
+  "entered": false,
+  "carbs_per_hour": null,
+  "sub_type": null,
+  "distance": 0,
+  "tags": null,
+  "attachments": null,
+  "oauth_client_id": null,
+  "external_id": null,
+  "load_target": null,
+  "time_target": null,
+  "distance_target": null,
+  "training_availability": "NORMAL",
+  "max_training_time": null,
+  "can_train_sports": null,
+  "plan_athlete_id": null,
+  "plan_folder_id": null,
+  "plan_workout_id": null,
+  "plan_applied": null,
+  "icu_intensity": 39.37004,
+  "strain_score": null,
+  "plan_name": null
+}

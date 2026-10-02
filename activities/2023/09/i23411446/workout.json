@@ -1,0 +1,188 @@
+{
+  "id": 19575907,
+  "start_date_local": "2023-09-07T10:00:00",
+  "icu_training_load": 40,
+  "icu_atl": 58.304096,
+  "icu_ctl": 56.937046,
+  "type": "Run",
+  "carbs_used": null,
+  "ss_p_max": null,
+  "ss_w_prime": null,
+  "ss_cp": null,
+  "calendar_id": 1,
+  "uid": "9304d54b-7689-48dc-9b5d-9f2c4153182d",
+  "athlete_id": "i124581",
+  "category": "WORKOUT",
+  "end_date_local": "2023-09-07T10:55:00",
+  "name": "MLSS teszt",
+  "description": "\n- 3m 60% Pace\n- 1m 0% Pace\n- 3m 75% Pace\n- 1m 0% Pace\n- 3m 90% Pace\n- 1m 0% Pace\n- 3m 105% Pace\n- 10m 0% Pace\n- 10m 97.5% Pace\n- 5m 60% Pace\n- 10m 105% Pace\n- 5m 60% Pace",
+  "indoor": true,
+  "color": "gray",
+  "moving_time": 3300,
+  "icu_ftp": null,
+  "w_prime": null,
+  "p_max": null,
+  "atl_days": null,
+  "ctl_days": null,
+  "updated": "2023-11-10T13:53:10.176+00:00",
+  "not_on_fitness_chart": false,
+  "show_as_note": false,
+  "show_on_ctl_line": false,
+  "for_week": false,
+  "target": null,
+  "joules": 0,
+  "joules_above_ftp": 0,
+  "workout_doc": {
+    "steps": [
+      {
+        "pace": {
+          "units": "%pace",
+          "value": 60
+        },
+        "duration": 180
+      },
+      {
+        "pace": {
+          "units": "%pace",
+          "value": 0
+        },
+        "duration": 60
+      },
+      {
+        "pace": {
+          "units": "%pace",
+          "value": 75
+        },
+        "duration": 180
+      },
+      {
+        "pace": {
+          "units": "%pace",
+          "value": 0
+        },
+        "duration": 60
+      },
+      {
+        "pace": {
+          "units": "%pace",
+          "value": 90
+        },
+        "duration": 180
+      },
+      {
+        "pace": {
+          "units": "%pace",
+          "value": 0
+        },
+        "duration": 60
+      },
+      {
+        "pace": {
+          "units": "%pace",
+          "value": 105
+        },
+        "duration": 180
+      },
+      {
+        "pace": {
+          "units": "%pace",
+          "value": 0
+        },
+        "duration": 600
+      },
+      {
+        "pace": {
+          "units": "%pace",
+          "value": 97.5
+        },
+        "duration": 600
+      },
+      {
+        "pace": {
+          "units": "%pace",
+          "value": 60
+        },
+        "duration": 300
+      },
+      {
+        "pace": {
+          "units": "%pace",
+          "value": 105
+        },
+        "duration": 600
+      },
+      {
+        "pace": {
+          "units": "%pace",
+          "value": 60
+        },
+        "duration": 300
+      }
+    ],
+    "locales": [],
+    "options": {},
+    "distance": 10419.555263808,
+    "duration": 3300,
+    "zoneTimes": [
+      {
+        "id": "Z1",
+        "secs": 1740
+      },
+      {
+        "id": "Z2",
+        "secs": 0
+      },
+      {
+        "id": "Z3",
+        "secs": 180
+      },
+      {
+        "id": "Z4",
+        "secs": 600
+      },
+      {
+        "id": "Z5",
+        "secs": 0
+      },
+      {
+        "id": "Z6",
+        "secs": 780
+      },
+      {
+        "id": "Z7",
+        "secs": 0
+      }
+    ],
+    "average_watts": 0,
+    "normalized_power": 0,
+    "variability_index": null,
+    "polarization_index": 1.72
+  },
+  "push_errors": null,
+  "athlete_cannot_edit": false,
+  "hide_from_athlete": false,
+  "structure_read_only": false,
+  "created_by_id": "i124581",
+  "shared_event_id": null,
+  "entered": false,
+  "carbs_per_hour": null,
+  "sub_type": null,
+  "distance": 10419.556,
+  "tags": null,
+  "attachments": null,
+  "oauth_client_id": null,
+  "external_id": null,
+  "load_target": null,
+  "time_target": null,
+  "distance_target": null,
+  "training_availability": "NORMAL",
+  "max_training_time": null,
+  "can_train_sports": null,
+  "plan_athlete_id": "i124581",
+  "plan_folder_id": 189895,
+  "plan_workout_id": 91,
+  "plan_applied": "2023-07-02T08:39:33.608+00:00",
+  "icu_intensity": 66.05782,
+  "strain_score": null,
+  "plan_name": "BUFF 6h 2023"
+}

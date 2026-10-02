@@ -1,0 +1,111 @@
+{
+  "id": 25525233,
+  "start_date_local": "2023-11-12T08:00:00",
+  "icu_training_load": 72,
+  "icu_atl": 46.878757,
+  "icu_ctl": 63.611217,
+  "type": "Ride",
+  "carbs_used": null,
+  "ss_p_max": null,
+  "ss_w_prime": null,
+  "ss_cp": null,
+  "calendar_id": 1,
+  "uid": "621d8281-d5e0-4475-8b32-ce18640289df",
+  "athlete_id": "i124581",
+  "category": "WORKOUT",
+  "end_date_local": "2023-11-12T10:15:00",
+  "name": "Hosszú",
+  "description": "-135m Z1 HR\n\nhttps://www.google.hu/maps/dir/Veszpr%C3%A9m,+R%C3%B3zsa+utca+34/47.0157702,17.9516941/46.9901717,17.969554/47.0638525,18.0229377/47.0970445,18.0101759/Veszpr%C3%A9m,+R%C3%B3zsa+u.+34,+8200/@47.0473197,17.9348611,19254m/data=!3m1!1e3!4m43!4m42!1m10!1m1!1s0x47699a706502b743:0xb84ca4e453217beb!2m2!1d17.9190393!2d47.0901683!3m4!1m2!1d17.918807!2d47.0794295!3s0x47699a0a5a14aeb5:0x859543ee39db8571!1m15!3m4!1m2!1d17.9529972!2d47.0143953!3s0x476996578a43531f:0xedac3e9a138e7ad5!3m4!1m2!1d17.9565681!2d47.0115603!3s0x476996593ccd32b3:0x2ea496391b9ba9c9!3m4!1m2!1d17.9637128!2d47.0101965!3s0x4769965e3be301ad:0xff8ef3c3741d391f!1m0!1m5!3m4!1m2!1d18.0300855!2d47.0778972!3s0x4769917c078d097b:0x7e79a49c9514cc5a!1m0!1m5!1m1!1s0x47699a706502b743:0xb84ca4e453217beb!2m2!1d17.9190393!2d47.0901683!3e1?entry=ttu",
+  "indoor": false,
+  "color": "green",
+  "moving_time": 8100,
+  "icu_ftp": null,
+  "w_prime": null,
+  "p_max": null,
+  "atl_days": null,
+  "ctl_days": null,
+  "updated": "2023-11-10T10:42:34.771+00:00",
+  "not_on_fitness_chart": false,
+  "show_as_note": false,
+  "show_on_ctl_line": false,
+  "for_week": false,
+  "target": null,
+  "joules": 0,
+  "joules_above_ftp": 0,
+  "workout_doc": {
+    "steps": [
+      {
+        "hr": {
+          "units": "hr_zone",
+          "value": 1
+        },
+        "duration": 8100
+      }
+    ],
+    "locales": [],
+    "options": {},
+    "distance": 0,
+    "duration": 8100,
+    "zoneTimes": [
+      {
+        "id": "Z1",
+        "secs": 8100
+      },
+      {
+        "id": "Z2",
+        "secs": 0
+      },
+      {
+        "id": "Z3",
+        "secs": 0
+      },
+      {
+        "id": "Z4",
+        "secs": 0
+      },
+      {
+        "id": "Z5",
+        "secs": 0
+      },
+      {
+        "id": "Z6",
+        "secs": 0
+      },
+      {
+        "id": "Z7",
+        "secs": 0
+      }
+    ],
+    "average_watts": 0,
+    "normalized_power": 0,
+    "variability_index": null,
+    "polarization_index": 0
+  },
+  "push_errors": null,
+  "athlete_cannot_edit": false,
+  "hide_from_athlete": false,
+  "structure_read_only": false,
+  "created_by_id": "i124581",
+  "shared_event_id": null,
+  "entered": false,
+  "carbs_per_hour": null,
+  "sub_type": null,
+  "distance": 0,
+  "tags": null,
+  "attachments": null,
+  "oauth_client_id": null,
+  "external_id": null,
+  "load_target": null,
+  "time_target": null,
+  "distance_target": null,
+  "training_availability": "NORMAL",
+  "max_training_time": null,
+  "can_train_sports": null,
+  "plan_athlete_id": null,
+  "plan_folder_id": null,
+  "plan_workout_id": null,
+  "plan_applied": null,
+  "icu_intensity": 56.568542,
+  "strain_score": null,
+  "plan_name": null
+}

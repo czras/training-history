@@ -1,0 +1,110 @@
+{
+  "id": 21582385,
+  "start_date_local": "2023-10-08T08:00:00",
+  "icu_training_load": 150,
+  "icu_atl": 88.6414,
+  "icu_ctl": 66.622795,
+  "type": "TrailRun",
+  "carbs_used": null,
+  "ss_p_max": null,
+  "ss_w_prime": null,
+  "ss_cp": null,
+  "calendar_id": 1,
+  "uid": "968cff8e-3314-4a1d-8340-b37082faea4d",
+  "athlete_id": "i124581",
+  "category": "RACE_C",
+  "end_date_local": "2023-10-08T11:00:00",
+  "name": "Németh Béla TT 28",
+  "description": "https://tturak.hu/hikeOccasion/5390/details\n- 180m Z2 HR",
+  "indoor": false,
+  "color": "green",
+  "moving_time": 10800,
+  "icu_ftp": null,
+  "w_prime": null,
+  "p_max": null,
+  "atl_days": null,
+  "ctl_days": null,
+  "updated": "2023-09-11T13:30:42.412+00:00",
+  "not_on_fitness_chart": false,
+  "show_as_note": false,
+  "show_on_ctl_line": false,
+  "for_week": false,
+  "target": null,
+  "joules": 0,
+  "joules_above_ftp": 0,
+  "workout_doc": {
+    "steps": [
+      {
+        "hr": {
+          "units": "hr_zone",
+          "value": 2
+        },
+        "duration": 5400
+      }
+    ],
+    "locales": [],
+    "options": {},
+    "distance": 0,
+    "duration": 5400,
+    "zoneTimes": [
+      {
+        "id": "Z1",
+        "secs": 0
+      },
+      {
+        "id": "Z2",
+        "secs": 5400
+      },
+      {
+        "id": "Z3",
+        "secs": 0
+      },
+      {
+        "id": "Z4",
+        "secs": 0
+      },
+      {
+        "id": "Z5",
+        "secs": 0
+      },
+      {
+        "id": "Z6",
+        "secs": 0
+      },
+      {
+        "id": "Z7",
+        "secs": 0
+      }
+    ],
+    "average_watts": 0,
+    "normalized_power": 0,
+    "variability_index": null
+  },
+  "push_errors": null,
+  "athlete_cannot_edit": false,
+  "hide_from_athlete": false,
+  "structure_read_only": false,
+  "created_by_id": "i124581",
+  "shared_event_id": null,
+  "entered": false,
+  "carbs_per_hour": null,
+  "sub_type": null,
+  "distance": null,
+  "tags": null,
+  "attachments": null,
+  "oauth_client_id": null,
+  "external_id": null,
+  "load_target": null,
+  "time_target": null,
+  "distance_target": null,
+  "training_availability": "NORMAL",
+  "max_training_time": null,
+  "can_train_sports": null,
+  "plan_athlete_id": null,
+  "plan_folder_id": null,
+  "plan_workout_id": null,
+  "plan_applied": null,
+  "icu_intensity": 70.71068,
+  "strain_score": null,
+  "plan_name": null
+}

@@ -1,0 +1,218 @@
+{
+  "id": 62633767,
+  "start_date_local": "2025-10-17T18:00:00",
+  "icu_training_load": 78,
+  "icu_atl": 65.45713,
+  "icu_ctl": 62.60319,
+  "type": "Run",
+  "carbs_used": null,
+  "ss_p_max": 0.6222827,
+  "ss_w_prime": 8.745413,
+  "ss_cp": 117.6321,
+  "calendar_id": 1,
+  "uid": "fd316d67-98d1-47d0-810c-d6d488ec86d8",
+  "athlete_id": "i124581",
+  "category": "WORKOUT",
+  "end_date_local": "2025-10-17T18:55:00",
+  "name": "SVSE futóklub",
+  "description": "\n- 15m Z1-Z2\n- 5m Z1\n\n5x\n- 3m10s Z5-Z6\n- 1m50s Z1\n\n- 10m Z1-Z2 ",
+  "indoor": false,
+  "color": "green",
+  "moving_time": 3300,
+  "icu_ftp": null,
+  "w_prime": null,
+  "p_max": null,
+  "atl_days": null,
+  "ctl_days": null,
+  "updated": "2025-10-17T17:27:36.461+00:00",
+  "not_on_fitness_chart": false,
+  "show_as_note": false,
+  "show_on_ctl_line": false,
+  "for_week": false,
+  "target": null,
+  "joules": 800200,
+  "joules_above_ftp": 44175,
+  "workout_doc": {
+    "steps": [
+      {
+        "power": {
+          "end": 2,
+          "start": 1,
+          "units": "power_zone"
+        },
+        "duration": 900
+      },
+      {
+        "power": {
+          "units": "power_zone",
+          "value": 1
+        },
+        "duration": 300
+      },
+      {
+        "reps": 5,
+        "text": "5x",
+        "steps": [
+          {
+            "power": {
+              "end": 6,
+              "start": 5,
+              "units": "power_zone"
+            },
+            "duration": 190
+          },
+          {
+            "power": {
+              "units": "power_zone",
+              "value": 1
+            },
+            "duration": 110
+          }
+        ],
+        "distance": 0,
+        "duration": 1500
+      },
+      {
+        "power": {
+          "end": 2,
+          "start": 1,
+          "units": "power_zone"
+        },
+        "duration": 600
+      }
+    ],
+    "locales": [],
+    "options": {},
+    "distance": 0,
+    "duration": 3300,
+    "zoneTimes": [
+      {
+        "id": "Z1",
+        "max": 80,
+        "name": "Z1",
+        "secs": 2350,
+        "zone": 1,
+        "color": "#009e80",
+        "maxWatts": 224,
+        "minWatts": 1,
+        "percentRange": "0% - 80%"
+      },
+      {
+        "id": "Z2",
+        "max": 88,
+        "name": "Z2",
+        "secs": 0,
+        "zone": 2,
+        "color": "#009e00",
+        "maxWatts": 246,
+        "minWatts": 225,
+        "percentRange": "81% - 88%"
+      },
+      {
+        "id": "Z3",
+        "max": 95,
+        "name": "Z3",
+        "secs": 0,
+        "zone": 3,
+        "color": "#ffcb0e",
+        "maxWatts": 266,
+        "minWatts": 247,
+        "percentRange": "89% - 95%"
+      },
+      {
+        "id": "Z4",
+        "max": 105,
+        "name": "Z4",
+        "secs": 0,
+        "zone": 4,
+        "color": "#ff7f0e",
+        "maxWatts": 294,
+        "minWatts": 267,
+        "percentRange": "96% - 105%"
+      },
+      {
+        "id": "Z5",
+        "max": 115,
+        "name": "Z5",
+        "secs": 0,
+        "zone": 5,
+        "color": "#dd0447",
+        "maxWatts": 322,
+        "minWatts": 295,
+        "percentRange": "106% - 115%"
+      },
+      {
+        "id": "Z6",
+        "max": 128,
+        "name": "Z6",
+        "secs": 950,
+        "zone": 6,
+        "color": "#6633cc",
+        "maxWatts": 358,
+        "minWatts": 323,
+        "percentRange": "116% - 128%"
+      },
+      {
+        "id": "Z7",
+        "max": 999,
+        "name": "Z7",
+        "secs": 0,
+        "zone": 7,
+        "color": "#504861",
+        "maxWatts": 9999,
+        "minWatts": 359,
+        "percentRange": "129% +"
+      },
+      {
+        "id": "SS",
+        "gap": true,
+        "max": 97,
+        "min": 84,
+        "name": "Sweet Spot",
+        "secs": 0,
+        "zone": 8,
+        "color": "#ffa00e",
+        "maxWatts": 271,
+        "minWatts": 235,
+        "percentRange": "84% - 97%"
+      }
+    ],
+    "strain_score": {
+      "ss_cp": 117.63209929368446,
+      "ss_p_max": 0.6222826595531314,
+      "ss_w_prime": 8.745413290709052,
+      "strain_score": 126.99979524394665
+    },
+    "average_watts": 242,
+    "normalized_power": 259,
+    "variability_index": 1.0702479338842976,
+    "polarization_index": 3.3
+  },
+  "push_errors": null,
+  "athlete_cannot_edit": false,
+  "hide_from_athlete": false,
+  "structure_read_only": false,
+  "created_by_id": "i124581",
+  "shared_event_id": null,
+  "entered": false,
+  "carbs_per_hour": null,
+  "sub_type": null,
+  "distance": 0,
+  "tags": null,
+  "attachments": null,
+  "oauth_client_id": null,
+  "external_id": null,
+  "load_target": null,
+  "time_target": null,
+  "distance_target": null,
+  "training_availability": "NORMAL",
+  "max_training_time": null,
+  "can_train_sports": null,
+  "plan_athlete_id": null,
+  "plan_folder_id": null,
+  "plan_workout_id": null,
+  "plan_applied": "2025-04-30T19:37:32.898+00:00",
+  "icu_intensity": 92.244736,
+  "strain_score": 126.9998,
+  "plan_name": null
+}
