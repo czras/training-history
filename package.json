@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "ingest": "tsx src/ingest.ts",
+    "ingest": "tsx src/sync/ingest.ts",
     "discover:activities": "tsx src/sync/activities.ts",
     "curate:geography": "tsx src/geography/curate.ts",
     "materialize:geography": "tsx src/geography/materialize.ts",

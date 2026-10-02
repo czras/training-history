@@ -1,23 +1,101 @@
-import { mkdir, writeFile } from "node:fs/promises";
-import { execFileSync } from "node:child_process";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const API_BASE = "https://intervals.icu/api/v1";
+const ACTIVITY_INDEX_PATH = join("data", "sync", "activities.json");
 
 const apiKey = process.env.INTERVALS_ICU_API_KEY;
-const args = process.argv.slice(2);
-const activityId = args[0] === "--" ? args[1] : args[0];
 
 if (!apiKey) {
   throw new Error("INTERVALS_ICU_API_KEY is not set");
 }
 
-if (!activityId) {
-  throw new Error("Usage: npm run ingest -- <activity-id>");
-}
+type ActivityIndexEntry = {
+  id: string;
+  start_date_local: string;
+  type: string;
+  name: string;
+};
+
+type ActivityIndex = {
+  source: string;
+  object_type: string;
+  activities: ActivityIndexEntry[];
+};
 
 function authHeader(): string {
   return `Basic ${Buffer.from(`API_KEY:${apiKey}`).toString("base64")}`;
+}
+
+function parseActivityId(): string | undefined {
+  const args = process.argv.slice(2);
+
+  if (args.length === 0) {
+    return undefined;
+  }
+
+  const activityId = args[0] === "--" ? args[1] : args[0];
+
+  if (!activityId) {
+    throw new Error(
+      "Usage: pnpm run ingest [-- <activity-id>]",
+    );
+  }
+
+  if (args[0] === "--" && args.length > 2) {
+    throw new Error(
+      "Usage: pnpm run ingest [-- <activity-id>]",
+    );
+  }
+
+  if (args[0] !== "--" && args.length > 1) {
+    throw new Error(
+      "Usage: pnpm run ingest [-- <activity-id>]",
+    );
+  }
+
+  return activityId;
+}
+
+async function readActivityIndex(): Promise<ActivityIndex> {
+  const content = await readFile(ACTIVITY_INDEX_PATH, "utf8");
+  const index = JSON.parse(content);
+
+  if (
+    !index ||
+    typeof index !== "object" ||
+    !Array.isArray(index.activities)
+  ) {
+    throw new Error(
+      `Invalid activity index: ${ACTIVITY_INDEX_PATH}`,
+    );
+  }
+
+  if (index.source !== "intervals.icu") {
+    throw new Error(
+      `Unexpected activity index source: ${String(index.source)}`,
+    );
+  }
+
+  if (index.object_type !== "activity") {
+    throw new Error(
+      `Unexpected activity index object_type: ${String(index.object_type)}`,
+    );
+  }
+
+  for (const activity of index.activities) {
+    if (
+      !activity ||
+      typeof activity !== "object" ||
+      typeof activity.id !== "string"
+    ) {
+      throw new Error(
+        `Invalid activity entry in ${ACTIVITY_INDEX_PATH}`,
+      );
+    }
+  }
+
+  return index as ActivityIndex;
 }
 
 async function fetchActivity(id: string): Promise<any> {
@@ -32,8 +110,9 @@ async function fetchActivity(id: string): Promise<any> {
 
   if (!response.ok) {
     const body = await response.text();
+
     throw new Error(
-      `Intervals.icu API returned ${response.status}: ${body}`,
+      `Intervals.icu API returned ${response.status} for activity ${id}: ${body}`,
     );
   }
 
@@ -52,12 +131,21 @@ async function fetchStreams(id: string): Promise<any[]> {
 
   if (!response.ok) {
     const body = await response.text();
+
     throw new Error(
-      `Intervals.icu streams API returned ${response.status}: ${body}`,
+      `Intervals.icu streams API returned ${response.status} for activity ${id}: ${body}`,
     );
   }
 
-  return response.json();
+  const streams = await response.json();
+
+  if (!Array.isArray(streams)) {
+    throw new Error(
+      `Intervals.icu streams API returned unexpected data for activity ${id}`,
+    );
+  }
+
+  return streams;
 }
 
 function formatDuration(seconds: unknown): string {
@@ -205,7 +293,7 @@ function activityEvidence(
   return `# Activity
 
 - Source: Intervals.icu
-- Source ID: \`${activity.id ?? activityId}\`
+- Source ID: \`${activity.id ?? "unknown"}\`
 - Type: ${activity.type ?? "unknown"}
 - Name: ${activity.name ?? "unknown"}
 - Start: ${activity.start_date_local ?? "unknown"}
@@ -269,7 +357,7 @@ ${geographySection}## Training
 
 Intervals.icu activity:
 
-\`${activity.id ?? activityId}\`
+\`${activity.id ?? "unknown"}\`
 
 ## Notes
 
@@ -281,24 +369,7 @@ Geographic and physiological values in this document are calculated from the pre
 `;
 }
 
-function gitCommitMessage(activity: any): string {
-  const type = activity.type ?? "Activity";
-  const name = activity.name?.trim();
-  const date = activity.start_date_local?.replace("T", " ").slice(0, 16);
-
-  const distanceKm =
-    typeof activity.distance === "number"
-      ? `${(activity.distance / 1000).toFixed(2)} km`
-      : undefined;
-
-  const label = [type, name, date, distanceKm]
-    .filter(Boolean)
-    .join(" — ");
-
-  return `ingest: ${label}`;
-}
-
-async function main() {
+async function ingestActivity(activityId: string): Promise<void> {
   const activity = await fetchActivity(activityId);
   const streams = await fetchStreams(activityId);
 
@@ -327,23 +398,44 @@ async function main() {
     activityEvidence(activity, streams),
     "utf8",
   );
+}
 
-  execFileSync(
-    "git",
-    ["add", sourcePath, streamsPath, evidencePath],
-    { stdio: "inherit" },
-  );
+async function main() {
+  const activityId = parseActivityId();
 
-  execFileSync(
-    "git",
-    ["commit", "-m", gitCommitMessage(activity)],
-    { stdio: "inherit" },
-  );
+  if (activityId) {
+    console.log(`Ingesting activity ${activityId}`);
 
-  console.log(`Ingested ${activityId}`);
-  console.log(`  ${sourcePath}`);
-  console.log(`  ${streamsPath}`);
-  console.log(`  ${evidencePath}`);
+    await ingestActivity(activityId);
+
+    console.log(`Ingested ${activityId}`);
+    console.log(`  activities/${activityId}/source.json`);
+    console.log(`  activities/${activityId}/streams.json`);
+    console.log(`  activities/${activityId}/evidence.md`);
+
+    return;
+  }
+
+  const index = await readActivityIndex();
+
+  console.log("Ingesting activities from discovery index");
+  console.log(`  Index: ${ACTIVITY_INDEX_PATH}`);
+  console.log(`  Activities: ${index.activities.length}`);
+  console.log("");
+
+  for (let i = 0; i < index.activities.length; i++) {
+    const entry = index.activities[i];
+
+    console.log(
+      `[${i + 1}/${index.activities.length}] ` +
+        `${entry.id} — ${entry.start_date_local} — ${entry.type} — ${entry.name}`,
+    );
+
+    await ingestActivity(entry.id);
+  }
+
+  console.log("");
+  console.log(`Ingested ${index.activities.length} activities`);
 }
 
 main().catch((error) => {
