@@ -60,13 +60,16 @@ function osmId(entry: CurationEntry): string {
     );
   }
 
+  const type = match[1] as "node" | "way" | "relation";
+  const id = match[2];
+
   const prefix = {
     node: "n",
     way: "w",
     relation: "r",
-  }[match[1]];
+  }[type];
 
-  return `${prefix}${match[2]}`;
+  return `${prefix}${id}`;
 }
 
 function tagsFromEntity(

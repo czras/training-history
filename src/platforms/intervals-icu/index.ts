@@ -1,9 +1,9 @@
 import { http } from "../../http/index.js";
-import type { Activity, ActivityPlatform } from "../activity.js";
+import type { Activity, ActivityPlatform, ActivitySource } from "../activity.js";
 
 const API_BASE = "https://intervals.icu/api/v1";
 
-type ActivitySource = {
+type IntervalsIcuActivitySource = ActivitySource & {
   icu_athlete_id?: unknown;
   paired_event_id?: unknown;
 };
@@ -36,7 +36,7 @@ export class IntervalsIcuPlatform implements ActivityPlatform {
     };
   }
 
-  private async fetchActivity(id: string): Promise<unknown> {
+  private async fetchActivity(id: string): Promise<IntervalsIcuActivitySource> {
     const url =
       `${API_BASE}/activity/${encodeURIComponent(id)}?intervals=true`;
 
@@ -55,7 +55,15 @@ export class IntervalsIcuPlatform implements ActivityPlatform {
       );
     }
 
-    return response.json();
+    const source = await response.json();
+
+    if (!isActivitySource(source)) {
+      throw new Error(
+        `Intervals.icu activity ${id} returned unexpected data`,
+      );
+    }
+
+    return source;
   }
 
   async getStreams(id: string): Promise<unknown[]> {
@@ -127,6 +135,21 @@ export class IntervalsIcuPlatform implements ActivityPlatform {
   }
 }
 
-function isActivitySource(value: unknown): value is ActivitySource {
-  return typeof value === "object" && value !== null;
+function isActivitySource(
+  value: unknown,
+): value is IntervalsIcuActivitySource {
+  if (
+    typeof value !== "object" ||
+    value === null
+  ) {
+    return false;
+  }
+
+  const source =
+    value as Record<string, unknown>;
+
+  return (
+    typeof source.id === "string" &&
+    typeof source.start_date_local === "string"
+  );
 }

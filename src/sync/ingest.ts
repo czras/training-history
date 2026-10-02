@@ -1,8 +1,8 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import type { ActivityPlatform } from "../platforms/activity.js";
 import { IntervalsIcuPlatform } from "../platforms/intervals-icu/index.js";
-import { deriveStreamFacts, StreamFacts } from "../derivation/streams.js";
+import { persistActivity } from "./persist.js";
 
 const ACTIVITY_INDEX_PATH = join("data", "sync", "activities.json");
 
@@ -101,60 +101,7 @@ async function readActivityIndex(): Promise<ActivityIndex> {
 async function ingestActivity(activityId: string): Promise<void> {
   const activity = await activityPlatform.getActivity(activityId);
 
-  const startDate = new Date(activity.source.start_date_local);
-
-  if (Number.isNaN(startDate.getTime())) {
-    throw new Error(
-      `Activity ${activityId} has invalid start_date_local: ${activity.source.start_date_local}`,
-    );
-  }
-
-  const year = activity.source.start_date_local.slice(0, 4);
-  const month = activity.source.start_date_local.slice(5, 7);
-
-  const directory = join("activities", year, month, activityId);
-
-  await mkdir(directory, { recursive: true });
-
-  const sourcePath = join(directory, "source.json");
-  const streamsPath = join(directory, "streams.json");
-  const workoutPath = join(directory, "workout.json");
-  const derivedPath = join(directory, "derived.json");
-  const evidencePath = join(directory, "evidence.md");
-
-  await writeFile(
-    sourcePath,
-    JSON.stringify(activity.source, null, 2) + "\n",
-    "utf8",
-  );
-
-  await writeFile(
-    streamsPath,
-    JSON.stringify(activity.streams, null, 2) + "\n",
-    "utf8",
-  );
-
-  const facts = deriveStreamFacts(activity.streams);
-
-  await writeFile(
-    derivedPath,
-    JSON.stringify(facts, null, 2) + "\n",
-    "utf8",
-  );
-
-  if (activity.workout !== undefined) {
-    await writeFile(
-      workoutPath,
-      JSON.stringify(activity.workout, null, 2) + "\n",
-      "utf8",
-    );
-  }
-
-  await writeFile(
-    evidencePath,
-    activityEvidence(activity.source, facts),
-    "utf8",
-  );
+  await persistActivity(activityId, activity);
 }
 
 function formatFailure(error: unknown): string {

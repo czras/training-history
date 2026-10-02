@@ -11,7 +11,13 @@ function timestamp(): string {
   return new Date().toISOString();
 }
 
-function formatValue(value: string | number | boolean): string {
+function formatValue(
+  value: string | number | boolean | undefined,
+): string {
+  if (value === undefined) {
+    return "undefined";
+  }
+
   if (typeof value === "string" && /\s/.test(value)) {
     return JSON.stringify(value);
   }
@@ -25,7 +31,12 @@ function formatFields(fields?: LogFields): string {
   }
 
   const entries = Object.entries(fields).filter(
-    ([, value]) => value !== undefined,
+    (
+      entry,
+    ): entry is [
+      string,
+      string | number | boolean,
+    ] => entry[1] !== undefined,
   );
 
   if (entries.length === 0) {

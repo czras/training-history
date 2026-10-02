@@ -61,7 +61,6 @@ async function main(): Promise<void> {
 
   await acquireCountries(
     selections.map((selection) => selection.country),
-    RAW_DIR,
   );
 
   endSection("Acquisition complete");

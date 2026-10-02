@@ -15,6 +15,12 @@ export type CuratedSelection = {
   candidate: Candidate;
 };
 
+export type CurationEntry = {
+  country: string;
+  area: string;
+  candidateKey: string;
+};
+
 function candidateKey(candidate: Candidate): string {
   return `${candidate.type}/${candidate.id}`;
 }
@@ -36,11 +42,7 @@ function selectedCandidateKeys(
 
 function parseSections(
   content: string,
-): Array<{
-  country: string;
-  area: string;
-  candidateKey: string;
-}> {
+): CurationEntry[] {
   const lines = content.split(/\r?\n/);
 
   let country: string | undefined;
@@ -97,13 +99,7 @@ function parseSections(
   return sections;
 }
 
-export async function loadCuration(): Promise<
-  Array<{
-    country: string;
-    area: string;
-    candidateKey: string;
-  }>
-> {
+export async function loadCuration(): Promise<CurationEntry[]> {
   const content = await fs.readFile(
     CURATION_FILE,
     "utf8",
