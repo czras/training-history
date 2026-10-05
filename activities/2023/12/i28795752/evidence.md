@@ -56,9 +56,9 @@
 
 ## Classification
 
-- Class: unknown
+- Class: strength
 - Signals:
-  - Intervals.icu race: false
+  - Name pattern: strength-name:SVSE futóiskola, erősítés
 
 ## Training
 

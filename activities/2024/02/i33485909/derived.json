@@ -1,10 +1,10 @@
 {
   "classification": {
-    "class": "unknown",
+    "class": "test",
     "signals": [
       {
-        "kind": "intervals_race",
-        "value": false
+        "kind": "name_pattern",
+        "rule": "test-name:MLSS teszt"
       }
     ]
   }

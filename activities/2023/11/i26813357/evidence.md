@@ -49,7 +49,6 @@
 
 - Class: community_event
 - Signals:
-  - Intervals.icu race: false
   - Name pattern: name-prefix:SVSE futóklub
 
 ## Training

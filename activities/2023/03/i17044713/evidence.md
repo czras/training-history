@@ -56,9 +56,9 @@
 
 ## Classification
 
-- Class: unknown
+- Class: generic_training
 - Signals:
-  - Intervals.icu race: false
+  - Name pattern: generic-name:Evening Run
 
 ## Training
 

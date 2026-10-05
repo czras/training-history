@@ -52,7 +52,7 @@
 
 - Class: unknown
 - Signals:
-  - Intervals.icu race: false
+  - none
 
 ## Training
 

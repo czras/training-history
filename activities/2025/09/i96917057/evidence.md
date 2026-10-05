@@ -61,7 +61,6 @@
 
 - Class: generic_training
 - Signals:
-  - Intervals.icu race: false
   - Name pattern: generic-name:Hosszú
 
 ## Training

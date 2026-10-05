@@ -4753,6 +4753,18 @@
       "start_date_local": "2026-10-01T06:40:04",
       "type": "GravelRide",
       "name": "Miklós Pál hegy"
+    },
+    {
+      "id": "i192715847",
+      "start_date_local": "2026-10-02T17:46:06",
+      "type": "Run",
+      "name": "SVSE futóklub"
+    },
+    {
+      "id": "i192916524",
+      "start_date_local": "2026-10-03T09:22:39",
+      "type": "Hike",
+      "name": "Olivia 3.c Csurgó-kút"
     }
   ]
 }

@@ -12,10 +12,6 @@
     "class": "generic_training",
     "signals": [
       {
-        "kind": "intervals_race",
-        "value": false
-      },
-      {
         "kind": "name_pattern",
         "rule": "generic-name:Tempó"
       }

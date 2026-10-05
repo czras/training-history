@@ -1,10 +1,10 @@
 {
   "classification": {
-    "class": "unknown",
+    "class": "strength",
     "signals": [
       {
-        "kind": "intervals_race",
-        "value": false
+        "kind": "name_pattern",
+        "rule": "strength-name:Strivacity erősítés"
       }
     ]
   }

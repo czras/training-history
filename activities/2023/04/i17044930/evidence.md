@@ -56,9 +56,9 @@
 
 ## Classification
 
-- Class: unknown
+- Class: commute
 - Signals:
-  - Intervals.icu race: false
+  - Name pattern: commute-name:Munkába
 
 ## Training
 

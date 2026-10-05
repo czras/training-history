@@ -47,9 +47,9 @@
 
 ## Classification
 
-- Class: unknown
+- Class: test
 - Signals:
-  - Intervals.icu race: false
+  - Name pattern: test-name:MLSS teszt
 
 ## Training
 
