@@ -99,7 +99,7 @@ export function classifyActivity(
       };
     }
 
-    if (activityRaceClassification === "funOrMinor") {
+    if (activityRaceClassification === "minor") {
       return {
         class: "minor_event",
         signals,

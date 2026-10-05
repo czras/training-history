@@ -8,6 +8,8 @@ import {
   activityEvidence,
   deriveActivity,
 } from "../derivation/activity.js";
+import type { ActivityPlatform } from "../platforms/activity.js";
+import { IntervalsIcuPlatform } from "../platforms/intervals-icu/index.js";
 import type { ActivityIndexEntry } from "./activities.js";
 
 const ACTIVITIES_DIR = "activities";
@@ -16,6 +18,9 @@ type DerivationFailure = {
   entry: ActivityIndexEntry;
   error: unknown;
 };
+
+const activityPlatform: ActivityPlatform =
+  new IntervalsIcuPlatform();
 
 async function readJson(
   path: string,
@@ -59,9 +64,27 @@ async function deriveActivityEntry(
     directory,
     "evidence.md",
   );
+  const workoutPath = join(
+    directory,
+    "workout.json",
+  );
 
   const source = await readJson(sourcePath);
   const streams = await readJson(streamsPath);
+
+  let workout: unknown;
+
+  try {
+    workout = await readJson(workoutPath);
+  } catch (error) {
+    if (
+      !(error instanceof Error) ||
+      !("code" in error) ||
+      error.code !== "ENOENT"
+    ) {
+      throw error;
+    }
+  }
 
   if (
     !source ||
@@ -79,9 +102,19 @@ async function deriveActivityEntry(
     );
   }
 
+  const normalization =
+    activityPlatform.normalizeActivity(
+      source as Record<string, unknown> & {
+        id: string;
+        start_date_local: string;
+      },
+      workout,
+    );
+
   const facts = deriveActivity(
     source as Record<string, unknown>,
     streams,
+    normalization,
   );
 
   await writeFile(

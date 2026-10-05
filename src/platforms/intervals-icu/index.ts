@@ -55,11 +55,27 @@ export class IntervalsIcuPlatform implements ActivityPlatform {
     const source = await this.fetchActivity(id);
     const streams = await this.getStreams(id);
     const workout = await this.getPairedEvent(source, id);
+    const normalization = this.normalizeActivity(
+      source,
+      workout,
+    );
 
     return {
       source,
       streams,
       workout,
+      ...normalization,
+    };
+  }
+
+  normalizeActivity(
+    source: ActivitySource,
+    workout?: unknown,
+  ): {
+    activityRace?: boolean;
+    activityRaceClassification?: ActivityRaceClassification;
+  } {
+    return {
       activityRace: readActivityRace(source),
       activityRaceClassification:
         readActivityRaceClassification(workout),

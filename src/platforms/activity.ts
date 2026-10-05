@@ -9,6 +9,11 @@ export type ActivityRaceClassification =
   | "preparatory"
   | "minor";
 
+export type ActivityNormalization = {
+  activityRace?: boolean;
+  activityRaceClassification?: ActivityRaceClassification;
+};
+
 export type Activity = {
   source: ActivitySource;
   streams: unknown[];
@@ -25,4 +30,9 @@ export interface ActivityPlatform {
   ): Promise<ActivitySource[]>;
 
   getActivity(id: string): Promise<Activity>;
+
+  normalizeActivity(
+    source: ActivitySource,
+    workout?: unknown,
+  ): ActivityNormalization;
 }

@@ -49,6 +49,11 @@ export async function persistActivity(
   const facts = deriveActivity(
     activity.source,
     activity.streams,
+    {
+      activityRace: activity.activityRace,
+      activityRaceClassification:
+        activity.activityRaceClassification,
+    },
   );
 
   await writeFileLogged(

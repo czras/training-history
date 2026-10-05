@@ -2,6 +2,9 @@ import {
   classifyActivity,
   type ActivityClassification,
 } from "../semantics/classify.js";
+import type {
+  ActivityNormalization,
+} from "../platforms/activity.js";
 import {
   deriveStreamFacts,
   type StreamFacts,
@@ -14,10 +17,15 @@ export type DerivedFacts = StreamFacts & {
 export function deriveActivity(
   source: Record<string, unknown>,
   streams: unknown[],
+  normalization: ActivityNormalization = {},
 ): DerivedFacts {
   const streamFacts = deriveStreamFacts(streams);
 
-  const classification = classifyActivity(source);
+  const classification = classifyActivity(
+    source,
+    normalization.activityRace,
+    normalization.activityRaceClassification,
+  );
 
   return {
     ...streamFacts,
@@ -95,11 +103,17 @@ export function activityEvidence(
 ${
   classification.signals.length > 0
     ? classification.signals
-        .map((signal) =>
-          signal.kind === "intervals_race"
-            ? `  - Intervals.icu race: ${String(signal.value)}`
-            : `  - Name pattern: ${signal.rule}`,
-        )
+        .map((signal) => {
+          if (signal.kind === "activity_race") {
+            return `  - Activity race: ${String(signal.value)}`;
+          }
+
+          if (signal.kind === "activity_race_classification") {
+            return `  - Activity race classification: ${signal.value}`;
+          }
+
+          return `  - Name pattern: ${signal.rule}`;
+        })
         .join("\n")
     : "  - none"
 }
