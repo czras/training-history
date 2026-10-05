@@ -59,8 +59,10 @@
 
 ## Classification
 
+- Modality: ride
 - Class: unknown
 - Signals:
+  - Modality: ride
   - Activity race: false
 
 ## Training

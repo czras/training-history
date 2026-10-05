@@ -47,8 +47,10 @@
 
 ## Classification
 
+- Modality: swim
 - Class: unknown
 - Signals:
+  - Modality: swim
   - Activity race: false
 
 ## Training

@@ -47,8 +47,10 @@
 
 ## Classification
 
+- Modality: swim
 - Class: generic_training
 - Signals:
+  - Modality: swim
   - Activity race: false
   - Name pattern: generic-name:Könnyű
 

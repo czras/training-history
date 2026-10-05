@@ -56,8 +56,10 @@
 
 ## Classification
 
+- Modality: ride
 - Class: generic_training
 - Signals:
+  - Modality: ride
   - Activity race: false
   - Name pattern: generic-name:Hosszú
 

@@ -59,8 +59,10 @@
 
 ## Classification
 
+- Modality: run
 - Class: generic_training
 - Signals:
+  - Modality: run
   - Activity race: false
   - Name pattern: generic-name:Könnyű
 

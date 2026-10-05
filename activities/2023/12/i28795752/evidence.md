@@ -56,8 +56,10 @@
 
 ## Classification
 
+- Modality: run
 - Class: strength
 - Signals:
+  - Modality: run
   - Activity race: false
   - Name pattern: strength-name:SVSE futóiskola, erősítés
 

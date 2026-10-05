@@ -56,8 +56,10 @@
 
 ## Classification
 
+- Modality: run
 - Class: named_event
 - Signals:
+  - Modality: run
   - Activity race: true
 
 ## Training

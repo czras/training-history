@@ -56,8 +56,10 @@
 
 ## Classification
 
+- Modality: walk
 - Class: generic_training
 - Signals:
+  - Modality: walk
   - Activity race: false
   - Name pattern: generic-name:Afternoon Walk
 

@@ -8,9 +8,14 @@
       "west": 18.015379
     }
   },
+  "modality": "swim",
   "classification": {
     "class": "generic_training",
     "signals": [
+      {
+        "kind": "modality",
+        "value": "swim"
+      },
       {
         "kind": "activity_race",
         "value": false

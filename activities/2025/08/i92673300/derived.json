@@ -1,7 +1,12 @@
 {
+  "modality": "swim",
   "classification": {
     "class": "unknown",
     "signals": [
+      {
+        "kind": "modality",
+        "value": "swim"
+      },
       {
         "kind": "activity_race",
         "value": false

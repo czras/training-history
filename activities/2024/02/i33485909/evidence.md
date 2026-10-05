@@ -47,8 +47,10 @@
 
 ## Classification
 
+- Modality: run
 - Class: test
 - Signals:
+  - Modality: run
   - Activity race: false
   - Name pattern: test-name:MLSS teszt
 

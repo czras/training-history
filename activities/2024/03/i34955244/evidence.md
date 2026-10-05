@@ -47,8 +47,10 @@
 
 ## Classification
 
+- Modality: strength
 - Class: strength
 - Signals:
+  - Modality: strength
   - Activity race: false
   - Name pattern: strength-name:Strivacity erősítés
 

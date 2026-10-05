@@ -56,8 +56,10 @@
 
 ## Classification
 
+- Modality: hike
 - Class: minor_event
 - Signals:
+  - Modality: hike
   - Activity race: true
   - Activity race classification: minor
 

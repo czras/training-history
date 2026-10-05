@@ -3,9 +3,14 @@
     "min": 0,
     "max": 37.27
   },
+  "modality": "other",
   "classification": {
     "class": "unknown",
     "signals": [
+      {
+        "kind": "modality",
+        "value": "other"
+      },
       {
         "kind": "activity_race",
         "value": false

@@ -8,9 +8,14 @@
       "west": 17.898361
     }
   },
+  "modality": "ride",
   "classification": {
     "class": "unknown",
     "signals": [
+      {
+        "kind": "modality",
+        "value": "ride"
+      },
       {
         "kind": "activity_race",
         "value": false

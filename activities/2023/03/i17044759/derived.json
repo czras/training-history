@@ -8,9 +8,14 @@
       "west": 18.910566
     }
   },
+  "modality": "run",
   "classification": {
     "class": "named_event",
     "signals": [
+      {
+        "kind": "modality",
+        "value": "run"
+      },
       {
         "kind": "activity_race",
         "value": true

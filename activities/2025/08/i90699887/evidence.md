@@ -56,8 +56,10 @@
 
 ## Classification
 
+- Modality: walk
 - Class: commute
 - Signals:
+  - Modality: walk
   - Activity race: false
   - Name pattern: commute-name:Munkából
 

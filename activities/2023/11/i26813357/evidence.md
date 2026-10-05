@@ -47,8 +47,10 @@
 
 ## Classification
 
+- Modality: other
 - Class: community_event
 - Signals:
+  - Modality: other
   - Activity race: false
   - Name pattern: name-prefix:SVSE futóklub
 

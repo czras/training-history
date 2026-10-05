@@ -56,8 +56,10 @@
 
 ## Classification
 
+- Modality: hike
 - Class: unknown
 - Signals:
+  - Modality: hike
   - Activity race: false
 
 ## Training

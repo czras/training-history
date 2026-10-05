@@ -59,8 +59,10 @@
 
 ## Classification
 
+- Modality: run
 - Class: preparatory_race
 - Signals:
+  - Modality: run
   - Activity race: true
   - Activity race classification: preparatory
 

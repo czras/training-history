@@ -1,7 +1,12 @@
 {
+  "modality": "other",
   "classification": {
     "class": "community_event",
     "signals": [
+      {
+        "kind": "modality",
+        "value": "other"
+      },
       {
         "kind": "activity_race",
         "value": false

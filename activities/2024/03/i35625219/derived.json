@@ -1,7 +1,12 @@
 {
+  "modality": "strength",
   "classification": {
     "class": "strength",
     "signals": [
+      {
+        "kind": "modality",
+        "value": "strength"
+      },
       {
         "kind": "activity_race",
         "value": false

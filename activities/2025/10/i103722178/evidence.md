@@ -59,8 +59,10 @@
 
 ## Classification
 
+- Modality: run
 - Class: minor_event
 - Signals:
+  - Modality: run
   - Activity race: true
   - Activity race classification: minor
 

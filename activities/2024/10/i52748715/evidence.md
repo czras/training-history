@@ -56,8 +56,10 @@
 
 ## Classification
 
+- Modality: run
 - Class: main_race
 - Signals:
+  - Modality: run
   - Activity race: true
   - Activity race classification: main
 

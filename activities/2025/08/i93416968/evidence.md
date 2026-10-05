@@ -56,8 +56,10 @@
 
 ## Classification
 
+- Modality: run
 - Class: unknown
 - Signals:
+  - Modality: run
   - Activity race: false
 
 ## Training

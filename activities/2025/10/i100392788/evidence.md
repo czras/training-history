@@ -50,8 +50,10 @@
 
 ## Classification
 
+- Modality: other
 - Class: unknown
 - Signals:
+  - Modality: other
   - Activity race: false
 
 ## Training

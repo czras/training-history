@@ -8,9 +8,14 @@
       "west": 17.660297
     }
   },
+  "modality": "hike",
   "classification": {
     "class": "minor_event",
     "signals": [
+      {
+        "kind": "modality",
+        "value": "hike"
+      },
       {
         "kind": "activity_race",
         "value": true

@@ -8,9 +8,14 @@
       "west": 17.911264
     }
   },
+  "modality": "run",
   "classification": {
     "class": "commute",
     "signals": [
+      {
+        "kind": "modality",
+        "value": "run"
+      },
       {
         "kind": "activity_race",
         "value": false

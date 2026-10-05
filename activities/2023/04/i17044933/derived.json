@@ -8,9 +8,14 @@
       "west": 17.860247
     }
   },
+  "modality": "run",
   "classification": {
     "class": "generic_training",
     "signals": [
+      {
+        "kind": "modality",
+        "value": "run"
+      },
       {
         "kind": "activity_race",
         "value": false

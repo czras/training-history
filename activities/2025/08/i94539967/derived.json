@@ -8,9 +8,14 @@
       "west": 9.180945
     }
   },
+  "modality": "walk",
   "classification": {
     "class": "unknown",
     "signals": [
+      {
+        "kind": "modality",
+        "value": "walk"
+      },
       {
         "kind": "activity_race",
         "value": false
