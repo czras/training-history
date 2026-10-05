@@ -4,12 +4,22 @@ export type ActivitySource = {
   [key: string]: unknown;
 };
 
+export type ActivityModality =
+  | "run"
+  | "ride"
+  | "swim"
+  | "hike"
+  | "walk"
+  | "strength"
+  | "other";
+
 export type ActivityRaceClassification =
   | "main"
   | "preparatory"
   | "minor";
 
 export type ActivityNormalization = {
+  modality?: ActivityModality;
   activityRace?: boolean;
   activityRaceClassification?: ActivityRaceClassification;
 };
@@ -19,6 +29,7 @@ export type Activity = {
   streams: unknown[];
   workout?: unknown;
 
+  modality?: ActivityModality;
   activityRace?: boolean;
   activityRaceClassification?: ActivityRaceClassification;
 };

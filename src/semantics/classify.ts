@@ -1,4 +1,5 @@
 import type {
+  ActivityModality,
   ActivityRaceClassification,
 } from "../platforms/activity.js";
 
@@ -15,6 +16,10 @@ export type ActivitySemanticClass =
   | "unknown";
 
 export type ClassificationSignal =
+  | {
+      kind: "modality";
+      value: ActivityModality;
+    }
   | {
       kind: "activity_race";
       value: boolean;
@@ -67,10 +72,18 @@ const TEST_NAMES = new Set([
 
 export function classifyActivity(
   source: Record<string, unknown>,
+  modality?: ActivityModality,
   activityRace?: boolean,
   activityRaceClassification?: ActivityRaceClassification,
 ): ActivityClassification {
   const signals: ClassificationSignal[] = [];
+
+  if (modality !== undefined) {
+    signals.push({
+      kind: "modality",
+      value: modality,
+    });
+  }
 
   if (activityRace !== undefined) {
     signals.push({
@@ -157,11 +170,16 @@ export function classifyActivity(
     };
   }
 
-  if (name && STRENGTH_NAMES.has(name)) {
-    signals.push({
-      kind: "name_pattern",
-      rule: `strength-name:${name}`,
-    });
+  if (
+    modality === "strength" ||
+    (name && STRENGTH_NAMES.has(name))
+  ) {
+    if (name && STRENGTH_NAMES.has(name)) {
+      signals.push({
+        kind: "name_pattern",
+        rule: `strength-name:${name}`,
+      });
+    }
 
     return {
       class: "strength",

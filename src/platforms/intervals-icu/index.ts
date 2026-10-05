@@ -1,6 +1,7 @@
-import { http } from "../../http/index.js";
 import type {
   Activity,
+  ActivityModality,
+  ActivityNormalization,
   ActivityPlatform,
   ActivityRaceClassification,
   ActivitySource,
@@ -9,56 +10,71 @@ import type {
 const API_BASE = "https://intervals.icu/api/v1";
 const DISCOVERY_LIMIT = 200;
 
-type IntervalsIcuActivitySource = ActivitySource & {
-  icu_athlete_id?: unknown;
-  paired_event_id?: unknown;
+type IntervalsIcuWorkout = {
+  id?: string;
+  category?: string;
+  [key: string]: unknown;
 };
 
 export class IntervalsIcuPlatform implements ActivityPlatform {
-  private readonly authorization: string;
+  private readonly apiKey: string;
 
   constructor() {
     const apiKey = process.env.INTERVALS_ICU_API_KEY;
 
     if (!apiKey) {
-      throw new Error("INTERVALS_ICU_API_KEY is not set");
+      throw new Error(
+        "INTERVALS_ICU_API_KEY environment variable is required",
+      );
     }
 
-    this.authorization =
-      "Basic " +
-      Buffer.from("API_KEY:" + apiKey).toString("base64");
+    this.apiKey = apiKey;
   }
 
   async discoverActivities(
     oldest: string,
     newest: string,
   ): Promise<ActivitySource[]> {
-    const oldestDate = parseDate(oldest, "oldest");
-    const newestDate = parseDate(newest, "newest");
+    return this.discoverRange(oldest, newest);
+  }
 
-    if (oldestDate > newestDate) {
-      throw new Error(
-        "Oldest date must not be after newest date: " +
-          oldest +
-          " > " +
-          newest,
-      );
+  private async discoverRange(
+    oldest: string,
+    newest: string,
+  ): Promise<ActivitySource[]> {
+    const activities = await this.request<ActivitySource[]>(
+      `/athlete/0/activities?oldest=${encodeURIComponent(
+        oldest,
+      )}&newest=${encodeURIComponent(newest)}`,
+    );
+
+    if (activities.length < DISCOVERY_LIMIT) {
+      return activities;
     }
 
-    return this.discoverRange(
-      formatDate(oldestDate),
-      formatDate(newestDate),
+    const oldestDate = new Date(oldest);
+    const newestDate = new Date(newest);
+    const midpoint = new Date(
+      (oldestDate.getTime() + newestDate.getTime()) / 2,
     );
+
+    const midpointIso = midpoint.toISOString();
+
+    const before = await this.discoverRange(oldest, midpointIso);
+    const after = await this.discoverRange(midpointIso, newest);
+
+    return [...before, ...after];
   }
 
   async getActivity(id: string): Promise<Activity> {
-    const source = await this.fetchActivity(id);
-    const streams = await this.getStreams(id);
-    const workout = await this.getPairedEvent(source, id);
-    const normalization = this.normalizeActivity(
-      source,
-      workout,
-    );
+    const [source, streams] = await Promise.all([
+      this.request<ActivitySource>(`/activity/${id}`),
+      this.request<unknown[]>(`/activity/${id}/streams`),
+    ]);
+
+    const workout = await this.getWorkout(id);
+
+    const normalization = this.normalizeActivity(source, workout);
 
     return {
       source,
@@ -71,326 +87,99 @@ export class IntervalsIcuPlatform implements ActivityPlatform {
   normalizeActivity(
     source: ActivitySource,
     workout?: unknown,
-  ): {
-    activityRace?: boolean;
-    activityRaceClassification?: ActivityRaceClassification;
-  } {
+  ): ActivityNormalization {
     return {
+      modality: readActivityModality(source),
       activityRace: readActivityRace(source),
       activityRaceClassification:
         readActivityRaceClassification(workout),
     };
   }
 
-  private async discoverRange(
-    oldest: string,
-    newest: string,
-  ): Promise<ActivitySource[]> {
-    const activities = await this.fetchActivities(oldest, newest);
-
-    if (activities.length < DISCOVERY_LIMIT) {
-      console.log(
-        "  " +
-          oldest +
-          ".." +
-          newest +
-          ": " +
-          activities.length +
-          " activities",
-      );
-
-      return activities;
-    }
-
-    const oldestDate = parseDate(oldest, "oldest");
-    const newestDate = parseDate(newest, "newest");
-
-    if (oldestDate.getTime() === newestDate.getTime()) {
-      throw new Error(
-        "Intervals.icu returned " +
-          DISCOVERY_LIMIT +
-          " activities for a single day (" +
-          oldest +
-          "). " +
-          "The discovery limit is insufficient to safely enumerate this day.",
-      );
-    }
-
-    const midpoint = new Date(
-      oldestDate.getTime() +
-        Math.floor(
-          (newestDate.getTime() - oldestDate.getTime()) / 2,
-        ),
-    );
-
-    const leftNewest = formatDate(
-      new Date(midpoint.getTime() - 24 * 60 * 60 * 1000),
-    );
-    const rightOldest = formatDate(midpoint);
-
-    console.log(
-      "  " +
-        oldest +
-        ".." +
-        newest +
-        ": reached " +
-        DISCOVERY_LIMIT +
-        "; splitting at " +
-        rightOldest,
-    );
-
-    const [left, right] = await Promise.all([
-      this.discoverRange(oldest, leftNewest),
-      this.discoverRange(rightOldest, newest),
-    ]);
-
-    return [...left, ...right];
-  }
-
-  private async fetchActivities(
-    oldest: string,
-    newest: string,
-  ): Promise<ActivitySource[]> {
-    const url = new URL(
-      API_BASE + "/athlete/0/activities",
-    );
-
-    url.searchParams.set("oldest", oldest);
-    url.searchParams.set("newest", newest);
-    url.searchParams.set("limit", String(DISCOVERY_LIMIT));
-
-    const response = await http.get(url.toString(), {
-      headers: {
-        Authorization: this.authorization,
-        Accept: "application/json",
-      },
-    });
-
-    if (!response.ok) {
-      const body = await response.text();
-
-      throw new Error(
-        "Intervals.icu activities API returned " +
-          response.status +
-          " for " +
-          oldest +
-          ".." +
-          newest +
-          ": " +
-          body,
-      );
-    }
-
-    if (response.status === 204) {
-      return [];
-    }
-
-    const data: unknown = await response.json();
-
-    if (!Array.isArray(data)) {
-      throw new Error(
-        "Intervals.icu activities API returned unexpected data for " +
-          oldest +
-          ".." +
-          newest,
-      );
-    }
-
-    return data.map((value) => {
-      if (!isActivitySource(value)) {
-        throw new Error(
-          "Intervals.icu returned an invalid activity for " +
-            oldest +
-            ".." +
-            newest,
-        );
-      }
-
-      return value;
-    });
-  }
-
-  private async fetchActivity(
-    id: string,
-  ): Promise<IntervalsIcuActivitySource> {
-    const url =
-      API_BASE +
-      "/activity/" +
-      encodeURIComponent(id) +
-      "?intervals=true";
-
-    const response = await http.get(url, {
-      headers: {
-        Authorization: this.authorization,
-        Accept: "application/json",
-      },
-    });
-
-    if (!response.ok) {
-      const body = await response.text();
-
-      throw new Error(
-        "Intervals.icu API returned " +
-          response.status +
-          " for activity " +
-          id +
-          ": " +
-          body,
-      );
-    }
-
-    const source: unknown = await response.json();
-
-    if (!isActivitySource(source)) {
-      throw new Error(
-        "Intervals.icu activity " +
-          id +
-          " returned unexpected data",
-      );
-    }
-
-    return source;
-  }
-
-  private async getStreams(id: string): Promise<unknown[]> {
-    const url =
-      API_BASE +
-      "/activity/" +
-      encodeURIComponent(id) +
-      "/streams.json";
-
-    const response = await http.get(url, {
-      headers: {
-        Authorization: this.authorization,
-        Accept: "application/json",
-      },
-    });
-
-    if (!response.ok) {
-      const body = await response.text();
-
-      throw new Error(
-        "Intervals.icu streams API returned " +
-          response.status +
-          " for activity " +
-          id +
-          ": " +
-          body,
-      );
-    }
-
-    const streams: unknown = await response.json();
-
-    if (!Array.isArray(streams)) {
-      throw new Error(
-        "Intervals.icu streams API returned unexpected data for activity " +
-          id,
-      );
-    }
-
-    return streams;
-  }
-
-  private async getPairedEvent(
-    source: unknown,
+  private async getWorkout(
     activityId: string,
-  ): Promise<unknown | undefined> {
-    if (!isActivitySource(source)) {
+  ): Promise<IntervalsIcuWorkout | undefined> {
+    try {
+      return await this.request<IntervalsIcuWorkout>(
+        `/activity/${activityId}/event`,
+      );
+    } catch {
       return undefined;
     }
+  }
 
-    if (
-      typeof source.icu_athlete_id !== "string" ||
-      typeof source.paired_event_id !== "number"
-    ) {
-      return undefined;
-    }
-
-    const url =
-      API_BASE +
-      "/athlete/" +
-      encodeURIComponent(source.icu_athlete_id) +
-      "/events/" +
-      encodeURIComponent(String(source.paired_event_id));
-
-    const response = await http.get(url, {
+  private async request<T>(path: string): Promise<T> {
+    const response = await fetch(`${API_BASE}${path}`, {
       headers: {
-        Authorization: this.authorization,
-        Accept: "application/json",
+        Authorization: `Basic ${Buffer.from(
+          `API_KEY:${this.apiKey}`,
+        ).toString("base64")}`,
       },
     });
 
     if (!response.ok) {
-      const body = await response.text();
-
       throw new Error(
-        "Intervals.icu event API returned " +
-          response.status +
-          " for paired event " +
-          source.paired_event_id +
-          " of activity " +
-          activityId +
-          ": " +
-          body,
+        `Intervals.icu request failed: ${response.status} ${response.statusText}`,
       );
     }
 
-    return response.json();
+    return (await response.json()) as T;
   }
 }
 
-function formatDate(date: Date): string {
-  return date.toISOString().slice(0, 10);
-}
+function readActivityModality(
+  source: ActivitySource,
+): ActivityModality | undefined {
+  const type = source.type;
 
-function parseDate(value: string, label: string): Date {
-  const date = new Date(value + "T00:00:00Z");
-
-  if (Number.isNaN(date.getTime())) {
-    throw new Error("Invalid " + label + " date: " + value);
+  if (typeof type !== "string") {
+    return undefined;
   }
 
-  return date;
-}
+  switch (type) {
+    case "Run":
+    case "TrailRun":
+      return "run";
 
-function isActivitySource(
-  value: unknown,
-): value is IntervalsIcuActivitySource {
-  if (
-    typeof value !== "object" ||
-    value === null
-  ) {
-    return false;
+    case "Ride":
+    case "GravelRide":
+      return "ride";
+
+    case "Swim":
+      return "swim";
+
+    case "Hike":
+      return "hike";
+
+    case "Walk":
+      return "walk";
+
+    case "WeightTraining":
+      return "strength";
+
+    case "Workout":
+    case "Other":
+      return "other";
+
+    default:
+      return "other";
   }
-
-  const source = value as Record<string, unknown>;
-
-  return (
-    typeof source.id === "string" &&
-    typeof source.start_date_local === "string"
-  );
 }
 
-function readActivityRace(
-  source: Record<string, unknown>,
-): boolean | undefined {
-  return typeof source.race === "boolean"
-    ? source.race
-    : undefined;
+function readActivityRace(source: ActivitySource): boolean | undefined {
+  const race = source.race;
+
+  return typeof race === "boolean" ? race : undefined;
 }
 
 function readActivityRaceClassification(
   workout: unknown,
 ): ActivityRaceClassification | undefined {
-  if (
-    typeof workout !== "object" ||
-    workout === null
-  ) {
+  if (!workout || typeof workout !== "object") {
     return undefined;
   }
 
-  const category =
-    (workout as Record<string, unknown>).category;
+  const category = (workout as Record<string, unknown>).category;
 
   if (category === "RACE_A") {
     return "main";

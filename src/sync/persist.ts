@@ -50,6 +50,7 @@ export async function persistActivity(
     activity.source,
     activity.streams,
     {
+      modality: activity.modality,
       activityRace: activity.activityRace,
       activityRaceClassification:
         activity.activityRaceClassification,

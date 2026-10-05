@@ -3,6 +3,7 @@ import {
   type ActivityClassification,
 } from "../semantics/classify.js";
 import type {
+  ActivityModality,
   ActivityNormalization,
 } from "../platforms/activity.js";
 import {
@@ -11,6 +12,7 @@ import {
 } from "./streams.js";
 
 export type DerivedFacts = StreamFacts & {
+  modality?: ActivityModality;
   classification: ActivityClassification;
 };
 
@@ -23,12 +25,14 @@ export function deriveActivity(
 
   const classification = classifyActivity(
     source,
+    normalization.modality,
     normalization.activityRace,
     normalization.activityRaceClassification,
   );
 
   return {
     ...streamFacts,
+    modality: normalization.modality,
     classification,
   };
 }
@@ -98,12 +102,17 @@ export function activityEvidence(
 
   const classificationSection = `## Classification
 
+- Modality: ${facts.modality ?? "unknown"}
 - Class: ${classification.class}
 - Signals:
 ${
   classification.signals.length > 0
     ? classification.signals
         .map((signal) => {
+          if (signal.kind === "modality") {
+            return `  - Modality: ${signal.value}`;
+          }
+
           if (signal.kind === "activity_race") {
             return `  - Activity race: ${String(signal.value)}`;
           }
