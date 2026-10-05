@@ -11,6 +11,7 @@
   "devDependencies": {
     "@ngageoint/geopackage": "^4.2.9",
     "@types/node": "^24.0.0",
+    "eta": "^4.6.0",
     "osm-pbf-parser-node": "^1.1.4",
     "remark-gfm": "^4.0.1",
     "remark-parse": "^11.0.0",

@@ -1,0 +1,108 @@
+# Activity
+
+- Source: <%= it.source %>
+- Source ID: `<%= it.id %>`
+- Type: <%= it.type %>
+- Name: <%= it.name %>
+- Start: <%= it.start %>
+
+## Session
+
+- Distance: <%= it.session.distance %> [km]
+- Moving time: <%= it.session.movingTime %>
+- Elapsed time: <%= it.session.elapsedTime %>
+- Recording time: <%= it.session.recordingTime %>
+- Elevation gain: <%= it.session.elevationGain %>
+- Elevation loss: <%= it.session.elevationLoss %>
+
+## Performance
+
+- Average speed: <%= it.performance.averageSpeed %>
+- Maximum speed: <%= it.performance.maximumSpeed %>
+- Average heart rate: <%= it.performance.averageHeartRate %>
+- Maximum heart rate: <%= it.performance.maximumHeartRate %>
+- Average power: <%= it.performance.averagePower %>
+- Weighted average power: <%= it.performance.weightedAveragePower %>
+- <%= it.performance.cadence %>
+
+## Running Dynamics
+
+- Average stride length: <%= it.runningDynamics.averageStrideLength %>
+- Average stance time: <%= it.runningDynamics.averageStanceTime %>
+- Average stance time percent: <%= it.runningDynamics.averageStanceTimePercent %>
+- Average vertical oscillation: <%= it.runningDynamics.averageVerticalOscillation %>
+- Average vertical ratio: <%= it.runningDynamics.averageVerticalRatio %>
+- Average leg spring stiffness: <%= it.runningDynamics.averageLegSpringStiffness %>
+
+## Environment
+
+- Recorded temperature: <%= it.environment.recordedTemperature %>
+- Weather temperature: <%= it.environment.weatherTemperature %>
+- Feels-like temperature: <%= it.environment.feelsLikeTemperature %>
+- Average wind speed: <%= it.environment.averageWindSpeed %>
+- Average wind gust: <%= it.environment.averageWindGust %>
+- Headwind: <%= it.environment.headwind %>
+- Tailwind: <%= it.environment.tailwind %>
+
+<% if (it.physiology) { %>
+## Physiology
+
+- Core temperature: <%= it.physiology.coreTemperatureMin %>–<%= it.physiology.coreTemperatureMax %> [°C]
+
+<% } %>
+<% if (it.geography) { %>
+## Geography
+
+- GPS coordinate count: <%= it.geography.coordinateCount %>
+- Bounding box:
+  - North: <%= it.geography.north %> [°]
+  - South: <%= it.geography.south %> [°]
+  - East: <%= it.geography.east %> [°]
+  - West: <%= it.geography.west %> [°]
+
+<% } %>
+<% if (it.externalGeography) { %>
+## External Geography
+
+- Bounding-box feature matches: <%= it.externalGeography.matchCount %>
+
+<% } %>
+## Classification
+
+- Modality: <%= it.classification.modality %>
+- Class: <%= it.classification.class %>
+- Signals:
+<% if (it.classification.signals.length > 0) { %>
+<% it.classification.signals.forEach((signal) => { %>  - <%= signal %>
+<% }) %>
+<% } else { %>  - none
+<% } %>
+
+## Training
+
+- Training load: <%= it.training.trainingLoad %>
+- HR load: <%= it.training.hrLoad %>
+- Pace load: <%= it.training.paceLoad %>
+- Power load: <%= it.training.powerLoad %>
+- Intensity: <%= it.training.intensity %>
+- Decoupling: <%= it.training.decoupling %>
+- RPE: <%= it.training.rpe %>
+- Feel: <%= it.training.feel %>
+
+## Source
+
+Intervals.icu activity:
+
+`<%= it.id %>`
+
+## Notes
+
+This document is a generated human-readable projection of `source.json` and `streams.json`.
+
+The canonical source evidence is preserved unchanged.
+
+The derived values in this document are calculated from the preserved `streams.json` and semantic classification from `source.json`. They are also preserved in `derived.json`.
+
+External geographic matches are derived from the materialized geography corpus using the activity bounding box.
+
+No semantic interpretation of external geographic matches is applied.

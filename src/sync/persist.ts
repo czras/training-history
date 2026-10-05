@@ -2,10 +2,8 @@ import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 import type { Activity } from "../platforms/activity.js";
-import {
-  activityEvidence,
-  deriveActivity,
-} from "../derivation/activity.js";
+import { deriveActivity } from "../derivation/activity.js";
+import { activityEvidence } from "../derivation/evidence.js";
 import { GeographyResolver } from "../derivation/geography.js";
 
 async function writeFileLogged(

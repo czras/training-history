@@ -4,10 +4,8 @@ import {
 } from "node:fs/promises";
 import { join } from "node:path";
 
-import {
-  activityEvidence,
-  deriveActivity,
-} from "../derivation/activity.js";
+import { deriveActivity } from "../derivation/activity.js";
+import { activityEvidence } from "../derivation/evidence.js";
 import {
   GeographyResolver,
 } from "../derivation/geography.js";
@@ -16,6 +14,7 @@ import { IntervalsIcuPlatform } from "../platforms/intervals-icu/index.js";
 import type { ActivityIndexEntry } from "./activities.js";
 
 const ACTIVITIES_DIR = "activities";
+const PROGRESS_INTERVAL = 25;
 
 type DerivationFailure = {
   entry: ActivityIndexEntry;
@@ -140,38 +139,51 @@ export async function deriveAll(
   const geographyResolver =
     await GeographyResolver.open();
 
+  let completed = 0;
+
   try {
     const results = await Promise.all(
-      entries.map(async (entry, index) => {
+      entries.map(async (entry) => {
         try {
           await deriveActivityEntry(
             entry,
             geographyResolver,
           );
 
-          console.log(
-            "[" +
-              (index + 1) +
-              "/" +
-              entries.length +
-              "] OK — " +
-              entry.id +
-              " — " +
-              entry.start_date_local +
-              " — " +
-              entry.type +
-              " — " +
-              entry.name,
-          );
+          completed++;
+
+          if (
+            completed === entries.length ||
+            completed % PROGRESS_INTERVAL === 0
+          ) {
+            const percent = Math.round(
+              (completed / entries.length) * 100,
+            );
+
+            console.log(
+              `  progress: ${completed}/${entries.length} (${percent}%)`,
+            );
+          }
 
           return undefined;
         } catch (error) {
+          completed++;
+
+          if (
+            completed === entries.length ||
+            completed % PROGRESS_INTERVAL === 0
+          ) {
+            const percent = Math.round(
+              (completed / entries.length) * 100,
+            );
+
+            console.log(
+              `  progress: ${completed}/${entries.length} (${percent}%)`,
+            );
+          }
+
           console.error(
-            "[" +
-              (index + 1) +
-              "/" +
-              entries.length +
-              "] FAILED — " +
+            "  FAILED — " +
               entry.id +
               " — " +
               entry.start_date_local +
@@ -181,7 +193,7 @@ export async function deriveAll(
               entry.name,
           );
           console.error(
-            "  " +
+            "    " +
               (error instanceof Error
                 ? error.message
                 : String(error)),
