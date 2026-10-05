@@ -10,17 +10,24 @@ import {
   deriveStreamFacts,
   type StreamFacts,
 } from "./streams.js";
+import {
+  type GeographicFeature,
+  type GeographyBoundingBox,
+  GeographyResolver,
+} from "./geography.js";
 
 export type DerivedFacts = StreamFacts & {
   modality?: ActivityModality;
   classification: ActivityClassification;
+  externalGeography?: GeographicFeature[];
 };
 
-export function deriveActivity(
+export async function deriveActivity(
   source: Record<string, unknown>,
   streams: unknown[],
   normalization: ActivityNormalization = {},
-): DerivedFacts {
+  geographyResolver?: GeographyResolver,
+): Promise<DerivedFacts> {
   const streamFacts = deriveStreamFacts(streams);
 
   const classification = classifyActivity(
@@ -30,10 +37,27 @@ export function deriveActivity(
     normalization.activityRaceClassification,
   );
 
+  let externalGeography:
+    | GeographicFeature[]
+    | undefined;
+
+  if (streamFacts.geography && geographyResolver) {
+    const boundingBox: GeographyBoundingBox =
+      streamFacts.geography.boundingBox;
+
+    externalGeography =
+      await geographyResolver.query(
+        boundingBox,
+      );
+  }
+
   return {
     ...streamFacts,
     modality: normalization.modality,
     classification,
+    ...(externalGeography
+      ? { externalGeography }
+      : {}),
   };
 }
 
@@ -77,6 +101,8 @@ export function activityEvidence(
 
   const coreTemperature = facts.coreTemperature;
   const geography = facts.geography;
+  const externalGeography =
+    facts.externalGeography;
   const classification = facts.classification;
 
   const coreTemperatureSection =
@@ -100,6 +126,15 @@ export function activityEvidence(
 `
     : "";
 
+  const externalGeographySection =
+    externalGeography
+      ? `## External Geography
+
+- Bounding-box feature matches: ${externalGeography.length}
+
+`
+      : "";
+
   const classificationSection = `## Classification
 
 - Modality: ${facts.modality ?? "unknown"}
@@ -117,7 +152,10 @@ ${
             return `  - Activity race: ${String(signal.value)}`;
           }
 
-          if (signal.kind === "activity_race_classification") {
+          if (
+            signal.kind ===
+            "activity_race_classification"
+          ) {
             return `  - Activity race classification: ${signal.value}`;
           }
 
@@ -181,7 +219,7 @@ ${
 - Tailwind: ${formatNumber(activity.tailwind_percent, 1)} [%]
 
 ${coreTemperatureSection}
-${geographySection}${classificationSection}## Training
+${geographySection}${externalGeographySection}${classificationSection}## Training
 
 - Training load: ${activity.icu_training_load ?? "unknown"}
 - HR load: ${activity.hr_load ?? "unknown"}
@@ -206,6 +244,8 @@ The canonical source evidence is preserved unchanged.
 
 The derived values in this document are calculated from the preserved \`streams.json\` and semantic classification from \`source.json\`. They are also preserved in \`derived.json\`.
 
-No external geographic enrichment is applied.
+External geographic matches are derived from the materialized geography corpus using the activity bounding box.
+
+No semantic interpretation of external geographic matches is applied.
 `;
 }

@@ -8,6 +8,9 @@ import {
   activityEvidence,
   deriveActivity,
 } from "../derivation/activity.js";
+import {
+  GeographyResolver,
+} from "../derivation/geography.js";
 import type { ActivityPlatform } from "../platforms/activity.js";
 import { IntervalsIcuPlatform } from "../platforms/intervals-icu/index.js";
 import type { ActivityIndexEntry } from "./activities.js";
@@ -25,7 +28,10 @@ const activityPlatform: ActivityPlatform =
 async function readJson(
   path: string,
 ): Promise<unknown> {
-  const content = await readFile(path, "utf8");
+  const content = await readFile(
+    path,
+    "utf8",
+  );
   return JSON.parse(content);
 }
 
@@ -45,29 +51,15 @@ function activityDirectory(
 
 async function deriveActivityEntry(
   entry: ActivityIndexEntry,
+  geographyResolver: GeographyResolver,
 ): Promise<void> {
   const directory = activityDirectory(entry);
 
-  const sourcePath = join(
-    directory,
-    "source.json",
-  );
-  const streamsPath = join(
-    directory,
-    "streams.json",
-  );
-  const derivedPath = join(
-    directory,
-    "derived.json",
-  );
-  const evidencePath = join(
-    directory,
-    "evidence.md",
-  );
-  const workoutPath = join(
-    directory,
-    "workout.json",
-  );
+  const sourcePath = join(directory, "source.json");
+  const streamsPath = join(directory, "streams.json");
+  const derivedPath = join(directory, "derived.json");
+  const evidencePath = join(directory, "evidence.md");
+  const workoutPath = join(directory, "workout.json");
 
   const source = await readJson(sourcePath);
   const streams = await readJson(streamsPath);
@@ -111,10 +103,11 @@ async function deriveActivityEntry(
       workout,
     );
 
-  const facts = deriveActivity(
+  const facts = await deriveActivity(
     source as Record<string, unknown>,
     streams,
     normalization,
+    geographyResolver,
   );
 
   await writeFile(
@@ -144,61 +137,71 @@ export async function deriveAll(
     "Deriving local corpus",
   );
 
-  const results = await Promise.all(
-    entries.map(async (entry, index) => {
-      try {
-        await deriveActivityEntry(entry);
+  const geographyResolver =
+    await GeographyResolver.open();
 
-        console.log(
-          "[" +
-            (index + 1) +
-            "/" +
-            entries.length +
-            "] OK — " +
-            entry.id +
-            " — " +
-            entry.start_date_local +
-            " — " +
-            entry.type +
-            " — " +
-            entry.name,
-        );
+  try {
+    const results = await Promise.all(
+      entries.map(async (entry, index) => {
+        try {
+          await deriveActivityEntry(
+            entry,
+            geographyResolver,
+          );
 
-        return undefined;
-      } catch (error) {
-        console.error(
-          "[" +
-            (index + 1) +
-            "/" +
-            entries.length +
-            "] FAILED — " +
-            entry.id +
-            " — " +
-            entry.start_date_local +
-            " — " +
-            entry.type +
-            " — " +
-            entry.name,
-        );
-        console.error(
-          "  " +
-            (error instanceof Error
-              ? error.message
-              : String(error)),
-        );
+          console.log(
+            "[" +
+              (index + 1) +
+              "/" +
+              entries.length +
+              "] OK — " +
+              entry.id +
+              " — " +
+              entry.start_date_local +
+              " — " +
+              entry.type +
+              " — " +
+              entry.name,
+          );
 
-        return {
-          entry,
-          error,
-        };
-      }
-    }),
-  );
+          return undefined;
+        } catch (error) {
+          console.error(
+            "[" +
+              (index + 1) +
+              "/" +
+              entries.length +
+              "] FAILED — " +
+              entry.id +
+              " — " +
+              entry.start_date_local +
+              " — " +
+              entry.type +
+              " — " +
+              entry.name,
+          );
+          console.error(
+            "  " +
+              (error instanceof Error
+                ? error.message
+                : String(error)),
+          );
 
-  return results.filter(
-    (
-      result,
-    ): result is DerivationFailure =>
-      result !== undefined,
-  );
+          return {
+            entry,
+            error,
+          };
+        }
+      }),
+    );
+
+    return results.filter(
+      (
+        result,
+      ): result is DerivationFailure =>
+        result !== undefined,
+    );
+  } finally {
+    geographyResolver.close();
+  }
 }

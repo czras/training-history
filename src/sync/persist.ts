@@ -1,10 +1,12 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+
 import type { Activity } from "../platforms/activity.js";
 import {
   activityEvidence,
   deriveActivity,
 } from "../derivation/activity.js";
+import { GeographyResolver } from "../derivation/geography.js";
 
 async function writeFileLogged(
   path: string,
@@ -46,44 +48,52 @@ export async function persistActivity(
   const workoutPath = join(directory, "workout.json");
   const evidencePath = join(directory, "evidence.md");
 
-  const facts = deriveActivity(
-    activity.source,
-    activity.streams,
-    {
-      modality: activity.modality,
-      activityRace: activity.activityRace,
-      activityRaceClassification:
-        activity.activityRaceClassification,
-    },
-  );
+  const geographyResolver =
+    await GeographyResolver.open();
 
-  await writeFileLogged(
-    sourcePath,
-    JSON.stringify(activity.source, null, 2) + "\n",
-  );
-
-  await writeFileLogged(
-    streamsPath,
-    JSON.stringify(activity.streams, null, 2) + "\n",
-  );
-
-  await writeFileLogged(
-    derivedPath,
-    JSON.stringify(facts, null, 2) + "\n",
-  );
-
-  if (activity.workout !== undefined) {
-    await writeFileLogged(
-      workoutPath,
-      JSON.stringify(activity.workout, null, 2) + "\n",
-    );
-  }
-
-  await writeFileLogged(
-    evidencePath,
-    activityEvidence(
+  try {
+    const facts = await deriveActivity(
       activity.source,
-      facts,
-    ),
-  );
+      activity.streams,
+      {
+        modality: activity.modality,
+        activityRace: activity.activityRace,
+        activityRaceClassification:
+          activity.activityRaceClassification,
+      },
+      geographyResolver,
+    );
+
+    await writeFileLogged(
+      sourcePath,
+      JSON.stringify(activity.source, null, 2) + "\n",
+    );
+
+    await writeFileLogged(
+      streamsPath,
+      JSON.stringify(activity.streams, null, 2) + "\n",
+    );
+
+    await writeFileLogged(
+      derivedPath,
+      JSON.stringify(facts, null, 2) + "\n",
+    );
+
+    if (activity.workout !== undefined) {
+      await writeFileLogged(
+        workoutPath,
+        JSON.stringify(activity.workout, null, 2) + "\n",
+      );
+    }
+
+    await writeFileLogged(
+      evidencePath,
+      activityEvidence(
+        activity.source,
+        facts,
+      ),
+    );
+  } finally {
+    geographyResolver.close();
+  }
 }
