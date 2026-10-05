@@ -8,7 +8,7 @@ import {
   item,
   detail,
   done,
-} from "./log.js";
+} from "../log.js";
 
 const CURATION_FILE = path.join(
   path.resolve("."),

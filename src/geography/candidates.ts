@@ -5,6 +5,7 @@ import { spawn } from "node:child_process";
 
 import { OSMTransform } from "osm-pbf-parser-node";
 
+import { info } from "../log.js";
 import type { CountrySelection } from "./coverage.js";
 import { isExcluded } from "./filter.js";
 
@@ -41,8 +42,8 @@ function runOsmium(
   outputPath: string,
 ): Promise<void> {
   return new Promise((resolve, reject) => {
-    console.log(
-      "  filtering named geographic objects with osmium...",
+    info(
+      "Filtering named geographic objects with osmium",
     );
 
     const child = spawn(
@@ -140,9 +141,9 @@ export async function discoverCandidates(
 
   const outputStats = await stat(outputPath);
 
-  console.log(
-    `  candidate PBF: ${(outputStats.size / 1024 / 1024).toFixed(1)} MB`,
-  );
+  info("Candidate PBF", {
+    size: `${(outputStats.size / 1024 / 1024).toFixed(1)} MB`,
+  });
 
   const candidates: Candidate[] = [];
 
@@ -211,25 +212,19 @@ export function printCandidates(
     (candidate) => candidate.type === "relation",
   );
 
-  console.log("");
-  console.log(`Candidates for ${country.country}`);
-  console.log(
-    `  nodes:      ${nodes.length.toLocaleString()}`,
-  );
-  console.log(
-    `  ways:       ${ways.length.toLocaleString()}`,
-  );
-  console.log(
-    `  relations:  ${relations.length.toLocaleString()}`,
-  );
+  info(`Candidates for ${country.country}`);
+  info("Candidate counts", {
+    nodes: nodes.length,
+    ways: ways.length,
+    relations: relations.length,
+  });
 
   if (country.areas.length === 0) {
-    console.log("  configured scope: whole country");
+    info("Configured scope: whole country");
     return;
   }
 
-  console.log("");
-  console.log("Configured selections");
+  info("Configured selections");
 
   for (const area of country.areas) {
     const matches = candidates.filter((candidate) =>
@@ -245,9 +240,9 @@ export function printCandidates(
       ),
     );
 
-    console.log(
-      `  ${area}: ${matches.length} match(es)`,
-    );
+    info(`Selection ${area}`, {
+      matches: matches.length,
+    });
 
     for (const match of matches.slice(0, 20)) {
       const matchingNames = match.names
@@ -289,8 +284,8 @@ export function printCandidates(
         )
         .join(", ");
 
-      console.log(
-        `    ${match.type}/${match.id} ${match.name}` +
+      info(
+        `${match.type}/${match.id} ${match.name}` +
           (matchingNames
             ? ` [matched: ${matchingNames}]`
             : "") +
@@ -301,9 +296,7 @@ export function printCandidates(
     }
 
     if (matches.length > 20) {
-      console.log(
-        `    ... ${matches.length - 20} more`,
-      );
+      info(`... ${matches.length - 20} more`);
     }
   }
 }

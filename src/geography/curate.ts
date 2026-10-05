@@ -18,11 +18,17 @@ import {
   done,
   endSection,
   info,
-} from "./log.js";
+  error,
+} from "../log.js";
 import { writeCuration } from "./curation.js";
 
 const ROOT = path.resolve(".");
-const RAW_DIR = path.join(ROOT, "data", "geography", "raw");
+const RAW_DIR = path.join(
+  ROOT,
+  "data",
+  "geography",
+  "raw",
+);
 
 function countrySlug(country: string): string {
   return country
@@ -41,7 +47,9 @@ async function main(): Promise<void> {
   const selections = await loadCoverage();
 
   if (selections.length === 0) {
-    throw new Error("No checked countries found in coverage.md");
+    throw new Error(
+      "No checked countries found in coverage.md",
+    );
   }
 
   for (const selection of selections) {
@@ -60,7 +68,9 @@ async function main(): Promise<void> {
   section("Acquisition");
 
   await acquireCountries(
-    selections.map((selection) => selection.country),
+    selections.map(
+      (selection) => selection.country,
+    ),
   );
 
   endSection("Acquisition complete");
@@ -69,7 +79,9 @@ async function main(): Promise<void> {
 
   const candidatesByCountry = new Map<
     string,
-    Awaited<ReturnType<typeof discoverCandidates>>
+    Awaited<
+      ReturnType<typeof discoverCandidates>
+    >
   >();
 
   for (const selection of selections) {
@@ -80,39 +92,53 @@ async function main(): Promise<void> {
 
     item(selection.country);
 
-    const candidates = await discoverCandidates(
-      selection,
-      sourcePath,
-    );
+    const candidates =
+      await discoverCandidates(
+        selection,
+        sourcePath,
+      );
 
-    candidatesByCountry.set(selection.country, candidates);
+    candidatesByCountry.set(
+      selection.country,
+      candidates,
+    );
 
     detail("candidates", {
       count: candidates.length,
     });
 
-    printCandidates(selection, candidates);
+    printCandidates(
+      selection,
+      candidates,
+    );
   }
 
-  endSection("Candidate discovery complete");
+  endSection(
+    "Candidate discovery complete",
+  );
 
   section("Resolution");
 
   const resolutionsByCountry = new Map<
     string,
-    Awaited<ReturnType<typeof resolveSelection>>
+    Awaited<
+      ReturnType<typeof resolveSelection>
+    >
   >();
 
   for (const selection of selections) {
     const candidates =
-      candidatesByCountry.get(selection.country) ?? [];
+      candidatesByCountry.get(
+        selection.country,
+      ) ?? [];
 
     item(selection.country);
 
-    const resolutions = resolveSelection(
-      selection,
-      candidates,
-    );
+    const resolutions =
+      resolveSelection(
+        selection,
+        candidates,
+      );
 
     resolutionsByCountry.set(
       selection.country,
@@ -123,7 +149,10 @@ async function main(): Promise<void> {
       count: resolutions.length,
     });
 
-    printResolutions(selection, resolutions);
+    printResolutions(
+      selection,
+      resolutions,
+    );
   }
 
   endSection("Resolution complete");
@@ -144,8 +173,12 @@ const isMain =
     import.meta.url;
 
 if (isMain) {
-  main().catch((error) => {
-    console.error(error);
+  main().catch((caughtError) => {
+    error(
+      caughtError instanceof Error
+        ? caughtError.message
+        : String(caughtError),
+    );
     process.exitCode = 1;
   });
 }

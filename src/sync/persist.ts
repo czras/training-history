@@ -1,6 +1,7 @@
 import { mkdir } from "node:fs/promises";
 import { join } from "node:path";
 
+import { info } from "../log.js";
 import type { Activity } from "../platforms/activity.js";
 import { deriveActivity } from "../derivation/activity.js";
 import { activityEvidence } from "../derivation/evidence.js";
@@ -16,7 +17,9 @@ async function writeFileLogged(
     content,
   );
 
-  console.log(`  saved ${path}`);
+  info(
+    `saved ${path}`,
+  );
 }
 
 export async function persistActivity(

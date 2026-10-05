@@ -2,6 +2,11 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { spawn } from "node:child_process";
 
+import {
+  info,
+  error,
+} from "../log.js";
+
 const ROOT = path.resolve(".");
 const GPKG = path.join(
   ROOT,
@@ -31,9 +36,9 @@ function run(
       stderr += chunk;
     });
 
-    child.once("error", (error) => {
+    child.once("error", (caughtError) => {
       if (
-        (error as NodeJS.ErrnoException).code ===
+        (caughtError as NodeJS.ErrnoException).code ===
         "ENOENT"
       ) {
         reject(
@@ -44,7 +49,7 @@ function run(
         return;
       }
 
-      reject(error);
+      reject(caughtError);
     });
 
     child.once("exit", (code, signal) => {
@@ -75,16 +80,16 @@ async function inspect(): Promise<void> {
     );
   }
 
-  console.log("");
-  console.log("Geography GeoPackage");
-  console.log("====================");
-  console.log(
-    `file: ${path.relative(".", GPKG)}`,
+  info("Geography GeoPackage");
+
+  info(
+    "file",
+    {
+      path: path.relative(".", GPKG),
+    },
   );
 
-  console.log("");
-  console.log("Layers");
-  console.log("------");
+  info("Layers");
 
   const layers = await run(
     "ogrinfo",
@@ -95,11 +100,9 @@ async function inspect(): Promise<void> {
     ],
   );
 
-  console.log(layers.trim());
+  info(layers.trim());
 
-  console.log("");
-  console.log("Schema");
-  console.log("------");
+  info("Schema");
 
   const schema = await run(
     "ogrinfo",
@@ -111,11 +114,9 @@ async function inspect(): Promise<void> {
     ],
   );
 
-  console.log(schema.trim());
+  info(schema.trim());
 
-  console.log("");
-  console.log("Role distribution");
-  console.log("-----------------");
+  info("Role distribution");
 
   const roles = await run(
     "ogrinfo",
@@ -135,11 +136,9 @@ async function inspect(): Promise<void> {
     ],
   );
 
-  console.log(roles.trim());
+  info(roles.trim());
 
-  console.log("");
-  console.log("Country distribution");
-  console.log("--------------------");
+  info("Country distribution");
 
   const countries = await run(
     "ogrinfo",
@@ -159,11 +158,9 @@ async function inspect(): Promise<void> {
     ],
   );
 
-  console.log(countries.trim());
+  info(countries.trim());
 
-  console.log("");
-  console.log("Geometry distribution");
-  console.log("--------------------");
+  info("Geometry distribution");
 
   const geometry = await run(
     "ogrinfo",
@@ -184,11 +181,9 @@ async function inspect(): Promise<void> {
     ],
   );
 
-  console.log(geometry.trim());
+  info(geometry.trim());
 
-  console.log("");
-  console.log("Known geographic examples");
-  console.log("-------------------------");
+  info("Known geographic examples");
 
   const examples = await run(
     "ogrinfo",
@@ -214,11 +209,9 @@ async function inspect(): Promise<void> {
     ],
   );
 
-  console.log(examples.trim());
+  info(examples.trim());
 
-  console.log("");
-  console.log("Null / provenance checks");
-  console.log("------------------------");
+  info("Null / provenance checks");
 
   const quality = await run(
     "ogrinfo",
@@ -241,13 +234,16 @@ async function inspect(): Promise<void> {
     ],
   );
 
-  console.log(quality.trim());
+  info(quality.trim());
 
-  console.log("");
-  console.log("Inspection complete.");
+  info("Inspection complete.");
 }
 
-inspect().catch((error) => {
-  console.error(error);
+inspect().catch((caughtError) => {
+  error(
+    caughtError instanceof Error
+      ? caughtError.message
+      : String(caughtError),
+  );
   process.exitCode = 1;
 });

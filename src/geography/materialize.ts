@@ -20,7 +20,9 @@ import {
   detail,
   done,
   endSection,
-} from "./log.js";
+  info,
+  error,
+} from "../log.js";
 
 const ROOT = path.resolve(".");
 const RAW_DIR = path.join(
@@ -210,7 +212,7 @@ function printDistribution(
     reason,
     tagGroups,
   ] of categories) {
-    console.log(`    ${reason}`);
+    info(`    ${reason}`);
 
     for (const [
       tagKey,
@@ -226,7 +228,7 @@ function printDistribution(
         value,
         count,
       ] of entries) {
-        console.log(
+        info(
           `      ${tagKey}=${value}: ${count.toLocaleString()}`,
         );
       }
@@ -392,8 +394,7 @@ async function inspectMaterializedCountry(
     });
   }
 
-  console.log("");
-  console.log(
+  info(
     `Geographic tag distribution for ${country}`,
   );
 
@@ -794,7 +795,11 @@ async function main(): Promise<void> {
   );
 }
 
-main().catch((error) => {
-  console.error(error);
+main().catch((caughtError) => {
+  error(
+    caughtError instanceof Error
+      ? caughtError.message
+      : String(caughtError),
+  );
   process.exitCode = 1;
 });

@@ -8,6 +8,11 @@ import {
 } from "node:fs/promises";
 import path from "node:path";
 
+import {
+  error,
+  info,
+} from "../log.js";
+
 const RAW_DIRECTORY = path.resolve("data/geography/raw");
 
 interface HttpMetadata {
@@ -62,14 +67,6 @@ function formatBytes(bytes: number): string {
   return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
 }
 
-function formatSpeed(bytesPerSecond: number): string {
-  if (bytesPerSecond < 1024 * 1024) {
-    return `${(bytesPerSecond / 1024).toFixed(1)} KB/s`;
-  }
-
-  return `${(bytesPerSecond / 1024 / 1024).toFixed(1)} MB/s`;
-}
-
 async function readJson<T>(
   filePath: string,
 ): Promise<T | undefined> {
@@ -98,10 +95,6 @@ async function writeJson(
 function parseHeaders(output: string): HttpMetadata {
   const headers: Record<string, string> = {};
 
-  /*
-   * curl --head --location may produce multiple header blocks
-   * because of redirects. Keep the last block.
-   */
   let current: Record<string, string> = {};
 
   for (const line of output.split(/\r?\n/)) {
@@ -241,7 +234,7 @@ async function validatePbf(
     );
   }
 
-  console.log("  validating PBF with osmium...");
+  info("Validating PBF with osmium");
 
   await new Promise<void>((resolve, reject) => {
     const child = spawn(
@@ -274,72 +267,10 @@ async function validatePbf(
         return;
       }
 
-      console.log("  PBF validation passed");
+      info("PBF validation passed");
       resolve();
     });
   });
-}
-
-interface CurlProgress {
-  total: number;
-  downloaded: number;
-  speed: number;
-}
-
-/*
- * curl --write-out can emit progress information periodically using
- * %{progress}. The exact availability of progress variables differs
- * between curl versions, so use the dedicated progress meter stream
- * instead. curl writes it to stderr; we parse the standard progress
- * meter fields here.
- *
- * The progress meter is:
- *
- *   % Total % Received % Xferd Average Speed Time Total Time Spent ...
- *
- * We primarily need total bytes, received bytes and current speed.
- */
-function parseCurlProgress(
-  line: string,
-): CurlProgress | undefined {
-  const cleaned = line.trim();
-
-  if (!cleaned) {
-    return undefined;
-  }
-
-  /*
-   * This parser intentionally accepts both the normal curl progress
-   * meter and the compact meter emitted when stderr is not a tty.
-   *
-   * If parsing fails, curl's own output is left alone rather than
-   * turning progress reporting into a download failure.
-   */
-  const match = cleaned.match(
-    /(\d+(?:\.\d+)?)\s+(\d+(?:\.\d+)?)\s+(\d+(?:\.\d+)?)\s+(\d+(?:\.\d+)?)\s+/,
-  );
-
-  if (!match) {
-    return undefined;
-  }
-
-  const total = Number(match[1]);
-  const downloaded = Number(match[2]);
-  const speed = Number(match[4]);
-
-  if (
-    !Number.isFinite(total) ||
-    !Number.isFinite(downloaded) ||
-    !Number.isFinite(speed)
-  ) {
-    return undefined;
-  }
-
-  return {
-    total,
-    downloaded,
-    speed,
-  };
 }
 
 async function download(
@@ -371,11 +302,11 @@ async function download(
     if (canResume) {
       append = true;
 
-      console.log(
-        `  resuming from ${formatBytes(existingBytes)}`,
-      );
+      info("Resuming download", {
+        bytes: formatBytes(existingBytes),
+      });
     } else {
-      console.log("  partial download is stale; restarting");
+      info("Partial download is stale; restarting");
 
       try {
         await unlink(temporaryPath);
@@ -403,12 +334,6 @@ async function download(
     "--progress-bar",
   ];
 
-  /*
-   * curl's progress-bar output is intentionally allowed to remain
-   * curl-native. It is much more reliable than trying to reproduce
-   * the progress meter ourselves, while the surrounding acquisition
-   * logic still provides our existing semantic progress messages.
-   */
   if (append) {
     args.push("--continue-at", "-");
   }
@@ -416,7 +341,7 @@ async function download(
   args.push("--output", temporaryPath);
   args.push(url);
 
-  console.log("  downloading...");
+  info("Downloading");
 
   await new Promise<void>((resolve, reject) => {
     const child = spawn("curl", args, {
@@ -428,10 +353,6 @@ async function download(
     child.stderr.on("data", (chunk: Buffer) => {
       const text = chunk.toString();
 
-      /*
-       * Preserve curl's native progress output. It is deliberately
-       * written directly rather than buffered until completion.
-       */
       process.stderr.write(text);
 
       stderr += text;
@@ -461,11 +382,6 @@ async function download(
     throw new Error("Downloaded OSM source is empty");
   }
 
-  /*
-   * This is the transport integrity boundary. A successful curl
-   * exit status alone is not enough; the resulting representation
-   * must have exactly the advertised byte count.
-   */
   if (
     remoteMetadata.contentLength !== undefined &&
     completed.size !== remoteMetadata.contentLength
@@ -497,9 +413,7 @@ export async function acquireCountry(
   );
 
   const metadataPath = metadataPathFor(targetPath);
-
   const temporaryPath = `${targetPath}.part`;
-
   const temporaryMetadataPath =
     partialMetadataPathFor(targetPath);
 
@@ -512,19 +426,12 @@ export async function acquireCountry(
       existing.isFile() && existing.size > 0;
   } catch {}
 
-  /*
-   * Existing complete source:
-   *
-   * Check the upstream representation before downloading anything.
-   */
   if (targetExists) {
     const localMetadata =
       await readJson<SourceMetadata>(metadataPath);
 
     if (localMetadata?.url === url) {
-      console.log(
-        `Checking OSM source for ${country}`,
-      );
+      info("Checking OSM source", { country });
 
       const remoteMetadata =
         await inspectRemote(url);
@@ -535,14 +442,8 @@ export async function acquireCountry(
           remoteMetadata,
         )
       ) {
-        console.log(
-          "  unchanged — using local source",
-        );
+        info("Unchanged — using local source");
 
-        /*
-         * Metadata equality is not sufficient. The local PBF
-         * itself must still pass integrity validation.
-         */
         await validatePbf(
           targetPath,
           remoteMetadata.contentLength,
@@ -556,33 +457,21 @@ export async function acquireCountry(
         };
       }
 
-      console.log("  upstream source changed");
+      info("Upstream source changed");
     } else {
-      console.log(
-        `OSM source exists but has no usable metadata: ${targetPath}`,
-      );
+      info("OSM source exists but has no usable metadata", {
+        path: targetPath,
+      });
     }
   }
 
-  console.log(
-    `Downloading OSM source for ${country}`,
-  );
+  info("Downloading OSM source", { country });
+  info("Source", { url });
+  info("Target", { path: targetPath });
 
-  console.log(`  ${url}`);
-
-  console.log(`  → ${targetPath}`);
-
-  /*
-   * Get the current upstream identity before deciding whether an
-   * existing partial download can be resumed.
-   */
   const remoteMetadata =
     await inspectRemote(url);
 
-  /*
-   * Download to .part, validate it, and only then promote it to the
-   * canonical raw source path.
-   */
   const downloadedBytes = await download(
     url,
     temporaryPath,
@@ -600,9 +489,9 @@ export async function acquireCountry(
     metadataPath,
   );
 
-  console.log(
-    `  completed: ${formatBytes(downloadedBytes)}`,
-  );
+  info("Download complete", {
+    bytes: formatBytes(downloadedBytes),
+  });
 
   return {
     country,

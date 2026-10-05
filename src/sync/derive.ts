@@ -3,6 +3,10 @@ import {
 } from "node:fs/promises";
 import { join } from "node:path";
 
+import {
+  error,
+  info,
+} from "../log.js";
 import { deriveActivity } from "../derivation/activity.js";
 import { activityEvidence } from "../derivation/evidence.js";
 import {
@@ -130,9 +134,7 @@ export async function deriveAll(
     return [];
   }
 
-  console.log(
-    "Deriving local corpus",
-  );
+  info("Deriving local corpus");
 
   const geographyResolver =
     await GeographyResolver.open();
@@ -158,13 +160,18 @@ export async function deriveAll(
               (completed / entries.length) * 100,
             );
 
-            console.log(
-              `  progress: ${completed}/${entries.length} (${percent}%)`,
+            info(
+              "Derivation progress",
+              {
+                completed,
+                total: entries.length,
+                percent,
+              },
             );
           }
 
           return undefined;
-        } catch (error) {
+        } catch (errorValue) {
           completed++;
 
           if (
@@ -175,31 +182,35 @@ export async function deriveAll(
               (completed / entries.length) * 100,
             );
 
-            console.log(
-              `  progress: ${completed}/${entries.length} (${percent}%)`,
+            info(
+              "Derivation progress",
+              {
+                completed,
+                total: entries.length,
+                percent,
+              },
             );
           }
 
-          console.error(
-            "  FAILED — " +
-              entry.id +
-              " — " +
-              entry.start_date_local +
-              " — " +
-              entry.type +
-              " — " +
-              entry.name,
+          error(
+            "Derivation failed",
+            {
+              id: entry.id,
+              date: entry.start_date_local,
+              type: entry.type,
+              name: entry.name,
+            },
           );
-          console.error(
-            "    " +
-              (error instanceof Error
-                ? error.message
-                : String(error)),
+
+          error(
+            errorValue instanceof Error
+              ? errorValue.message
+              : String(errorValue),
           );
 
           return {
             entry,
-            error,
+            error: errorValue,
           };
         }
       }),

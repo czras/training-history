@@ -1,3 +1,4 @@
+import { info } from "../log.js";
 import type { CountrySelection } from "./coverage.js";
 import type { Candidate } from "./candidates.js";
 
@@ -157,24 +158,24 @@ export function printResolutions(
   resolutions: Resolution[],
 ): void {
   if (selection.areas.length === 0) {
-    console.log("");
-    console.log(
+    info(
       `No named-area resolution required for ${selection.country}: whole country`,
     );
     return;
   }
 
-  console.log("");
-  console.log(`Geographic resolution for ${selection.country}`);
+  info(`Geographic resolution for ${selection.country}`);
 
   for (const resolution of resolutions) {
-    console.log("");
-    console.log(
-      `  ${resolution.selection}: ${resolution.candidates.length} candidate(s)`,
+    info(
+      `Resolution ${resolution.selection}`,
+      {
+        candidates: resolution.candidates.length,
+      },
     );
 
     if (resolution.candidates.length === 0) {
-      console.log("    UNRESOLVED: no matching named OSM object");
+      info("UNRESOLVED: no matching named OSM object");
       continue;
     }
 
@@ -190,15 +191,15 @@ export function printResolutions(
       .map(([role, count]) => `${role}=${count}`)
       .join(", ");
 
-    console.log(`    semantic candidates: ${summary}`);
+    info(`Semantic candidates: ${summary}`);
 
     for (const candidate of resolution.candidates.slice(0, 20)) {
-      console.log(formatCandidate(candidate));
+      info(formatCandidate(candidate));
     }
 
     if (resolution.candidates.length > 20) {
-      console.log(
-        `    ... ${resolution.candidates.length - 20} more`,
+      info(
+        `... ${resolution.candidates.length - 20} more`,
       );
     }
   }

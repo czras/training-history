@@ -5,6 +5,10 @@ import {
 } from "node:fs/promises";
 import { join } from "node:path";
 
+import {
+  error,
+  info,
+} from "../log.js";
 import type { ActivityPlatform } from "../platforms/activity.js";
 import { IntervalsIcuPlatform } from "../platforms/intervals-icu/index.js";
 import {
@@ -171,13 +175,19 @@ async function reconcileActivityIndex(): Promise<{
     .toISOString()
     .slice(0, 10);
 
-  console.log("Reconciling activities");
-  console.log("  Index: " + ACTIVITY_INDEX_PATH);
-  console.log(
-    "  Remote range: " +
-      oldest +
-      ".." +
-      newest,
+  info("Reconciling activities");
+  info(
+    "Index",
+    {
+      path: ACTIVITY_INDEX_PATH,
+    },
+  );
+  info(
+    "Remote range",
+    {
+      from: oldest,
+      to: newest,
+    },
   );
 
   const remote = await discoverActivities(
@@ -217,21 +227,14 @@ async function reconcileActivityIndex(): Promise<{
     "utf8",
   );
 
-  console.log(
-    "  Local activities:  " +
-      local.activities.length,
-  );
-  console.log(
-    "  Remote discovered: " +
-      remote.length,
-  );
-  console.log(
-    "  New activities:    " +
-      newActivities.length,
-  );
-  console.log(
-    "  Reconciled total:  " +
-      merged.length,
+  info(
+    "Reconciliation",
+    {
+      local: local.activities.length,
+      remote: remote.length,
+      new: newActivities.length,
+      total: merged.length,
+    },
   );
 
   return {
@@ -267,7 +270,7 @@ async function ingestAll(
     return [];
   }
 
-  console.log(
+  info(
     "Downloads are rate-limited; the first result may take a few seconds.",
   );
 
@@ -276,39 +279,29 @@ async function ingestAll(
       try {
         await ingestActivity(entry.id);
 
-        console.log(
-          "[" +
-            (index + 1) +
-            "/" +
-            entries.length +
-            "] OK — " +
-            entry.id +
-            " — " +
-            entry.start_date_local +
-            " — " +
-            entry.type +
-            " — " +
-            entry.name,
+        info(
+          `[${index + 1}/${entries.length}] OK`,
+          {
+            id: entry.id,
+            start: entry.start_date_local,
+            type: entry.type,
+            name: entry.name,
+          },
         );
 
         return undefined;
       } catch (error) {
-        console.error(
-          "[" +
-            (index + 1) +
-            "/" +
-            entries.length +
-            "] FAILED — " +
-            entry.id +
-            " — " +
-            entry.start_date_local +
-            " — " +
-            entry.type +
-            " — " +
-            entry.name,
-        );
-        console.error(
-          "  " + formatFailure(error),
+        const message =
+          `[${index + 1}/${entries.length}] FAILED`;
+
+        info(
+          message,
+          {
+            id: entry.id,
+            start: entry.start_date_local,
+            type: entry.type,
+            name: entry.name,
+          },
         );
 
         return {
@@ -327,20 +320,20 @@ async function ingestAll(
   );
 }
 
-function logFailure(failure: IngestionFailure) {
-  console.log(
-    "  " +
-    failure.entry.id +
-    " — " +
-    failure.entry.start_date_local +
-    " — " +
-    failure.entry.type +
-    " — " +
-    failure.entry.name
+function logFailure(
+  failure: IngestionFailure,
+): void {
+  error(
+    failure.entry.id,
+    {
+      start: failure.entry.start_date_local,
+      type: failure.entry.type,
+      name: failure.entry.name,
+    },
   );
-  console.log(
-    "    " +
-    formatFailure(failure.error)
+
+  error(
+    formatFailure(failure.error),
   );
 }
 
@@ -348,14 +341,20 @@ async function main(): Promise<void> {
   const activityId = parseActivityId();
 
   if (activityId) {
-    console.log(
-      "Ingesting activity " + activityId,
+    info(
+      "Ingesting activity",
+      {
+        id: activityId,
+      },
     );
 
     await ingestActivity(activityId);
 
-    console.log(
-      "Ingested " + activityId,
+    info(
+      "Ingested activity",
+      {
+        id: activityId,
+      },
     );
 
     return;
@@ -367,41 +366,34 @@ async function main(): Promise<void> {
   } =
     await reconcileActivityIndex();
 
-  console.log("");
-
   const failures =
     await ingestAll(newActivities);
-
-  console.log("");
 
   const derivationFailures =
     await deriveAll(index.activities);
 
-  console.log("");
-  console.log("Ingestion complete");
-  console.log("");
-  console.log(
-    "Reconciled: " +
-      index.activities.length,
+  info(
+    "Ingestion complete",
   );
-  console.log(
-    "Downloaded: " +
-      (newActivities.length - failures.length),
-  );
-  console.log(
-    "Derived:    " +
-      (index.activities.length -
-        derivationFailures.length),
-  );
-  console.log(
-    "Failed:     " +
-      (failures.length +
-        derivationFailures.length),
+
+  info(
+    "Summary",
+    {
+      reconciled: index.activities.length,
+      downloaded:
+        newActivities.length -
+        failures.length,
+      derived:
+        index.activities.length -
+        derivationFailures.length,
+      failed:
+        failures.length +
+        derivationFailures.length,
+    },
   );
 
   if (failures.length > 0) {
-    console.log("");
-    console.log("Failed downloads:");
+    info("Failed downloads");
 
     for (const failure of failures) {
       logFailure(failure);
@@ -409,8 +401,7 @@ async function main(): Promise<void> {
   }
 
   if (derivationFailures.length > 0) {
-    console.log("");
-    console.log("Failed derivations:");
+    info("Failed derivations");
 
     for (const failure of derivationFailures) {
       logFailure(failure);
@@ -425,7 +416,11 @@ async function main(): Promise<void> {
   }
 }
 
-main().catch((error) => {
-  console.error(error);
+main().catch((caughtError) => {
+  error(
+    caughtError instanceof Error
+      ? caughtError.message
+      : String(caughtError),
+  );
   process.exit(1);
 });

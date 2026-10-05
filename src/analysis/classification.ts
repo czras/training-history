@@ -1,6 +1,8 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
+import { info } from "../log.js";
+
 type ActivityIndex = {
   activities: Array<{
     id: string;
@@ -29,24 +31,38 @@ type RaceClassification =
   | "minor";
 
 const ROOT = process.cwd();
-const INDEX = path.join(ROOT, "activities", "index.json");
+const INDEX = path.join(
+  ROOT,
+  "activities",
+  "index.json",
+);
 
-async function readJson<T>(file: string): Promise<T> {
-  return JSON.parse(await readFile(file, "utf8")) as T;
+async function readJson<T>(
+  file: string,
+): Promise<T> {
+  return JSON.parse(
+    await readFile(file, "utf8"),
+  ) as T;
 }
 
 async function main(): Promise<void> {
-  const index = await readJson<ActivityIndex>(INDEX);
+  const index =
+    await readJson<ActivityIndex>(INDEX);
 
   const classes = new Map<string, number>();
   const modalities = new Map<string, number>();
-  const classByModality = new Map<string, Map<string, number>>();
-  const raceClassifications = new Map<string, number>();
-  const unknownNames = new Map<string, number>();
+  const classByModality =
+    new Map<string, Map<string, number>>();
+  const raceClassifications =
+    new Map<string, number>();
+  const unknownNames =
+    new Map<string, number>();
 
   for (const activity of index.activities) {
-    const year = activity.start_date_local.slice(0, 4);
-    const month = activity.start_date_local.slice(5, 7);
+    const year =
+      activity.start_date_local.slice(0, 4);
+    const month =
+      activity.start_date_local.slice(5, 7);
 
     const activityDir = path.join(
       ROOT,
@@ -56,24 +72,33 @@ async function main(): Promise<void> {
       activity.id,
     );
 
-    const [source, derived] = await Promise.all([
-      readJson<Source>(
-        path.join(activityDir, "source.json"),
-      ),
-      readJson<Derived>(
-        path.join(activityDir, "derived.json"),
-      ),
-    ]);
+    const [source, derived] =
+      await Promise.all([
+        readJson<Source>(
+          path.join(
+            activityDir,
+            "source.json",
+          ),
+        ),
+        readJson<Derived>(
+          path.join(
+            activityDir,
+            "derived.json",
+          ),
+        ),
+      ]);
 
     const classification =
-      derived.classification?.class ?? "missing";
+      derived.classification?.class ??
+      "missing";
 
     classes.set(
       classification,
       (classes.get(classification) ?? 0) + 1,
     );
 
-    const modality = derived.modality ?? "missing";
+    const modality =
+      derived.modality ?? "missing";
 
     modalities.set(
       modality,
@@ -84,7 +109,9 @@ async function main(): Promise<void> {
       classByModality.get(modality);
 
     if (!modalityClasses) {
-      modalityClasses = new Map<string, number>();
+      modalityClasses =
+        new Map<string, number>();
+
       classByModality.set(
         modality,
         modalityClasses,
@@ -110,7 +137,9 @@ async function main(): Promise<void> {
     ) {
       raceClassifications.set(
         raceClassification,
-        (raceClassifications.get(raceClassification) ?? 0) + 1,
+        (raceClassifications.get(
+          raceClassification,
+        ) ?? 0) + 1,
       );
     }
 
@@ -127,45 +156,60 @@ async function main(): Promise<void> {
     }
   }
 
-  console.log("\nClassification");
-  console.log("==============");
-
-  for (const [name, count] of [...classes.entries()].sort()) {
-    console.log(`${name.padEnd(22)} ${count}`);
-  }
-
-  console.log("\nModality");
-  console.log("========");
+  info("Classification");
 
   for (
-    const [name, count] of [...modalities.entries()].sort()
+    const [name, count] of [
+      ...classes.entries(),
+    ].sort()
   ) {
-    console.log(`${name.padEnd(22)} ${count}`);
+    info(
+      name.padEnd(22),
+      { count },
+    );
   }
 
-  console.log("\nClassification by modality");
-  console.log("==========================");
+  info("Modality");
 
   for (
-    const [modality, modalityClasses] of [
+    const [name, count] of [
+      ...modalities.entries(),
+    ].sort()
+  ) {
+    info(
+      name.padEnd(22),
+      { count },
+    );
+  }
+
+  info("Classification by modality");
+
+  for (
+    const [
+      modality,
+      modalityClasses,
+    ] of [
       ...classByModality.entries(),
     ].sort()
   ) {
-    console.log(`\n${modality}`);
+    info(modality);
 
     for (
-      const [classification, count] of [
+      const [
+        classification,
+        count,
+      ] of [
         ...modalityClasses.entries(),
       ].sort()
     ) {
-      console.log(
-        `  ${classification.padEnd(20)} ${count}`,
+      info(
+        classification.padEnd(20),
+        { count },
       );
     }
   }
 
-  console.log("\nActivity race classification");
-  console.log("============================");
+  info("Activity race classification");
 
   for (
     const name of [
@@ -174,24 +218,30 @@ async function main(): Promise<void> {
       "minor",
     ] as RaceClassification[]
   ) {
-    console.log(
-      `${name.padEnd(22)} ${raceClassifications.get(name) ?? 0}`,
+    info(
+      name.padEnd(22),
+      {
+        count:
+          raceClassifications.get(name) ??
+          0,
+      },
     );
   }
 
-  console.log("\nUnknown activity names");
-  console.log("======================");
+  info("Unknown activity names");
 
   for (
-    const [name, count] of [...unknownNames.entries()]
-      .sort(
-        (a, b) =>
-          b[1] - a[1] ||
-          a[0].localeCompare(b[0]),
-      )
+    const [name, count] of [
+      ...unknownNames.entries(),
+    ].sort(
+      (a, b) =>
+        b[1] - a[1] ||
+        a[0].localeCompare(b[0]),
+    )
   ) {
-    console.log(
-      `${String(count).padStart(4)}  ${name}`,
+    info(
+      name,
+      { count },
     );
   }
 }
