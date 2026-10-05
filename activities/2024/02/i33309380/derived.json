@@ -3,6 +3,10 @@
     "class": "strength",
     "signals": [
       {
+        "kind": "activity_race",
+        "value": false
+      },
+      {
         "kind": "name_pattern",
         "rule": "strength-name:SVSE erősítés"
       }

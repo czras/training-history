@@ -49,6 +49,7 @@
 
 - Class: strength
 - Signals:
+  - Activity race: false
   - Name pattern: strength-name:SVSE erősítés
 
 ## Training

@@ -56,9 +56,10 @@
 
 ## Classification
 
-- Class: unknown
+- Class: main_race
 - Signals:
-  - none
+  - Activity race: true
+  - Activity race classification: main
 
 ## Training
 

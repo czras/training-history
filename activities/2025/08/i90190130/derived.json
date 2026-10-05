@@ -1,6 +1,11 @@
 {
   "classification": {
     "class": "unknown",
-    "signals": []
+    "signals": [
+      {
+        "kind": "activity_race",
+        "value": false
+      }
+    ]
   }
 }

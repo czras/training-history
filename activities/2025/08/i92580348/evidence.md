@@ -58,6 +58,7 @@
 
 - Class: generic_training
 - Signals:
+  - Activity race: false
   - Name pattern: name-prefix:Résztáv
 
 ## Training

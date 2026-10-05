@@ -58,6 +58,7 @@
 
 - Class: community_event
 - Signals:
+  - Activity race: false
   - Name pattern: name-prefix:VeszpRun
 
 ## Training

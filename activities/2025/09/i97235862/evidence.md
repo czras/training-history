@@ -59,9 +59,10 @@
 
 ## Classification
 
-- Class: unknown
+- Class: preparatory_race
 - Signals:
-  - none
+  - Activity race: true
+  - Activity race classification: preparatory
 
 ## Training
 

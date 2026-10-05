@@ -9,7 +9,16 @@
     }
   },
   "classification": {
-    "class": "unknown",
-    "signals": []
+    "class": "minor_event",
+    "signals": [
+      {
+        "kind": "activity_race",
+        "value": true
+      },
+      {
+        "kind": "activity_race_classification",
+        "value": "minor"
+      }
+    ]
   }
 }

@@ -49,6 +49,7 @@
 
 - Class: generic_training
 - Signals:
+  - Activity race: false
   - Name pattern: generic-name:Könnyű
 
 ## Training

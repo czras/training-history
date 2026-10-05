@@ -12,6 +12,10 @@
     "class": "commute",
     "signals": [
       {
+        "kind": "activity_race",
+        "value": false
+      },
+      {
         "kind": "name_pattern",
         "rule": "commute-name:Munkából"
       }

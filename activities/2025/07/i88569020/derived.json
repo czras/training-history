@@ -12,6 +12,10 @@
     "class": "generic_training",
     "signals": [
       {
+        "kind": "activity_race",
+        "value": false
+      },
+      {
         "kind": "name_pattern",
         "rule": "generic-name:Morning Walk"
       }

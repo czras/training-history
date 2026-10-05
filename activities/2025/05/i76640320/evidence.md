@@ -58,7 +58,7 @@
 
 - Class: unknown
 - Signals:
-  - none
+  - Activity race: false
 
 ## Training
 

@@ -49,6 +49,7 @@
 
 - Class: test
 - Signals:
+  - Activity race: false
   - Name pattern: test-name:MLSS teszt
 
 ## Training

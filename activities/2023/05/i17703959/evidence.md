@@ -56,9 +56,9 @@
 
 ## Classification
 
-- Class: unknown
+- Class: named_event
 - Signals:
-  - none
+  - Activity race: true
 
 ## Training
 

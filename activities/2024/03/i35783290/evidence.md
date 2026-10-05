@@ -56,9 +56,10 @@
 
 ## Classification
 
-- Class: unknown
+- Class: minor_event
 - Signals:
-  - none
+  - Activity race: true
+  - Activity race classification: minor
 
 ## Training
 

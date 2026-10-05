@@ -9,7 +9,12 @@
     }
   },
   "classification": {
-    "class": "unknown",
-    "signals": []
+    "class": "named_event",
+    "signals": [
+      {
+        "kind": "activity_race",
+        "value": true
+      }
+    ]
   }
 }

@@ -58,6 +58,7 @@
 
 - Class: commute
 - Signals:
+  - Activity race: false
   - Name pattern: commute-name:Irodából
 
 ## Training

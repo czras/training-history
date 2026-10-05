@@ -13,7 +13,16 @@
     }
   },
   "classification": {
-    "class": "unknown",
-    "signals": []
+    "class": "preparatory_race",
+    "signals": [
+      {
+        "kind": "activity_race",
+        "value": true
+      },
+      {
+        "kind": "activity_race_classification",
+        "value": "preparatory"
+      }
+    ]
   }
 }

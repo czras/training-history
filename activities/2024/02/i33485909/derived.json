@@ -3,6 +3,10 @@
     "class": "test",
     "signals": [
       {
+        "kind": "activity_race",
+        "value": false
+      },
+      {
         "kind": "name_pattern",
         "rule": "test-name:MLSS teszt"
       }
