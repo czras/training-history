@@ -1,4 +1,6 @@
-export type IntervalsRace = "A" | "B" | "C" | false;
+import type {
+  ActivityRaceClassification,
+} from "../platforms/activity.js";
 
 export type ActivitySemanticClass =
   | "main_race"
@@ -6,13 +8,20 @@ export type ActivitySemanticClass =
   | "minor_event"
   | "generic_training"
   | "community_event"
+  | "commute"
+  | "strength"
+  | "test"
   | "named_event"
   | "unknown";
 
 export type ClassificationSignal =
   | {
-      kind: "intervals_race";
-      value: IntervalsRace;
+      kind: "activity_race";
+      value: boolean;
+    }
+  | {
+      kind: "activity_race_classification";
+      value: ActivityRaceClassification;
     }
   | {
       kind: "name_pattern";
@@ -29,36 +38,68 @@ const GENERIC_TRAINING_NAMES = new Set([
   "Könnyű",
   "Regeneráló",
   "Tempó",
+  "Lendületes",
+  "Morning Run",
+  "Lunch Run",
+  "Afternoon Run",
+  "Evening Run",
+  "Night Run",
+  "Morning Walk",
+  "Afternoon Walk",
+]);
+
+const COMMUTE_NAMES = new Set([
+  "Munkába",
+  "Munkából",
+  "Irodába",
+  "Irodából",
+]);
+
+const STRENGTH_NAMES = new Set([
+  "Strivacity erősítés",
+  "SVSE erősítés",
+  "SVSE futóiskola, erősítés",
+]);
+
+const TEST_NAMES = new Set([
+  "MLSS teszt",
 ]);
 
 export function classifyActivity(
   source: Record<string, unknown>,
+  activityRace?: boolean,
+  activityRaceClassification?: ActivityRaceClassification,
 ): ActivityClassification {
   const signals: ClassificationSignal[] = [];
 
-  const race = readIntervalsRace(source);
-
-  if (race !== undefined) {
+  if (activityRace !== undefined) {
     signals.push({
-      kind: "intervals_race",
-      value: race,
+      kind: "activity_race",
+      value: activityRace,
+    });
+  }
+
+  if (activityRaceClassification !== undefined) {
+    signals.push({
+      kind: "activity_race_classification",
+      value: activityRaceClassification,
     });
 
-    if (race === "A") {
+    if (activityRaceClassification === "main") {
       return {
         class: "main_race",
         signals,
       };
     }
 
-    if (race === "B") {
+    if (activityRaceClassification === "preparatory") {
       return {
         class: "preparatory_race",
         signals,
       };
     }
 
-    if (race === "C") {
+    if (activityRaceClassification === "funOrMinor") {
       return {
         class: "minor_event",
         signals,
@@ -76,6 +117,66 @@ export function classifyActivity(
 
     return {
       class: "generic_training",
+      signals,
+    };
+  }
+
+  if (name?.startsWith("Résztáv")) {
+    signals.push({
+      kind: "name_pattern",
+      rule: "name-prefix:Résztáv",
+    });
+
+    return {
+      class: "generic_training",
+      signals,
+    };
+  }
+
+  if (name?.startsWith("Domb ")) {
+    signals.push({
+      kind: "name_pattern",
+      rule: "name-prefix:Domb",
+    });
+
+    return {
+      class: "generic_training",
+      signals,
+    };
+  }
+
+  if (name && COMMUTE_NAMES.has(name)) {
+    signals.push({
+      kind: "name_pattern",
+      rule: `commute-name:${name}`,
+    });
+
+    return {
+      class: "commute",
+      signals,
+    };
+  }
+
+  if (name && STRENGTH_NAMES.has(name)) {
+    signals.push({
+      kind: "name_pattern",
+      rule: `strength-name:${name}`,
+    });
+
+    return {
+      class: "strength",
+      signals,
+    };
+  }
+
+  if (name && TEST_NAMES.has(name)) {
+    signals.push({
+      kind: "name_pattern",
+      rule: `test-name:${name}`,
+    });
+
+    return {
+      class: "test",
       signals,
     };
   }
@@ -104,26 +205,17 @@ export function classifyActivity(
     };
   }
 
+  if (activityRace === true) {
+    return {
+      class: "named_event",
+      signals,
+    };
+  }
+
   return {
     class: "unknown",
     signals,
   };
-}
-
-function readIntervalsRace(
-  source: Record<string, unknown>,
-): IntervalsRace | undefined {
-  const value = source.race;
-
-  if (value === false) {
-    return false;
-  }
-
-  if (value === "A" || value === "B" || value === "C") {
-    return value;
-  }
-
-  return undefined;
 }
 
 function readName(

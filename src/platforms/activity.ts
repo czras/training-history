@@ -4,10 +4,18 @@ export type ActivitySource = {
   [key: string]: unknown;
 };
 
+export type ActivityRaceClassification =
+  | "main"
+  | "preparatory"
+  | "minor";
+
 export type Activity = {
   source: ActivitySource;
   streams: unknown[];
   workout?: unknown;
+
+  activityRace?: boolean;
+  activityRaceClassification?: ActivityRaceClassification;
 };
 
 export interface ActivityPlatform {

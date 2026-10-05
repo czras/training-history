@@ -2,6 +2,7 @@ import { http } from "../../http/index.js";
 import type {
   Activity,
   ActivityPlatform,
+  ActivityRaceClassification,
   ActivitySource,
 } from "../activity.js";
 
@@ -59,6 +60,9 @@ export class IntervalsIcuPlatform implements ActivityPlatform {
       source,
       streams,
       workout,
+      activityRace: readActivityRace(source),
+      activityRaceClassification:
+        readActivityRaceClassification(workout),
     };
   }
 
@@ -349,4 +353,40 @@ function isActivitySource(
     typeof source.id === "string" &&
     typeof source.start_date_local === "string"
   );
+}
+
+function readActivityRace(
+  source: Record<string, unknown>,
+): boolean | undefined {
+  return typeof source.race === "boolean"
+    ? source.race
+    : undefined;
+}
+
+function readActivityRaceClassification(
+  workout: unknown,
+): ActivityRaceClassification | undefined {
+  if (
+    typeof workout !== "object" ||
+    workout === null
+  ) {
+    return undefined;
+  }
+
+  const category =
+    (workout as Record<string, unknown>).category;
+
+  if (category === "RACE_A") {
+    return "main";
+  }
+
+  if (category === "RACE_B") {
+    return "preparatory";
+  }
+
+  if (category === "RACE_C") {
+    return "minor";
+  }
+
+  return undefined;
 }
