@@ -1,16 +1,21 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir } from "node:fs/promises";
 import { join } from "node:path";
 
 import type { Activity } from "../platforms/activity.js";
 import { deriveActivity } from "../derivation/activity.js";
 import { activityEvidence } from "../derivation/evidence.js";
 import { GeographyResolver } from "../derivation/geography.js";
+import { writeFileAtomic } from "./write.js";
 
 async function writeFileLogged(
   path: string,
   content: string,
 ): Promise<void> {
-  await writeFile(path, content, "utf8");
+  await writeFileAtomic(
+    path,
+    content,
+  );
+
   console.log(`  saved ${path}`);
 }
 

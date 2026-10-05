@@ -1,6 +1,5 @@
 import {
   readFile,
-  writeFile,
 } from "node:fs/promises";
 import { join } from "node:path";
 
@@ -12,6 +11,7 @@ import {
 import type { ActivityPlatform } from "../platforms/activity.js";
 import { IntervalsIcuPlatform } from "../platforms/intervals-icu/index.js";
 import type { ActivityIndexEntry } from "./activities.js";
+import { writeFileAtomic } from "./write.js";
 
 const ACTIVITIES_DIR = "activities";
 const PROGRESS_INTERVAL = 25;
@@ -109,19 +109,17 @@ async function deriveActivityEntry(
     geographyResolver,
   );
 
-  await writeFile(
+  await writeFileAtomic(
     derivedPath,
     JSON.stringify(facts, null, 2) + "\n",
-    "utf8",
   );
 
-  await writeFile(
+  await writeFileAtomic(
     evidencePath,
     activityEvidence(
       source as Record<string, unknown>,
       facts,
     ),
-    "utf8",
   );
 }
 
