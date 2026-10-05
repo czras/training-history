@@ -1,79 +1,38 @@
 # Activity
 
-- Source: Intervals.icu
-- Source ID: `i25125934`
-- Type: Run
-- Name: Bakonyi barangolás 30
-- Start: 2023-10-07T08:19:24
-
+- Source: Intervals.icu- Source ID: `i25125934`
+- Type: Run- Name: Bakonyi barangolás 30- Start: 2023-10-07T08:19:24
 ## Session
 
 - Distance: 29.34 [km]
-- Moving time: 13395 [s] (3h 43m 15s)
-- Elapsed time: 14926 [s] (4h 8m 46s)
-- Recording time: 14925 [s] (4h 8m 45s)
-- Elevation gain: 934 [m+]
-- Elevation loss: unknown [m-]
-
+- Moving time: 13395 [s] (3h 43m 15s)- Elapsed time: 14926 [s] (4h 8m 46s)- Recording time: 14925 [s] (4h 8m 45s)- Elevation gain: 934 [m+]- Elevation loss: unknown [m-]
 ## Performance
 
-- Average speed: 1.97 [m/s]
-- Maximum speed: 4.57 [m/s]
-- Average heart rate: 146 [bpm]
-- Maximum heart rate: 171 [bpm]
-- Average power: 174 [W]
-- Weighted average power: 203 [W]
-- Average unilateral cadence: 81.7 [steps/min]
-
+- Average speed: 1.97 [m/s]- Maximum speed: 4.57 [m/s]- Average heart rate: 146 [bpm]- Maximum heart rate: 171 [bpm]- Average power: 174 [W]- Weighted average power: 203 [W]- Average unilateral cadence: 81.7 [steps/min]
 ## Running Dynamics
 
-- Average stride length: 0.804 [m]
-- Average stance time: unknown [ms]
-- Average stance time percent: unknown [%]
-- Average vertical oscillation: unknown [mm]
-- Average vertical ratio: unknown [%]
-- Average leg spring stiffness: unknown [kN/m]
-
+- Average stride length: 0.804 [m]- Average stance time: unknown [ms]- Average stance time percent: unknown [%]- Average vertical oscillation: unknown [mm]- Average vertical ratio: unknown [%]- Average leg spring stiffness: unknown [kN/m]
 ## Environment
 
-- Recorded temperature: unknown [°C]
-- Weather temperature: unknown [°C]
-- Feels-like temperature: unknown [°C]
-- Average wind speed: unknown [m/s]
-- Average wind gust: unknown [m/s]
-- Headwind: unknown [%]
-- Tailwind: unknown [%]
-
-
+- Recorded temperature: unknown [°C]- Weather temperature: unknown [°C]- Feels-like temperature: unknown [°C]- Average wind speed: unknown [m/s]- Average wind gust: unknown [m/s]- Headwind: unknown [%]- Tailwind: unknown [%]
 ## Geography
 
-- GPS coordinate count: 13239
-- Bounding box:
+- GPS coordinate count: 13239- Bounding box:
   - North: 47.298683 [°]
   - South: 47.244705 [°]
   - East: 17.764605 [°]
   - West: 17.662610 [°]
 
+## External Geography
+
+- Bounding-box feature matches: 48
 ## Classification
 
-- Modality: run
-- Class: minor_event
-- Signals:
-  - Modality: run
-  - Activity race: true
-  - Activity race classification: minor
-
+- Modality: run- Class: minor_event- Signals:
+  - Modality: run  - Activity race: true  - Activity race classification: minor
 ## Training
 
-- Training load: 197
-- HR load: 197
-- Pace load: 182
-- Power load: 196
-- Intensity: 72.5 [%]
-- Decoupling: 12.80 [%]
-- RPE: unknown [1–10]
-- Feel: unknown
-
+- Training load: 197- HR load: 197- Pace load: 182- Power load: 196- Intensity: 72.5 [%]- Decoupling: 12.80 [%]- RPE: unknown [1–10]- Feel: unknown
 ## Source
 
 Intervals.icu activity:
@@ -88,4 +47,6 @@ The canonical source evidence is preserved unchanged.
 
 The derived values in this document are calculated from the preserved `streams.json` and semantic classification from `source.json`. They are also preserved in `derived.json`.
 
-No external geographic enrichment is applied.
+External geographic matches are derived from the materialized geography corpus using the activity bounding box.
+
+No semantic interpretation of external geographic matches is applied.

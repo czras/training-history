@@ -1,82 +1,42 @@
 # Activity
 
-- Source: Intervals.icu
-- Source ID: `i99601778`
-- Type: Run
-- Name: VeszpRun haladó
-- Start: 2025-09-30T18:27:47
-
+- Source: Intervals.icu- Source ID: `i99601778`
+- Type: Run- Name: VeszpRun haladó- Start: 2025-09-30T18:27:47
 ## Session
 
 - Distance: 12.33 [km]
-- Moving time: 4502 [s] (1h 15m 2s)
-- Elapsed time: 5139 [s] (1h 25m 39s)
-- Recording time: 4511 [s] (1h 15m 11s)
-- Elevation gain: 57 [m+]
-- Elevation loss: 72 [m-]
-
+- Moving time: 4502 [s] (1h 15m 2s)- Elapsed time: 5139 [s] (1h 25m 39s)- Recording time: 4511 [s] (1h 15m 11s)- Elevation gain: 57 [m+]- Elevation loss: 72 [m-]
 ## Performance
 
-- Average speed: 2.73 [m/s]
-- Maximum speed: 3.80 [m/s]
-- Average heart rate: 136 [bpm]
-- Maximum heart rate: 151 [bpm]
-- Average power: 217 [W]
-- Weighted average power: 217 [W]
-- Average unilateral cadence: 90.3 [steps/min]
-
+- Average speed: 2.73 [m/s]- Maximum speed: 3.80 [m/s]- Average heart rate: 136 [bpm]- Maximum heart rate: 151 [bpm]- Average power: 217 [W]- Weighted average power: 217 [W]- Average unilateral cadence: 90.3 [steps/min]
 ## Running Dynamics
 
-- Average stride length: 0.911 [m]
-- Average stance time: unknown [ms]
-- Average stance time percent: unknown [%]
-- Average vertical oscillation: unknown [mm]
-- Average vertical ratio: unknown [%]
-- Average leg spring stiffness: unknown [kN/m]
-
+- Average stride length: 0.911 [m]- Average stance time: unknown [ms]- Average stance time percent: unknown [%]- Average vertical oscillation: unknown [mm]- Average vertical ratio: unknown [%]- Average leg spring stiffness: unknown [kN/m]
 ## Environment
 
-- Recorded temperature: 14.0 [°C]
-- Weather temperature: 10.08 [°C]
-- Feels-like temperature: 7.97 [°C]
-- Average wind speed: 1.45 [m/s]
-- Average wind gust: 3.74 [m/s]
-- Headwind: 43.6 [%]
-- Tailwind: 43.3 [%]
-
+- Recorded temperature: 14.0 [°C]- Weather temperature: 10.08 [°C]- Feels-like temperature: 7.97 [°C]- Average wind speed: 1.45 [m/s]- Average wind gust: 3.74 [m/s]- Headwind: 43.6 [%]- Tailwind: 43.3 [%]
 ## Physiology
 
 - Core temperature: 0.00–38.26 [°C]
 
 ## Geography
 
-- GPS coordinate count: 4513
-- Bounding box:
+- GPS coordinate count: 4513- Bounding box:
   - North: 47.106820 [°]
   - South: 47.083847 [°]
   - East: 17.912243 [°]
   - West: 17.858252 [°]
 
+## External Geography
+
+- Bounding-box feature matches: 49
 ## Classification
 
-- Modality: run
-- Class: community_event
-- Signals:
-  - Modality: run
-  - Activity race: false
-  - Name pattern: name-prefix:VeszpRun
-
+- Modality: run- Class: community_event- Signals:
+  - Modality: run  - Activity race: false  - Name pattern: name-prefix:VeszpRun
 ## Training
 
-- Training load: 75
-- HR load: 47
-- Pace load: 56
-- Power load: 75
-- Intensity: 77.5 [%]
-- Decoupling: -2.26 [%]
-- RPE: 4 [1–10]
-- Feel: 3
-
+- Training load: 75- HR load: 47- Pace load: 56- Power load: 75- Intensity: 77.5 [%]- Decoupling: -2.26 [%]- RPE: 4 [1–10]- Feel: 3
 ## Source
 
 Intervals.icu activity:
@@ -91,4 +51,6 @@ The canonical source evidence is preserved unchanged.
 
 The derived values in this document are calculated from the preserved `streams.json` and semantic classification from `source.json`. They are also preserved in `derived.json`.
 
-No external geographic enrichment is applied.
+External geographic matches are derived from the materialized geography corpus using the activity bounding box.
+
+No semantic interpretation of external geographic matches is applied.

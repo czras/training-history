@@ -1,79 +1,38 @@
 # Activity
 
-- Source: Intervals.icu
-- Source ID: `i88511595`
-- Type: Walk
-- Name: Morning Walk
-- Start: 2025-07-21T08:03:23
-
+- Source: Intervals.icu- Source ID: `i88511595`
+- Type: Walk- Name: Morning Walk- Start: 2025-07-21T08:03:23
 ## Session
 
 - Distance: 3.97 [km]
-- Moving time: 2813 [s] (46m 53s)
-- Elapsed time: 3476 [s] (57m 56s)
-- Recording time: 2926 [s] (48m 46s)
-- Elevation gain: 71 [m+]
-- Elevation loss: 63 [m-]
-
+- Moving time: 2813 [s] (46m 53s)- Elapsed time: 3476 [s] (57m 56s)- Recording time: 2926 [s] (48m 46s)- Elevation gain: 71 [m+]- Elevation loss: 63 [m-]
 ## Performance
 
-- Average speed: 1.35 [m/s]
-- Maximum speed: 2.70 [m/s]
-- Average heart rate: 92 [bpm]
-- Maximum heart rate: 116 [bpm]
-- Average power: unknown [W]
-- Weighted average power: unknown [W]
-- Average cadence: 54.8 [rpm]
-
+- Average speed: 1.35 [m/s]- Maximum speed: 2.70 [m/s]- Average heart rate: 92 [bpm]- Maximum heart rate: 116 [bpm]- Average power: unknown [W]- Weighted average power: unknown [W]- Average cadence: 54.8 [rpm]
 ## Running Dynamics
 
-- Average stride length: 0.772 [m]
-- Average stance time: unknown [ms]
-- Average stance time percent: unknown [%]
-- Average vertical oscillation: unknown [mm]
-- Average vertical ratio: unknown [%]
-- Average leg spring stiffness: unknown [kN/m]
-
+- Average stride length: 0.772 [m]- Average stance time: unknown [ms]- Average stance time percent: unknown [%]- Average vertical oscillation: unknown [mm]- Average vertical ratio: unknown [%]- Average leg spring stiffness: unknown [kN/m]
 ## Environment
 
-- Recorded temperature: 27.0 [°C]
-- Weather temperature: 24.56 [°C]
-- Feels-like temperature: 25.73 [°C]
-- Average wind speed: 2.43 [m/s]
-- Average wind gust: 4.20 [m/s]
-- Headwind: 22.0 [%]
-- Tailwind: 32.6 [%]
-
-
+- Recorded temperature: 27.0 [°C]- Weather temperature: 24.56 [°C]- Feels-like temperature: 25.73 [°C]- Average wind speed: 2.43 [m/s]- Average wind gust: 4.20 [m/s]- Headwind: 22.0 [%]- Tailwind: 32.6 [%]
 ## Geography
 
-- GPS coordinate count: 2575
-- Bounding box:
+- GPS coordinate count: 2575- Bounding box:
   - North: 47.091680 [°]
   - South: 47.083344 [°]
   - East: 17.917065 [°]
   - West: 17.911560 [°]
 
+## External Geography
+
+- Bounding-box feature matches: 10
 ## Classification
 
-- Modality: walk
-- Class: generic_training
-- Signals:
-  - Modality: walk
-  - Activity race: false
-  - Name pattern: generic-name:Morning Walk
-
+- Modality: walk- Class: generic_training- Signals:
+  - Modality: walk  - Activity race: false  - Name pattern: generic-name:Morning Walk
 ## Training
 
-- Training load: 6
-- HR load: 6
-- Pace load: unknown
-- Power load: unknown
-- Intensity: 27.2 [%]
-- Decoupling: unknown [%]
-- RPE: unknown [1–10]
-- Feel: unknown
-
+- Training load: 6- HR load: 6- Pace load: unknown- Power load: unknown- Intensity: 27.2 [%]- Decoupling: unknown [%]- RPE: unknown [1–10]- Feel: unknown
 ## Source
 
 Intervals.icu activity:
@@ -88,4 +47,6 @@ The canonical source evidence is preserved unchanged.
 
 The derived values in this document are calculated from the preserved `streams.json` and semantic classification from `source.json`. They are also preserved in `derived.json`.
 
-No external geographic enrichment is applied.
+External geographic matches are derived from the materialized geography corpus using the activity bounding box.
+
+No semantic interpretation of external geographic matches is applied.

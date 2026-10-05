@@ -1,79 +1,38 @@
 # Activity
 
-- Source: Intervals.icu
-- Source ID: `i95524892`
-- Type: Walk
-- Name: Irodából 
-- Start: 2025-09-02T17:04:25
-
+- Source: Intervals.icu- Source ID: `i95524892`
+- Type: Walk- Name: Irodából - Start: 2025-09-02T17:04:25
 ## Session
 
 - Distance: 1.27 [km]
-- Moving time: 921 [s] (15m 21s)
-- Elapsed time: 959 [s] (15m 59s)
-- Recording time: 958 [s] (15m 58s)
-- Elevation gain: 23 [m+]
-- Elevation loss: 19 [m-]
-
+- Moving time: 921 [s] (15m 21s)- Elapsed time: 959 [s] (15m 59s)- Recording time: 958 [s] (15m 58s)- Elevation gain: 23 [m+]- Elevation loss: 19 [m-]
 ## Performance
 
-- Average speed: 1.32 [m/s]
-- Maximum speed: 1.54 [m/s]
-- Average heart rate: 85 [bpm]
-- Maximum heart rate: 98 [bpm]
-- Average power: unknown [W]
-- Weighted average power: unknown [W]
-- Average cadence: 53.8 [rpm]
-
+- Average speed: 1.32 [m/s]- Maximum speed: 1.54 [m/s]- Average heart rate: 85 [bpm]- Maximum heart rate: 98 [bpm]- Average power: unknown [W]- Weighted average power: unknown [W]- Average cadence: 53.8 [rpm]
 ## Running Dynamics
 
-- Average stride length: 0.768 [m]
-- Average stance time: unknown [ms]
-- Average stance time percent: unknown [%]
-- Average vertical oscillation: unknown [mm]
-- Average vertical ratio: unknown [%]
-- Average leg spring stiffness: unknown [kN/m]
-
+- Average stride length: 0.768 [m]- Average stance time: unknown [ms]- Average stance time percent: unknown [%]- Average vertical oscillation: unknown [mm]- Average vertical ratio: unknown [%]- Average leg spring stiffness: unknown [kN/m]
 ## Environment
 
-- Recorded temperature: 28.0 [°C]
-- Weather temperature: 27.28 [°C]
-- Feels-like temperature: 27.48 [°C]
-- Average wind speed: 1.83 [m/s]
-- Average wind gust: 5.47 [m/s]
-- Headwind: 67.6 [%]
-- Tailwind: 1.2 [%]
-
-
+- Recorded temperature: 28.0 [°C]- Weather temperature: 27.28 [°C]- Feels-like temperature: 27.48 [°C]- Average wind speed: 1.83 [m/s]- Average wind gust: 5.47 [m/s]- Headwind: 67.6 [%]- Tailwind: 1.2 [%]
 ## Geography
 
-- GPS coordinate count: 847
-- Bounding box:
+- GPS coordinate count: 847- Bounding box:
   - North: 47.091743 [°]
   - South: 47.083447 [°]
   - East: 17.916637 [°]
   - West: 17.912079 [°]
 
+## External Geography
+
+- Bounding-box feature matches: 9
 ## Classification
 
-- Modality: walk
-- Class: commute
-- Signals:
-  - Modality: walk
-  - Activity race: false
-  - Name pattern: commute-name:Irodából
-
+- Modality: walk- Class: commute- Signals:
+  - Modality: walk  - Activity race: false  - Name pattern: commute-name:Irodából
 ## Training
 
-- Training load: 2
-- HR load: 2
-- Pace load: unknown
-- Power load: unknown
-- Intensity: 27.4 [%]
-- Decoupling: unknown [%]
-- RPE: 1 [1–10]
-- Feel: 3
-
+- Training load: 2- HR load: 2- Pace load: unknown- Power load: unknown- Intensity: 27.4 [%]- Decoupling: unknown [%]- RPE: 1 [1–10]- Feel: 3
 ## Source
 
 Intervals.icu activity:
@@ -88,4 +47,6 @@ The canonical source evidence is preserved unchanged.
 
 The derived values in this document are calculated from the preserved `streams.json` and semantic classification from `source.json`. They are also preserved in `derived.json`.
 
-No external geographic enrichment is applied.
+External geographic matches are derived from the materialized geography corpus using the activity bounding box.
+
+No semantic interpretation of external geographic matches is applied.

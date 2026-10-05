@@ -1,79 +1,38 @@
 # Activity
 
-- Source: Intervals.icu
-- Source ID: `i49549195`
-- Type: TrailRun
-- Name: Hosszú
-- Start: 2024-09-14T06:09:15
-
+- Source: Intervals.icu- Source ID: `i49549195`
+- Type: TrailRun- Name: Hosszú- Start: 2024-09-14T06:09:15
 ## Session
 
 - Distance: 32.66 [km]
-- Moving time: 13199 [s] (3h 39m 59s)
-- Elapsed time: 13353 [s] (3h 42m 33s)
-- Recording time: 13232 [s] (3h 40m 32s)
-- Elevation gain: 814 [m+]
-- Elevation loss: unknown [m-]
-
+- Moving time: 13199 [s] (3h 39m 59s)- Elapsed time: 13353 [s] (3h 42m 33s)- Recording time: 13232 [s] (3h 40m 32s)- Elevation gain: 814 [m+]- Elevation loss: unknown [m-]
 ## Performance
 
-- Average speed: 2.47 [m/s]
-- Maximum speed: 4.50 [m/s]
-- Average heart rate: 152 [bpm]
-- Maximum heart rate: 172 [bpm]
-- Average power: 210 [W]
-- Weighted average power: 216 [W]
-- Average cadence: 87.1 [rpm]
-
+- Average speed: 2.47 [m/s]- Maximum speed: 4.50 [m/s]- Average heart rate: 152 [bpm]- Maximum heart rate: 172 [bpm]- Average power: 210 [W]- Weighted average power: 216 [W]- Average cadence: 87.1 [rpm]
 ## Running Dynamics
 
-- Average stride length: 0.852 [m]
-- Average stance time: unknown [ms]
-- Average stance time percent: unknown [%]
-- Average vertical oscillation: unknown [mm]
-- Average vertical ratio: unknown [%]
-- Average leg spring stiffness: unknown [kN/m]
-
+- Average stride length: 0.852 [m]- Average stance time: unknown [ms]- Average stance time percent: unknown [%]- Average vertical oscillation: unknown [mm]- Average vertical ratio: unknown [%]- Average leg spring stiffness: unknown [kN/m]
 ## Environment
 
-- Recorded temperature: 10.0 [°C]
-- Weather temperature: unknown [°C]
-- Feels-like temperature: unknown [°C]
-- Average wind speed: unknown [m/s]
-- Average wind gust: unknown [m/s]
-- Headwind: unknown [%]
-- Tailwind: unknown [%]
-
-
+- Recorded temperature: 10.0 [°C]- Weather temperature: unknown [°C]- Feels-like temperature: unknown [°C]- Average wind speed: unknown [m/s]- Average wind gust: unknown [m/s]- Headwind: unknown [%]- Tailwind: unknown [%]
 ## Geography
 
-- GPS coordinate count: 13098
-- Bounding box:
+- GPS coordinate count: 13098- Bounding box:
   - North: 47.114105 [°]
   - South: 47.085392 [°]
   - East: 17.919106 [°]
   - West: 17.775642 [°]
 
+## External Geography
+
+- Bounding-box feature matches: 68
 ## Classification
 
-- Modality: run
-- Class: generic_training
-- Signals:
-  - Modality: run
-  - Activity race: false
-  - Name pattern: generic-name:Hosszú
-
+- Modality: run- Class: generic_training- Signals:
+  - Modality: run  - Activity race: false  - Name pattern: generic-name:Hosszú
 ## Training
 
-- Training load: 202
-- HR load: 202
-- Pace load: 169
-- Power load: 218
-- Intensity: 77.1 [%]
-- Decoupling: 6.03 [%]
-- RPE: unknown [1–10]
-- Feel: unknown
-
+- Training load: 202- HR load: 202- Pace load: 169- Power load: 218- Intensity: 77.1 [%]- Decoupling: 6.03 [%]- RPE: unknown [1–10]- Feel: unknown
 ## Source
 
 Intervals.icu activity:
@@ -88,4 +47,6 @@ The canonical source evidence is preserved unchanged.
 
 The derived values in this document are calculated from the preserved `streams.json` and semantic classification from `source.json`. They are also preserved in `derived.json`.
 
-No external geographic enrichment is applied.
+External geographic matches are derived from the materialized geography corpus using the activity bounding box.
+
+No semantic interpretation of external geographic matches is applied.

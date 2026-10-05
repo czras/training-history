@@ -29,5 +29,2975 @@
         "value": "preparatory"
       }
     ]
-  }
+  },
+  "externalGeography": [
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078485,
+      "name": "Zánka",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Zánka\",\"wikidata\":\"Q683947\",\"wikipedia\":\"hu:Zánka\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "watercourse",
+      "osmType": "way",
+      "osmId": 329087107,
+      "name": "Cser-kúti-patak",
+      "tags": "{\"alt_name\":\"Csorsza-patak\",\"name\":\"Cser-kúti-patak\",\"waterway\":\"stream\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078476,
+      "name": "Szentantalfa",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Szentantalfa\",\"wikidata\":\"Q1089644\",\"wikipedia\":\"hu:Szentantalfa\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "watercourse",
+      "osmType": "way",
+      "osmId": 389365841,
+      "name": "Cser-kúti-patak",
+      "tags": "{\"alt_name\":\"Csorsza-patak\",\"name\":\"Cser-kúti-patak\",\"waterway\":\"stream\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5438155566,
+      "name": "Szent György-hegy",
+      "tags": "{\"name\":\"Szent György-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 3752846375,
+      "name": "Szent György-hegy",
+      "tags": "{\"ele\":\"318\",\"name\":\"Szent György-hegy\",\"natural\":\"peak\",\"source\":\"SRTM\",\"wikidata\":\"Q26230853\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 5440287459,
+      "name": "Halomhegy",
+      "tags": "{\"name\":\"Halomhegy\",\"place\":\"neighbourhood\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 3752846377,
+      "name": "Halom-hegy",
+      "tags": "{\"ele\":\"399\",\"name\":\"Halom-hegy\",\"natural\":\"volcano\",\"source\":\"SRTM\",\"url\":\"https://welovebalaton.hu/aktiv.balaton/bringa.kirandulas/halom.hegyi.vulkan.tanosveny\",\"url:geocaching\":\"http://geocaching.hu/caches.geo?id=855\",\"url:geopark\":\"http://www.geopark.hu/component/jevents/icalrepeat.detail/2016/09/04/1558/-/halom-hegyi-geotura-es-terepi-tarsasjatek-a-vulkan-tanosvenyen-a-kossuth-kilatonal\",\"volcano:status\":\"extinct\",\"volcano:type\":\"scoria\",\"wikidata\":\"Q26233054\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57880019,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440283927,
+      "name": "Csemfa",
+      "tags": "{\"name\":\"Csemfa\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 706545894,
+      "name": "Mencshely",
+      "tags": "{\"ksh_ref\":\"27137\",\"name\":\"Mencshely\",\"name:ru\":\"Менчхей\",\"name:sr\":\"Менчељ\",\"place\":\"village\",\"place:hu\":\"község\",\"population\":\"300\",\"population:date\":\"2024-01-01\",\"postal_code\":\"8271\",\"source:population\":\"KSH (www.ksh.hu)\",\"source:population:date\":\"2024-01-01\",\"source:postal_code\":\"A Magyar Köztársaság Helységnévtára, 2009\",\"wikidata\":\"Q1175885\",\"wikipedia\":\"hu:Mencshely\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7597613953,
+      "name": "Finta",
+      "tags": "{\"name\":\"Finta\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7597621693,
+      "name": "Csertető",
+      "tags": "{\"name\":\"Csertető\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 8013656894,
+      "name": "Kánya-domb",
+      "tags": "{\"ele\":\"343\",\"name\":\"Kánya-domb\",\"natural\":\"peak\",\"wikidata\":\"Q26232516\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7597622823,
+      "name": "Téglaházi dűlő",
+      "tags": "{\"name\":\"Téglaházi dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7597618927,
+      "name": "Cigányföldek",
+      "tags": "{\"name\":\"Cigányföldek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151419170,
+      "name": "Mocsolyai-dűlő",
+      "tags": "{\"name\":\"Mocsolyai-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57876277,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57881832,
+      "name": "null",
+      "tags": "{\"admin_level\":\"7\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078648,
+      "name": "Óbudavár",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Óbudavár\",\"wikidata\":\"Q1089984\",\"wikipedia\":\"hu:Óbudavár\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "watercourse",
+      "osmType": "way",
+      "osmId": 97965223,
+      "name": "Vázsonyi-séd",
+      "tags": "{\"fixme\":\"position\",\"name\":\"Vázsonyi-séd\",\"waterway\":\"stream\",\"width\":\"1\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7575160497,
+      "name": "Agyaglikalja",
+      "tags": "{\"name\":\"Agyaglikalja\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 4781127437,
+      "name": "Balázs-tető",
+      "tags": "{\"ele\":\"320\",\"name\":\"Balázs-tető\",\"natural\":\"peak\",\"source\":\"SRTM\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440292664,
+      "name": "Margya",
+      "tags": "{\"name\":\"Margya\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440333563,
+      "name": "Agyaglik",
+      "tags": "{\"name\":\"Agyaglik\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440299447,
+      "name": "Sárkút melléke",
+      "tags": "{\"name\":\"Sárkút melléke\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440328138,
+      "name": "Ságma",
+      "tags": "{\"name\":\"Ságma\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 8043816551,
+      "name": "Boncserdő-tető",
+      "tags": "{\"ele\":\"243\",\"name\":\"Boncserdő-tető\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7826734064,
+      "name": "Balázs alja",
+      "tags": "{\"name\":\"Balázs alja\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8013585888,
+      "name": "Szilvási dűlő",
+      "tags": "{\"name\":\"Szilvási dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440304021,
+      "name": "Mocsár",
+      "tags": "{\"name\":\"Mocsár\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8013585889,
+      "name": "Bonts-erdő",
+      "tags": "{\"name\":\"Bonts-erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57875149,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57879582,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57874951,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 1133595982,
+      "name": "Zánkai Erzsébet-tábor",
+      "tags": "{\"name\":\"Zánkai Erzsébet-tábor\",\"place\":\"hamlet\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 3458341707,
+      "name": "Zánkai Erzsébet-tábor",
+      "tags": "{\"name\":\"Zánkai Erzsébet-tábor\",\"place\":\"isolated_dwelling\",\"source\":\"turistautak.hu\",\"source:date\":\"2013-03-31\",\"url\":\"http://turistautak.hu/poi.php?id=15700\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440366314,
+      "name": "Somogyi-völgy",
+      "tags": "{\"name\":\"Somogyi-völgy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440367978,
+      "name": "Szili-dűlő",
+      "tags": "{\"name\":\"Szili-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 9006674843,
+      "name": "Murvás-mező",
+      "tags": "{\"name\":\"Murvás-mező\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440397150,
+      "name": "Kis-telek",
+      "tags": "{\"local_name\":\"Kistelek\",\"name\":\"Kis-telek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 9481097241,
+      "name": "Ófalu",
+      "tags": "{\"name\":\"Ófalu\",\"name:sr\":\"Офалу\",\"place\":\"hamlet\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440361831,
+      "name": "Pántlika",
+      "tags": "{\"name\":\"Pántlika\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 26612056,
+      "name": "Balatonakali",
+      "tags": "{\"ksh_ref\":\"25308\",\"name\":\"Balatonakali\",\"name:ru\":\"Балатонакали\",\"name:sr\":\"Балатонкали\",\"old_name:-1954\":\"Akali\",\"place\":\"village\",\"place:hu\":\"község\",\"population\":\"686\",\"population:date\":\"2024-01-01\",\"postal_code\":\"8243\",\"source:population\":\"KSH (www.ksh.hu)\",\"source:population:date\":\"2024-01-01\",\"source:postal_code\":\"Magyar Posta (posta.hu)\",\"source:postal_code:date\":\"2009-03-01\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 9006674873,
+      "name": "Előhegy",
+      "tags": "{\"name\":\"Előhegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 9480472795,
+      "name": "Árvalányhajas rét",
+      "tags": "{\"name\":\"Árvalányhajas rét\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 9006674874,
+      "name": "Sósi földek",
+      "tags": "{\"name\":\"Sósi földek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440358177,
+      "name": "Hegytető",
+      "tags": "{\"ele\":\"135\",\"name\":\"Hegytető\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 9006674875,
+      "name": "Keresztvonyó",
+      "tags": "{\"name\":\"Keresztvonyó\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 1372702453,
+      "name": "Keresztvonyó-fok",
+      "tags": "{\"name\":\"Keresztvonyó-fok\",\"natural\":\"cape\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 9006674876,
+      "name": "Fövényes határszél",
+      "tags": "{\"name\":\"Fövényes határszél\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57879169,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57880713,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078552,
+      "name": "Balatonakali",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Balatonakali\",\"wikidata\":\"Q789248\",\"wikipedia\":\"hu:Balatonakali\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078623,
+      "name": "Balatonudvari",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Balatonudvari\",\"wikidata\":\"Q789323\",\"wikipedia\":\"hu:Balatonudvari\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "watercourse",
+      "osmType": "way",
+      "osmId": 438321370,
+      "name": "Bere-patak",
+      "tags": "{\"intermittent\":\"yes\",\"name\":\"Bere-patak\",\"seasonal\":\"yes\",\"waterway\":\"stream\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7597522588,
+      "name": "Tófő",
+      "tags": "{\"name\":\"Tófő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7597601653,
+      "name": "Ragonya",
+      "tags": "{\"name\":\"Ragonya\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440308791,
+      "name": "Kútfői-dűlő",
+      "tags": "{\"name\":\"Kútfői-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 706545895,
+      "name": "Vöröstó",
+      "tags": "{\"ksh_ref\":\"11703\",\"name\":\"Vöröstó\",\"name:de\":\"Werischtul\",\"name:sr\":\"Верешто\",\"place\":\"village\",\"place:hu\":\"község\",\"population\":\"103\",\"population:date\":\"2024-01-01\",\"postal_code\":\"8291\",\"source:population\":\"KSH (www.ksh.hu)\",\"source:population:date\":\"2024-01-01\",\"source:postal_code\":\"A Magyar Köztársaság Helységnévtára, 2009\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7597615411,
+      "name": "Réti dűlő",
+      "tags": "{\"name\":\"Réti dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7597616515,
+      "name": "Ökör-réti-dűlő",
+      "tags": "{\"name\":\"Ökör-réti-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7597617866,
+      "name": "Hátsó Ragonya",
+      "tags": "{\"name\":\"Hátsó Ragonya\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 6670093438,
+      "name": "Pusztatemplomi dűlő",
+      "tags": "{\"name\":\"Pusztatemplomi dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7782921784,
+      "name": "Kerékmogyorós",
+      "tags": "{\"name\":\"Kerékmogyorós\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 3439631875,
+      "name": "Mini löszfal",
+      "tags": "{\"name\":\"Mini löszfal\",\"natural\":\"cliff\",\"source\":\"turistautak.hu\",\"source:date\":\"2013-03-01\",\"url\":\"http://turistautak.hu/poi.php?id=63682\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 1133562551,
+      "name": "Kisdörgicse",
+      "tags": "{\"alt_name\":\"Kisfaluddörgicse\",\"name\":\"Kisdörgicse\",\"name:sr\":\"Кишдергиче\",\"place\":\"hamlet\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 3439631856,
+      "name": "Kis szikla",
+      "tags": "{\"name\":\"Kis szikla\",\"natural\":\"cliff\",\"source\":\"turistautak.hu\",\"source:date\":\"2013-10-06\",\"url\":\"http://turistautak.hu/poi.php?id=63675\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7597616902,
+      "name": "Kenderföldek",
+      "tags": "{\"name\":\"Kenderföldek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 7597614219,
+      "name": "Túri-hegy",
+      "tags": "{\"name\":\"Túri-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 3439631855,
+      "name": "Kis szikla",
+      "tags": "{\"alt_name\":\"Andrásszék\",\"name\":\"Kis szikla\",\"natural\":\"cliff\",\"source\":\"turistautak.hu\",\"source:date\":\"2013-10-06\",\"url\":\"http://turistautak.hu/poi.php?id=63673\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7597622493,
+      "name": "Méhes",
+      "tags": "{\"name\":\"Méhes\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 6670529860,
+      "name": "Nagy-erdő",
+      "tags": "{\"name\":\"Nagy-erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 7597619213,
+      "name": "Kőhegy",
+      "tags": "{\"name\":\"Kőhegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5873951944,
+      "name": "Répaföld",
+      "tags": "{\"name\":\"Répaföld\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 706545897,
+      "name": "Barnag",
+      "tags": "{\"ksh_ref\":\"15778\",\"name\":\"Barnag\",\"name:de\":\"Barnig\",\"name:sr\":\"Барнаг\",\"place\":\"village\",\"place:hu\":\"község\",\"population\":\"98\",\"population:date\":\"2024-01-01\",\"postal_code\":\"8291\",\"source:population\":\"KSH (www.ksh.hu)\",\"source:population:date\":\"2024-01-01\",\"source:postal_code\":\"A Magyar Köztársaság Helységnévtára, 2009\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5521846428,
+      "name": "Kenderföldek",
+      "tags": "{\"name\":\"Kenderföldek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5521853221,
+      "name": "Eresztvény",
+      "tags": "{\"name\":\"Eresztvény\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 3752846381,
+      "name": "Hideg-hegy",
+      "tags": "{\"ele\":\"395\",\"name\":\"Hideg-hegy\",\"natural\":\"peak\",\"source\":\"SRTM\",\"wikidata\":\"Q26232366\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5873951945,
+      "name": "Erdő alja",
+      "tags": "{\"name\":\"Erdő alja\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 6329640596,
+      "name": "Kisrét",
+      "tags": "{\"name\":\"Kisrét\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7782929563,
+      "name": "Kopasz tető",
+      "tags": "{\"name\":\"Kopasz tető\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7782936784,
+      "name": "Bertalan kert",
+      "tags": "{\"name\":\"Bertalan kert\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7782944090,
+      "name": "Tizenkét hold",
+      "tags": "{\"name\":\"Tizenkét hold\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7782946293,
+      "name": "Köves irtás",
+      "tags": "{\"name\":\"Köves irtás\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7782947835,
+      "name": "Halomi erdő",
+      "tags": "{\"name\":\"Halomi erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7782950055,
+      "name": "Nemes mező",
+      "tags": "{\"name\":\"Nemes mező\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8014299069,
+      "name": "Felső-erdő",
+      "tags": "{\"name\":\"Felső-erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8014316999,
+      "name": "Alsó-erdő",
+      "tags": "{\"name\":\"Alsó-erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8014337376,
+      "name": "Gyertyános",
+      "tags": "{\"name\":\"Gyertyános\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151415829,
+      "name": "Szurdik",
+      "tags": "{\"name\":\"Szurdik\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151420232,
+      "name": "Sombokor",
+      "tags": "{\"name\":\"Sombokor\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 8946321315,
+      "name": "Németbarnag",
+      "tags": "{\"name\":\"Németbarnag\",\"name:sr\":\"Неметбарнаг\",\"place\":\"neighbourhood\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 8946321316,
+      "name": "Magyarbarnag",
+      "tags": "{\"name\":\"Magyarbarnag\",\"name:sr\":\"Мађарбарнаг\",\"place\":\"neighbourhood\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078522,
+      "name": "Vöröstó",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Vöröstó\",\"wikidata\":\"Q1184761\",\"wikipedia\":\"hu:Vöröstó\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440346487,
+      "name": "Fenye-hegy",
+      "tags": "{\"name\":\"Fenye-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440340716,
+      "name": "Magyal",
+      "tags": "{\"name\":\"Magyal\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440340668,
+      "name": "Sajtó-telek",
+      "tags": "{\"name\":\"Sajtó-telek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440349282,
+      "name": "Les-hegy",
+      "tags": "{\"name\":\"Les-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 6670479867,
+      "name": "Fenyves-hegy",
+      "tags": "{\"ele\":\"301\",\"name\":\"Fenyves-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440336099,
+      "name": "Becce",
+      "tags": "{\"alt_name\":\"Becce szőlőhegy\",\"name\":\"Becce\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 6670093452,
+      "name": "Imer-tető",
+      "tags": "{\"ele\":\"302\",\"name\":\"Imer-tető\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440335748,
+      "name": "Hosszú-dűlő",
+      "tags": "{\"name\":\"Hosszú-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440352191,
+      "name": "Les-hegy",
+      "tags": "{\"name\":\"Les-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 3458341616,
+      "name": "Kis-Les-hegy",
+      "tags": "{\"ele\":\"280\",\"name\":\"Kis-Les-hegy\",\"natural\":\"peak\",\"source\":\"turistautak.hu\",\"source:date\":\"2013-10-06\",\"url\":\"http://turistautak.hu/poi.php?id=132497\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 3458341608,
+      "name": "Hűvös-völgy",
+      "tags": "{\"name\":\"Hűvös-völgy\",\"place\":\"locality\",\"source\":\"turistautak.hu\",\"source:date\":\"2013-10-06\",\"url\":\"http://turistautak.hu/poi.php?id=132498\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 1133562452,
+      "name": "Alsódörgicse",
+      "tags": "{\"alt_name\":\"Boldogaszonydörgicse\",\"name\":\"Alsódörgicse\",\"name:sr\":\"Алшодергиче\",\"place\":\"neighbourhood\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 6670093450,
+      "name": "Öcs-hegy",
+      "tags": "{\"ele\":\"292\",\"name\":\"Öcs-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 262809045,
+      "name": "Dörgicse",
+      "tags": "{\"ksh_ref\":\"06363\",\"name\":\"Dörgicse\",\"name:sr\":\"Дергиче\",\"place\":\"village\",\"place:hu\":\"község\",\"population\":\"313\",\"population:date\":\"2024-01-01\",\"postal_code\":\"8244\",\"source:population\":\"KSH (www.ksh.hu)\",\"source:population:date\":\"2024-01-01\",\"source:postal_code\":\"Magyar Posta (posta.hu)\",\"source:postal_code:date\":\"2009-03-01\",\"wikidata\":\"Q987245\",\"wikipedia\":\"hu:Dörgicse\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440353987,
+      "name": "Erdei",
+      "tags": "{\"name\":\"Erdei\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 1133562531,
+      "name": "Felsődörgicse",
+      "tags": "{\"alt_name\":\"Szentpéterdörgicse\",\"name\":\"Felsődörgicse\",\"name:sr\":\"Фелшедергиче\",\"place\":\"neighbourhood\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440321370,
+      "name": "Apácska",
+      "tags": "{\"name\":\"Apácska\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 3458341623,
+      "name": "Kő-hegy",
+      "tags": "{\"ele\":\"313\",\"name\":\"Kő-hegy\",\"natural\":\"peak\",\"source\":\"turistautak.hu\",\"source:date\":\"2013-01-04\",\"url\":\"http://turistautak.hu/poi.php?id=149294\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 6670479868,
+      "name": "Gernye-hegy",
+      "tags": "{\"ele\":\"292\",\"name\":\"Gernye-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 6670500594,
+      "name": "Becseri-erdő",
+      "tags": "{\"name\":\"Becseri-erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 6670529861,
+      "name": "Öreg-erdő",
+      "tags": "{\"name\":\"Öreg-erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7830390079,
+      "name": "Vízterítő",
+      "tags": "{\"name\":\"Vízterítő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8013585482,
+      "name": "Hamuházon aluli",
+      "tags": "{\"name\":\"Hamuházon aluli\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8013585483,
+      "name": "Gáliczkő",
+      "tags": "{\"name\":\"Gáliczkő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8013585484,
+      "name": "Kis pajtáskert",
+      "tags": "{\"name\":\"Kis pajtáskert\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8013585885,
+      "name": "Pajtáskert",
+      "tags": "{\"name\":\"Pajtáskert\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8013585886,
+      "name": "Berek alja",
+      "tags": "{\"name\":\"Berek alja\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8013585887,
+      "name": "Kőfejtő",
+      "tags": "{\"name\":\"Kőfejtő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8013632909,
+      "name": "Csapásra dűlő",
+      "tags": "{\"name\":\"Csapásra dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8013632910,
+      "name": "Csorda út",
+      "tags": "{\"name\":\"Csorda út\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8013632911,
+      "name": "Aszó",
+      "tags": "{\"name\":\"Aszó\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 9006674872,
+      "name": "Nagymező",
+      "tags": "{\"name\":\"Nagymező\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078638,
+      "name": "Dörgicse",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Dörgicse\",\"wikidata\":\"Q987245\",\"wikipedia\":\"hu:Dörgicse\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "protected_area",
+      "osmType": "way",
+      "osmId": 1159924234,
+      "name": "Fokozottan védett terület",
+      "tags": "{\"boundary\":\"protected_area\",\"leisure\":\"nature_reserve\",\"name\":\"Fokozottan védett terület\",\"protect_class\":\"1\",\"protection_title\":\"Fokozottan Védett Természeti Terület\",\"protection_title:en\":\"Strict Nature Reserve\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 6670529857,
+      "name": "Nyelő",
+      "tags": "{\"name\":\"Nyelő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 262808755,
+      "name": "Vászoly",
+      "tags": "{\"ksh_ref\":\"16656\",\"name\":\"Vászoly\",\"name:sr\":\"Васољ\",\"place\":\"village\",\"place:hu\":\"község\",\"population\":\"280\",\"population:date\":\"2024-01-01\",\"postal_code\":\"8245\",\"source:population\":\"KSH (www.ksh.hu)\",\"source:population:date\":\"2024-01-01\",\"source:postal_code\":\"Magyar Posta (posta.hu)\",\"source:postal_code:date\":\"2009-03-01\",\"wikidata\":\"Q1090001\",\"wikipedia\":\"hu:Vászoly\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 3755415909,
+      "name": "Kőgát",
+      "tags": "{\"name\":\"Kőgát\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5857016816,
+      "name": "Börtön-kút-dűlő",
+      "tags": "{\"name\":\"Börtön-kút-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 6329636840,
+      "name": "Kislapos",
+      "tags": "{\"name\":\"Kislapos\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 3752846383,
+      "name": "Derék-hegy",
+      "tags": "{\"ele\":\"373\",\"name\":\"Derék-hegy\",\"natural\":\"peak\",\"source\":\"SRTM\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5521840775,
+      "name": "Káposztáskertek",
+      "tags": "{\"name\":\"Káposztáskertek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7597622193,
+      "name": "Tuskós",
+      "tags": "{\"name\":\"Tuskós\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 6670529856,
+      "name": "Keresztfa-tető",
+      "tags": "{\"ele\":\"349\",\"name\":\"Keresztfa-tető\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5521823997,
+      "name": "Lóakol",
+      "tags": "{\"name\":\"Lóakol\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440442009,
+      "name": "Szentegyházi-dűlő",
+      "tags": "{\"alt_name\":\"Pusztaszentegyházi-dűlő\",\"name\":\"Szentegyházi-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 7597607260,
+      "name": "Remetekert",
+      "tags": "{\"name\":\"Remetekert\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 7438448138,
+      "name": "Magyaró-hegy",
+      "tags": "{\"ele\":\"276\",\"name\":\"Magyaró-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 3755415908,
+      "name": "Kőgát",
+      "tags": "{\"name\":\"Kőgát\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 6385087140,
+      "name": "Vár-hegy",
+      "tags": "{\"ele\":\"303\",\"name\":\"Vár-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 6385084349,
+      "name": "töbör",
+      "tags": "{\"name\":\"töbör\",\"natural\":\"sinkhole\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 7439219289,
+      "name": "Kakas-hegy",
+      "tags": "{\"name\":\"Kakas-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5517483856,
+      "name": "Malom-völgy",
+      "tags": "{\"name\":\"Malom-völgy\",\"natural\":\"valley\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 3752846384,
+      "name": "Zádor-hegy",
+      "tags": "{\"name\":\"Zádor-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440440015,
+      "name": "Király-oldal",
+      "tags": "{\"name\":\"Király-oldal\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 3752846386,
+      "name": "Hosszú-hegy",
+      "tags": "{\"ele\":\"367\",\"name\":\"Hosszú-hegy\",\"natural\":\"peak\",\"source\":\"SRTM\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5857091814,
+      "name": "Meggy-hegy",
+      "tags": "{\"name\":\"Meggy-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5324962825,
+      "name": "Ördögtorok",
+      "tags": "{\"name\":\"Ördögtorok\",\"natural\":\"valley\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5860299453,
+      "name": "Farkasverem",
+      "tags": "{\"name\":\"Farkasverem\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 7438485983,
+      "name": "Kósa-hegy",
+      "tags": "{\"ele\":\"245\",\"name\":\"Kósa-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5521667431,
+      "name": "Bab-völgy",
+      "tags": "{\"name\":\"Bab-völgy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5857016118,
+      "name": "Pusztavári",
+      "tags": "{\"name\":\"Pusztavári\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 8015342599,
+      "name": "Bagó-hegy",
+      "tags": "{\"ele\":\"326\",\"name\":\"Bagó-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151412298,
+      "name": "Vászolyi-oldal",
+      "tags": "{\"name\":\"Vászolyi-oldal\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151412664,
+      "name": "Felső-erdő",
+      "tags": "{\"name\":\"Felső-erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151417898,
+      "name": "Csabi-sarok",
+      "tags": "{\"name\":\"Csabi-sarok\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151422056,
+      "name": "Határ megye",
+      "tags": "{\"name\":\"Határ megye\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151430425,
+      "name": "Agyagos",
+      "tags": "{\"name\":\"Agyagos\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8153872710,
+      "name": "Macska-kút",
+      "tags": "{\"name\":\"Macska-kút\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8153895695,
+      "name": "Agyag gödör",
+      "tags": "{\"name\":\"Agyag gödör\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8153897744,
+      "name": "Sári-birtok",
+      "tags": "{\"name\":\"Sári-birtok\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8153898814,
+      "name": "Szentes-hegy",
+      "tags": "{\"name\":\"Szentes-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078498,
+      "name": "Pécsely",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Pécsely\",\"wikidata\":\"Q1089863\",\"wikipedia\":\"hu:Pécsely\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078507,
+      "name": "Vászoly",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Vászoly\",\"wikidata\":\"Q1090001\",\"wikipedia\":\"hu:Vászoly\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "protected_area",
+      "osmType": "way",
+      "osmId": 1159924235,
+      "name": "Fokozottan védett terület",
+      "tags": "{\"boundary\":\"protected_area\",\"leisure\":\"nature_reserve\",\"name\":\"Fokozottan védett terület\",\"protect_class\":\"1\",\"protection_title\":\"Fokozottan Védett Természeti Terület\",\"protection_title:en\":\"Strict Nature Reserve\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 30770275,
+      "name": "Fövenyes",
+      "tags": "{\"alt_name\":\"Kiliántelep\",\"name\":\"Fövenyes\",\"name:sr\":\"Февењеш\",\"old_name\":\"Szent Antal-telep; Antaltelep\",\"place\":\"hamlet\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 1132398473,
+      "name": "Üdülőtelep",
+      "tags": "{\"name\":\"Üdülőtelep\",\"name:sr\":\"Идилетелеп\",\"place\":\"hamlet\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 25871288,
+      "name": "Balatonudvari",
+      "tags": "{\"ksh_ref\":\"15565\",\"name\":\"Balatonudvari\",\"name:sr\":\"Балатонудвар\",\"place\":\"village\",\"place:hu\":\"község\",\"population\":\"348\",\"population:date\":\"2024-01-01\",\"postal_code\":\"8242\",\"source:population\":\"KSH (www.ksh.hu)\",\"source:population:date\":\"2024-01-01\",\"source:postal_code\":\"Magyar Posta (posta.hu)\",\"source:postal_code:date\":\"2009-03-01\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440676092,
+      "name": "Erdő alja",
+      "tags": "{\"name\":\"Erdő alja\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440674591,
+      "name": "Templom feletti",
+      "tags": "{\"name\":\"Templom feletti\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440673426,
+      "name": "Szilvás-kúti",
+      "tags": "{\"name\":\"Szilvás-kúti\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 3458341627,
+      "name": "Les-hegy",
+      "tags": "{\"name\":\"Les-hegy\",\"natural\":\"peak\",\"source\":\"turistautak.hu\",\"source:date\":\"2012-01-22\",\"url\":\"http://turistautak.hu/poi.php?id=132495\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 1132398420,
+      "name": "Tanítótelep",
+      "tags": "{\"name\":\"Tanítótelep\",\"name:sr\":\"Танитотелеп\",\"place\":\"hamlet\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 27301592,
+      "name": "Örvényes",
+      "tags": "{\"ksh_ref\":\"10092\",\"name\":\"Örvényes\",\"name:de\":\"Erewin\",\"name:sr\":\"Ервењеш\",\"place\":\"village\",\"place:hu\":\"község\",\"population\":\"166\",\"population:date\":\"2024-01-01\",\"postal_code\":\"8242\",\"source:population\":\"KSH (www.ksh.hu)\",\"source:population:date\":\"2024-01-01\",\"source:postal_code\":\"Magyar Posta (posta.hu)\",\"source:postal_code:date\":\"2009-03-01\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440443874,
+      "name": "Öreg-hegy",
+      "tags": "{\"name\":\"Öreg-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440671045,
+      "name": "Hosszú-föld",
+      "tags": "{\"name\":\"Hosszú-föld\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440667742,
+      "name": "Szőlőföld",
+      "tags": "{\"name\":\"Szőlőföld\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440664438,
+      "name": "Kispécselyi-dűlő",
+      "tags": "{\"name\":\"Kispécselyi-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440667567,
+      "name": "Öreg-hegy",
+      "tags": "{\"name\":\"Öreg-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5502315974,
+      "name": "Vasásó-hegy",
+      "tags": "{\"name\":\"Vasásó-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440665120,
+      "name": "Kispécselyi-dűlő",
+      "tags": "{\"name\":\"Kispécselyi-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5502312820,
+      "name": "Öreg-hegy",
+      "tags": "{\"name\":\"Öreg-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5503767954,
+      "name": "Öreg-hegy",
+      "tags": "{\"ele\":\"234\",\"name\":\"Öreg-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5503305194,
+      "name": "Ágas-magas",
+      "tags": "{\"ele\":\"263\",\"name\":\"Ágas-magas\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5502325354,
+      "name": "Körtvélyes",
+      "tags": "{\"ele\":\"238\",\"name\":\"Körtvélyes\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5521668072,
+      "name": "Szénégető",
+      "tags": "{\"name\":\"Szénégető\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5521731273,
+      "name": "Hodály",
+      "tags": "{\"name\":\"Hodály\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5521734930,
+      "name": "Szurdok-völgy",
+      "tags": "{\"name\":\"Szurdok-völgy\",\"natural\":\"valley\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5521823998,
+      "name": "Bab-völgyi-kaszáló",
+      "tags": "{\"name\":\"Bab-völgyi-kaszáló\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5521830234,
+      "name": "Babvölgyi-rétek",
+      "tags": "{\"name\":\"Babvölgyi-rétek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5619959126,
+      "name": "Giligó",
+      "tags": "{\"name\":\"Giligó\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5860323085,
+      "name": "Puszta-rét",
+      "tags": "{\"name\":\"Puszta-rét\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 6385084350,
+      "name": "Nagyvár-tető",
+      "tags": "{\"ele\":\"296\",\"name\":\"Nagyvár-tető\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151413202,
+      "name": "Őkör-tilos",
+      "tags": "{\"name\":\"Őkör-tilos\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151419790,
+      "name": "Bakos-föld",
+      "tags": "{\"name\":\"Bakos-föld\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151420174,
+      "name": "Farkasfogó",
+      "tags": "{\"name\":\"Farkasfogó\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151420231,
+      "name": "Felső-haraszt",
+      "tags": "{\"name\":\"Felső-haraszt\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151423948,
+      "name": "Gyűr",
+      "tags": "{\"name\":\"Gyűr\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151424315,
+      "name": "Körtélyes",
+      "tags": "{\"name\":\"Körtélyes\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151426556,
+      "name": "Csák-oldal",
+      "tags": "{\"name\":\"Csák-oldal\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 9006666116,
+      "name": "Sédút",
+      "tags": "{\"name\":\"Sédút\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 9006674878,
+      "name": "Sósi rét",
+      "tags": "{\"name\":\"Sósi rét\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57880839,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57882615,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "watercourse",
+      "osmType": "way",
+      "osmId": 98102284,
+      "name": "Aszófői-séd",
+      "tags": "{\"name\":\"Aszófői-séd\",\"waterway\":\"stream\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078429,
+      "name": "Örvényes",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Örvényes\",\"wikidata\":\"Q1089835\",\"wikipedia\":\"hu:Örvényes\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5517474863,
+      "name": "Diós-rét",
+      "tags": "{\"name\":\"Diós-rét\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 7438486161,
+      "name": "Szép-magas",
+      "tags": "{\"ele\":\"208\",\"name\":\"Szép-magas\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 1133562532,
+      "name": "Nemespécsely",
+      "tags": "{\"name\":\"Nemespécsely\",\"name:sr\":\"Немешпечељ\",\"place\":\"neighbourhood\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5860299452,
+      "name": "Köves-rét",
+      "tags": "{\"name\":\"Köves-rét\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5517475069,
+      "name": "Hamari-szőlők alja",
+      "tags": "{\"name\":\"Hamari-szőlők alja\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151417919,
+      "name": "Tize-rét",
+      "tags": "{\"name\":\"Tize-rét\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5517475004,
+      "name": "Nagy-rét",
+      "tags": "{\"name\":\"Nagy-rét\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5518160393,
+      "name": "Pap-rét",
+      "tags": "{\"name\":\"Pap-rét\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5492063277,
+      "name": "Csucska-rét",
+      "tags": "{\"name\":\"Csucska-rét\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 7597601654,
+      "name": "Róka-hegy",
+      "tags": "{\"name\":\"Róka-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 7438481138,
+      "name": "Pusztai-domb",
+      "tags": "{\"ele\":\"196\",\"name\":\"Pusztai-domb\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 35300125,
+      "name": "Pécsely",
+      "tags": "{\"ksh_ref\":\"22451\",\"name\":\"Pécsely\",\"name:sr\":\"Печељ\",\"place\":\"village\",\"place:hu\":\"község\",\"population\":\"557\",\"population:date\":\"2024-01-01\",\"postal_code\":\"8245\",\"source:population\":\"KSH (www.ksh.hu)\",\"source:population:date\":\"2024-01-01\",\"source:postal_code\":\"Magyar Posta (posta.hu)\",\"source:postal_code:date\":\"2009-03-01\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5492044259,
+      "name": "Kereszti-dűlő",
+      "tags": "{\"name\":\"Kereszti-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5492170568,
+      "name": "Öreg-hegy",
+      "tags": "{\"name\":\"Öreg-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5502320026,
+      "name": "Dobogó",
+      "tags": "{\"ele\":\"209\",\"name\":\"Dobogó\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5492040179,
+      "name": "Kender-szeg",
+      "tags": "{\"name\":\"Kender-szeg\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5492068333,
+      "name": "Temető alja",
+      "tags": "{\"name\":\"Temető alja\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 1133562416,
+      "name": "Nagypécsely",
+      "tags": "{\"name\":\"Nagypécsely\",\"name:sr\":\"Нађпечељ\",\"place\":\"neighbourhood\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5492154680,
+      "name": "Kis-bötke",
+      "tags": "{\"name\":\"Kis-bötke\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5492043919,
+      "name": "Kőhídi-dűlő",
+      "tags": "{\"name\":\"Kőhídi-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5433306861,
+      "name": "Koldus-telek",
+      "tags": "{\"name\":\"Koldus-telek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151415831,
+      "name": "Dobogó",
+      "tags": "{\"name\":\"Dobogó\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151417918,
+      "name": "Köves-tar",
+      "tags": "{\"name\":\"Köves-tar\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5502339255,
+      "name": "Nyáló-hegy",
+      "tags": "{\"ele\":\"218\",\"name\":\"Nyáló-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5492163163,
+      "name": "Nyáló-hegy-alja",
+      "tags": "{\"name\":\"Nyáló-hegy-alja\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5485264991,
+      "name": "Tó-telki-dűlő",
+      "tags": "{\"name\":\"Tó-telki-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5485237417,
+      "name": "Bordoma",
+      "tags": "{\"name\":\"Bordoma\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8014341463,
+      "name": "Cserszéle",
+      "tags": "{\"name\":\"Cserszéle\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5492040180,
+      "name": "Kis-erdő föle",
+      "tags": "{\"name\":\"Kis-erdő föle\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5492044260,
+      "name": "Kiserdő",
+      "tags": "{\"name\":\"Kiserdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5440690522,
+      "name": "Tarcsa-kút",
+      "tags": "{\"name\":\"Tarcsa-kút\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5485238386,
+      "name": "Jábod",
+      "tags": "{\"name\":\"Jábod\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 4957887835,
+      "name": "Meggy-hegy",
+      "tags": "{\"ele\":\"255\",\"name\":\"Meggy-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151417920,
+      "name": "Isztári telek",
+      "tags": "{\"name\":\"Isztári telek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151419169,
+      "name": "Déllő",
+      "tags": "{\"name\":\"Déllő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151419941,
+      "name": "Vízálló",
+      "tags": "{\"name\":\"Vízálló\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151419942,
+      "name": "Bogoma",
+      "tags": "{\"name\":\"Bogoma\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151420048,
+      "name": "Sósi-rétek",
+      "tags": "{\"name\":\"Sósi-rétek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151420230,
+      "name": "Köves-telek",
+      "tags": "{\"name\":\"Köves-telek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151424055,
+      "name": "Kápolnás",
+      "tags": "{\"name\":\"Kápolnás\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151424056,
+      "name": "Bástyás-vágó",
+      "tags": "{\"name\":\"Bástyás-vágó\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151425833,
+      "name": "Ó-kút",
+      "tags": "{\"name\":\"Ó-kút\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151426156,
+      "name": "Iharkút",
+      "tags": "{\"name\":\"Iharkút\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151426554,
+      "name": "Meggy-hegy-föle",
+      "tags": "{\"name\":\"Meggy-hegy-föle\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151426555,
+      "name": "Marton-erdő",
+      "tags": "{\"name\":\"Marton-erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8153890796,
+      "name": "Csatári-erdő",
+      "tags": "{\"name\":\"Csatári-erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8153895460,
+      "name": "Kelemen-rét",
+      "tags": "{\"name\":\"Kelemen-rét\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5497665976,
+      "name": "Mádé-oldal",
+      "tags": "{\"name\":\"Mádé-oldal\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5514722675,
+      "name": "Meggy-hegy-alja",
+      "tags": "{\"name\":\"Meggy-hegy-alja\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5483487570,
+      "name": "Veken",
+      "tags": "{\"name\":\"Veken\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5483399638,
+      "name": "Csite-hegy",
+      "tags": "{\"ele\":\"229\",\"name\":\"Csite-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5502559490,
+      "name": "Gál-hegy",
+      "tags": "{\"ele\":\"193\",\"name\":\"Gál-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 4957875550,
+      "name": "Csengő-hegy",
+      "tags": "{\"ele\":\"212\",\"name\":\"Csengő-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5482181762,
+      "name": "Pogány-pince",
+      "tags": "{\"name\":\"Pogány-pince\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5583605549,
+      "name": "Csite erdő",
+      "tags": "{\"name\":\"Csite erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5485000660,
+      "name": "Szamár-tó",
+      "tags": "{\"name\":\"Szamár-tó\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5483368676,
+      "name": "Kosbika",
+      "tags": "{\"name\":\"Kosbika\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8014338985,
+      "name": "Lapos telek",
+      "tags": "{\"name\":\"Lapos telek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5482157180,
+      "name": "Sötét-rét",
+      "tags": "{\"name\":\"Sötét-rét\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5483417408,
+      "name": "Szénégető-hegy",
+      "tags": "{\"name\":\"Szénégető-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5445850268,
+      "name": "Dobogó",
+      "tags": "{\"name\":\"Dobogó\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5509782731,
+      "name": "Alsó-erdő",
+      "tags": "{\"name\":\"Alsó-erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5516987744,
+      "name": "Nagy-mező-oldal",
+      "tags": "{\"name\":\"Nagy-mező-oldal\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5503815754,
+      "name": "Vásár-hegy",
+      "tags": "{\"ele\":\"237\",\"name\":\"Vásár-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151419791,
+      "name": "Várad",
+      "tags": "{\"name\":\"Várad\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151420047,
+      "name": "Torda-rét",
+      "tags": "{\"name\":\"Torda-rét\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8151422055,
+      "name": "Fodor-tag",
+      "tags": "{\"name\":\"Fodor-tag\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8153866909,
+      "name": "Sós-kúti-lap",
+      "tags": "{\"name\":\"Sós-kúti-lap\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8153890281,
+      "name": "Barhé-domb",
+      "tags": "{\"name\":\"Barhé-domb\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8176631517,
+      "name": "Hátsó-csatár",
+      "tags": "{\"name\":\"Hátsó-csatár\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57873693,
+      "name": "null",
+      "tags": "{\"admin_level\":\"7\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57878594,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078596,
+      "name": "Balatonszőlős",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Balatonszőlős\",\"wikidata\":\"Q513392\",\"wikipedia\":\"hu:Balatonszőlős\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "watercourse",
+      "osmType": "way",
+      "osmId": 97550411,
+      "name": "Szőlősi-séd",
+      "tags": "{\"name\":\"Szőlősi-séd\",\"waterway\":\"stream\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 285901432,
+      "name": "Balatonszőlős",
+      "tags": "{\"ksh_ref\":\"28501\",\"name\":\"Balatonszőlős\",\"name:sr\":\"Балатонселеш\",\"place\":\"village\",\"place:hu\":\"község\",\"population\":\"648\",\"population:date\":\"2024-01-01\",\"postal_code\":\"8230\",\"source:population\":\"KSH (www.ksh.hu)\",\"source:population:date\":\"2024-01-01\",\"source:postal_code\":\"Magyar Posta (posta.hu)\",\"source:postal_code:date\":\"2009-03-01\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5482129840,
+      "name": "Kertalja",
+      "tags": "{\"name\":\"Kertalja\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5515448856,
+      "name": "Tó-hegy",
+      "tags": "{\"name\":\"Tó-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5509787480,
+      "name": "Urasági-erdő",
+      "tags": "{\"name\":\"Urasági-erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57880979,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 9006674917,
+      "name": "Sásrét",
+      "tags": "{\"name\":\"Sásrét\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 170890838,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "relation",
+      "osmId": 18350715,
+      "name": "Balaton Kiemelt Üdülőkörzet",
+      "tags": "{\"boundary\":\"region\",\"name\":\"Balaton Kiemelt Üdülőkörzet\",\"source\":\"2018. évi CXXXIX. törvény Magyarország és egyes kiemelt térségeinek területrendezési tervéről\",\"source:url\":\"https://njt.hu/jogszabaly/2018-139-00-00.16#ME12\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "relation",
+      "osmId": 14574540,
+      "name": "Balaton turisztikai térség",
+      "tags": "{\"boundary\":\"tourism_region\",\"name\":\"Balaton turisztikai térség\",\"name:en\":\"Balaton\",\"source\":\"429/2020. (IX. 14.) Korm. rendelet a turisztikai térségek meghatározásáról\",\"source:url\":\"https://njt.hu/jogszabaly/2020-429-20-22.6\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "relation",
+      "osmId": 18350772,
+      "name": "Balaton Kiemelt Üdülőkörzet parti és partközeli települések",
+      "tags": "{\"boundary\":\"region\",\"name\":\"Balaton Kiemelt Üdülőkörzet parti és partközeli települések\",\"source\":\"2018. évi CXXXIX. törvény Magyarország és egyes kiemelt térségeinek területrendezési tervéről\",\"source:url\":\"https://njt.hu/jogszabaly/2018-139-00-00.16#ME13\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 2377042,
+      "name": "Veszprémi járás",
+      "tags": "{\"admin_level\":\"7\",\"boundary\":\"administrative\",\"name\":\"Veszprémi járás\",\"name:sk\":\"okres Vesprém\",\"wikidata\":\"Q585975\",\"wikipedia\":\"hu:Veszprémi járás\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 2376985,
+      "name": "Balatonfüredi járás",
+      "tags": "{\"admin_level\":\"7\",\"boundary\":\"administrative\",\"name\":\"Balatonfüredi járás\",\"wikidata\":\"Q3030968\",\"wikipedia\":\"hu:Balatonfüredi járás\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078455,
+      "name": "Barnag",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Barnag\",\"wikidata\":\"Q790678\",\"wikipedia\":\"hu:Barnag\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "way",
+      "osmId": 380535493,
+      "name": "Balaton",
+      "tags": "{\"boundary\":\"region\",\"import_ref\":\"MTATAKI\",\"name\":\"Balaton\",\"ref:hu_kistaj\":\"4.1.14\",\"ref:hu_kistaj:kozeptaj\":\"1\",\"ref:hu_kistaj:nagytaj\":\"4\",\"source\":\"MTA ATK TAKI GIS labor\",\"type\":\"boundary\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "way",
+      "osmId": 380535493,
+      "name": "Balaton",
+      "tags": "{\"boundary\":\"region\",\"import_ref\":\"MTATAKI\",\"name\":\"Balaton\",\"ref:hu_kistaj\":\"4.1.14\",\"ref:hu_kistaj:kozeptaj\":\"1\",\"ref:hu_kistaj:nagytaj\":\"4\",\"source\":\"MTA ATK TAKI GIS labor\",\"type\":\"boundary\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "way",
+      "osmId": 279665156,
+      "name": "Bakony",
+      "tags": "{\"name\":\"Bakony\",\"name:cs\":\"Bakoňský les\",\"name:de\":\"Bakonywald\",\"name:es\":\"Montes Bakony\",\"name:hr\":\"Bakonjska šuma\",\"name:lt\":\"Bakonis\",\"name:pl\":\"Las Bakoński\",\"name:ru\":\"Баконь\",\"name:sk\":\"Bakonský les\",\"name:uk\":\"Баконь\",\"natural\":\"mountain_range\",\"wikidata\":\"Q695810\",\"wikipedia\":\"hu:Bakony\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "way",
+      "osmId": 279665156,
+      "name": "Bakony",
+      "tags": "{\"name\":\"Bakony\",\"name:cs\":\"Bakoňský les\",\"name:de\":\"Bakonywald\",\"name:es\":\"Montes Bakony\",\"name:hr\":\"Bakonjska šuma\",\"name:lt\":\"Bakonis\",\"name:pl\":\"Las Bakoński\",\"name:ru\":\"Баконь\",\"name:sk\":\"Bakonský les\",\"name:uk\":\"Баконь\",\"natural\":\"mountain_range\",\"wikidata\":\"Q695810\",\"wikipedia\":\"hu:Bakony\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "way",
+      "osmId": 279665387,
+      "name": "Balaton-felvidék",
+      "tags": "{\"name\":\"Balaton-felvidék\",\"name:pl\":\"Wzgórza Balatońskie\",\"natural\":\"mountain_range\",\"wikidata\":\"Q789218\",\"wikipedia\":\"hu:Balaton-felvidék\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "way",
+      "osmId": 279665387,
+      "name": "Balaton-felvidék",
+      "tags": "{\"name\":\"Balaton-felvidék\",\"name:pl\":\"Wzgórza Balatońskie\",\"natural\":\"mountain_range\",\"wikidata\":\"Q789218\",\"wikipedia\":\"hu:Balaton-felvidék\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 22278,
+      "name": "Veszprém vármegye",
+      "tags": "{\"ISO3166-2\":\"HU-VE\",\"admin_level\":\"6\",\"boundary\":\"administrative\",\"name\":\"Veszprém vármegye\",\"name:de\":\"Komitat Wesprim\",\"name:en\":\"Veszprém\",\"name:hr\":\"Vesprimaska županija\",\"name:ru\":\"медье Веспрем\",\"name:sk\":\"Vesprémska župa\",\"old_name\":\"Veszprém megye\",\"place\":\"county\",\"place:hu\":\"vármegye\",\"ref:nuts\":\"HU213\",\"ref:nuts:3\":\"HU213\",\"wikidata\":\"Q188890\",\"wikipedia\":\"hu:Veszprém vármegye\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 22783,
+      "name": "Közép-Dunántúl",
+      "tags": "{\"admin_level\":\"5\",\"boundary\":\"administrative\",\"name\":\"Közép-Dunántúl\",\"name:cs\":\"Střední Zadunají\",\"name:de\":\"Mitteltransdanubien\",\"name:en\":\"Central Transdanubia\",\"name:hr\":\"Središnje Podunavlje\",\"name:it\":\"Transdanubio Centrale\",\"name:nl\":\"Centraal-Transdanubië\",\"name:pl\":\"Środkowy Kraj Zadunajski\",\"name:ro\":\"Transdanubia Centrală\",\"name:ru\":\"Центрально-Задунайский край\",\"name:uk\":\"Центральне Задунав'я\",\"place\":\"region\",\"place:hu\":\"régió\",\"ref:nuts\":\"HU21\",\"ref:nuts:2\":\"HU21\",\"wikidata\":\"Q962153\",\"wikipedia\":\"hu:Közép-Dunántúl\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 22787,
+      "name": "Dunántúl",
+      "tags": "{\"admin_level\":\"4\",\"boundary\":\"administrative\",\"name\":\"Dunántúl\",\"name:cs\":\"Zadunají\",\"name:de\":\"Transdanubien\",\"name:en\":\"Transdanubia\",\"name:es\":\"Transdanubia\",\"name:fr\":\"Transdanubie\",\"name:hr\":\"Podunavlje\",\"name:hu\":\"Dunántúl\",\"name:it\":\"Transdanubio\",\"name:nl\":\"Transdanubië\",\"name:pl\":\"Kraj Zadunajski\",\"name:ro\":\"Transdanubia\",\"name:ru\":\"Задунайский край\",\"name:uk\":\"Задунав'я\",\"place\":\"region\",\"place:hu\":\"régió\",\"ref:nuts\":\"HU2\",\"ref:nuts:1\":\"HU2\",\"wikidata\":\"Q840562\",\"wikipedia\":\"hu:Dunántúl\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 21335,
+      "name": "Magyarország",
+      "tags": "{\"ISO3166-1\":\"HU\",\"ISO3166-1:alpha2\":\"HU\",\"ISO3166-1:alpha3\":\"HUN\",\"ISO3166-1:numeric\":\"348\",\"admin_level\":\"2\",\"alt_name:eo\":\"Hungarujo\",\"alt_name:lfn\":\"Ungaria\",\"alt_name:vi\":\"Hung-ga-ri\",\"boundary\":\"administrative\",\"country_code_fips\":\"HU\",\"default_language\":\"hu\",\"driving_side\":\"right\",\"flag\":\"https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg\",\"flag:wikidata\":\"Q81970\",\"flag:wikipedia\":\"hu:Magyarország zászlaja\",\"int_name\":\"Hungary\",\"land_area\":\"administrative\",\"name\":\"Magyarország\",\"name:ab\":\"Мадиартәыла\",\"name:ace\":\"Hongaria\",\"name:af\":\"Hongarye\",\"name:ak\":\"Hangari\",\"name:als\":\"Ungarn\",\"name:am\":\"ሀንጋሪ\",\"name:an\":\"Hongría\",\"name:ang\":\"Ungerland\",\"name:ar\":\"المجر\",\"name:arc\":\"ܡܓܪ\",\"name:arz\":\"المجر\",\"name:ast\":\"Hungría\",\"name:ay\":\"Hunkariya\",\"name:az\":\"Macarıstan\",\"name:ba\":\"Венгрия\",\"name:bar\":\"Ungarn\",\"name:bat-smg\":\"Vengrėjė\",\"name:bcl\":\"Hungriya\",\"name:be\":\"Венгрыя\",\"name:be-tarask\":\"Вугоршчына\",\"name:bg\":\"Унгария\",\"name:bi\":\"Hungary\",\"name:bm\":\"Hɔngri\",\"name:bn\":\"হাঙ্গেরি\",\"name:bo\":\"ཧུང་གྷ་རི།\",\"name:bpy\":\"হাঙ্গেরী\",\"name:br\":\"Hungaria\",\"name:bs\":\"Mađarska\",\"name:bxr\":\"Унгар\",\"name:ca\":\"Hongria\",\"name:ce\":\"Венгри\",\"name:ceb\":\"Unggriya\",\"name:chr\":\"ᎲᏂᎦᎵ\",\"name:ckb\":\"مەجارستان\",\"name:cnr\":\"Mađarska\",\"name:co\":\"Ungheria\",\"name:crh\":\"Macaristan\",\"name:cs\":\"Maďarsko\",\"name:csb\":\"Madżarskô\",\"name:cu\":\"Ѫгри\",\"name:cv\":\"Венгри\",\"name:cy\":\"Hwngari\",\"name:da\":\"Ungarn\",\"name:de\":\"Ungarn\",\"name:diq\":\"Macarıstan\",\"name:dsb\":\"Hungorska\",\"name:dv\":\"ހަންގޭރީ\",\"name:dz\":\"ཧཱང་གྷ་རི\",\"name:ee\":\"Hungary\",\"name:el\":\"Ουγγαρία\",\"name:eml\":\"Ungherî\",\"name:en\":\"Hungary\",\"name:eo\":\"Hungario\",\"name:es\":\"Hungría\",\"name:et\":\"Ungari\",\"name:eu\":\"Hungaria\",\"name:ext\":\"Ungria\",\"name:fa\":\"مجارستان\",\"name:ff\":\"Hunngariya\",\"name:fi\":\"Unkari\",\"name:fo\":\"Ungarn\",\"name:fr\":\"Hongrie\",\"name:frp\":\"Hongrie\",\"name:frr\":\"Ungarn\",\"name:fur\":\"Ongjarie\",\"name:fy\":\"Hongarije\",\"name:ga\":\"An Ungáir\",\"name:gag\":\"Vengriya\",\"name:gd\":\"An Ungair\",\"name:gl\":\"Hungría\",\"name:gn\":\"Hungyria\",\"name:gu\":\"હંગેરી\",\"name:gv\":\"Yn Ungaar\",\"name:ha\":\"Hungari\",\"name:hak\":\"Hiûng-ngà-li\",\"name:haw\":\"Hunakalia\",\"name:he\":\"הונגריה\",\"name:hi\":\"हंगरी\",\"name:hif\":\"Hungary\",\"name:hr\":\"Mađarska\",\"name:hsb\":\"Madźarska\",\"name:ht\":\"Ongri\",\"name:hu\":\"Magyarország\",\"name:hy\":\"Հունգարիա\",\"name:ia\":\"Hungaria\",\"name:id\":\"Hongaria\",\"name:ie\":\"Hungaria\",\"name:ilo\":\"Hungaria\",\"name:io\":\"Hungaria\",\"name:is\":\"Ungverjaland\",\"name:it\":\"Ungheria\",\"name:ja\":\"ハンガリー\",\"name:jbo\":\"madjiar\",\"name:jv\":\"Hongaria\",\"name:ka\":\"უნგრეთი\",\"name:kaa\":\"Vengriya\",\"name:kab\":\"Hungri\",\"name:kbd\":\"Мэжарей\",\"name:kg\":\"Hongrie\",\"name:ki\":\"Macartsa\",\"name:kk\":\"Мажарстан\",\"name:kl\":\"Ungarni\",\"name:km\":\"ប្រទេសហុងគ្រី\",\"name:kn\":\"ಹಂಗೇರಿ\",\"name:ko\":\"헝가리\",\"name:koi\":\"Мадьярму\",\"name:krc\":\"Маджар\",\"name:ks\":\"ہَنٛگری\",\"name:ksh\":\"Unjann\",\"name:ku\":\"Macaristan\",\"name:kv\":\"Мадьяр Му\",\"name:kw\":\"Hungari\",\"name:ky\":\"Мажарстан\",\"name:la\":\"Hungaria\",\"name:lad\":\"Madjaristan\",\"name:lb\":\"Ungarn\",\"name:lez\":\"Венгрия\",\"name:lfn\":\"Magiar\",\"name:lg\":\"Hangare\",\"name:li\":\"Hongarieë\",\"name:lij\":\"Ungaja\",\"name:lmo\":\"Üngheria\",\"name:ln\":\"Ungri\",\"name:lo\":\"ຮັງກາຣີ\",\"name:lt\":\"Vengrija\",\"name:ltg\":\"Vengreja\",\"name:lv\":\"Ungārija\",\"name:lzh\":\"匈牙利\",\"name:mdf\":\"Венгеронь мастор\",\"name:mg\":\"Hongria\",\"name:mhr\":\"Венгрий\",\"name:mi\":\"Hanekeria\",\"name:mk\":\"Унгарија\",\"name:ml\":\"ഹംഗറി\",\"name:mn\":\"Унгар\",\"name:mr\":\"हंगेरी\",\"name:mrj\":\"Венгри\",\"name:ms\":\"Hungary\",\"name:mt\":\"Ungerija\",\"name:my\":\"ဟန်ဂေရီနိုင်ငံ\",\"name:myv\":\"Мадьяронь Мастор\",\"name:mzn\":\"مجارستون\",\"name:na\":\"Ungari\",\"name:nah\":\"Hungria\",\"name:nan\":\"Magyar-kok\",\"name:nap\":\"Ungaria\",\"name:nds\":\"Ungarn\",\"name:nds-nl\":\"Hongaarnlaand\",\"name:ne\":\"हंगेरी\",\"name:nl\":\"Hongarije\",\"name:nn\":\"Ungarn\",\"name:no\":\"Ungarn\",\"name:nov\":\"Hungaria\",\"name:nrm\":\"Hongrie\",\"name:nv\":\"Hángewii\",\"name:oc\":\"Ongria\",\"name:or\":\"ହଙ୍ଗେରୀ\",\"name:os\":\"Венгри\",\"name:pa\":\"ਹੰਗਰੀ\",\"name:pag\":\"Hungary\",\"name:pam\":\"Hungrya\",\"name:pap\":\"Hongaria\",\"name:pcd\":\"Hongrie\",\"name:pdc\":\"Ungarn\",\"name:pih\":\"Hungrii\",\"name:pl\":\"Węgry\",\"name:pms\":\"Ungherìa\",\"name:pnb\":\"ہنگری\",\"name:pnt\":\"Ουγγαρία\",\"name:ps\":\"هنګري\",\"name:pt\":\"Hungria\",\"name:qu\":\"Unriya\",\"name:rm\":\"Ungaria\",\"name:rmy\":\"Ungariya\",\"name:rn\":\"Hungariya\",\"name:ro\":\"Ungaria\",\"name:roa-rup\":\"Ungaria\",\"name:roa-tara\":\"Ungherie\",\"name:ru\":\"Венгрия\",\"name:rue\":\"Мадярьско\",\"name:rw\":\"Hongiriya\",\"name:sa\":\"हंगरी\",\"name:sah\":\"Венгрия\",\"name:scn\":\"Unghirìa\",\"name:sco\":\"Hungary\",\"name:se\":\"Ungára\",\"name:sg\":\"Hongirùii\",\"name:sh\":\"Mađarska\",\"name:si\":\"හන්ගේරියානු සමුහාණ්ඩුව\",\"name:sk\":\"Maďarsko\",\"name:sl\":\"Madžarska\",\"name:sm\":\"Hungary\",\"name:smn\":\"Unkari\",\"name:sms\":\"Unkar\",\"name:sn\":\"Hungary\",\"name:so\":\"Hungaria\",\"name:sq\":\"Hungaria\",\"name:sr\":\"Мађарска\",\"name:sr-Latn\":\"Mađarska\",\"name:ss\":\"IHangareyi\",\"name:st\":\"Hungary\",\"name:stq\":\"Ungarn\",\"name:su\":\"Hungaria\",\"name:sv\":\"Ungern\",\"name:sw\":\"Hungaria\",\"name:szl\":\"Madziary\",\"name:ta\":\"அங்கேரி\",\"name:te\":\"హంగేరి\",\"name:tet\":\"Ungria\",\"name:tg\":\"Маҷористон\",\"name:th\":\"ประเทศฮังการี\",\"name:ti\":\"ሀንጋሪ\",\"name:tk\":\"Wengriýa\",\"name:tl\":\"Unggarya\",\"name:to\":\"Hangakalia\",\"name:tok\":\"ma Mosijo\",\"name:tpi\":\"Hangari\",\"name:tr\":\"Macaristan\",\"name:ts\":\"Hungary\",\"name:tt\":\"Маҗарстан\",\"name:tzl\":\"Máxharphäts\",\"name:udm\":\"Венгрия\",\"name:ug\":\"ۋېنگرىيە\",\"name:uk\":\"Угорщина\",\"name:ur\":\"مجارستان\",\"name:uz\":\"Mojariston\",\"name:vec\":\"Ongarìa\",\"name:vep\":\"Mad'jaranma\",\"name:vi\":\"Hungary\",\"name:vls\":\"Hongareye\",\"name:vo\":\"Macarän\",\"name:vro\":\"Ungari\",\"name:war\":\"Hungarya\",\"name:wo\":\"Ongiri\",\"name:wuu\":\"匈牙利\",\"name:xal\":\"Хунһармудин Орн\",\"name:xmf\":\"უნგრეთი\",\"name:yi\":\"אונגארן\",\"name:yo\":\"Húngárì\",\"name:yue\":\"匈牙利\",\"name:zea\":\"Honharije\",\"name:zh\":\"匈牙利\",\"name:zh-Hans\":\"匈牙利\",\"name:zh-Hant\":\"匈牙利\",\"name:zh-Latn-pinyin\":\"Xiōngyálì\",\"name:zu\":\"i-Hungary\",\"old_name:-2011-12-31\":\"Magyar Köztársaság\",\"old_name:be:-2011-12-31\":\"Венгерская Рэспубліка\",\"old_name:cs:-2011-12-31\":\"Maďarská republika\",\"old_name:el:-2011-12-31\":\"Δημοκρατία της Ουγγαρίας\",\"old_name:en:-2011-12-31\":\"Republic of Hungary\",\"old_name:es:-2011-12-31\":\"República de Hungría\",\"old_name:et:-2011-12-31\":\"Ungari Vabariik\",\"old_name:fr:-2011-12-31\":\"République de Hongrie\",\"old_name:id:-2011-12-31\":\"Republik Hongaria\",\"old_name:it:-2011-12-31\":\"Repubblica d'Ungheria\",\"old_name:ja:-2011-12-31\":\"ハンガリー共和国\",\"old_name:ku:-2011-12-31\":\"Komara Macaristanê\",\"old_name:lb:-2011-12-31\":\"Republik Ungarn\",\"old_name:lt:-2011-12-31\":\"Vengrijos Respublika\",\"old_name:lv:-2011-12-31\":\"Ungārijas Republika\",\"old_name:pl:-2011-12-31\":\"Republika Węgier\",\"old_name:ru:-2011-12-31\":\"Венге́рская Респу́блика\",\"old_name:sk:-2011-12-31\":\"Maďarská republika\",\"old_name:sr:-2011-12-31\":\"Република Мађарска\",\"old_name:sv:-2011-12-31\":\"Republiken Ungern\",\"old_name:vi\":\"Hung Gia Lợi\",\"old_name:vi:-2011-12-31\":\"Cộng Hòa Hungary\",\"population\":\"9603634\",\"population:date\":\"2022-10-01\",\"source:name:oc\":\"ieo-bdtopoc\",\"source:population\":\"https://nepszamlalas2022.ksh.hu\",\"timezone\":\"Europe/Budapest\",\"wikidata\":\"Q28\",\"wikimedia_commons\":\"Category:Hungary\",\"wikipedia\":\"hu:Magyarország\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078619,
+      "name": "Nagyvázsony",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Nagyvázsony\",\"wikidata\":\"Q1079847\",\"wikipedia\":\"hu:Nagyvázsony\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "watercourse",
+      "osmType": "way",
+      "osmId": 329894510,
+      "name": "Kövesi-árok",
+      "tags": "{\"alt_name\":\"Eger-patak\",\"name\":\"Kövesi-árok\",\"waterway\":\"stream\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57879508,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "way",
+      "osmId": 380535890,
+      "name": "Veszprém-Nagyvázsonyi-medence",
+      "tags": "{\"boundary\":\"region\",\"import_ref\":\"MTATAKI\",\"name\":\"Veszprém-Nagyvázsonyi-medence\",\"ref:hu_kistaj\":\"5.1.31\",\"ref:hu_kistaj:kozeptaj\":\"1\",\"ref:hu_kistaj:nagytaj\":\"5\",\"source\":\"MTA ATK TAKI GIS labor\",\"type\":\"boundary\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "way",
+      "osmId": 380535890,
+      "name": "Veszprém-Nagyvázsonyi-medence",
+      "tags": "{\"boundary\":\"region\",\"import_ref\":\"MTATAKI\",\"name\":\"Veszprém-Nagyvázsonyi-medence\",\"ref:hu_kistaj\":\"5.1.31\",\"ref:hu_kistaj:kozeptaj\":\"1\",\"ref:hu_kistaj:nagytaj\":\"5\",\"source\":\"MTA ATK TAKI GIS labor\",\"type\":\"boundary\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "way",
+      "osmId": 380535491,
+      "name": "Balaton-felvidék és kismedencék",
+      "tags": "{\"boundary\":\"region\",\"import_ref\":\"MTATAKI\",\"name\":\"Balaton-felvidék és kismedencék\",\"ref:hu_kistaj\":\"5.1.22\",\"ref:hu_kistaj:kozeptaj\":\"1\",\"ref:hu_kistaj:nagytaj\":\"5\",\"source\":\"MTA ATK TAKI GIS labor\",\"type\":\"boundary\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "way",
+      "osmId": 380535491,
+      "name": "Balaton-felvidék és kismedencék",
+      "tags": "{\"boundary\":\"region\",\"import_ref\":\"MTATAKI\",\"name\":\"Balaton-felvidék és kismedencék\",\"ref:hu_kistaj\":\"5.1.22\",\"ref:hu_kistaj:kozeptaj\":\"1\",\"ref:hu_kistaj:nagytaj\":\"5\",\"source\":\"MTA ATK TAKI GIS labor\",\"type\":\"boundary\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "way",
+      "osmId": 380535492,
+      "name": "Balatoni-Riviéra",
+      "tags": "{\"boundary\":\"region\",\"import_ref\":\"MTATAKI\",\"name\":\"Balatoni-Riviéra\",\"ref:hu_kistaj\":\"4.1.15\",\"ref:hu_kistaj:kozeptaj\":\"1\",\"ref:hu_kistaj:nagytaj\":\"4\",\"source\":\"MTA ATK TAKI GIS labor\",\"type\":\"boundary\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "way",
+      "osmId": 380535492,
+      "name": "Balatoni-Riviéra",
+      "tags": "{\"boundary\":\"region\",\"import_ref\":\"MTATAKI\",\"name\":\"Balatoni-Riviéra\",\"ref:hu_kistaj\":\"4.1.15\",\"ref:hu_kistaj:kozeptaj\":\"1\",\"ref:hu_kistaj:nagytaj\":\"4\",\"source\":\"MTA ATK TAKI GIS labor\",\"type\":\"boundary\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "protected_area",
+      "osmType": "way",
+      "osmId": 480301032,
+      "name": "Fokozottan védett terület",
+      "tags": "{\"boundary\":\"protected_area\",\"leisure\":\"nature_reserve\",\"name\":\"Fokozottan védett terület\",\"protect_class\":\"1\",\"protection_title\":\"Fokozottan Védett Természeti Terület\",\"protection_title:en\":\"Strict Nature Reserve\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "watercourse",
+      "osmType": "way",
+      "osmId": 97550414,
+      "name": "Hidegkúti-séd",
+      "tags": "{\"intermittent\":\"no\",\"name\":\"Hidegkúti-séd\",\"waterway\":\"stream\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "watercourse",
+      "osmType": "way",
+      "osmId": 704290942,
+      "name": "Hidegkúti-séd",
+      "tags": "{\"name\":\"Hidegkúti-séd\",\"waterway\":\"stream\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078598,
+      "name": "Aszófő",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Aszófő\",\"wikidata\":\"Q282402\",\"wikipedia\":\"hu:Aszófő\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "way",
+      "osmId": 842510950,
+      "name": "Evetes-völgy",
+      "tags": "{\"name\":\"Evetes-völgy\",\"natural\":\"valley\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "way",
+      "osmId": 878578429,
+      "name": "Kis-tó",
+      "tags": "{\"alt_name\":\"Mocsolak\",\"name\":\"Kis-tó\",\"natural\":\"wetland\",\"seasonal\":\"wet_season\",\"wetland\":\"wet_meadow\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "way",
+      "osmId": 878584315,
+      "name": "Tó",
+      "tags": "{\"name\":\"Tó\",\"natural\":\"wetland\",\"wetland\":\"reedbed\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078511,
+      "name": "Tihany",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Tihany\",\"wikidata\":\"Q75732\",\"wikipedia\":\"hu:Tihanyi-félsziget\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078616,
+      "name": "Balatonfüred",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Balatonfüred\",\"name:fa\":\"بالاتنفورد\",\"name:hr\":\"Balatonfured\",\"name:lt\":\"Balatonfiuredas\",\"name:ru\":\"Балатонфюред\",\"name:sr\":\"Балатонфиред\",\"name:zh\":\"巴拉頓菲賴德\",\"old_name:de\":\"Bad Plattensee\",\"wikidata\":\"Q680743\",\"wikipedia\":\"hu:Balatonfüred\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078530,
+      "name": "Mencshely",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Mencshely\",\"wikidata\":\"Q1175885\",\"wikipedia\":\"hu:Mencshely\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078574,
+      "name": "Balatoncsicsó",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Balatoncsicsó\",\"wikidata\":\"Q789260\",\"wikipedia\":\"hu:Balatoncsicsó\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5483378820,
+      "name": "Felső mező",
+      "tags": "{\"name\":\"Felső mező\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5485228569,
+      "name": "Csaba",
+      "tags": "{\"name\":\"Csaba\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5492105235,
+      "name": "Sima-hegy",
+      "tags": "{\"name\":\"Sima-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5483392267,
+      "name": "Nyerges-hegy",
+      "tags": "{\"ele\":\"238\",\"name\":\"Nyerges-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5483390229,
+      "name": "Szőlők alja",
+      "tags": "{\"name\":\"Szőlők alja\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5483466854,
+      "name": "Barátszőlő",
+      "tags": "{\"name\":\"Barátszőlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 3752846390,
+      "name": "Új-hegy",
+      "tags": "{\"ele\":\"272\",\"name\":\"Új-hegy\",\"natural\":\"peak\",\"source\":\"SRTM\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5445917130,
+      "name": "Öreg-hegy",
+      "tags": "{\"name\":\"Öreg-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5515514531,
+      "name": "Penke",
+      "tags": "{\"name\":\"Penke\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 5390682884,
+      "name": "Penke-tető",
+      "tags": "{\"ele\":\"271\",\"name\":\"Penke-tető\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5391510858,
+      "name": "Sós-kút",
+      "tags": "{\"name\":\"Sós-kút\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5492185877,
+      "name": "Felső-erdő",
+      "tags": "{\"name\":\"Felső-erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5483469896,
+      "name": "Hajagos",
+      "tags": "{\"name\":\"Hajagos\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5445912875,
+      "name": "Gella",
+      "tags": "{\"name\":\"Gella\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5520028924,
+      "name": "Irtás",
+      "tags": "{\"name\":\"Irtás\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5857015561,
+      "name": "Új-hegy",
+      "tags": "{\"name\":\"Új-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5857015562,
+      "name": "Bagoly-hegy",
+      "tags": "{\"name\":\"Bagoly-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5857015563,
+      "name": "Csibe-hegy",
+      "tags": "{\"name\":\"Csibe-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5857016817,
+      "name": "Újhegy",
+      "tags": "{\"name\":\"Újhegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5861748225,
+      "name": "Csere-hegy",
+      "tags": "{\"name\":\"Csere-hegy\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 311298465,
+      "name": "Tótvázsony",
+      "tags": "{\"ksh_ref\":\"02714\",\"name\":\"Tótvázsony\",\"name:de\":\"Totwaschon\",\"name:ru\":\"Тотважонь\",\"name:sr\":\"Тотважоњ\",\"place\":\"village\",\"place:hu\":\"község\",\"population\":\"1379\",\"population:date\":\"2024-01-01\",\"postal_code\":\"8246\",\"source:population\":\"KSH (www.ksh.hu)\",\"source:population:date\":\"2024-01-01\",\"source:postal_code\":\"Magyar Posta (posta.hu)\",\"source:postal_code:date\":\"2009-03-01\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5493911163,
+      "name": "Alsó-erdő",
+      "tags": "{\"name\":\"Alsó-erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5857091952,
+      "name": "Koldustelek",
+      "tags": "{\"name\":\"Koldustelek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 1716738178,
+      "name": "Nagy-Gella",
+      "tags": "{\"ele\":\"416\",\"name\":\"Nagy-Gella\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5863490740,
+      "name": "Öregszőlők",
+      "tags": "{\"name\":\"Öregszőlők\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 3752846388,
+      "name": "Kis-Gella",
+      "tags": "{\"ele\":\"380\",\"name\":\"Kis-Gella\",\"natural\":\"peak\",\"source\":\"SRTM\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 4147871568,
+      "name": "Hegyes-mál",
+      "tags": "{\"ele\":\"409\",\"name\":\"Hegyes-mál\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 1132324645,
+      "name": "Kishidegkút",
+      "tags": "{\"name\":\"Kishidegkút\",\"name:sr\":\"Кишхидегкут\",\"place\":\"neighbourhood\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5515464028,
+      "name": "Nemesi-dűlő",
+      "tags": "{\"name\":\"Nemesi-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5518691929,
+      "name": "Káposzta Körtvély",
+      "tags": "{\"name\":\"Káposzta Körtvély\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5515515136,
+      "name": "Eresztő",
+      "tags": "{\"name\":\"Eresztő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5518904929,
+      "name": "Vörös-földek",
+      "tags": "{\"name\":\"Vörös-földek\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 495588650,
+      "name": "Hidegkút",
+      "tags": "{\"ksh_ref\":\"20756\",\"name\":\"Hidegkút\",\"name:de\":\"Kaltenbrunn\",\"name:hu\":\"Hidegkút\",\"name:sr\":\"Хидегкут\",\"place\":\"village\",\"place:hu\":\"község\",\"population\":\"458\",\"population:date\":\"2024-01-01\",\"postal_code\":\"8247\",\"source:population\":\"KSH (www.ksh.hu)\",\"source:population:date\":\"2024-01-01\",\"source:postal_code\":\"Magyar Posta (posta.hu)\",\"source:postal_code:date\":\"2009-03-01\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5515463779,
+      "name": "Malom-dűlő",
+      "tags": "{\"name\":\"Malom-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5515463780,
+      "name": "Evetes-erdő",
+      "tags": "{\"name\":\"Evetes-erdő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 1132324638,
+      "name": "Nagyhidegkút",
+      "tags": "{\"name\":\"Nagyhidegkút\",\"name:de\":\"Großkaltenbrunn\",\"name:hu\":\"Nagyhidegkút\",\"name:sr\":\"Нађхидегкут\",\"place\":\"neighbourhood\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 5863442163,
+      "name": "Zsellér-hegyi-dűlő",
+      "tags": "{\"name\":\"Zsellér-hegyi-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 8062256988,
+      "name": "Csatár-hegy",
+      "tags": "{\"name\":\"Csatár-hegy\",\"natural\":\"peak\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8176626255,
+      "name": "Eresztvény",
+      "tags": "{\"name\":\"Eresztvény\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "node",
+      "osmId": 8176631273,
+      "name": "Belső-dűlő",
+      "tags": "{\"name\":\"Belső-dűlő\",\"place\":\"locality\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57877817,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 57882042,
+      "name": "null",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078531,
+      "name": "Tótvázsony",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Tótvázsony\",\"wikidata\":\"Q676352\",\"wikipedia\":\"hu:Tótvázsony\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1078589,
+      "name": "Hidegkút",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Hidegkút\",\"wikidata\":\"Q432227\",\"wikipedia\":\"hu:Hidegkút\"}"
+    }
+  ]
 }

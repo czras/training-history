@@ -25,5 +25,471 @@
         "value": "preparatory"
       }
     ]
-  }
+  },
+  "externalGeography": [
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "way",
+      "osmId": 380535510,
+      "name": "Budaörsi- és Budakeszi-medence",
+      "tags": "{\"boundary\":\"region\",\"import_ref\":\"MTATAKI\",\"name\":\"Budaörsi- és Budakeszi-medence\",\"ref:hu_kistaj\":\"5.3.33\",\"ref:hu_kistaj:kozeptaj\":\"3\",\"ref:hu_kistaj:nagytaj\":\"5\",\"source\":\"MTA ATK TAKI GIS labor\",\"type\":\"boundary\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "way",
+      "osmId": 380535510,
+      "name": "Budaörsi- és Budakeszi-medence",
+      "tags": "{\"boundary\":\"region\",\"import_ref\":\"MTATAKI\",\"name\":\"Budaörsi- és Budakeszi-medence\",\"ref:hu_kistaj\":\"5.3.33\",\"ref:hu_kistaj:kozeptaj\":\"3\",\"ref:hu_kistaj:nagytaj\":\"5\",\"source\":\"MTA ATK TAKI GIS labor\",\"type\":\"boundary\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 221998,
+      "name": "XI. kerület",
+      "tags": "{\"admin_level\":\"9\",\"alt_name\":\"Újbuda\",\"alt_name:de\":\"Neu-Ofen\",\"boundary\":\"administrative\",\"name\":\"XI. kerület\",\"name:de\":\"XI. Bezirk\",\"name:en\":\"11th district\",\"place\":\"borough\",\"ref\":\"11\",\"short_name\":\"11. kerület\",\"wikidata\":\"Q330026\",\"wikipedia\":\"hu:Budapest XI. kerülete\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "watercourse",
+      "osmType": "way",
+      "osmId": 671087823,
+      "name": "Ördög-árok",
+      "tags": "{\"intermittent\":\"yes\",\"layer\":\"-1\",\"name\":\"Ördög-árok\",\"tunnel\":\"yes\",\"waterway\":\"stream\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 221980,
+      "name": "II. kerület",
+      "tags": "{\"admin_level\":\"9\",\"boundary\":\"administrative\",\"name\":\"II. kerület\",\"name:de\":\"II. Bezirk\",\"name:en\":\"2nd district\",\"place\":\"borough\",\"ref\":\"2\",\"short_name\":\"2. kerület\",\"wikidata\":\"Q1068701\",\"wikipedia\":\"hu:Budapest II. kerülete\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "way",
+      "osmId": 380535530,
+      "name": "Csepeli-sík",
+      "tags": "{\"boundary\":\"region\",\"import_ref\":\"MTATAKI\",\"name\":\"Csepeli-sík\",\"ref:hu_kistaj\":\"1.1.21\",\"ref:hu_kistaj:kozeptaj\":\"1\",\"ref:hu_kistaj:nagytaj\":\"1\",\"source\":\"MTA ATK TAKI GIS labor\",\"type\":\"boundary\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "way",
+      "osmId": 380535530,
+      "name": "Csepeli-sík",
+      "tags": "{\"boundary\":\"region\",\"import_ref\":\"MTATAKI\",\"name\":\"Csepeli-sík\",\"ref:hu_kistaj\":\"1.1.21\",\"ref:hu_kistaj:kozeptaj\":\"1\",\"ref:hu_kistaj:nagytaj\":\"1\",\"source\":\"MTA ATK TAKI GIS labor\",\"type\":\"boundary\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1244004,
+      "name": "Budapest",
+      "tags": "{\"admin_level\":\"8\",\"boundary\":\"administrative\",\"name\":\"Budapest\",\"name:ar\":\"بودابست\",\"name:azb\":\"بوداپست\",\"name:be\":\"Будапешт\",\"name:be-tarask\":\"Будапэшт\",\"name:de\":\"Budapest\",\"name:el\":\"Βουδαπέστη\",\"name:en\":\"Budapest\",\"name:es\":\"Budapest\",\"name:grc\":\"Βουδαπέστη\",\"name:hu\":\"Budapest\",\"name:hy\":\"Բուդապեշտ\",\"name:hyw\":\"Պուտափեսթ\",\"name:kn\":\"ಬುಡಾಪೆಸ್ಟ್\",\"name:ko\":\"부다페스트\",\"name:lt\":\"Budapeštas\",\"name:nl\":\"Boedapest\",\"name:pnt\":\"Βουδαπέστη\",\"name:ro\":\"Budapesta\",\"name:ru\":\"Будапешт\",\"name:sr\":\"Будимпешта\",\"name:uk\":\"Будапешт\",\"name:ur\":\"بوداپست\",\"name:zh-Hans\":\"布达佩斯\",\"name:zh-Hant\":\"布達佩斯\",\"place\":\"city\",\"ref:lau\":\"13578\",\"source:ref:lau\":\"ksh\",\"wikidata\":\"Q1781\",\"wikipedia\":\"hu:Budapest\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 37244,
+      "name": "Budapest",
+      "tags": "{\"ISO3166-2\":\"HU-BU\",\"admin_level\":\"6\",\"boundary\":\"administrative\",\"name\":\"Budapest\",\"name:ar\":\"بودابست\",\"name:az\":\"Budapeşt\",\"name:azb\":\"بوداپست\",\"name:be\":\"Будапешт\",\"name:be-tarask\":\"Будапэшт\",\"name:de\":\"Budapest\",\"name:el\":\"Βουδαπέστη\",\"name:en\":\"Budapest\",\"name:es\":\"Budapest\",\"name:grc\":\"Βουδαπέστη\",\"name:hr\":\"Budimpešta\",\"name:hy\":\"Բուդապեշտ\",\"name:hyw\":\"Պուտափեսթ\",\"name:lt\":\"Budapeštas\",\"name:nl\":\"Boedapest\",\"name:pl\":\"Budapeszt\",\"name:pnt\":\"Βουδαπέστη\",\"name:ro\":\"Budapesta\",\"name:ru\":\"Будапешт\",\"name:sk\":\"Budapešť\",\"name:sr\":\"Будимпешта\",\"name:uk\":\"Будапешт\",\"name:ur\":\"بوداپست\",\"place\":\"region\",\"ref:nuts:2\":\"HU11\",\"ref:nuts:3\":\"HU110\",\"wikidata\":\"Q1781\",\"wikipedia\":\"hu:Budapest\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 22723,
+      "name": "Közép-Magyarország",
+      "tags": "{\"admin_level\":\"5\",\"boundary\":\"administrative\",\"name\":\"Közép-Magyarország\",\"name:de\":\"Mittelungarn\",\"name:en\":\"Central Hungary\",\"name:hr\":\"Središnja Mađarska\",\"name:it\":\"Ungheria Centrale\",\"name:lt\":\"Centrinė Vengrija\",\"name:nl\":\"Centraal-Hongarije\",\"name:ro\":\"Ungaria Centrală\",\"name:ru\":\"Центральная Венгрия\",\"name:uk\":\"Центральна Угорщина\",\"ref:nuts\":\"HU10\",\"ref:nuts:2\":\"HU10\",\"wikidata\":\"Q852742\",\"wikipedia\":\"hu:Közép-Magyarország\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 22786,
+      "name": "Közép-Magyarország",
+      "tags": "{\"admin_level\":\"4\",\"boundary\":\"administrative\",\"name\":\"Közép-Magyarország\",\"name:ar\":\"مركز المجر\",\"name:de\":\"Mittelungarn\",\"name:en\":\"Central Hungary\",\"name:es\":\"Hungría Central\",\"name:fr\":\"Hongrie centrale\",\"name:hr\":\"Središnja Mađarska\",\"name:hu\":\"Közép-Magyarország\",\"name:it\":\"Ungheria Centrale\",\"name:lt\":\"Centrinė Vengrija\",\"name:nl\":\"Centraal-Hongarije\",\"name:pl\":\"Środkowe Węgry\",\"name:ro\":\"Ungaria Centrală\",\"name:ru\":\"Центральная Венгрия\",\"name:uk\":\"Центральна Угорщина\",\"place\":\"region\",\"place:hu\":\"régió\",\"ref:nuts\":\"HU1\",\"ref:nuts:1\":\"HU1\",\"wikidata\":\"Q852742\",\"wikipedia\":\"hu:Közép-Magyarország\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 21335,
+      "name": "Magyarország",
+      "tags": "{\"ISO3166-1\":\"HU\",\"ISO3166-1:alpha2\":\"HU\",\"ISO3166-1:alpha3\":\"HUN\",\"ISO3166-1:numeric\":\"348\",\"admin_level\":\"2\",\"alt_name:eo\":\"Hungarujo\",\"alt_name:lfn\":\"Ungaria\",\"alt_name:vi\":\"Hung-ga-ri\",\"boundary\":\"administrative\",\"country_code_fips\":\"HU\",\"default_language\":\"hu\",\"driving_side\":\"right\",\"flag\":\"https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg\",\"flag:wikidata\":\"Q81970\",\"flag:wikipedia\":\"hu:Magyarország zászlaja\",\"int_name\":\"Hungary\",\"land_area\":\"administrative\",\"name\":\"Magyarország\",\"name:ab\":\"Мадиартәыла\",\"name:ace\":\"Hongaria\",\"name:af\":\"Hongarye\",\"name:ak\":\"Hangari\",\"name:als\":\"Ungarn\",\"name:am\":\"ሀንጋሪ\",\"name:an\":\"Hongría\",\"name:ang\":\"Ungerland\",\"name:ar\":\"المجر\",\"name:arc\":\"ܡܓܪ\",\"name:arz\":\"المجر\",\"name:ast\":\"Hungría\",\"name:ay\":\"Hunkariya\",\"name:az\":\"Macarıstan\",\"name:ba\":\"Венгрия\",\"name:bar\":\"Ungarn\",\"name:bat-smg\":\"Vengrėjė\",\"name:bcl\":\"Hungriya\",\"name:be\":\"Венгрыя\",\"name:be-tarask\":\"Вугоршчына\",\"name:bg\":\"Унгария\",\"name:bi\":\"Hungary\",\"name:bm\":\"Hɔngri\",\"name:bn\":\"হাঙ্গেরি\",\"name:bo\":\"ཧུང་གྷ་རི།\",\"name:bpy\":\"হাঙ্গেরী\",\"name:br\":\"Hungaria\",\"name:bs\":\"Mađarska\",\"name:bxr\":\"Унгар\",\"name:ca\":\"Hongria\",\"name:ce\":\"Венгри\",\"name:ceb\":\"Unggriya\",\"name:chr\":\"ᎲᏂᎦᎵ\",\"name:ckb\":\"مەجارستان\",\"name:cnr\":\"Mađarska\",\"name:co\":\"Ungheria\",\"name:crh\":\"Macaristan\",\"name:cs\":\"Maďarsko\",\"name:csb\":\"Madżarskô\",\"name:cu\":\"Ѫгри\",\"name:cv\":\"Венгри\",\"name:cy\":\"Hwngari\",\"name:da\":\"Ungarn\",\"name:de\":\"Ungarn\",\"name:diq\":\"Macarıstan\",\"name:dsb\":\"Hungorska\",\"name:dv\":\"ހަންގޭރީ\",\"name:dz\":\"ཧཱང་གྷ་རི\",\"name:ee\":\"Hungary\",\"name:el\":\"Ουγγαρία\",\"name:eml\":\"Ungherî\",\"name:en\":\"Hungary\",\"name:eo\":\"Hungario\",\"name:es\":\"Hungría\",\"name:et\":\"Ungari\",\"name:eu\":\"Hungaria\",\"name:ext\":\"Ungria\",\"name:fa\":\"مجارستان\",\"name:ff\":\"Hunngariya\",\"name:fi\":\"Unkari\",\"name:fo\":\"Ungarn\",\"name:fr\":\"Hongrie\",\"name:frp\":\"Hongrie\",\"name:frr\":\"Ungarn\",\"name:fur\":\"Ongjarie\",\"name:fy\":\"Hongarije\",\"name:ga\":\"An Ungáir\",\"name:gag\":\"Vengriya\",\"name:gd\":\"An Ungair\",\"name:gl\":\"Hungría\",\"name:gn\":\"Hungyria\",\"name:gu\":\"હંગેરી\",\"name:gv\":\"Yn Ungaar\",\"name:ha\":\"Hungari\",\"name:hak\":\"Hiûng-ngà-li\",\"name:haw\":\"Hunakalia\",\"name:he\":\"הונגריה\",\"name:hi\":\"हंगरी\",\"name:hif\":\"Hungary\",\"name:hr\":\"Mađarska\",\"name:hsb\":\"Madźarska\",\"name:ht\":\"Ongri\",\"name:hu\":\"Magyarország\",\"name:hy\":\"Հունգարիա\",\"name:ia\":\"Hungaria\",\"name:id\":\"Hongaria\",\"name:ie\":\"Hungaria\",\"name:ilo\":\"Hungaria\",\"name:io\":\"Hungaria\",\"name:is\":\"Ungverjaland\",\"name:it\":\"Ungheria\",\"name:ja\":\"ハンガリー\",\"name:jbo\":\"madjiar\",\"name:jv\":\"Hongaria\",\"name:ka\":\"უნგრეთი\",\"name:kaa\":\"Vengriya\",\"name:kab\":\"Hungri\",\"name:kbd\":\"Мэжарей\",\"name:kg\":\"Hongrie\",\"name:ki\":\"Macartsa\",\"name:kk\":\"Мажарстан\",\"name:kl\":\"Ungarni\",\"name:km\":\"ប្រទេសហុងគ្រី\",\"name:kn\":\"ಹಂಗೇರಿ\",\"name:ko\":\"헝가리\",\"name:koi\":\"Мадьярму\",\"name:krc\":\"Маджар\",\"name:ks\":\"ہَنٛگری\",\"name:ksh\":\"Unjann\",\"name:ku\":\"Macaristan\",\"name:kv\":\"Мадьяр Му\",\"name:kw\":\"Hungari\",\"name:ky\":\"Мажарстан\",\"name:la\":\"Hungaria\",\"name:lad\":\"Madjaristan\",\"name:lb\":\"Ungarn\",\"name:lez\":\"Венгрия\",\"name:lfn\":\"Magiar\",\"name:lg\":\"Hangare\",\"name:li\":\"Hongarieë\",\"name:lij\":\"Ungaja\",\"name:lmo\":\"Üngheria\",\"name:ln\":\"Ungri\",\"name:lo\":\"ຮັງກາຣີ\",\"name:lt\":\"Vengrija\",\"name:ltg\":\"Vengreja\",\"name:lv\":\"Ungārija\",\"name:lzh\":\"匈牙利\",\"name:mdf\":\"Венгеронь мастор\",\"name:mg\":\"Hongria\",\"name:mhr\":\"Венгрий\",\"name:mi\":\"Hanekeria\",\"name:mk\":\"Унгарија\",\"name:ml\":\"ഹംഗറി\",\"name:mn\":\"Унгар\",\"name:mr\":\"हंगेरी\",\"name:mrj\":\"Венгри\",\"name:ms\":\"Hungary\",\"name:mt\":\"Ungerija\",\"name:my\":\"ဟန်ဂေရီနိုင်ငံ\",\"name:myv\":\"Мадьяронь Мастор\",\"name:mzn\":\"مجارستون\",\"name:na\":\"Ungari\",\"name:nah\":\"Hungria\",\"name:nan\":\"Magyar-kok\",\"name:nap\":\"Ungaria\",\"name:nds\":\"Ungarn\",\"name:nds-nl\":\"Hongaarnlaand\",\"name:ne\":\"हंगेरी\",\"name:nl\":\"Hongarije\",\"name:nn\":\"Ungarn\",\"name:no\":\"Ungarn\",\"name:nov\":\"Hungaria\",\"name:nrm\":\"Hongrie\",\"name:nv\":\"Hángewii\",\"name:oc\":\"Ongria\",\"name:or\":\"ହଙ୍ଗେରୀ\",\"name:os\":\"Венгри\",\"name:pa\":\"ਹੰਗਰੀ\",\"name:pag\":\"Hungary\",\"name:pam\":\"Hungrya\",\"name:pap\":\"Hongaria\",\"name:pcd\":\"Hongrie\",\"name:pdc\":\"Ungarn\",\"name:pih\":\"Hungrii\",\"name:pl\":\"Węgry\",\"name:pms\":\"Ungherìa\",\"name:pnb\":\"ہنگری\",\"name:pnt\":\"Ουγγαρία\",\"name:ps\":\"هنګري\",\"name:pt\":\"Hungria\",\"name:qu\":\"Unriya\",\"name:rm\":\"Ungaria\",\"name:rmy\":\"Ungariya\",\"name:rn\":\"Hungariya\",\"name:ro\":\"Ungaria\",\"name:roa-rup\":\"Ungaria\",\"name:roa-tara\":\"Ungherie\",\"name:ru\":\"Венгрия\",\"name:rue\":\"Мадярьско\",\"name:rw\":\"Hongiriya\",\"name:sa\":\"हंगरी\",\"name:sah\":\"Венгрия\",\"name:scn\":\"Unghirìa\",\"name:sco\":\"Hungary\",\"name:se\":\"Ungára\",\"name:sg\":\"Hongirùii\",\"name:sh\":\"Mađarska\",\"name:si\":\"හන්ගේරියානු සමුහාණ්ඩුව\",\"name:sk\":\"Maďarsko\",\"name:sl\":\"Madžarska\",\"name:sm\":\"Hungary\",\"name:smn\":\"Unkari\",\"name:sms\":\"Unkar\",\"name:sn\":\"Hungary\",\"name:so\":\"Hungaria\",\"name:sq\":\"Hungaria\",\"name:sr\":\"Мађарска\",\"name:sr-Latn\":\"Mađarska\",\"name:ss\":\"IHangareyi\",\"name:st\":\"Hungary\",\"name:stq\":\"Ungarn\",\"name:su\":\"Hungaria\",\"name:sv\":\"Ungern\",\"name:sw\":\"Hungaria\",\"name:szl\":\"Madziary\",\"name:ta\":\"அங்கேரி\",\"name:te\":\"హంగేరి\",\"name:tet\":\"Ungria\",\"name:tg\":\"Маҷористон\",\"name:th\":\"ประเทศฮังการี\",\"name:ti\":\"ሀንጋሪ\",\"name:tk\":\"Wengriýa\",\"name:tl\":\"Unggarya\",\"name:to\":\"Hangakalia\",\"name:tok\":\"ma Mosijo\",\"name:tpi\":\"Hangari\",\"name:tr\":\"Macaristan\",\"name:ts\":\"Hungary\",\"name:tt\":\"Маҗарстан\",\"name:tzl\":\"Máxharphäts\",\"name:udm\":\"Венгрия\",\"name:ug\":\"ۋېنگرىيە\",\"name:uk\":\"Угорщина\",\"name:ur\":\"مجارستان\",\"name:uz\":\"Mojariston\",\"name:vec\":\"Ongarìa\",\"name:vep\":\"Mad'jaranma\",\"name:vi\":\"Hungary\",\"name:vls\":\"Hongareye\",\"name:vo\":\"Macarän\",\"name:vro\":\"Ungari\",\"name:war\":\"Hungarya\",\"name:wo\":\"Ongiri\",\"name:wuu\":\"匈牙利\",\"name:xal\":\"Хунһармудин Орн\",\"name:xmf\":\"უნგრეთი\",\"name:yi\":\"אונגארן\",\"name:yo\":\"Húngárì\",\"name:yue\":\"匈牙利\",\"name:zea\":\"Honharije\",\"name:zh\":\"匈牙利\",\"name:zh-Hans\":\"匈牙利\",\"name:zh-Hant\":\"匈牙利\",\"name:zh-Latn-pinyin\":\"Xiōngyálì\",\"name:zu\":\"i-Hungary\",\"old_name:-2011-12-31\":\"Magyar Köztársaság\",\"old_name:be:-2011-12-31\":\"Венгерская Рэспубліка\",\"old_name:cs:-2011-12-31\":\"Maďarská republika\",\"old_name:el:-2011-12-31\":\"Δημοκρατία της Ουγγαρίας\",\"old_name:en:-2011-12-31\":\"Republic of Hungary\",\"old_name:es:-2011-12-31\":\"República de Hungría\",\"old_name:et:-2011-12-31\":\"Ungari Vabariik\",\"old_name:fr:-2011-12-31\":\"République de Hongrie\",\"old_name:id:-2011-12-31\":\"Republik Hongaria\",\"old_name:it:-2011-12-31\":\"Repubblica d'Ungheria\",\"old_name:ja:-2011-12-31\":\"ハンガリー共和国\",\"old_name:ku:-2011-12-31\":\"Komara Macaristanê\",\"old_name:lb:-2011-12-31\":\"Republik Ungarn\",\"old_name:lt:-2011-12-31\":\"Vengrijos Respublika\",\"old_name:lv:-2011-12-31\":\"Ungārijas Republika\",\"old_name:pl:-2011-12-31\":\"Republika Węgier\",\"old_name:ru:-2011-12-31\":\"Венге́рская Респу́блика\",\"old_name:sk:-2011-12-31\":\"Maďarská republika\",\"old_name:sr:-2011-12-31\":\"Република Мађарска\",\"old_name:sv:-2011-12-31\":\"Republiken Ungern\",\"old_name:vi\":\"Hung Gia Lợi\",\"old_name:vi:-2011-12-31\":\"Cộng Hòa Hungary\",\"population\":\"9603634\",\"population:date\":\"2022-10-01\",\"source:name:oc\":\"ieo-bdtopoc\",\"source:population\":\"https://nepszamlalas2022.ksh.hu\",\"timezone\":\"Europe/Budapest\",\"wikidata\":\"Q28\",\"wikimedia_commons\":\"Category:Hungary\",\"wikipedia\":\"hu:Magyarország\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 963923001,
+      "name": "Gellért-hegy",
+      "tags": "{\"alt_name:de\":\"Sankt Gerhardsberg;Blocksberg\",\"ele\":\"235\",\"importance\":\"regional\",\"name\":\"Gellért-hegy\",\"name:de\":\"Gellértberg\",\"name:en\":\"Gellért Hill\",\"name:it\":\"Monte Gellert\",\"name:ko\":\"겔레르트언덕\",\"name:pl\":\"Góra Gellerta\",\"name:ru\":\"Гора Геллерт\",\"natural\":\"peak\",\"old_name:de\":\"Blocksberg\",\"wikidata\":\"Q577122\",\"wikimedia_commons\":\"Category:Gellért Hill\",\"wikipedia\":\"hu:Gellért-hegy\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "way",
+      "osmId": 380535896,
+      "name": "Vác-Pesti-Duna-völgy",
+      "tags": "{\"boundary\":\"region\",\"import_ref\":\"MTATAKI\",\"name\":\"Vác-Pesti-Duna-völgy\",\"ref:hu_kistaj\":\"1.1.11\",\"ref:hu_kistaj:kozeptaj\":\"1\",\"ref:hu_kistaj:nagytaj\":\"1\",\"source\":\"MTA ATK TAKI GIS labor\",\"type\":\"boundary\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "regional_boundary",
+      "osmType": "way",
+      "osmId": 380535896,
+      "name": "Vác-Pesti-Duna-völgy",
+      "tags": "{\"boundary\":\"region\",\"import_ref\":\"MTATAKI\",\"name\":\"Vác-Pesti-Duna-völgy\",\"ref:hu_kistaj\":\"1.1.11\",\"ref:hu_kistaj:kozeptaj\":\"1\",\"ref:hu_kistaj:nagytaj\":\"1\",\"source\":\"MTA ATK TAKI GIS labor\",\"type\":\"boundary\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 2786100,
+      "name": "Vár",
+      "tags": "{\"admin_level\":\"10\",\"alt_name\":\"Budai Várnegyed;Budavár\",\"boundary\":\"administrative\",\"castle_type\":\"defensive\",\"heritage\":\"1\",\"heritage:operator\":\"whc\",\"historic\":\"castle\",\"int_name\":\"Buda Castle Quarter\",\"name\":\"Vár\",\"name:cs\":\"Hrad\",\"name:de\":\"Burgviertel\",\"name:en\":\"Castle District\",\"name:sk\":\"Hradná Štvrť\",\"ref:whc\":\"400\",\"wikidata\":\"Q463332\",\"wikipedia\":\"hu:Budai Várnegyed\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 2702616,
+      "name": "Szentimreváros",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\",\"name\":\"Szentimreváros\",\"name:etymology:wikidata\":\"Q359259\",\"wikidata\":\"Q780503\",\"wikipedia\":\"hu:Szentimreváros\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 2714681,
+      "name": "Tabán",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\",\"name\":\"Tabán\",\"name:de\":\"Raitzenstadt\",\"wikidata\":\"Q1075342\",\"wikipedia\":\"hu:Tabán (Budapest)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 3232203,
+      "name": "Margitsziget",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\",\"name\":\"Margitsziget\",\"name:cs\":\"Markétin ostrov\",\"name:de\":\"Margareteninsel\",\"name:en\":\"Margaret Island\",\"name:es\":\"Isla Margarita\",\"name:etymology:wikidata\":\"Q232031\",\"name:it\":\"Isola Margherita\",\"name:nl\":\"Margaretheneiland\",\"name:ro\":\"Insula Margareta\",\"wikidata\":\"Q18816\",\"wikipedia\":\"hu:Margit-sziget\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "watercourse",
+      "osmType": "way",
+      "osmId": 851474508,
+      "name": "Duna",
+      "tags": "{\"canoe\":\"yes\",\"motorboat\":\"yes\",\"name\":\"Duna\",\"name:ar\":\"دانوب\",\"name:br\":\"Danav\",\"name:de\":\"Donau\",\"name:en\":\"Danube\",\"name:es\":\"Danubio\",\"name:fr\":\"Danube\",\"name:hr\":\"Dunav\",\"name:it\":\"Danubio\",\"name:ku\":\"Duna\",\"name:pl\":\"Dunaj\",\"name:ru\":\"Дунай\",\"name:sk\":\"Dunaj\",\"name:sr\":\"Дунав\",\"name:uk\":\"Дунай\",\"name:zh\":\"多瑙河\",\"ship\":\"yes\",\"source\":\"Landsat\",\"source:name:br\":\"ofis publik ar brezhoneg\",\"url\":\"http://www.eumet.hu/vizallas/duna/\",\"url:hydroinfo\":\"http://www.hydroinfo.hu/tables/dunelot.html\",\"url:vizugy\":\"https://www.vizugy.hu/index.php?module=content&programelemid=138\",\"waterway\":\"river\",\"wikipedia\":\"hu:Duna\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 3228576,
+      "name": "Lipótváros",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\",\"name\":\"Lipótváros\",\"name:de\":\"Leopoldstadt\",\"name:etymology:wikidata\":\"Q151321\",\"wikidata\":\"Q598014\",\"wikipedia\":\"hu:Lipótváros\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1606103,
+      "name": "V. kerület",
+      "tags": "{\"admin_level\":\"9\",\"alt_name\":\"Belváros-Lipótváros\",\"boundary\":\"administrative\",\"name\":\"V. kerület\",\"name:de\":\"V. Bezirk\",\"name:en\":\"5th district\",\"place\":\"borough\",\"ref\":\"5\",\"short_name\":\"5. kerület\",\"wikidata\":\"Q1042732\",\"wikipedia\":\"hu:Budapest V. kerülete\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 2702615,
+      "name": "Lágymányos",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\",\"name\":\"Lágymányos\",\"name:de\":\"Leutmannosch\",\"wikidata\":\"Q1160072\",\"wikipedia\":\"hu:Lágymányos\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1605916,
+      "name": "XIII. kerület",
+      "tags": "{\"admin_level\":\"9\",\"alt_name\":\"Újlipótváros-Angyalföld\",\"boundary\":\"administrative\",\"name\":\"XIII. kerület\",\"name:de\":\"XIII. Bezirk\",\"name:en\":\"13th district\",\"place\":\"borough\",\"ref\":\"13\",\"short_name\":\"13. kerület\",\"wikidata\":\"Q851023\",\"wikipedia\":\"hu:Budapest XIII. kerülete\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 3228574,
+      "name": "Belváros",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\",\"name\":\"Belváros\",\"name:de\":\"Innenstadt\",\"wikidata\":\"Q648004\",\"wikipedia\":\"hu:Belváros (Budapest)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1606101,
+      "name": "VI. kerület",
+      "tags": "{\"admin_level\":\"9\",\"alt_name\":\"Terézváros\",\"boundary\":\"administrative\",\"name\":\"VI. kerület\",\"name:de\":\"VI. Bezirk\",\"name:en\":\"6th district\",\"place\":\"borough\",\"ref\":\"6\",\"short_name\":\"6. kerület\",\"wikidata\":\"Q697679\",\"wikipedia\":\"hu:Budapest VI. kerülete\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 3229919,
+      "name": "Terézváros",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\",\"name\":\"Terézváros\",\"name:de\":\"Theresienstadt\",\"name:etymology:wikidata\":\"Q131706\",\"wikidata\":\"Q697679\",\"wikipedia\":\"hu:Budapest VI. kerülete\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "protected_area",
+      "osmType": "way",
+      "osmId": 1054092830,
+      "name": "Andrássy út",
+      "tags": "{\"boundary\":\"protected_area\",\"heritage\":\"1\",\"heritage:operator\":\"whc\",\"name\":\"Andrássy út\",\"name:de\":\"Andrássy-Straße\",\"name:en\":\"Andrássy Avenue and the Underground\",\"name:es\":\"Avenida Andrássy\",\"name:fr\":\"Avenue Andrassy et le métropolitain\",\"name:nl\":\"Andrássy Avenue\",\"name:pt\":\"Avenida Andrássy\",\"ref:whc\":\"400-002\",\"whc:criteria\":\"(ii),(iv)\",\"wikidata\":\"Q851122\",\"wikipedia\":\"hu:Budapest világörökségi helyszínei\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "protected_area",
+      "osmType": "way",
+      "osmId": 1054092830,
+      "name": "Andrássy út",
+      "tags": "{\"boundary\":\"protected_area\",\"heritage\":\"1\",\"heritage:operator\":\"whc\",\"name\":\"Andrássy út\",\"name:de\":\"Andrássy-Straße\",\"name:en\":\"Andrássy Avenue and the Underground\",\"name:es\":\"Avenida Andrássy\",\"name:fr\":\"Avenue Andrassy et le métropolitain\",\"name:nl\":\"Andrássy Avenue\",\"name:pt\":\"Avenida Andrássy\",\"ref:whc\":\"400-002\",\"whc:criteria\":\"(ii),(iv)\",\"wikidata\":\"Q851122\",\"wikipedia\":\"hu:Budapest világörökségi helyszínei\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1606102,
+      "name": "VII. kerület",
+      "tags": "{\"admin_level\":\"9\",\"alt_name\":\"Erzsébetváros\",\"boundary\":\"administrative\",\"name\":\"VII. kerület\",\"name:de\":\"VII. Bezirk\",\"name:en\":\"7th district\",\"place\":\"borough\",\"ref\":\"7\",\"short_name\":\"7. kerület\",\"wikidata\":\"Q284541\",\"wikipedia\":\"hu:Budapest VII. kerülete\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 3229918,
+      "name": "Erzsébetváros",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\",\"name\":\"Erzsébetváros\",\"name:de\":\"Elisabethstadt\",\"name:etymology:wikidata\":\"Q150782\",\"wikidata\":\"Q284541\",\"wikipedia\":\"hu:Budapest VII. kerülete\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 466170097,
+      "name": "null",
+      "tags": "{\"admin_level\":\"9\",\"boundary\":\"administrative\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1746619,
+      "name": "Újlipótváros",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\",\"name\":\"Újlipótváros\",\"name:de\":\"Neu Leopoldistadt\",\"name:etymology:wikidata\":\"Q151321\",\"wikidata\":\"Q570142\",\"wikipedia\":\"hu:Újlipótváros\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "protected_area",
+      "osmType": "relation",
+      "osmId": 14067472,
+      "name": "Budapest, Duna-part látképe, a Budai Várnegyed és az Andrássy út",
+      "tags": "{\"boundary\":\"protected_area\",\"heritage\":\"1\",\"heritage:operator\":\"whc\",\"name\":\"Budapest, Duna-part látképe, a Budai Várnegyed és az Andrássy út\",\"name:ar\":\"بودابست بضفاف نهار الدانوب، وحي قصر بودا وجادة أندراسي\",\"name:de\":\"Budapest mit Donau-Ufern, Burgviertel Buda und Andrássy-Straße\",\"name:en\":\"Budapest, including the Banks of the Danube, the Buda Castle Quarter and Andrássy Avenue\",\"name:es\":\"Budapest con las orillas del Danubio, el barrio del Castillo de Buda y la Avenida Andrássy\",\"name:fr\":\"Budapest, avec les rives du Danube, le quartier du château de Buda et l’avenue Andrássy\",\"name:ja\":\"ドナウ河岸、ブダ城地区及びアンドラーシ通りを含むブダペスト\",\"name:nl\":\"Boedapest - de Donau oevers, Boeda burchtwijk en Andrássy Avenue\",\"name:pl\":\"Budapeszt - nadbrzeża Dunaju, dzielnica zamkowa w Budzie i aleja Andrássyego (Andrássy út)\",\"name:pt\":\"Budapeste, com as Margens do Danúbio, o Bairro do Castelo de Buda e a Avenida Andrássy\",\"name:ru\":\"Будапешт: берега Дуная, Крепостная гора в Буде и проспект Андрашши\",\"name:zh\":\"布达佩斯（多瑙河两岸、布达城堡区和安德拉什大街）\",\"protect_class\":\"22\",\"ref:whc\":\"400bis\",\"whc:criteria\":\"(ii),(iv)\",\"wikidata\":\"Q851122\",\"wikipedia\":\"hu:Budapest világörökségi helyszínei\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 276931731,
+      "name": "Lipótváros",
+      "tags": "{\"name\":\"Lipótváros\",\"name:de\":\"Leopoldstadt\",\"name:sk\":\"Leopoldov\",\"place\":\"suburb\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 39621947,
+      "name": "null",
+      "tags": "{\"admin_level\":\"9\",\"boundary\":\"administrative\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 207247969,
+      "name": "null",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "locality",
+      "osmType": "relation",
+      "osmId": 11173422,
+      "name": "Margit-sziget",
+      "tags": "{\"leisure\":\"park\",\"name\":\"Margit-sziget\",\"name:cs\":\"Markétin ostrov\",\"name:de\":\"Margareteninsel\",\"name:en\":\"Margaret Island\",\"name:es\":\"Isla Margarita\",\"name:it\":\"Isola Margherita\",\"name:nl\":\"Margaretha Eiland\",\"name:pl\":\"Wyspa Małgorzaty\",\"name:ro\":\"Insula Margareta\",\"place\":\"island\",\"wikidata\":\"Q18816\",\"wikipedia\":\"hu:Margit-sziget\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "watercourse",
+      "osmType": "way",
+      "osmId": 1136798873,
+      "name": "Duna",
+      "tags": "{\"CEMT\":\"VIa\",\"boat\":\"yes\",\"canoe\":\"yes\",\"motorboat\":\"yes\",\"name\":\"Duna\",\"name:ar\":\"دانوب\",\"name:br\":\"Danav\",\"name:de\":\"Donau\",\"name:en\":\"Danube\",\"name:es\":\"Danubio\",\"name:fr\":\"Danube\",\"name:hr\":\"Dunav\",\"name:it\":\"Danubio\",\"name:ku\":\"Duna\",\"name:nl\":\"Donau\",\"name:pl\":\"Dunaj\",\"name:ru\":\"Дунай\",\"name:sk\":\"Dunaj\",\"name:sr\":\"Дунав\",\"name:uk\":\"Дунай\",\"name:zh\":\"多瑙河\",\"source\":\"Landsat\",\"source:name:br\":\"ofis publik ar brezhoneg\",\"url\":\"http://www.eumet.hu/vizallas/duna/\",\"url:hydroinfo\":\"http://www.hydroinfo.hu/tables/dunelot.html\",\"url:vizugy\":\"https://www.vizugy.hu/index.php?module=content&programelemid=138\",\"waterway\":\"river\",\"wikipedia\":\"hu:Duna\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 3166410,
+      "name": "Felhévíz",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\",\"name\":\"Felhévíz\",\"wikidata\":\"Q998874\",\"wikipedia\":\"hu:Felhévíz\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 3176172,
+      "name": "Országút",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\",\"name\":\"Országút\",\"wikidata\":\"Q1226200\",\"wikipedia\":\"hu:Országút (városrész)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 369291663,
+      "name": "Tabán",
+      "tags": "{\"name\":\"Tabán\",\"name:de\":\"Raitzenstadt\",\"place\":\"suburb\",\"wikidata\":\"Q1075342\",\"wikipedia\":\"hu:Tabán (Budapest)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 276931733,
+      "name": "Belváros",
+      "tags": "{\"name\":\"Belváros\",\"name:de\":\"Innenstadt\",\"name:sk\":\"Vnútorné Mesto\",\"place\":\"suburb\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 9006565214,
+      "name": "Buda",
+      "tags": "{\"alt_name\":\"Offen\",\"name\":\"Buda\",\"name:de\":\"Ofen\",\"name:en\":\"Buda\",\"name:hr\":\"Budim\",\"name:sk\":\"Budin\",\"name:sr\":\"Будим\",\"name:tr\":\"Budin\",\"place\":\"suburb\",\"start_date\":\"1243\",\"wikidata\":\"Q850754\",\"wikipedia\":\"hu:Buda (városrész)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 9006565215,
+      "name": "Pest",
+      "tags": "{\"alt_name\":\"Pesth\",\"name\":\"Pest\",\"name:en\":\"Pest\",\"name:hr\":\"Pešta\",\"name:sr\":\"Пешта\",\"place\":\"suburb\",\"start_date\":\"1148\",\"wikidata\":\"Q210205\",\"wikipedia\":\"hu:Pest (történelmi település)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 202164572,
+      "name": "null",
+      "tags": "{\"admin_level\":\"10\",\"barrier\":\"city_wall\",\"boundary\":\"administrative\",\"layer\":\"1\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 222572102,
+      "name": "null",
+      "tags": "{\"admin_level\":\"10\",\"barrier\":\"city_wall\",\"boundary\":\"administrative\",\"layer\":\"1\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 85788293,
+      "name": "Budapest",
+      "tags": "{\"ISO3166-2\":\"HU-BU\",\"admin_level\":\"2\",\"capital\":\"yes\",\"capital_ISO3166-1\":\"yes\",\"ele\":\"102\",\"ksh_ref\":\"13578\",\"name\":\"Budapest\",\"name:ace\":\"Budapèst\",\"name:af\":\"Boedapest\",\"name:am\":\"ቡዳፔስት\",\"name:ar\":\"بودابست\",\"name:arz\":\"بودابست\",\"name:ast\":\"Budapest\",\"name:av\":\"Будапешт\",\"name:az\":\"Budapeşt\",\"name:azb\":\"بوداپست\",\"name:ba\":\"Будапешт\",\"name:bat-smg\":\"Budapešts\",\"name:be\":\"Будапешт\",\"name:be-tarask\":\"Будапэшт\",\"name:bg\":\"Будапеща\",\"name:bn\":\"বুদাপেস্ট\",\"name:bo\":\"བུ་ད་ཕེ་སིད།\",\"name:br\":\"Budapest\",\"name:bs\":\"Budimpešta\",\"name:ca\":\"Budapest\",\"name:ce\":\"Будапешт\",\"name:ckb\":\"بوداپێست\",\"name:crh\":\"Budapeşt\",\"name:cs\":\"Budapešť\",\"name:csb\":\"Bùdapeszt\",\"name:cu\":\"Боудапєщь\",\"name:cv\":\"Будапешт\",\"name:de\":\"Budapest\",\"name:diq\":\"Budapeşt\",\"name:el\":\"Βουδαπέστη\",\"name:en\":\"Budapest\",\"name:eo\":\"Budapeŝto\",\"name:es\":\"Budapest\",\"name:fa\":\"بوداپست\",\"name:fr\":\"Budapest\",\"name:frp\":\"Budapèst\",\"name:fy\":\"Boedapest\",\"name:ga\":\"Búdaipeist\",\"name:gag\":\"Budapeşt\",\"name:grc\":\"Βουδαπέστη\",\"name:gu\":\"બુડાપેસ્ટ\",\"name:he\":\"בודפשט\",\"name:hi\":\"बुडापेस्ट\",\"name:hr\":\"Budimpešta\",\"name:ht\":\"Boudapès\",\"name:hu\":\"Budapest\",\"name:hy\":\"Բուդապեշտ\",\"name:hyw\":\"Պուտափեսթ\",\"name:is\":\"Búdapest\",\"name:it\":\"Budapest\",\"name:ja\":\"ブダペスト\",\"name:ka\":\"ბუდაპეშტი\",\"name:kk\":\"Будапешт\",\"name:kn\":\"ಬುಡಾಪೆಸ್ಟ್\",\"name:ko\":\"부다페스트\",\"name:koi\":\"Будапешт\",\"name:krc\":\"Будапешт\",\"name:ku\":\"Budapeşt\",\"name:kv\":\"Будапешт\",\"name:ky\":\"Будапешт\",\"name:la\":\"Budapestinum\",\"name:li\":\"Boedapes\",\"name:lt\":\"Budapeštas\",\"name:lv\":\"Budapešta\",\"name:mdf\":\"Будапешт\",\"name:mhr\":\"Будапешт\",\"name:mk\":\"Будимпешта\",\"name:ml\":\"ബുഡാപെസ്റ്റ്\",\"name:mn\":\"Будапешт\",\"name:mr\":\"बुडापेस्ट\",\"name:mrj\":\"Будапешт\",\"name:my\":\"ဗူးဒပက်မြို့\",\"name:myv\":\"Будапешт ош\",\"name:ne\":\"बुडापेस्ट\",\"name:nl\":\"Boedapest\",\"name:no\":\"Budapest\",\"name:nov\":\"Budapesht\",\"name:nv\":\"Naaki Bineʼ Naʼadziʼii\",\"name:oc\":\"Budapèst\",\"name:or\":\"ବୁଦାପେଷ୍ଟ\",\"name:os\":\"Будапешт\",\"name:pa\":\"ਬੁਦਾਪੈਸਤ\",\"name:pdc\":\"Budapescht\",\"name:pl\":\"Budapeszt\",\"name:pms\":\"Bùdapest\",\"name:pnb\":\"بوداپست\",\"name:pnt\":\"Βουδαπέστη\",\"name:ps\":\"بوډاپسټ\",\"name:pt\":\"Budapeste\",\"name:ro\":\"Budapesta\",\"name:ru\":\"Будапешт\",\"name:sa\":\"बुद्धप्रस्थ\",\"name:sah\":\"Будапешт\",\"name:sd\":\"بوڊاپيسٽ\",\"name:sh\":\"Budimpešta\",\"name:sk\":\"Budapešť\",\"name:sl\":\"Budimpešta\",\"name:sn\":\"Bhudhapesti\",\"name:sq\":\"Budapesti\",\"name:sr\":\"Будимпешта\",\"name:sv\":\"Budapest\",\"name:szl\":\"Budapeszt\",\"name:ta\":\"புடாபெஸ்ட்\",\"name:te\":\"బుడాపెస్ట్\",\"name:tg\":\"Будапешт\",\"name:th\":\"บูดาเปสต์\",\"name:tr\":\"Budapeşte\",\"name:tt\":\"Будапешт\",\"name:tw\":\"Budapεst\",\"name:udm\":\"Будапешт\",\"name:ug\":\"Budapésht\",\"name:uk\":\"Будапешт\",\"name:ur\":\"بوداپست\",\"name:uz\":\"Budapesht\",\"name:vep\":\"Budapešt\",\"name:wa\":\"Budapesse\",\"name:wal\":\"Budaapestte\",\"name:yi\":\"בודאפעשט\",\"name:yue\":\"布達佩斯\",\"name:zea\":\"Boedapest\",\"name:zh\":\"布達佩斯\",\"name:zh-Hans\":\"布达佩斯\",\"name:zh-Hant\":\"布達佩斯\",\"place\":\"city\",\"place:hu\":\"főváros\",\"population\":\"1686222\",\"population:date\":\"2024-01-01\",\"postal_code\":\"1000\",\"source:name:br\":\"ofis publik ar brezhoneg\",\"source:population\":\"KSH (www.ksh.hu)\",\"source:population:date\":\"2024-01-01\",\"wikidata\":\"Q1781\",\"wikimedia_commons\":\"Category:Budapest\",\"wikipedia\":\"hu:Budapest\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "settlement",
+      "osmType": "node",
+      "osmId": 2142472590,
+      "name": "V. kerület",
+      "tags": "{\"alt_name\":\"Belváros-Lipótváros\",\"ksh_ref\":\"13392\",\"name\":\"V. kerület\",\"place\":\"borough\",\"place:hu\":\"fővárosi kerület\",\"population\":\"23701\",\"population:date\":\"2024-01-01\",\"short_name\":\"5. kerület\",\"source:population\":\"KSH (www.ksh.hu)\",\"source:population:date\":\"2024-01-01\",\"wikidata\":\"Q1042732\",\"wikipedia\":\"hu:Budapest V. kerülete\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 2786368,
+      "name": "Víziváros",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\",\"name\":\"Víziváros\",\"name:de\":\"Wasserstadt\",\"wikidata\":\"Q1415725\",\"wikipedia\":\"hu:Víziváros (Budapest)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 221984,
+      "name": "I. kerület",
+      "tags": "{\"admin_level\":\"9\",\"alt_name\":\"Budavár\",\"boundary\":\"administrative\",\"name\":\"I. kerület\",\"name:de\":\"I. Bezirk\",\"name:en\":\"1st district\",\"place\":\"borough\",\"ref\":\"1\",\"short_name\":\"1. kerület\",\"wikidata\":\"Q1094308\",\"wikipedia\":\"hu:Budapest I. kerülete\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 2702687,
+      "name": "Gellérthegy",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\",\"name\":\"Gellérthegy\",\"name:de\":\"Gerhardsberg\",\"name:etymology:wikidata\":\"Q577122\",\"wikidata\":\"Q386977\",\"wikipedia\":\"hu:Gellérthegy\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "watercourse",
+      "osmType": "way",
+      "osmId": 109561910,
+      "name": "Duna",
+      "tags": "{\"CEMT\":\"VIa\",\"boat\":\"yes\",\"canoe\":\"yes\",\"motorboat\":\"yes\",\"name\":\"Duna\",\"name:ar\":\"دانوب\",\"name:br\":\"Danav\",\"name:de\":\"Donau\",\"name:en\":\"Danube\",\"name:es\":\"Danubio\",\"name:fr\":\"Danube\",\"name:hr\":\"Dunav\",\"name:it\":\"Danubio\",\"name:nl\":\"Donau\",\"name:pl\":\"Dunaj\",\"name:ru\":\"Дунай\",\"name:sk\":\"Dunaj\",\"name:sr\":\"Дунав\",\"name:uk\":\"Дунай\",\"name:zh\":\"多瑙河\",\"source\":\"Landsat\",\"source:name:br\":\"ofis publik ar brezhoneg\",\"url\":\"http://www.eumet.hu/vizallas/duna/\",\"url:hydroinfo\":\"http://www.hydroinfo.hu/tables/dunelot.html\",\"url:vizugy\":\"https://www.vizugy.hu/index.php?module=content&programelemid=138\",\"waterway\":\"river\",\"wikipedia\":\"hu:Duna\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "node",
+      "osmId": 4155285433,
+      "name": "Ínség-szikla",
+      "tags": "{\"description\":\"Az Ínség-szikla, Ínség-kő, Ínség-zátony egy általában vízzel fedett sziklaszirt a Dunában a Gellért-hegy lábánál. 95cm alatti alacsony vízállásnál látható, ami csak aszályos időszakban, ínség idején fordulhat elő. Anyaga természetes eredetű homokkő.\",\"ele\":\"95.76\",\"material\":\"dolomite\",\"name\":\"Ínség-szikla\",\"natural\":\"rock\",\"ref\":\"1645,4 folyamkilométer;95,76 Bf;koordinátái: 47° 29' 09.19\\\" É;19° 3' 09.32\\\" K\",\"seamark:rock:water_level\":\"covers\",\"seamark:type\":\"rock\",\"source\":\"survey\",\"source:url\":\"https://efolyoirat.oszk.hu/01600/01635/00341/pdf/EPA01635_foldtani_kozlony_2012_142_3_243-250.pdf\",\"survey:date\":\"2018-10-14\",\"tourism\":\"attraction\",\"website\":\"https://dunaiszigetek.blogspot.hu/2011/11/duna-mederbe-sullyedt-hegy-csucsa-az.html\",\"wheelchair\":\"no\",\"wikidata\":\"Q1471415\",\"wikimedia_commons\":\"Category:Rock of Famine\",\"wikipedia\":\"hu:Ínség-szikla\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "way",
+      "osmId": 465482112,
+      "name": "null",
+      "tags": "{\"admin_level\":\"9\",\"boundary\":\"administrative\",\"import_ref\":\"OTrT\",\"source\":\"Országos Területrendezési Terv (2003. évi XXVI. törvény, módosítva 2008), Térszerkezet melléklet (imported: 2010.01.25)\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "geographic_feature",
+      "osmType": "way",
+      "osmId": 543902033,
+      "name": "Ínség-zátony",
+      "tags": "{\"description\":\"Nagyon alacsony vízállás idején látható.\",\"name\":\"Ínség-zátony\",\"natural\":\"beach\",\"seasonal\":\"yes\",\"surface\":\"stone\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 3229950,
+      "name": "Belső-Ferencváros",
+      "tags": "{\"admin_level\":\"10\",\"boundary\":\"administrative\",\"name\":\"Belső-Ferencváros\",\"wikidata\":\"Q21294279\"}"
+    },
+    {
+      "country": "Hungary",
+      "role": "administrative_boundary",
+      "osmType": "relation",
+      "osmId": 1552462,
+      "name": "IX. kerület",
+      "tags": "{\"admin_level\":\"9\",\"alt_name\":\"Ferencváros\",\"alt_name:de\":\"Franzstadt\",\"boundary\":\"administrative\",\"name\":\"IX. kerület\",\"name:de\":\"IX. Bezirk\",\"name:en\":\"9th district\",\"place\":\"borough\",\"ref\":\"9\",\"short_name\":\"9. kerület\",\"wikidata\":\"Q301411\",\"wikipedia\":\"hu:Budapest IX. kerülete\"}"
+    }
+  ]
 }

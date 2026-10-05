@@ -1,79 +1,38 @@
 # Activity
 
-- Source: Intervals.icu
-- Source ID: `i35783290`
-- Type: Run
-- Name: Pétfürdői Tavasz 26
-- Start: 2024-03-23T08:57:39
-
+- Source: Intervals.icu- Source ID: `i35783290`
+- Type: Run- Name: Pétfürdői Tavasz 26- Start: 2024-03-23T08:57:39
 ## Session
 
 - Distance: 21.77 [km]
-- Moving time: 8557 [s] (2h 22m 37s)
-- Elapsed time: 8961 [s] (2h 29m 21s)
-- Recording time: 8960 [s] (2h 29m 20s)
-- Elevation gain: 320 [m+]
-- Elevation loss: unknown [m-]
-
+- Moving time: 8557 [s] (2h 22m 37s)- Elapsed time: 8961 [s] (2h 29m 21s)- Recording time: 8960 [s] (2h 29m 20s)- Elevation gain: 320 [m+]- Elevation loss: unknown [m-]
 ## Performance
 
-- Average speed: 2.43 [m/s]
-- Maximum speed: 3.64 [m/s]
-- Average heart rate: 140 [bpm]
-- Maximum heart rate: 178 [bpm]
-- Average power: 199 [W]
-- Weighted average power: 211 [W]
-- Average unilateral cadence: 89.1 [steps/min]
-
+- Average speed: 2.43 [m/s]- Maximum speed: 3.64 [m/s]- Average heart rate: 140 [bpm]- Maximum heart rate: 178 [bpm]- Average power: 199 [W]- Weighted average power: 211 [W]- Average unilateral cadence: 89.1 [steps/min]
 ## Running Dynamics
 
-- Average stride length: 0.857 [m]
-- Average stance time: unknown [ms]
-- Average stance time percent: unknown [%]
-- Average vertical oscillation: unknown [mm]
-- Average vertical ratio: unknown [%]
-- Average leg spring stiffness: unknown [kN/m]
-
+- Average stride length: 0.857 [m]- Average stance time: unknown [ms]- Average stance time percent: unknown [%]- Average vertical oscillation: unknown [mm]- Average vertical ratio: unknown [%]- Average leg spring stiffness: unknown [kN/m]
 ## Environment
 
-- Recorded temperature: unknown [°C]
-- Weather temperature: unknown [°C]
-- Feels-like temperature: unknown [°C]
-- Average wind speed: unknown [m/s]
-- Average wind gust: unknown [m/s]
-- Headwind: unknown [%]
-- Tailwind: unknown [%]
-
-
+- Recorded temperature: unknown [°C]- Weather temperature: unknown [°C]- Feels-like temperature: unknown [°C]- Average wind speed: unknown [m/s]- Average wind gust: unknown [m/s]- Headwind: unknown [%]- Tailwind: unknown [%]
 ## Geography
 
-- GPS coordinate count: 8609
-- Bounding box:
+- GPS coordinate count: 8609- Bounding box:
   - North: 47.167030 [°]
   - South: 47.119698 [°]
   - East: 18.127523 [°]
   - West: 18.038074 [°]
 
+## External Geography
+
+- Bounding-box feature matches: 44
 ## Classification
 
-- Modality: run
-- Class: minor_event
-- Signals:
-  - Modality: run
-  - Activity race: true
-  - Activity race classification: minor
-
+- Modality: run- Class: minor_event- Signals:
+  - Modality: run  - Activity race: true  - Activity race classification: minor
 ## Training
 
-- Training load: 99
-- HR load: 99
-- Pace load: 100
-- Power load: 135
-- Intensity: 75.4 [%]
-- Decoupling: -3.79 [%]
-- RPE: unknown [1–10]
-- Feel: unknown
-
+- Training load: 99- HR load: 99- Pace load: 100- Power load: 135- Intensity: 75.4 [%]- Decoupling: -3.79 [%]- RPE: unknown [1–10]- Feel: unknown
 ## Source
 
 Intervals.icu activity:
@@ -88,4 +47,6 @@ The canonical source evidence is preserved unchanged.
 
 The derived values in this document are calculated from the preserved `streams.json` and semantic classification from `source.json`. They are also preserved in `derived.json`.
 
-No external geographic enrichment is applied.
+External geographic matches are derived from the materialized geography corpus using the activity bounding box.
+
+No semantic interpretation of external geographic matches is applied.

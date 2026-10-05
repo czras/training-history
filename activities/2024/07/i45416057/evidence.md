@@ -1,79 +1,38 @@
 # Activity
 
-- Source: Intervals.icu
-- Source ID: `i45416057`
-- Type: Run
-- Name: SVSE futóklub
-- Start: 2024-07-26T18:51:45
-
+- Source: Intervals.icu- Source ID: `i45416057`
+- Type: Run- Name: SVSE futóklub- Start: 2024-07-26T18:51:45
 ## Session
 
 - Distance: 9.71 [km]
-- Moving time: 3561 [s] (59m 21s)
-- Elapsed time: 3996 [s] (1h 6m 36s)
-- Recording time: 3588 [s] (59m 48s)
-- Elevation gain: 129 [m+]
-- Elevation loss: unknown [m-]
-
+- Moving time: 3561 [s] (59m 21s)- Elapsed time: 3996 [s] (1h 6m 36s)- Recording time: 3588 [s] (59m 48s)- Elevation gain: 129 [m+]- Elevation loss: unknown [m-]
 ## Performance
 
-- Average speed: 2.72 [m/s]
-- Maximum speed: 4.88 [m/s]
-- Average heart rate: 147 [bpm]
-- Maximum heart rate: 174 [bpm]
-- Average power: 219 [W]
-- Weighted average power: 224 [W]
-- Average unilateral cadence: 89.7 [steps/min]
-
+- Average speed: 2.72 [m/s]- Maximum speed: 4.88 [m/s]- Average heart rate: 147 [bpm]- Maximum heart rate: 174 [bpm]- Average power: 219 [W]- Weighted average power: 224 [W]- Average unilateral cadence: 89.7 [steps/min]
 ## Running Dynamics
 
-- Average stride length: 0.912 [m]
-- Average stance time: unknown [ms]
-- Average stance time percent: unknown [%]
-- Average vertical oscillation: unknown [mm]
-- Average vertical ratio: unknown [%]
-- Average leg spring stiffness: unknown [kN/m]
-
+- Average stride length: 0.912 [m]- Average stance time: unknown [ms]- Average stance time percent: unknown [%]- Average vertical oscillation: unknown [mm]- Average vertical ratio: unknown [%]- Average leg spring stiffness: unknown [kN/m]
 ## Environment
 
-- Recorded temperature: 26.0 [°C]
-- Weather temperature: unknown [°C]
-- Feels-like temperature: unknown [°C]
-- Average wind speed: unknown [m/s]
-- Average wind gust: unknown [m/s]
-- Headwind: unknown [%]
-- Tailwind: unknown [%]
-
-
+- Recorded temperature: 26.0 [°C]- Weather temperature: unknown [°C]- Feels-like temperature: unknown [°C]- Average wind speed: unknown [m/s]- Average wind gust: unknown [m/s]- Headwind: unknown [%]- Tailwind: unknown [%]
 ## Geography
 
-- GPS coordinate count: 3564
-- Bounding box:
+- GPS coordinate count: 3564- Bounding box:
   - North: 47.096912 [°]
   - South: 47.084263 [°]
   - East: 17.919073 [°]
   - West: 17.884056 [°]
 
+## External Geography
+
+- Bounding-box feature matches: 35
 ## Classification
 
-- Modality: run
-- Class: community_event
-- Signals:
-  - Modality: run
-  - Activity race: false
-  - Name pattern: name-prefix:SVSE futóklub
-
+- Modality: run- Class: community_event- Signals:
+  - Modality: run  - Activity race: false  - Name pattern: name-prefix:SVSE futóklub
 ## Training
 
-- Training load: 50
-- HR load: 50
-- Pace load: 46
-- Power load: 63
-- Intensity: 80.0 [%]
-- Decoupling: 3.11 [%]
-- RPE: unknown [1–10]
-- Feel: unknown
-
+- Training load: 50- HR load: 50- Pace load: 46- Power load: 63- Intensity: 80.0 [%]- Decoupling: 3.11 [%]- RPE: unknown [1–10]- Feel: unknown
 ## Source
 
 Intervals.icu activity:
@@ -88,4 +47,6 @@ The canonical source evidence is preserved unchanged.
 
 The derived values in this document are calculated from the preserved `streams.json` and semantic classification from `source.json`. They are also preserved in `derived.json`.
 
-No external geographic enrichment is applied.
+External geographic matches are derived from the materialized geography corpus using the activity bounding box.
+
+No semantic interpretation of external geographic matches is applied.
