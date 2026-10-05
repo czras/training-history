@@ -19,6 +19,7 @@ import { writeFileAtomic } from "./write.js";
 
 const ACTIVITIES_DIR = "activities";
 const PROGRESS_INTERVAL = 25;
+const HEARTBEAT_INTERVAL = 10_000;
 
 type DerivationFailure = {
   entry: ActivityIndexEntry;
@@ -134,12 +135,30 @@ export async function deriveAll(
     return [];
   }
 
-  info("Deriving local corpus");
+  info("Deriving local corpus", {
+    total: entries.length,
+  });
 
   const geographyResolver =
     await GeographyResolver.open();
 
   let completed = 0;
+  const startedAt = Date.now();
+
+  const heartbeat = setInterval(() => {
+    if (completed === 0) {
+      info(
+        "Derivation working",
+        {
+          completed,
+          total: entries.length,
+          elapsed: Math.round(
+            (Date.now() - startedAt) / 1000,
+          ),
+        },
+      );
+    }
+  }, HEARTBEAT_INTERVAL);
 
   try {
     const results = await Promise.all(
@@ -223,6 +242,7 @@ export async function deriveAll(
         result !== undefined,
     );
   } finally {
+    clearInterval(heartbeat);
     geographyResolver.close();
   }
 }
